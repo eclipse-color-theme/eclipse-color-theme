@@ -1,6 +1,5 @@
 0.1
 ===
-* Add a feature and site project.
 * Implement at least one theme for the JDT editor.
 
 Later
