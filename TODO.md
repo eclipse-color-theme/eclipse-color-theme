@@ -1,10 +1,10 @@
-0.1
-===
-* Implement at least one theme for the JDT editor.
-
-Later
-=====
-* Add support for CDT and other editors.
+* Add support for the following editors (at least):
+  * Java
+  * C++
+  * JavaScript
+  * XML
+  * HTML
+  * CSS
 * Define themes in files instead of hard coding them.
 * Make it possible to import/export theme files.
 * Add more themes.
