@@ -21,8 +21,8 @@ public class ColorThemeManager {
         themes.put("Zenburn", createZenburnTheme());
 
         editors = new HashSet<ThemePreferenceMapper>();
-        editors.add(new TextEditorThemePreferenceMapper());
-        editors.add(new JavaEditorThemePreferenceMapper());
+        editors.add(new TextEditorMapper());
+        editors.add(new JavaEditorMapper());
     }
 
     private static Map<String, String> createInkpotTheme() {

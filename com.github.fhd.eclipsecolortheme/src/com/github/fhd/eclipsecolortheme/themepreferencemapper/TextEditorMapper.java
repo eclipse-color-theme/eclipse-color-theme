@@ -2,10 +2,10 @@ package com.github.fhd.eclipsecolortheme.themepreferencemapper;
 
 import java.util.*;
 
-/** Maps color themes to preferences for Eclipse's Text Editor. */
-public class TextEditorThemePreferenceMapper extends ThemePreferenceMapper {
+/** Maps color themes to preferences for Eclipse's Text editor. */
+public class TextEditorMapper extends ThemePreferenceMapper {
     /** Creates a new color theme mapper. */
-    public TextEditorThemePreferenceMapper() {
+    public TextEditorMapper() {
         super("org.eclipse.ui.editors");
     }
 
