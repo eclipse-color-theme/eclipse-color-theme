@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * A collection of color themes.
+ * TODO: The keys are Java specific right now. Generalise them.
  * XXX: One class per theme would be more flexible.
  */
 public class ColorThemeCollection {
@@ -57,7 +58,35 @@ public class ColorThemeCollection {
         theme.put("writeOccurrenceIndication", color(148,133,103));
         theme.put("currentIP", color(26,89,26));
         theme.put("searchResultIndication", color(70,68,103));
-        // TODO: Add Java-specific colors.
+        theme.put("contentAssistProposalsForeground", color(0, 0, 0));
+        theme.put("contentAssistProposalsBackground", color(255, 255, 255));
+        theme.put("commentTaskTag", color(172,193,172));
+        theme.put("javadoc", color(179, 181, 175));
+        theme.put("javadocLink", color(168, 147, 204));
+        theme.put("javadocSingleLineComment", color(127, 159, 127));
+        theme.put("localVariable", color(212, 196, 169));
+        theme.put("staticFinalField", color(83, 220, 205));
+        theme.put("bracket", color(255, 255, 255));
+        theme.put("field", color(179, 183, 132));
+        theme.put("staticMethodInvocation", color(196, 196, 183));
+        theme.put("contentAssistParametersForeground", color(246, 243, 232));
+        theme.put("contentAssistParametersBackground", color(36, 36, 36));
+        theme.put("number", color(138, 04, 07));
+        theme.put("sourceHoverBackground", color(161, 52, 21));
+        theme.put("deprecatedMember", color(255, 55, 55));
+        theme.put("class", color(202, 30, 30));
+        theme.put("operator", color(240, 39, 208));
+        theme.put("method", color(223, 90, 49));
+        theme.put("methodDeclarationName", color(223, 90, 49));
+        theme.put("autoboxing", color(255, 87, 87));
+        theme.put("keyword", color(239, 39, 75));
+        theme.put("string", color(204, 47, 47));
+        theme.put("localVariableDeclaration", color(212, 96, 69));
+        theme.put("javadocKeyword", color(204, 47, 47));
+        theme.put("annotation", color(128, 28, 28));
+        theme.put("staticField", color(147, 62, 04));
+        theme.put("multiLineComment", color(127, 59, 27));
+        theme.put("javadocTag", color(147, 47, 04));
         return theme;
     }
 

@@ -26,6 +26,10 @@ public class JavaEditorThemePreferenceMapper extends ThemePreferenceMapper {
         preferences.putBoolean("semanticHighlighting.deprecatedMember.enabled",
                                false);
         preferences.putBoolean("semanticHighlighting.number.enabled", false);
+        preferences.putBoolean("semanticHighlighting.localVariable.enabled",
+                               false);
+        preferences.putBoolean(
+                "semanticHighlighting.localVariableDeclaration.enabled", false);
 
         putPreference("java_default", theme.get("foreground"));
         putPreference("content_assist_proposals_foreground",
@@ -50,6 +54,24 @@ public class JavaEditorThemePreferenceMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.method.color", theme.get("method"));
         putPreference("semanticHighlighting.methodDeclarationName.color",
                       theme.get("methodDeclarationName"));
+        putPreference("java_doc_default", theme.get("javadoc"));
+        putPreference("java_doc_link", theme.get("javadocLink"));
+        putPreference("java_doc_keyword", theme.get("javadocKeyword"));
+        putPreference("java_doc_tag", theme.get("javadocTag"));
+        putPreference("java_single_line_comment",
+                      theme.get("javadocSingleLineComment"));
+        putPreference("semanticHighlighting.localVariable.color",
+                      theme.get("localVariable"));
+        putPreference("semanticHighlighting.localVariableDeclaration.color",
+                      theme.get("localVariableDeclaration"));
+        putPreference("semanticHighlighting.staticFinalField.color",
+                      theme.get("staticFinalField"));
+        putPreference("content_assist_parameters_foreground",
+                      theme.get("contentAssistParametersForeground"));
+        putPreference("content_assist_parameters_background",
+                      theme.get("contentAssistParametersBackground"));
+        putPreference("semanticHighlighting.autoboxing.color",
+                      theme.get("autoboxing"));
     }
 
     @Override
@@ -82,6 +104,14 @@ public class JavaEditorThemePreferenceMapper extends ThemePreferenceMapper {
                     "semanticHighlighting.deprecatedMember.enabled", true);
         else if ("semanticHighlighting.number.color".equals(key))
             preferences.putBoolean("semanticHighlighting.number.enabled", true);
+        else if ("semanticHighlighting.localVariable.color".equals(key))
+            preferences.putBoolean("semanticHighlighting.localVariable.enabled",
+                                   true);
+        else if ("semanticHighlighting.localVariableDeclaration.color"
+                .equals(key))
+            preferences.putBoolean(
+                    "semanticHighlighting.localVariableDeclaration.enabled",
+                    true);
     }
 
     @Override
@@ -98,6 +128,9 @@ public class JavaEditorThemePreferenceMapper extends ThemePreferenceMapper {
         preferences.remove("semanticHighlighting.field.enabled");
         preferences.remove("semanticHighlighting.deprecatedMember.enabled");
         preferences.remove("semanticHighlighting.number.enabled");
+        preferences.remove("semanticHighlighting.localVariable.enabled");
+        preferences.remove(
+                "semanticHighlighting.localVariableDeclaration.enabled");
         preferences.remove("semanticHighlighting.methodDeclarationName.bold");
         preferences.remove("java_default");
         preferences.remove("content_assist_proposals_foreground");
@@ -116,5 +149,17 @@ public class JavaEditorThemePreferenceMapper extends ThemePreferenceMapper {
         preferences.remove("semanticHighlighting.interface.color");
         preferences.remove("semanticHighlighting.method.color");
         preferences.remove("semanticHighlighting.methodDeclarationName.color");
-    }
+        preferences.remove("java_doc_default");
+        preferences.remove("java_doc_link");
+        preferences.remove("java_doc_keyword");
+        preferences.remove("java_doc_tag");
+        preferences.remove("java_single_line_comment");
+        preferences.remove("semanticHighlighting.localVariable.color");
+        preferences.remove(
+                "semanticHighlighting.localVariableDeclaration.color");
+        preferences.remove("semanticHighlighting.staticFinalField.color");
+        preferences.remove("content_assist_parameters_foreground");
+        preferences.remove("content_assist_parameters_background");
+        preferences.remove("semanticHighlighting.autoboxing.color");
+    }        
 }
