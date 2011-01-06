@@ -71,22 +71,22 @@ public class ColorThemeCollection {
         theme.put("staticMethodInvocation", color(196, 196, 183));
         theme.put("contentAssistParametersForeground", color(246, 243, 232));
         theme.put("contentAssistParametersBackground", color(36, 36, 36));
-        theme.put("number", color(138, 04, 07));
-        theme.put("sourceHoverBackground", color(161, 52, 21));
-        theme.put("deprecatedMember", color(255, 55, 55));
-        theme.put("class", color(202, 30, 30));
-        theme.put("operator", color(240, 39, 208));
-        theme.put("method", color(223, 90, 49));
-        theme.put("methodDeclarationName", color(223, 90, 49));
-        theme.put("autoboxing", color(255, 87, 87));
-        theme.put("keyword", color(239, 39, 75));
-        theme.put("string", color(204, 47, 47));
-        theme.put("localVariableDeclaration", color(212, 96, 69));
-        theme.put("javadocKeyword", color(204, 47, 47));
-        theme.put("annotation", color(128, 28, 28));
-        theme.put("staticField", color(147, 62, 04));
-        theme.put("multiLineComment", color(127, 59, 27));
-        theme.put("javadocTag", color(147, 47, 04));
+        theme.put("number", color(138, 204, 207));
+        theme.put("sourceHoverBackground", color(161, 152, 121));
+        theme.put("deprecatedMember", color(255, 255, 255));
+        theme.put("class", color(202, 230, 130));
+        theme.put("operator", color(240, 239, 208));
+        theme.put("method", color(223, 190, 149));
+        theme.put("methodDeclarationName", color(223, 190, 149));
+        theme.put("autoboxing", color(255, 187, 187));
+        theme.put("keyword", color(239, 239, 175));
+        theme.put("string", color(204, 147, 147));
+        theme.put("localVariableDeclaration", color(212, 196, 169));
+        theme.put("javadocKeyword", color(204, 147, 147));
+        theme.put("annotation", color(128, 128, 128));
+        theme.put("staticField", color(147, 162, 204));
+        theme.put("multiLineComment", color(127, 159, 127));
+        theme.put("javadocTag", color(147, 147, 204));
         return theme;
     }
 
