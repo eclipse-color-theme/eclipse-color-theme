@@ -13,7 +13,7 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="com.github.fhd.eclipsecolortheme.PreferenceInitializer">
+            class="com.github.fhd.eclipsecolortheme.preferences.PreferenceInitializer">
       </initializer>
    </extension>
 
