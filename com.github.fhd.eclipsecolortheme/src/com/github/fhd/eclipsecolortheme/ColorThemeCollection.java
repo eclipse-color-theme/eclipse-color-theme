@@ -45,22 +45,22 @@ public class ColorThemeCollection {
 
     private static Map<String, String> createZenburnTheme() {
         Map<String, String> theme = new HashMap<String, String>();
-        theme.put("foreground", color(246,243,232));
-        theme.put("background", color(64,64,64));
-        theme.put("selectionForeground", color(0,0,0));
-        theme.put("selectionBackground", color(137,137,65));
-        theme.put("currentLine", color(80,80,80));
-        theme.put("lineNumber", color(192,192,192));
-        theme.put("filteredSearchResultIndication", color(63,63,106));
-        theme.put("occurrenceIndication", color(97,97,97));
-        theme.put("findScope", color(188,173,173));
-        theme.put("secondaryIP", color(26,89,26));
-        theme.put("writeOccurrenceIndication", color(148,133,103));
-        theme.put("currentIP", color(26,89,26));
-        theme.put("searchResultIndication", color(70,68,103));
+        theme.put("foreground", color(246, 243, 232));
+        theme.put("background", color(64, 64, 64));
+        theme.put("selectionForeground", color(0, 0, 0));
+        theme.put("selectionBackground", color(137, 137, 65));
+        theme.put("currentLine", color(80, 80, 80));
+        theme.put("lineNumber", color(192, 192, 192));
+        theme.put("filteredSearchResultIndication", color(63, 63, 106));
+        theme.put("occurrenceIndication", color(97, 97, 97));
+        theme.put("findScope", color(188, 173, 173));
+        theme.put("secondaryIP", color(26, 89, 26));
+        theme.put("writeOccurrenceIndication", color(148, 133, 103));
+        theme.put("currentIP", color(26, 89, 26));
+        theme.put("searchResultIndication", color(70, 68, 103));
         theme.put("contentAssistProposalsForeground", color(0, 0, 0));
         theme.put("contentAssistProposalsBackground", color(255, 255, 255));
-        theme.put("commentTaskTag", color(172,193,172));
+        theme.put("commentTaskTag", color(172, 193, 172));
         theme.put("javadoc", color(179, 181, 175));
         theme.put("javadocLink", color(168, 147, 204));
         theme.put("javadocSingleLineComment", color(127, 159, 127));
