@@ -1,9 +1,10 @@
 * Add support for the following editors (at least):
-  * C++
-  * JavaScript
+  * Java Properties
   * XML
   * HTML
   * CSS
+  * JavaScript
+  * C++
 * Define themes in files instead of hard coding them.
 * Make it possible to import/export theme files.
 * Add more themes.
