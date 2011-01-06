@@ -24,6 +24,7 @@ Currently supported editors:
 
 * Text
 * Java
+* Java properties
 
 Available themes:
 

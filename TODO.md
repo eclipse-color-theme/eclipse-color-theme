@@ -1,5 +1,4 @@
 * Add support for the following editors (at least):
-  * Java Properties
   * XML
   * HTML
   * CSS
