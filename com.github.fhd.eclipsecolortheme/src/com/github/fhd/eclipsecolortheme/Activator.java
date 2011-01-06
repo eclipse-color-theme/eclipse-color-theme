@@ -1,8 +1,8 @@
 package com.github.fhd.eclipsecolortheme;
 
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.osgi.framework.BundleContext;
+import org.eclipse.jface.resource.*;
+import org.eclipse.ui.plugin.*;
+import org.osgi.framework.*;
 
 /** This plugin's activator. */
 public class Activator extends AbstractUIPlugin {
@@ -24,7 +24,7 @@ public class Activator extends AbstractUIPlugin {
         plugin = null;
         super.stop(context);
     }
-
+    
     public static Activator getDefault() {
         return plugin;
     }

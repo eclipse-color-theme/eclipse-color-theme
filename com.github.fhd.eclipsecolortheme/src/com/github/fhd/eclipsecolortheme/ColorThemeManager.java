@@ -2,19 +2,27 @@ package com.github.fhd.eclipsecolortheme;
 
 import java.util.*;
 
-/**
- * A collection of color themes.
- * TODO: The keys are Java specific right now. Generalise them.
- * XXX: One class per theme would be more flexible.
- */
-public class ColorThemeCollection {
-    private Map<String, Map<String, String>> themes;
+import org.osgi.service.prefs.*;
 
-    /** Creates a new color theme collection. */
-    public ColorThemeCollection() {
+import com.github.fhd.eclipsecolortheme.themepreferencemapper.*;
+
+/**
+ * Loads and applies color themes.
+ * TODO: The keys are Java specific right now. Generalise them.
+ */
+public class ColorThemeManager {
+    private Map<String, Map<String, String>> themes;
+    private Set<ThemePreferenceMapper> editors;
+
+    /** Creates a new color theme manager. */
+    public ColorThemeManager() {
         themes = new HashMap<String, Map<String, String>>();
         themes.put("Inkpot", createInkpotTheme());
         themes.put("Zenburn", createZenburnTheme());
+
+        editors = new HashSet<ThemePreferenceMapper>();
+        editors.add(new TextEditorThemePreferenceMapper());
+        editors.add(new JavaEditorThemePreferenceMapper());
     }
 
     private static Map<String, String> createInkpotTheme() {
@@ -93,7 +101,7 @@ public class ColorThemeCollection {
     private static String color(int r, int g, int b) {
         return r + "," + g + "," + b;
     }
-
+    
     /**
      * Returns the names of all available color themes.
      * @return the names of all available color themes.
@@ -110,5 +118,24 @@ public class ColorThemeCollection {
      */
     public Map<String, String> getTheme(String name) {
         return themes.get(name);
+    }
+
+    /**
+     * Changes the preferences of other plugins to apply the color theme.
+     * @param theme The name of the color theme to apply.
+     */
+    public void applyTheme(String theme) {
+        for (ThemePreferenceMapper editor : editors) {
+            editor.clear();
+            if (themes.get(theme) != null)
+                editor.map(themes.get(theme));
+
+            try {
+                editor.flush();
+            } catch (BackingStoreException e) {
+                // TODO: Show a proper error message (StatusManager).
+                e.printStackTrace();
+            }
+        }
     }
 }
