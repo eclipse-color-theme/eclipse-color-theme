@@ -93,6 +93,7 @@ public class ColorThemeManager {
         theme.put("javadocKeyword", color(204, 147, 147));
         theme.put("annotation", color(128, 128, 128));
         theme.put("staticField", color(147, 162, 204));
+        theme.put("singleLineComment", color(127, 159, 127));
         theme.put("multiLineComment", color(127, 159, 127));
         theme.put("javadocTag", color(147, 147, 204));
         return theme;
