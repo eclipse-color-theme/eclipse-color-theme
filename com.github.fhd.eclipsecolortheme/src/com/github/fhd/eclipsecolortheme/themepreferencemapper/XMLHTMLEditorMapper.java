@@ -2,9 +2,27 @@ package com.github.fhd.eclipsecolortheme.themepreferencemapper;
 
 import java.util.*;
 
-public class XMLEditorMapper extends ThemePreferenceMapper {
-    public XMLEditorMapper() {
-        super("org.eclipse.wst.xml.ui");
+public class XMLHTMLEditorMapper extends ThemePreferenceMapper {
+    public enum Type {
+        XML("org.eclipse.wst.xml.ui"),
+        HTML("org.eclipse.wst.html.ui");
+
+        private String plugin;
+
+        private Type(String plugin) {
+            this.plugin = plugin;
+        }
+
+        public String getPlugin() {
+            return plugin;
+        }
+    }
+
+    private Type editorType;
+    
+    public XMLHTMLEditorMapper(Type editorType) {
+        super(editorType.getPlugin());
+        this.editorType = editorType;
     }
 
     @Override
@@ -21,12 +39,16 @@ public class XMLEditorMapper extends ThemePreferenceMapper {
         putPreference("doctypeName", entry(theme.get("method")));
         putPreference("doctypeExternalPubref", entry(theme.get("method")));
         putPreference("doctypeExtrenalSysref", entry(theme.get("method")));
-        putPreference("doctypeExternalId", entry(theme.get("staticFinalField")));
-        putPreference("cdataBorder", entry(theme.get("method")));
-        putPreference("cdataText", entry(theme.get("foreground")));
-        putPreference("piBorder", entry(theme.get("method")));
-        putPreference("piContent", entry(theme.get("foreground")));
-        putPreference("declBorder", entry(theme.get("method")));        
+        putPreference("doctypeExternalId",
+                      entry(theme.get("staticFinalField")));
+        if (Type.XML.equals(editorType)) {
+            putPreference("declBorder", entry(theme.get("method")));
+            putPreference("cdataBorder", entry(theme.get("method")));
+            putPreference("cdataText", entry(theme.get("foreground")));
+            putPreference("piBorder", entry(theme.get("method")));
+            putPreference("piContent", entry(theme.get("foreground")));
+        } else if (Type.HTML.equals(editorType))
+            putPreference("declBoder", entry(theme.get("method")));
     }
 
     private static String entry(String rgb) {

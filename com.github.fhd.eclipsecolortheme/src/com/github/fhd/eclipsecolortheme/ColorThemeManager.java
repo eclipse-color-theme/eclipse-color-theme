@@ -5,6 +5,7 @@ import java.util.*;
 import org.osgi.service.prefs.*;
 
 import com.github.fhd.eclipsecolortheme.themepreferencemapper.*;
+import com.github.fhd.eclipsecolortheme.themepreferencemapper.XMLHTMLEditorMapper.*;
 
 /**
  * Loads and applies color themes.
@@ -24,7 +25,8 @@ public class ColorThemeManager {
         editors.add(new TextEditorMapper());
         editors.add(new JavaEditorMapper());
         editors.add(new JavaPropertiesEditorMapper());
-        editors.add(new XMLEditorMapper());
+        editors.add(new XMLHTMLEditorMapper(Type.XML));
+        editors.add(new XMLHTMLEditorMapper(Type.HTML));
     }
 
     private static Map<String, String> createInkpotTheme() {
