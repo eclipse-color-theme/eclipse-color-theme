@@ -8,7 +8,7 @@ import com.github.fhd.eclipsecolortheme.themepreferencemapper.*;
 
 /**
  * Loads and applies color themes.
- * TODO: The keys are Java specific right now. Generalise them.
+ * TODO: Make the keys less Java specific and less redundant.
  */
 public class ColorThemeManager {
     private Map<String, Map<String, String>> themes;
@@ -37,19 +37,19 @@ public class ColorThemeManager {
         theme.put("lineNumber", color(43, 145, 175));
         theme.put("contentAssistProposalsForeground", color(0, 0, 0));
         theme.put("contentAssistProposalsBackground", color(255, 255, 255));
+        theme.put("sourceHoverBackground", color(255, 255, 255));;
         theme.put("singleLineComment", color(205, 139, 0));
         theme.put("multiLineComment", color(205, 139, 0));
         theme.put("commentTaskTag", color(255, 139, 255));
-        theme.put("sourceHoverBackground", color(255, 255, 255));;
-        theme.put("number", color(255, 205, 139));
-        theme.put("string", color(255, 205, 139));
-        theme.put("bracket", color(207, 191, 173));
-        theme.put("operator", color(207, 191, 173));
-        theme.put("keyword", color(128, 139, 237));
         theme.put("class", color(135, 206, 250));
         theme.put("interface", color(135, 250, 196));
         theme.put("method", color(135, 206, 250));
         theme.put("methodDeclarationName", color(207, 191, 173));
+        theme.put("bracket", color(207, 191, 173));
+        theme.put("number", color(255, 205, 139));
+        theme.put("string", color(255, 205, 139));
+        theme.put("operator", color(207, 191, 173));
+        theme.put("keyword", color(128, 139, 237));
         return theme;
     }
 
@@ -61,43 +61,44 @@ public class ColorThemeManager {
         theme.put("selectionBackground", color(137, 137, 65));
         theme.put("currentLine", color(80, 80, 80));
         theme.put("lineNumber", color(192, 192, 192));
+        theme.put("searchResultIndication", color(70, 68, 103));
         theme.put("filteredSearchResultIndication", color(63, 63, 106));
         theme.put("occurrenceIndication", color(97, 97, 97));
-        theme.put("findScope", color(188, 173, 173));
-        theme.put("secondaryIP", color(26, 89, 26));
         theme.put("writeOccurrenceIndication", color(148, 133, 103));
+        theme.put("findScope", color(188, 173, 173));
         theme.put("currentIP", color(26, 89, 26));
-        theme.put("searchResultIndication", color(70, 68, 103));
+        theme.put("secondaryIP", color(26, 89, 26));
         theme.put("contentAssistProposalsForeground", color(0, 0, 0));
         theme.put("contentAssistProposalsBackground", color(255, 255, 255));
+        theme.put("contentAssistParametersForeground", color(246, 243, 232));
+        theme.put("contentAssistParametersBackground", color(36, 36, 36));
+        theme.put("sourceHoverBackground", color(161, 152, 121));
+        theme.put("singleLineComment", color(127, 159, 127));
+        theme.put("multiLineComment", color(127, 159, 127));
         theme.put("commentTaskTag", color(172, 193, 172));
         theme.put("javadoc", color(179, 181, 175));
         theme.put("javadocLink", color(168, 147, 204));
         theme.put("javadocSingleLineComment", color(127, 159, 127));
-        theme.put("localVariable", color(212, 196, 169));
-        theme.put("staticFinalField", color(83, 220, 205));
-        theme.put("bracket", color(255, 255, 255));
-        theme.put("field", color(179, 183, 132));
-        theme.put("staticMethodInvocation", color(196, 196, 183));
-        theme.put("contentAssistParametersForeground", color(246, 243, 232));
-        theme.put("contentAssistParametersBackground", color(36, 36, 36));
-        theme.put("number", color(138, 204, 207));
-        theme.put("sourceHoverBackground", color(161, 152, 121));
-        theme.put("deprecatedMember", color(255, 255, 255));
+        theme.put("javadocTag", color(147, 147, 204));
+        theme.put("javadocKeyword", color(204, 147, 147));
         theme.put("class", color(202, 230, 130));
-        theme.put("operator", color(240, 239, 208));
+        theme.put("interface", color(202, 230, 130));
         theme.put("method", color(223, 190, 149));
         theme.put("methodDeclarationName", color(223, 190, 149));
-        theme.put("autoboxing", color(255, 187, 187));
-        theme.put("keyword", color(239, 239, 175));
+        theme.put("bracket", color(255, 255, 255));
+        theme.put("number", color(138, 204, 207));
         theme.put("string", color(204, 147, 147));
-        theme.put("localVariableDeclaration", color(212, 196, 169));
-        theme.put("javadocKeyword", color(204, 147, 147));
+        theme.put("operator", color(240, 239, 208));
+        theme.put("keyword", color(239, 239, 175));
+        theme.put("autoboxing", color(255, 187, 187));
         theme.put("annotation", color(128, 128, 128));
+        theme.put("staticMethodInvocation", color(196, 196, 183));
+        theme.put("localVariable", color(212, 196, 169));
+        theme.put("localVariableDeclaration", color(212, 196, 169));
+        theme.put("field", color(179, 183, 132));
         theme.put("staticField", color(147, 162, 204));
-        theme.put("singleLineComment", color(127, 159, 127));
-        theme.put("multiLineComment", color(127, 159, 127));
-        theme.put("javadocTag", color(147, 147, 204));
+        theme.put("staticFinalField", color(83, 220, 205));
+        theme.put("deprecatedMember", color(255, 255, 255));
         return theme;
     }
 
