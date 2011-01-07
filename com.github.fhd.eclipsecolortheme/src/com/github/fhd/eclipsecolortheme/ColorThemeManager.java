@@ -24,6 +24,7 @@ public class ColorThemeManager {
         editors.add(new TextEditorMapper());
         editors.add(new JavaEditorMapper());
         editors.add(new JavaPropertiesEditorMapper());
+        editors.add(new XMLEditorMapper());
     }
 
     private static Map<String, String> createInkpotTheme() {

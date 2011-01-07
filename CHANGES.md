@@ -1,6 +1,7 @@
 0.2.0
 ==================
 * Added support for the Java properties editor.
+* Added support for the XML editor.
 
 0.1.1 (2011-01-06)
 ==================
