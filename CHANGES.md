@@ -1,3 +1,6 @@
+0.3.0
+==================
+
 0.2.1 (2011-01-07)
 ==================
 * Fixed comment colouring in the XML editor.
