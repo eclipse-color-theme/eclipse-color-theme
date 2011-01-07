@@ -15,8 +15,8 @@ public class XMLEditorMapper extends ThemePreferenceMapper {
         putPreference("tagAttributeEquals", entry(theme.get("foreground")));
         putPreference("tagAttributeValue", italicEntry(theme.get("string")));
         putPreference("xmlContent", entry(theme.get("foreground")));
-        putPreference("commentBorder", entry(theme.get("comment")));
-        putPreference("commentText", entry(theme.get("comment")));
+        putPreference("commentBorder", entry(theme.get("multiLineComment")));
+        putPreference("commentText", entry(theme.get("multiLineComment")));
         putPreference("entityReference", entry(theme.get("keyword")));
         putPreference("doctypeName", entry(theme.get("method")));
         putPreference("doctypeExternalPubref", entry(theme.get("method")));
