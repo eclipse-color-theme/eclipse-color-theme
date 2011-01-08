@@ -60,8 +60,6 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         putPreference("java_doc_link", theme.get("javadocLink"));
         putPreference("java_doc_keyword", theme.get("javadocKeyword"));
         putPreference("java_doc_tag", theme.get("javadocTag"));
-        putPreference("java_single_line_comment",
-                      theme.get("javadocSingleLineComment"));
         putPreference("semanticHighlighting.localVariable.color",
                       theme.get("localVariable"));
         putPreference("semanticHighlighting.localVariableDeclaration.color",
@@ -155,7 +153,6 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.remove("java_doc_link");
         preferences.remove("java_doc_keyword");
         preferences.remove("java_doc_tag");
-        preferences.remove("java_single_line_comment");
         preferences.remove("semanticHighlighting.localVariable.color");
         preferences.remove(
                 "semanticHighlighting.localVariableDeclaration.color");

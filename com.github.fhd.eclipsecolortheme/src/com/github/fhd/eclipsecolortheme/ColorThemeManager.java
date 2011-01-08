@@ -81,7 +81,6 @@ public class ColorThemeManager {
         theme.put("commentTaskTag", color(172, 193, 172));
         theme.put("javadoc", color(179, 181, 175));
         theme.put("javadocLink", color(168, 147, 204));
-        theme.put("javadocSingleLineComment", color(127, 159, 127));
         theme.put("javadocTag", color(147, 147, 204));
         theme.put("javadocKeyword", color(204, 147, 147));
         theme.put("class", color(202, 230, 130));
