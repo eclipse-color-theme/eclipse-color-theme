@@ -30,6 +30,7 @@ Currently supported editors:
 * XML
 * HTML
 * CSS
+* JavaScript
 
 Available themes:
 

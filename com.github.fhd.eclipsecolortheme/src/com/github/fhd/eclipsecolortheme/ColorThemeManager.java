@@ -28,6 +28,7 @@ public class ColorThemeManager {
         editors.add(new WebEditorMapper(Type.XML));
         editors.add(new WebEditorMapper(Type.HTML));
         editors.add(new WebEditorMapper(Type.CSS));
+        editors.add(new JavaScriptEditorMapper());
     }
 
     private static Map<String, String> createInkpotTheme() {
