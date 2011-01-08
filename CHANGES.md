@@ -2,6 +2,7 @@
 ==================
 * Added support for the HTML editor.
 * Added support for the CSS editor.
+* Fixed annotation colouring in the Java editor.
 
 0.2.1 (2011-01-07)
 ==================
