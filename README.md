@@ -5,6 +5,13 @@ Color themes for Eclipse.
 
 [![Flattr this](http://api.flattr.com/button/flattr-badge-large.png "Flattr this")](http://flattr.com/thing/111560/Eclipse-Color-Theme)
 
+Eclipse Color Theme makes it possible to switch color themes
+conveniently and without side effects, support for importing and
+exporting of themes is planned. This is still work in progress,
+contributions are welcome.
+
+You can install the plugin from the [update site](http://fhd.github.com/eclipse-color-theme).
+
 While Eclipse makes it possible to change the syntax coloring in great
 detail, there is no support for managing multiple color themes. It is
 possible to achieve that by importing and exporting preferences files,
@@ -14,15 +21,7 @@ Eclipse 4 will probably solve the issue once and for all by making it
 possible to change the user interface via CSS, but I'm not sure when
 it will arrive, and neither when I will be able to upgrade.
 
-Eclipse Color Theme makes it possible to switch color themes
-conveniently and without side effects. Support for importing and
-exporting of themes is planned.
-
-This is still work in progress, contributions are welcome.
-
-You can install the plugin from the [update site](http://fhd.github.com/eclipse-color-theme).
-
-Currently supported editors:
+Eclipse Color Theme currently supports the following editors:
 
 * Text
 * Java
