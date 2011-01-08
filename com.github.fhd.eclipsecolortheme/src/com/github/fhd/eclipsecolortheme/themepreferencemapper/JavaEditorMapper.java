@@ -32,10 +32,6 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                 "semanticHighlighting.localVariableDeclaration.enabled", false);
 
         putPreference("java_default", theme.get("foreground"));
-        putPreference("content_assist_proposals_foreground",
-                      theme.get("contentAssistProposalsForeground"));
-        putPreference("content_assist_proposals_background",
-                      theme.get("contentAssistProposalsBackground"));
         putPreference("java_single_line_comment",
                       theme.get("singleLineComment"));
         putPreference("java_multi_line_comment", theme.get("multiLineComment"));
@@ -66,10 +62,6 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                       theme.get("localVariableDeclaration"));
         putPreference("semanticHighlighting.staticFinalField.color",
                       theme.get("staticFinalField"));
-        putPreference("content_assist_parameters_foreground",
-                      theme.get("contentAssistParametersForeground"));
-        putPreference("content_assist_parameters_background",
-                      theme.get("contentAssistParametersBackground"));
         putPreference("semanticHighlighting.autoboxing.color",
                       theme.get("autoboxing"));
     }
@@ -133,8 +125,6 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                 "semanticHighlighting.localVariableDeclaration.enabled");
         preferences.remove("semanticHighlighting.methodDeclarationName.bold");
         preferences.remove("java_default");
-        preferences.remove("content_assist_proposals_foreground");
-        preferences.remove("content_assist_proposals_background");
         preferences.remove("java_single_line_comment");
         preferences.remove("java_multi_line_comment");
         preferences.remove("java_comment_task_tag");
@@ -157,8 +147,6 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.remove(
                 "semanticHighlighting.localVariableDeclaration.color");
         preferences.remove("semanticHighlighting.staticFinalField.color");
-        preferences.remove("content_assist_parameters_foreground");
-        preferences.remove("content_assist_parameters_background");
         preferences.remove("semanticHighlighting.autoboxing.color");
     }        
 }

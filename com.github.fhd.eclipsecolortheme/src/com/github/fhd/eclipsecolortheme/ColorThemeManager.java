@@ -42,8 +42,6 @@ public class ColorThemeManager {
         theme.put("selectionBackground", color(139, 139, 255));
         theme.put("currentLine", color(45, 45, 68));
         theme.put("lineNumber", color(43, 145, 175));
-        theme.put("contentAssistProposalsForeground", color(0, 0, 0));
-        theme.put("contentAssistProposalsBackground", color(255, 255, 255));
         theme.put("sourceHoverBackground", color(255, 255, 255));;
         theme.put("singleLineComment", color(205, 139, 0));
         theme.put("multiLineComment", color(205, 139, 0));
@@ -75,10 +73,6 @@ public class ColorThemeManager {
         theme.put("findScope", color(188, 173, 173));
         theme.put("currentIP", color(26, 89, 26));
         theme.put("secondaryIP", color(26, 89, 26));
-        theme.put("contentAssistProposalsForeground", color(0, 0, 0));
-        theme.put("contentAssistProposalsBackground", color(255, 255, 255));
-        theme.put("contentAssistParametersForeground", color(246, 243, 232));
-        theme.put("contentAssistParametersBackground", color(36, 36, 36));
         theme.put("sourceHoverBackground", color(161, 152, 121));
         theme.put("singleLineComment", color(127, 159, 127));
         theme.put("multiLineComment", color(127, 159, 127));
