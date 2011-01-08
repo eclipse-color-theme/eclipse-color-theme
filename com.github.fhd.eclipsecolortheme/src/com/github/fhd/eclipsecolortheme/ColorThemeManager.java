@@ -21,6 +21,9 @@ public class ColorThemeManager {
         themes.put("Inkpot", createInkpotTheme());
         themes.put("Zenburn", createZenburnTheme());
 
+        for (Map<String, String> theme : themes.values())
+            amendTheme(theme);
+
         editors = new HashSet<ThemePreferenceMapper>();
         editors.add(new TextEditorMapper());
         editors.add(new JavaEditorMapper());
@@ -107,6 +110,21 @@ public class ColorThemeManager {
 
     private static String color(int r, int g, int b) {
         return r + "," + g + "," + b;
+    }
+
+    private static void amendTheme(Map<String, String> theme) {
+        applyDefault(theme, "method", "foreground");
+        applyDefault(theme, "field", "foreground");
+        applyDefault(theme, "javadoc", "multiLineComment");
+        applyDefault(theme, "javadocLink", "javadoc");
+        applyDefault(theme, "javadocTag", "javadoc");
+        applyDefault(theme, "javadocKeyword", "javadoc");
+    }
+
+    private static void applyDefault(Map<String, String> theme, String key,
+                                     String defaultKey) {
+        if (!theme.containsKey(key))
+            theme.put(key, theme.get(defaultKey));
     }
     
     /**

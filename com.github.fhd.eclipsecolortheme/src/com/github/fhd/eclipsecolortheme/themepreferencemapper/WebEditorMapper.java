@@ -49,8 +49,7 @@ public class WebEditorMapper extends ThemePreferenceMapper {
             putPreference("doctypeName", entry(theme.get("method")));
             putPreference("doctypeExternalPubref", entry(theme.get("method")));
             putPreference("doctypeExtrenalSysref", entry(theme.get("method")));
-            putPreference("doctypeExternalId",
-                          entry(theme.get("staticFinalField")));
+            putPreference("doctypeExternalId", entry(theme.get("method")));
             if (Type.XML.equals(editorType)) {
                 putPreference("declBorder", entry(theme.get("method")));
                 putPreference("cdataBorder", entry(theme.get("method")));

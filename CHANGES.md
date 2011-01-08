@@ -1,5 +1,6 @@
 0.4.0
 ==================
+* Made missing color entries default to other entries (improved Inkpot).
 
 0.3.0 (2011-01-08)
 ==================
