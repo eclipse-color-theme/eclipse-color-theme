@@ -2,7 +2,7 @@
 <feature
       id="com.github.fhd.eclipsecolortheme.feature"
       label="Eclipse Color Theme"
-      version="0.3.0.qualifier"
+      version="0.4.0.qualifier"
       provider-name="Felix H. Dahlke">
 
    <description url="http://github.com/fhd/eclipse-color-theme">
