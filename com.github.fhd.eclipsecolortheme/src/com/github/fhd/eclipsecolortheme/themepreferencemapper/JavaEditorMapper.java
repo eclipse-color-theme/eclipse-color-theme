@@ -18,10 +18,10 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean(
                 "semanticHighlighting.staticMethodInvocation.enabled", false);
         preferences.putBoolean("semanticHighlighting.method.enabled", false);
-        preferences.putBoolean("semanticHighlighting.annotation.enabled",
-                               false);
         preferences.putBoolean(
                 "semanticHighlighting.methodDeclarationName.enabled", false);
+        preferences.putBoolean("semanticHighlighting.annotation.enabled",
+                               false);
         preferences.putBoolean("semanticHighlighting.field.enabled", false);
         preferences.putBoolean("semanticHighlighting.deprecatedMember.enabled",
                                false);
@@ -54,6 +54,8 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.method.color", theme.get("method"));
         putPreference("semanticHighlighting.methodDeclarationName.color",
                       theme.get("methodDeclarationName"));
+        putPreference("semanticHighlighting.annotation.color",
+                      theme.get("annotation"));
         putPreference("java_doc_default", theme.get("javadoc"));
         putPreference("java_doc_link", theme.get("javadocLink"));
         putPreference("java_doc_keyword", theme.get("javadocKeyword"));
@@ -91,12 +93,12 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                     true);
         else if ("semanticHighlighting.method.color".equals(key))
             preferences.putBoolean("semanticHighlighting.method.enabled", true);
-        else if ("semanticHighlighting.annotation.color".equals(key))
-            preferences.putBoolean("semanticHighlighting.annotation.enabled",
-                                   true);
         else if ("semanticHighlighting.methodDeclarationName.color".equals(key))
             preferences.putBoolean(
                     "semanticHighlighting.methodDeclarationName.enabled", true);
+        else if ("semanticHighlighting.annotation.color".equals(key))
+            preferences.putBoolean("semanticHighlighting.annotation.enabled",
+                                   true);
         else if ("semanticHighlighting.field.color".equals(key))
             preferences.putBoolean("semanticHighlighting.field.enabled", true);
         else if ("semanticHighlighting.deprecatedMember.color".equals(key))
@@ -122,9 +124,9 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.remove(
                 "semanticHighlighting.staticMethodInvocation.enabled");
         preferences.remove("semanticHighlighting.method.enabled");
-        preferences.remove("semanticHighlighting.annotation.enabled");
         preferences.remove(
                 "semanticHighlighting.methodDeclarationName.enabled");
+        preferences.remove("semanticHighlighting.annotation.enabled");
         preferences.remove("semanticHighlighting.field.enabled");
         preferences.remove("semanticHighlighting.deprecatedMember.enabled");
         preferences.remove("semanticHighlighting.number.enabled");
