@@ -1,6 +1,7 @@
 0.3.0
 ==================
 * Added support for the HTML editor.
+* Added support for the CSS editor.
 
 0.2.1 (2011-01-07)
 ==================
