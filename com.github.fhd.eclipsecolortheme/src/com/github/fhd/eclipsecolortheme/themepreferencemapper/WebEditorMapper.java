@@ -36,7 +36,7 @@ public class WebEditorMapper extends ThemePreferenceMapper {
         case HTML:
             putPreference("tagBorder", entry(theme.get("method")));
             putPreference("tagName", entry(theme.get("method")));
-            putPreference("tagAttributeName", entry(theme.get("field")));
+            putPreference("tagAttributeName", entry(theme.get("keyword")));
             putPreference("tagAttributeEquals",
                           entry(theme.get("foreground")));
             putPreference("tagAttributeValue",
