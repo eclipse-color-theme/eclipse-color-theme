@@ -1,6 +1,8 @@
-0.4.0
+0.3.1 (2011-01-09)
 ==================
 * Made missing color entries default to other entries (improved Inkpot).
+* Improved XML/HTML mapping.
+* Removed content assist related color theme entries.
 
 0.3.0 (2011-01-08)
 ==================
