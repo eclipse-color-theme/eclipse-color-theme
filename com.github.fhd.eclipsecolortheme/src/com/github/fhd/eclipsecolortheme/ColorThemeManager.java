@@ -7,10 +7,7 @@ import org.osgi.service.prefs.*;
 import com.github.fhd.eclipsecolortheme.themepreferencemapper.*;
 import com.github.fhd.eclipsecolortheme.themepreferencemapper.WebEditorMapper.Type;
 
-/**
- * Loads and applies color themes.
- * TODO: Make the keys less Java specific and less redundant.
- */
+/** Loads and applies color themes. */
 public class ColorThemeManager {
     private Map<String, Map<String, String>> themes;
     private Set<ThemePreferenceMapper> editors;
