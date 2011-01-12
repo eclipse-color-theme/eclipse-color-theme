@@ -1,4 +1,4 @@
-package com.github.fhd.eclipsecolortheme.themepreferencemapper;
+package com.github.fhd.eclipsecolortheme.mapper;
 
 import java.util.*;
 

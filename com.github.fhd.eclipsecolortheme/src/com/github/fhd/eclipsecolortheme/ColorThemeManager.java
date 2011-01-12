@@ -4,8 +4,8 @@ import java.util.*;
 
 import org.osgi.service.prefs.*;
 
-import com.github.fhd.eclipsecolortheme.themepreferencemapper.*;
-import com.github.fhd.eclipsecolortheme.themepreferencemapper.WebEditorMapper.Type;
+import com.github.fhd.eclipsecolortheme.mapper.*;
+import com.github.fhd.eclipsecolortheme.mapper.WebEditorMapper.*;
 
 /** Loads and applies color themes. */
 public class ColorThemeManager {
