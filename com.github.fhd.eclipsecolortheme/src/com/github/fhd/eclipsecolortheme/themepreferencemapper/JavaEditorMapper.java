@@ -62,8 +62,6 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                       theme.get("localVariableDeclaration"));
         putPreference("semanticHighlighting.staticFinalField.color",
                       theme.get("staticFinalField"));
-        putPreference("semanticHighlighting.autoboxing.color",
-                      theme.get("autoboxing"));
     }
 
     @Override
@@ -147,6 +145,5 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.remove(
                 "semanticHighlighting.localVariableDeclaration.color");
         preferences.remove("semanticHighlighting.staticFinalField.color");
-        preferences.remove("semanticHighlighting.autoboxing.color");
     }        
 }

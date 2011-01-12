@@ -88,7 +88,6 @@ public class ColorThemeManager {
         theme.put("string", color(204, 147, 147));
         theme.put("operator", color(240, 239, 208));
         theme.put("keyword", color(239, 239, 175));
-        theme.put("autoboxing", color(255, 187, 187));
         theme.put("annotation", color(128, 128, 128));
         theme.put("staticMethodInvocation", color(196, 196, 183));
         theme.put("localVariable", color(212, 196, 169));
