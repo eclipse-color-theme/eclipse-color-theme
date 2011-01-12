@@ -29,6 +29,7 @@ public class ColorThemeManager {
         editors.add(new WebEditorMapper(Type.HTML));
         editors.add(new WebEditorMapper(Type.CSS));
         editors.add(new JavaScriptEditorMapper());
+        editors.add(new CppEditorMapper());
     }
 
     private static Map<String, String> createInkpotTheme() {

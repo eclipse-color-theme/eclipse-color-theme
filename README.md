@@ -36,6 +36,7 @@ Eclipse Color Theme currently supports the following editors:
 * HTML
 * CSS
 * JavaScript
+* C++
 
 Available themes:
 
