@@ -35,7 +35,11 @@ public class TextEditorMapper extends ThemePreferenceMapper {
         putPreference("filteredSearchResultIndicationColor",
                       entry(theme.get("filteredSearchResultIndication")));
         putPreference("occurrenceIndicationColor",
-                      entry(theme.get("occurenceIndication")));
+                      entry(theme.get("occurrenceIndication")));
+        putPreference("javaScriptOccurrenceIndicationColor",
+                      entry(theme.get("occurrenceIndication")));
+        putPreference("org.eclipse.cdt.ui.occurrenceIndicationColor",
+                      entry(theme.get("occurrenceIndication")));
         putPreference("AbstractTextEditor.Color.FindScope",
                       entry(theme.get("findScope")));
         putPreference("secondaryIPColor", entry(theme.get("secondaryIP")));

@@ -2,6 +2,7 @@
 ==================
 * Added support for the C++ editor.
 * Moved colour themes to XML files.
+* Fixed mark occurrence highlighting.
 
 0.3.1 (2011-01-09)
 ==================

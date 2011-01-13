@@ -6,6 +6,7 @@
     <selectionBackground color="#8B8BFF"/>
     <currentLine color="#2D2D44"/>
     <lineNumber color="#2B91AF"/>
+    <occurrenceIndication color="#616161"/>
     <sourceHoverBackground color="#FFFFFF"/>
     <singleLineComment color="#CD8B00"/>
     <multiLineComment color="#CD8B00"/>
