@@ -23,8 +23,7 @@ public class ColorThemeManager {
     private Map<String, Map<String, String>> themes;
     private Set<ThemePreferenceMapper> editors;
 
-    /** Creates a new color theme manager. 
-     * @throws URISyntaxException */
+    /** Creates a new color theme manager. */
     public ColorThemeManager() {
         themes = new HashMap<String, Map<String, String>>();
         for (String themeFile : THEME_FILES) {
