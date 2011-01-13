@@ -24,13 +24,25 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean("semanticHighlighting.annotation.enabled",
                                false);
         preferences.putBoolean("semanticHighlighting.field.enabled", false);
-        preferences.putBoolean("semanticHighlighting.deprecatedMember.enabled",
-                               false);
+        preferences.putBoolean(
+                "semanticHighlighting.deprecatedMember.enabled", false);
         preferences.putBoolean("semanticHighlighting.number.enabled", false);
+        preferences.putBoolean(
+                "semanticHighlighting.inheritedMethodInvocation.enabled",
+                false);
+        preferences.putBoolean(
+                "semanticHighlighting.abstractMethodInvocation.enabled",
+                false);
         preferences.putBoolean("semanticHighlighting.localVariable.enabled",
                                false);
         preferences.putBoolean(
                 "semanticHighlighting.localVariableDeclaration.enabled", false);
+        preferences.putBoolean("semanticHighlighting.typeArgument.enabled",
+                               false);
+        preferences.putBoolean("semanticHighlighting.typeParameter.enabled",
+                               false);
+        preferences.putBoolean(
+                "semanticHighlighting.parameterVariable.enabled", false);
 
         putPreference("java_default", entry(theme.get("foreground")));
         putPreference("java_single_line_comment",

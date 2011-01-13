@@ -11,18 +11,38 @@ public class CppEditorMapper extends ThemePreferenceMapper {
 
     @Override
     public void map(Map<String, String> theme) {
-        preferences.putBoolean("semanticHighlighting.function.enabled", false);
+        preferences.putBoolean("semanticHighlighting.class.enabled", false);
+        preferences.putBoolean("semanticHighlighting.staticField.enabled",
+                               false);
+        preferences.putBoolean("semanticHighlighting.interface.enabled", false);
         preferences.putBoolean("semanticHighlighting.enum.enabled", false);
         preferences.putBoolean(
-                "semanticHighlighting.localVariableDeclaration.enabled", false);
+                "semanticHighlighting.staticMethodInvocation.enabled", false);
+        preferences.putBoolean("semanticHighlighting.method.enabled", false);
+        preferences.putBoolean(
+                "semanticHighlighting.methodDeclarationName.enabled", false);
+        preferences.putBoolean("semanticHighlighting.annotation.enabled",
+                               false);
+        preferences.putBoolean("semanticHighlighting.field.enabled", false);
+        preferences.putBoolean("semanticHighlighting.deprecatedMember.enabled",
+                               false);
+        preferences.putBoolean("semanticHighlighting.number.enabled", false);
+        preferences.putBoolean(
+                "semanticHighlighting.inheritedMethodInvocation.enabled",
+                false);
+        preferences.putBoolean(
+                "semanticHighlighting.abstractMethodInvocation.enabled", false);
         preferences.putBoolean("semanticHighlighting.localVariable.enabled",
                                false);
-        preferences.putBoolean("semanticHighlighting.macroDefinition.enabled",
+        preferences.putBoolean(
+                "semanticHighlighting.localVariableDeclaration.enabled", false);
+        preferences.putBoolean("semanticHighlighting.typeArgument.enabled",
                                false);
-        preferences.putBoolean("semanticHighlighting.namespace.enabled", false);        
         preferences.putBoolean("semanticHighlighting.typeParameter.enabled",
                                false);
-        
+        preferences.putBoolean("semanticHighlighting.parameterVariable.enabled",
+                               false);
+
         putPreference("c_default", entry(theme.get("foreground")));
         putPreference("c_braces", entry(theme.get("bracket")));
         putPreference("c_type", entry(theme.get("keyword")));
