@@ -8,6 +8,7 @@ conveniently and without side effects. Support for importing and
 exporting of themes is planned.
 
 You can install the plugin from the [update site](http://fhd.github.com/eclipse-color-theme).
+After installing, go to *Window->Preferences->Color Theme* to change the color theme.
 
 When updating the plugin via Eclipse, go to the preferences page and
 press *OK* once, otherwise you won't see any changes. I'm planning to
