@@ -1,4 +1,3 @@
-* Define themes in files instead of hard coding them.
 * Make it possible to import/export theme files.
 * Add more themes.
 * Add theme previews.

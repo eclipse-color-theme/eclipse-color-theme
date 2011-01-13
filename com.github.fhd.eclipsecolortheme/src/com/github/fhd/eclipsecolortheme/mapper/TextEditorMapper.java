@@ -23,27 +23,27 @@ public class TextEditorMapper extends ThemePreferenceMapper {
                 true);
 
         putPreference("AbstractTextEditor.Color.Foreground",
-                      theme.get("foreground"));
+                      entry(theme.get("foreground")));
         putPreference("AbstractTextEditor.Color.Background",
-                      theme.get("background"));
+                      entry(theme.get("background")));
         putPreference("AbstractTextEditor.Color.SelectionForeground",
-                      theme.get("selectionForeground"));
+                      entry(theme.get("selectionForeground")));
         putPreference("AbstractTextEditor.Color.SelectionBackground",
-                      theme.get("selectionBackground"));
-        putPreference("currentLineColor", theme.get("currentLine"));
-        putPreference("lineNumberColor", theme.get("lineNumber"));
+                      entry(theme.get("selectionBackground")));
+        putPreference("currentLineColor", entry(theme.get("currentLine")));
+        putPreference("lineNumberColor", entry(theme.get("lineNumber")));
         putPreference("filteredSearchResultIndicationColor",
-                      theme.get("filteredSearchResultIndication"));
+                      entry(theme.get("filteredSearchResultIndication")));
         putPreference("occurrenceIndicationColor",
-                      theme.get("occurenceIndication"));
+                      entry(theme.get("occurenceIndication")));
         putPreference("AbstractTextEditor.Color.FindScope",
-                      theme.get("findScope"));
-        putPreference("secondaryIPColor", theme.get("secondaryIP"));
+                      entry(theme.get("findScope")));
+        putPreference("secondaryIPColor", entry(theme.get("secondaryIP")));
         putPreference("writeOccurrenceIndicationColor",
-                      theme.get("writeOccurrenceIndication"));
-        putPreference("currentIPColor", theme.get("currentIP"));
+                      entry(theme.get("writeOccurrenceIndication")));
+        putPreference("currentIPColor", entry(theme.get("currentIP")));
         putPreference("searchResultIndicationColor",
-                      theme.get("searchResultIndication"));
+                      entry(theme.get("searchResultIndication")));
     }
 
     @Override

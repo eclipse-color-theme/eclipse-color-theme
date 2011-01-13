@@ -1,6 +1,7 @@
 0.4.0
 ==================
 * Added support for the C++ editor.
+* Moved colour themes to XML files.
 
 0.3.1 (2011-01-09)
 ==================

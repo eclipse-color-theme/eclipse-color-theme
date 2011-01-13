@@ -85,30 +85,23 @@ public class WebEditorMapper extends ThemePreferenceMapper {
         }
     }
 
-    private static String entry(String rgb) {
-        return (rgb == null) ? null 
-                             : "#" + rgbToHex(rgb)
-                               + " | null | false | false | false | false";
+    @Override
+    protected String entry(String color) {
+        return (color == null) ? null 
+                               : color.toLowerCase()
+                                 + " | null | false | false | false | false";
     }
 
-    private static String boldEntry(String rgb) {
-        return (rgb == null) ? null
-                             : "#" + rgbToHex(rgb)
-                               + " | null | true | false| false | false";
+    private static String boldEntry(String color) {
+        return (color == null) ? null
+                               : color.toLowerCase()
+                                 + " | null | true | false| false | false";
     }
     
-    private static String italicEntry(String rgb) {
-        return (rgb == null) ? null
-                             : "#" + rgbToHex(rgb)
-                               + " | null | false | true | false | false";
-    }
-    
-    private static String rgbToHex(String rgb) {
-        String[] channels = rgb.split(",");
-        int r = Integer.parseInt(channels[0]);
-        int g = Integer.parseInt(channels[1]);
-        int b = Integer.parseInt(channels[2]);
-        return Integer.toHexString(r << 16 | g << 8 | b);
+    private static String italicEntry(String color) {
+        return (color == null) ? null
+                               : color.toLowerCase()
+                                 + " | null | false | true | false | false";
     }
 
     @Override

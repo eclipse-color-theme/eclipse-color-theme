@@ -11,11 +11,12 @@ public class JavaPropertiesEditorMapper extends ThemePreferenceMapper {
 
     @Override
     public void map(Map<String, String> theme) {
-        putPreference("pf_coloring_comment", theme.get("singleLineComment"));
-        putPreference("pf_coloring_key", theme.get("foreground"));
-        putPreference("pf_coloring_assignment", theme.get("foreground"));
-        putPreference("pf_coloring_value", theme.get("string"));
-        putPreference("pf_coloring_argument", theme.get("keyword"));
+        putPreference("pf_coloring_comment",
+                      entry(theme.get("singleLineComment")));
+        putPreference("pf_coloring_key", entry(theme.get("foreground")));
+        putPreference("pf_coloring_assignment", entry(theme.get("foreground")));
+        putPreference("pf_coloring_value", entry(theme.get("string")));
+        putPreference("pf_coloring_argument", entry(theme.get("keyword")));
     }
 
     @Override

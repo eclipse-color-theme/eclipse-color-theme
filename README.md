@@ -48,13 +48,13 @@ Both converted from [these preferences files](https://eclipsecolorthemes.jottit.
 Adding a theme
 --------------
 
-Right now, the themes are all hard coded, so you'll have to change the
-code to add a new one.
+To create a new theme, you'll have get the source and build the plugin
+until theme importing/exporting is implemented.
 
-Add a new method to the `ColorThemeManager` class (like Inkpot and
-Zenburn) and add them to the theme map. You can then define the
-colours, have a look at Zenburn for all currently available keys. The
-keys are quite Java-specific right now, but the entries are mapped to
+Create an XML file alongside *zenburn.xml* and change the colour values until
+you're satisfied.
+
+The keys are quite Java-specific right now, but the entries are mapped to
 other editors (e.g. the *method* key is used for XML/HTML tags).
 
 Adding an editor

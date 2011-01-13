@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme name="Inkpot" version="0.1">
+    <foreground color="#CFBFAD"/>
+    <background color="#1F1F27"/>
+    <selectionForeground color="#404040"/>
+    <selectionBackground color="#8B8BFF"/>
+    <currentLine color="#2D2D44"/>
+    <lineNumber color="#2B91AF"/>
+    <sourceHoverBackground color="#FFFFFF"/>
+    <singleLineComment color="#CD8B00"/>
+    <multiLineComment color="#CD8B00"/>
+    <commentTaskTag color="#FF8BFF"/>
+    <class color="#87CEFA"/>
+    <interface color="#87FAC4"/>
+    <method color="#87CEFA"/>
+    <methodDeclarationName color="#CFBFAD"/>
+    <bracket color="#CFBFAD"/>
+    <number color="#FFCD8B"/>
+    <string color="#FFCD8B"/>
+    <operator color="#CFBFAD"/>
+    <keyword color="#808BED"/>
+</colorTheme>

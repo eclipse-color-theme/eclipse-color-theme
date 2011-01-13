@@ -53,7 +53,7 @@ public abstract class ThemePreferenceMapper {
     /**
      * Modifies the associated Eclipse preferences to set any values required
      * for @a key to take effect.
-     * @param key The key whose dependent should be movied. 
+     * @param key The key whose dependent entries should be set.
      */
     protected abstract void putDependentEntries(String key);
 
@@ -62,4 +62,30 @@ public abstract class ThemePreferenceMapper {
      * This resets every preference to its default value.
      */
     public abstract void clear();
+
+    /**
+     * Creates a preference entry for this editor.
+     * @param color The color to set.
+     * @return A preference entry.
+     */
+    protected String entry(String color) {
+        return hexToRGB(color);
+    }
+
+    /**
+     * Converts a hexadecimal color value to an RGB string.
+     * @param hexColor Hexadecimal colour value starting with a hash, as common
+     *                 in CSS.
+     * @return Comma-separated list of red, green and blue decimal values.
+     */
+    protected String hexToRGB(String hexColor) {
+        String hexR = hexColor.substring(1, 3);
+        String hexG = hexColor.substring(3, 5);
+        String hexB = hexColor.substring(5, 7);
+        return hexToDec(hexR) + ", " + hexToDec(hexG) + ", " + hexToDec(hexB);
+    }
+
+    private String hexToDec(String hex) {
+        return String.valueOf(Integer.parseInt(hex, 16));
+    }
 }

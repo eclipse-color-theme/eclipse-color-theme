@@ -22,53 +22,59 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean("semanticHighlighting.templateParameter.enabled",
                                false);
         
-        putPreference("c_default", theme.get("foreground"));
-        putPreference("c_braces", theme.get("bracket"));
-        putPreference("c_type", theme.get("keyword"));
-        putPreference("c_keyword", theme.get("keyword"));
-        putPreference("c_numbers", theme.get("number"));
-        putPreference("c_operators", theme.get("operator"));
-        putPreference("c_string", theme.get("string"));
-        putPreference("c_multi_line_comment", theme.get("multiLineComment"));
-        putPreference("c_single_line_comment", theme.get("singleLineComment"));
-        putPreference("c_comment_task_tag", theme.get("commentTaskTag"));
-        putPreference("asm_directive", theme.get("keyword"));
-        putPreference("asm_label", theme.get("foreground"));
-        putPreference("pp_directive", theme.get("keyword"));
-        putPreference("pp_header", theme.get("string"));
-        putPreference("pp_default", theme.get("foreground"));
-        putPreference("semanticHighlighting.class.color", theme.get("class"));
+        putPreference("c_default", entry(theme.get("foreground")));
+        putPreference("c_braces", entry(theme.get("bracket")));
+        putPreference("c_type", entry(theme.get("keyword")));
+        putPreference("c_keyword", entry(theme.get("keyword")));
+        putPreference("c_numbers", entry(theme.get("number")));
+        putPreference("c_operators", entry(theme.get("operator")));
+        putPreference("c_string", entry(theme.get("string")));
+        putPreference("c_multi_line_comment",
+                      entry(theme.get("multiLineComment")));
+        putPreference("c_single_line_comment",
+                      entry(theme.get("singleLineComment")));
+        putPreference("c_comment_task_tag", entry(theme.get("commentTaskTag")));
+        putPreference("asm_directive", entry(theme.get("keyword")));
+        putPreference("asm_label", entry(theme.get("foreground")));
+        putPreference("pp_directive", entry(theme.get("keyword")));
+        putPreference("pp_header", entry(theme.get("string")));
+        putPreference("pp_default", entry(theme.get("foreground")));
+        putPreference("semanticHighlighting.class.color",
+                      entry(theme.get("class")));
         putPreference("semanticHighlighting.enumerator.color",
-                      theme.get("staticFinalField"));
+                      entry(theme.get("staticFinalField")));
         putPreference("semanticHighlighting.externalSDK.color",
-                      theme.get("staticMethodInvocation"));
-        putPreference("semanticHighlighting.field.color", theme.get("field"));
+                      entry(theme.get("staticMethodInvocation")));
+        putPreference("semanticHighlighting.field.color",
+                      entry(theme.get("field")));
         putPreference("semanticHighlighting.functionDeclaration.color",
-                      theme.get("methodDeclarationName"));
+                      entry(theme.get("methodDeclarationName")));
         putPreference("semanticHighlighting.function.color",
-                      theme.get("staticMethodInvocation"));
+                      entry(theme.get("staticMethodInvocation")));
         putPreference("semanticHighlighting.localVariableDeclaration.color",
-                      theme.get("localVariableDeclaration"));
+                      entry(theme.get("localVariableDeclaration")));
         putPreference("semanticHighlighting.localVariable.color",
-                      theme.get("localVariable"));
+                      entry(theme.get("localVariable")));
         putPreference("semanticHighlighting.macroDefinition.color",
-                      theme.get("methodDeclarationName"));
+                      entry(theme.get("methodDeclarationName")));
         putPreference("semanticHighlighting.methodDeclaration.color",
-                      theme.get("methodDeclarationName"));
-        putPreference("semanticHighlighting.method.color", theme.get("method"));
+                      entry(theme.get("methodDeclarationName")));
+        putPreference("semanticHighlighting.method.color",
+                      entry(theme.get("method")));
         putPreference("semanticHighlighting.namespace.color",
-                      theme.get("class"));
+                      entry(theme.get("class")));
         putPreference("semanticHighlighting.staticMethod.color",
-                      theme.get("staticMethodInvocation"));
+                      entry(theme.get("staticMethodInvocation")));
         putPreference("semanticHighlighting.staticField.color",
-                      theme.get("staticField"));
-        putPreference("semanticHighlighting.typedef.color", theme.get("class"));
+                      entry(theme.get("staticField")));
+        putPreference("semanticHighlighting.typedef.color",
+                      entry(theme.get("class")));
         putPreference("org.eclipse.cdt.internal.ui.text.doctools.multi",
-                      theme.get("javadoc"));
+                      entry(theme.get("javadoc")));
         putPreference("org.eclipse.cdt.internal.ui.text.doctools.single",
-                      theme.get("javadoc"));
+                      entry(theme.get("javadoc")));
         putPreference("org.eclipse.cdt.internal.ui.text.doctools.recognizedTag",
-                      theme.get("javadocTag"));
+                      entry(theme.get("javadocTag")));
     }
 
     @Override
