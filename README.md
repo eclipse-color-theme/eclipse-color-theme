@@ -9,6 +9,10 @@ exporting of themes is planned.
 
 You can install the plugin from the [update site](http://fhd.github.com/eclipse-color-theme).
 
+When updating the plugin via Eclipse, go to the preferences page and
+press *OK* once, otherwise you won't see any changes. I'm planning to
+fix this.
+
 [![Flattr this](http://api.flattr.com/button/flattr-badge-large.png "Flattr this")](http://flattr.com/thing/111560/Eclipse-Color-Theme)
 
 Rationale
@@ -48,14 +52,18 @@ Both converted from [these preferences files](https://eclipsecolorthemes.jottit.
 Adding a theme
 --------------
 
-To create a new theme, you'll have get the source and build the plugin
-until theme importing/exporting is implemented.
+To create a new theme, you'll have to get the source and build the
+plugin until theme importing/exporting is implemented.
 
-Create an XML file alongside *zenburn.xml* and change the colour values until
-you're satisfied.
+Create an XML file in the *com.github.fhd.eclipsecolortheme.themes*
+package next to *zenburn.xml* and change the colour values until
+you're satisfied. Then add the file name to the constant `FILE_NAMES`
+in `ColorThemeManager`.
 
-The keys are quite Java-specific right now, but the entries are mapped to
-other editors (e.g. the *method* key is used for XML/HTML tags).
+The keys are quite Java-specific right now, but the entries are mapped
+to other editors (e.g. the *method* key is used for XML/HTML
+tags). None of the current file uses all keys, so you'll have to look
+at each to see what's possible.
 
 Adding an editor
 ----------------
