@@ -69,7 +69,7 @@ public abstract class ThemePreferenceMapper {
      * @return A preference entry.
      */
     protected String entry(String color) {
-        return hexToRGB(color);
+        return (color == null) ? null : hexToRGB(color);
     }
 
     /**

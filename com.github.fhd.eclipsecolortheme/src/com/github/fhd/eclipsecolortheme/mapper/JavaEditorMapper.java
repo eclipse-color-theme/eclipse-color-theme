@@ -15,6 +15,7 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean("semanticHighlighting.staticField.enabled",
                                false);
         preferences.putBoolean("semanticHighlighting.interface.enabled", false);
+        preferences.putBoolean("semanticHighlighting.enum.enabled", false);
         preferences.putBoolean(
                 "semanticHighlighting.staticMethodInvocation.enabled", false);
         preferences.putBoolean("semanticHighlighting.method.enabled", false);
@@ -51,6 +52,8 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                       entry(theme.get("class")));
         putPreference("semanticHighlighting.interface.color",
                       entry(theme.get("interface")));
+        putPreference("semanticHighlighting.enum.color",
+                      entry(theme.get("enum")));
         putPreference("semanticHighlighting.method.color",
                       entry(theme.get("method")));
         putPreference("semanticHighlighting.methodDeclarationName.color",
@@ -63,8 +66,18 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         putPreference("java_doc_tag", entry(theme.get("javadocTag")));
         putPreference("semanticHighlighting.localVariable.color",
                       entry(theme.get("localVariable")));
+        putPreference("semanticHighlighting.inheritedMethodInvocation.color",
+                      entry(theme.get("inheritedMethodInvocation")));
+        putPreference("semanticHighlighting.abstractMethodInvocation.color",
+                      entry(theme.get("abstractMethodInvocation")));
         putPreference("semanticHighlighting.localVariableDeclaration.color",
                       entry(theme.get("localVariableDeclaration")));
+        putPreference("semanticHighlighting.typeArgument.color",
+                      entry(theme.get("typeArgument")));
+        putPreference("semanticHighlighting.typeParameter.color",
+                      entry(theme.get("typeParameter")));
+        putPreference("semanticHighlighting.parameterVariable.color",
+                      entry(theme.get("parameterVariable")));
         putPreference("semanticHighlighting.staticFinalField.color",
                       entry(theme.get("staticFinalField")));
     }
@@ -78,6 +91,9 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                                    true);
         else if ("semanticHighlighting.interface.color".equals(key))
             preferences.putBoolean("semanticHighlighting.interface.enabled",
+                                   true);
+        else if ("semanticHighlighting.enum.color".equals(key))
+            preferences.putBoolean("semanticHighlighting.enum.enabled",
                                    true);
         else if ("semanticHighlighting.staticMethodInvocation.color"
                 .equals(key))
@@ -99,6 +115,16 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                     "semanticHighlighting.deprecatedMember.enabled", true);
         else if ("semanticHighlighting.number.color".equals(key))
             preferences.putBoolean("semanticHighlighting.number.enabled", true);
+        else if ("semanticHighlighting.inheritedMethodInvocation.color"
+                         .equals(key))
+            preferences.putBoolean(
+                    "semanticHighlighting.inheritedMethodInvocation.enabled",
+                    true);
+        else if ("semanticHighlighting.abstractMethodInvocation.color"
+                         .equals(key))
+            preferences.putBoolean(
+                    "semanticHighlighting.abstractMethodInvocation.enabled",
+                    true);
         else if ("semanticHighlighting.localVariable.color".equals(key))
             preferences.putBoolean("semanticHighlighting.localVariable.enabled",
                                    true);
@@ -107,6 +133,16 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
             preferences.putBoolean(
                     "semanticHighlighting.localVariableDeclaration.enabled",
                     true);
+        else if ("semanticHighlighting.typeArgument.color".equals(key))
+            preferences.putBoolean("semanticHighlighting.typeArgument.enabled",
+                                   true);
+        else if ("semanticHighlighting.typeParameter.color".equals(key))
+            preferences.putBoolean("semanticHighlighting.typeParameter.enabled",
+                                   true);
+        else if ("semanticHighlighting.parameterVariable.color".equals(key))
+            preferences.putBoolean(
+                    "semanticHighlighting.parameterVariable.enabled",
+                    true);
     }
 
     @Override
@@ -114,6 +150,7 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.remove("semanticHighlighting.class.enabled");
         preferences.remove("semanticHighlighting.staticField.enabled");
         preferences.remove("semanticHighlighting.interface.enabled");
+        preferences.remove("semanticHighlighting.enum.enabled");
         preferences.remove(
                 "semanticHighlighting.staticMethodInvocation.enabled");
         preferences.remove("semanticHighlighting.method.enabled");
@@ -146,9 +183,16 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.remove("java_doc_link");
         preferences.remove("java_doc_keyword");
         preferences.remove("java_doc_tag");
+        preferences.remove(
+                "semanticHighlighting.inheritedMethodInvocation.color");
+        preferences.remove(
+                "semanticHighlighting.abstractMethodInvocation.color");
         preferences.remove("semanticHighlighting.localVariable.color");
         preferences.remove(
                 "semanticHighlighting.localVariableDeclaration.color");
         preferences.remove("semanticHighlighting.staticFinalField.color");
+        preferences.remove("semanticHighlighting.typeArgument.color");
+        preferences.remove("semanticHighlighting.typeParameter.color");
+        preferences.remove("semanticHighlighting.parameterVariable.color");
     }        
 }

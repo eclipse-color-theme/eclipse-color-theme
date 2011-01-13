@@ -46,8 +46,9 @@ Available themes:
 
 * [Inkpot](http://www.vim.org/scripts/script.php?script_id=1143)
 * [Zenburn](http://slinky.imukuppi.org/zenburnpage/)
+* [Vibrant Ink](http://code.google.com/p/vibrant-ink-textmate/)
 
-Both converted from [these preferences files](https://eclipsecolorthemes.jottit.com/).
+All converted from [these preferences files](https://eclipsecolorthemes.jottit.com/).
 
 Adding a theme
 --------------

@@ -12,6 +12,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
     @Override
     public void map(Map<String, String> theme) {
         preferences.putBoolean("semanticHighlighting.function.enabled", false);
+        preferences.putBoolean("semanticHighlighting.enum.enabled", false);
         preferences.putBoolean(
                 "semanticHighlighting.localVariableDeclaration.enabled", false);
         preferences.putBoolean("semanticHighlighting.localVariable.enabled",
@@ -19,7 +20,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean("semanticHighlighting.macroDefinition.enabled",
                                false);
         preferences.putBoolean("semanticHighlighting.namespace.enabled", false);        
-        preferences.putBoolean("semanticHighlighting.templateParameter.enabled",
+        preferences.putBoolean("semanticHighlighting.typeParameter.enabled",
                                false);
         
         putPreference("c_default", entry(theme.get("foreground")));
@@ -41,6 +42,8 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         putPreference("pp_default", entry(theme.get("foreground")));
         putPreference("semanticHighlighting.class.color",
                       entry(theme.get("class")));
+        putPreference("semanticHighlighting.enum.color",
+                      entry(theme.get("enum")));
         putPreference("semanticHighlighting.enumerator.color",
                       entry(theme.get("staticFinalField")));
         putPreference("semanticHighlighting.externalSDK.color",
@@ -55,6 +58,10 @@ public class CppEditorMapper extends ThemePreferenceMapper {
                       entry(theme.get("localVariableDeclaration")));
         putPreference("semanticHighlighting.localVariable.color",
                       entry(theme.get("localVariable")));
+        putPreference("semanticHighlighting.typeParameter.color",
+                      entry(theme.get("typeParameter")));
+        putPreference("semanticHighlighting.parameterVariable.color",
+                      entry(theme.get("parameterVariable")));
         putPreference("semanticHighlighting.macroDefinition.color",
                       entry(theme.get("methodDeclarationName")));
         putPreference("semanticHighlighting.methodDeclaration.color",
@@ -62,7 +69,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.method.color",
                       entry(theme.get("method")));
         putPreference("semanticHighlighting.namespace.color",
-                      entry(theme.get("class")));
+                      entry(theme.get("interface")));
         putPreference("semanticHighlighting.staticMethod.color",
                       entry(theme.get("staticMethodInvocation")));
         putPreference("semanticHighlighting.staticField.color",
@@ -82,6 +89,9 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         if ("semanticHighlighting.function.color".equals(key))
             preferences.putBoolean("semanticHighlighting.function.enabled",
                                    true);
+        else if ("semanticHighlighting.enum.color".equals(key))
+            preferences.putBoolean("semanticHighlighting.enum.enabled",
+                                   true);
         else if ("semanticHighlighting.localVariableDeclaration.color"
                 .equals(key))
             preferences.putBoolean(
@@ -96,6 +106,12 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         else if ("semanticHighlighting.namespace.color".equals(key))
             preferences.putBoolean("semanticHighlighting.namespace.enabled",
                                    true);
+        else if ("semanticHighlighting.typeParameter.color".equals(key))
+            preferences.putBoolean("semanticHighlighting.typeParameter.enabled",
+                                   true);
+        else if ("semanticHighlighting.parameterVariable.color".equals(key))
+            preferences.putBoolean(
+                    "semanticHighlighting.parameterVariable.enabled", true);
     }
 
     @Override
@@ -106,7 +122,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         preferences.remove("semanticHighlighting.localVariable.enabled");
         preferences.remove("semanticHighlighting.macroDefinition.enabled");
         preferences.remove("semanticHighlighting.namespace.enabled");
-        preferences.remove("semanticHighlighting.templateParameter.enabled");
+        preferences.remove("semanticHighlighting.typeParameter.enabled");
         preferences.remove("c_default");
         preferences.remove("c_braces");
         preferences.remove("c_type");
@@ -123,6 +139,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         preferences.remove("pp_header");
         preferences.remove("pp_default");
         preferences.remove("semanticHighlighting.class.color");
+        preferences.remove("semanticHighlighting.enum.color");
         preferences.remove("semanticHighlighting.enumerator.color");
         preferences.remove("semanticHighlighting.externalSDK.color");
         preferences.remove("semanticHighlighting.field.color");
@@ -137,6 +154,8 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         preferences.remove("semanticHighlighting.namespace.color");
         preferences.remove("semanticHighlighting.staticMethod.color");
         preferences.remove("semanticHighlighting.staticField.color");
+        preferences.remove("semanticHighlighting.typeParameter.color");
+        preferences.remove("semanticHighlighting.parameterVariable.color");
         preferences.remove("semanticHighlighting.typedef.color");
         preferences.remove("org.eclipse.cdt.internal.ui.text.doctools.multi");
         preferences.remove("org.eclipse.cdt.internal.ui.text.doctools.single");

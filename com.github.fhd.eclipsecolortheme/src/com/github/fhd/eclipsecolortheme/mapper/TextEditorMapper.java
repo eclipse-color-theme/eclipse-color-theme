@@ -40,12 +40,15 @@ public class TextEditorMapper extends ThemePreferenceMapper {
                       entry(theme.get("occurrenceIndication")));
         putPreference("org.eclipse.cdt.ui.occurrenceIndicationColor",
                       entry(theme.get("occurrenceIndication")));
+        putPreference("deletionIndicationColor",
+                      entry(theme.get("deletionIndication")));
         putPreference("AbstractTextEditor.Color.FindScope",
                       entry(theme.get("findScope")));
+        putPreference("printMarginColor", entry(theme.get("printMargin")));
+        putPreference("currentIPColor", entry(theme.get("currentIP")));
         putPreference("secondaryIPColor", entry(theme.get("secondaryIP")));
         putPreference("writeOccurrenceIndicationColor",
                       entry(theme.get("writeOccurrenceIndication")));
-        putPreference("currentIPColor", entry(theme.get("currentIP")));
         putPreference("searchResultIndicationColor",
                       entry(theme.get("searchResultIndication")));
     }
@@ -84,10 +87,14 @@ public class TextEditorMapper extends ThemePreferenceMapper {
         preferences.remove("lineNumberColor");
         preferences.remove("filteredSearchResultIndicationColor");
         preferences.remove("occurrenceIndicationColor");
+        preferences.remove("javaScriptOccurrenceIndicationColor");
+        preferences.remove("org.eclipse.cdt.ui.occurrenceIndicationColor");
+        preferences.remove("deletionIndicationColor");
         preferences.remove("AbstractTextEditor.Color.FindScope");
+        preferences.remove("printMarginColor");
+        preferences.remove("currentIPColor");
         preferences.remove("secondaryIPColor");
         preferences.remove("writeOccurrenceIndicationColor");
-        preferences.remove("currentIPColor");
         preferences.remove("searchResultIndicationColor");
     }
 }
