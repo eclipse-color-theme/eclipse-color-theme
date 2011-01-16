@@ -1,7 +1,6 @@
 package com.github.fhd.eclipsecolortheme;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
 
 import javax.xml.parsers.*;
