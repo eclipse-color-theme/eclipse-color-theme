@@ -1,16 +1,31 @@
 package com.github.fhd.eclipsecolortheme;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
-import javax.xml.parsers.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
-import org.osgi.service.prefs.*;
-import org.w3c.dom.*;
-import org.xml.sax.*;
+import org.osgi.service.prefs.BackingStoreException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
-import com.github.fhd.eclipsecolortheme.mapper.*;
+import com.github.fhd.eclipsecolortheme.mapper.CppEditorMapper;
+import com.github.fhd.eclipsecolortheme.mapper.JavaEditorMapper;
+import com.github.fhd.eclipsecolortheme.mapper.JavaPropertiesEditorMapper;
+import com.github.fhd.eclipsecolortheme.mapper.JavaScriptEditorMapper;
+import com.github.fhd.eclipsecolortheme.mapper.PhpEditorMapper;
+import com.github.fhd.eclipsecolortheme.mapper.TextEditorMapper;
+import com.github.fhd.eclipsecolortheme.mapper.ThemePreferenceMapper;
+import com.github.fhd.eclipsecolortheme.mapper.WebEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.WebEditorMapper.Type;
 
 /** Loads and applies color themes. */
@@ -52,6 +67,7 @@ public class ColorThemeManager {
         editors.add(new WebEditorMapper(Type.CSS));
         editors.add(new JavaScriptEditorMapper());
         editors.add(new CppEditorMapper());
+        editors.add(new PhpEditorMapper());
     }
 
     private static ColorTheme parseTheme(InputStream input)
