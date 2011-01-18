@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme name="Oblivion" version="0.1">
+    <foreground color="#D8D8D8"/>
+    <background color="#1E1E1E"/>
+    <selectionForeground color="#D0D0D0"/>
+    <selectionBackground color="#757575"/>
+    <currentLine color="#555753"/>
+    <lineNumber color="#D0D0D0"/>
+    <singleLineComment color="#C7DD0C"/>
+    <multiLineComment color="#C7DD0C"/>
+    <commentTaskTag color="#CCDF32"/>
+    <number color="#7FB347"/>
+    <string color="#FFC600"/>
+    <operator color="#D8D8D8"/>
+    <keyword color="#FFFFFF"/>
+    <class color="#D25252" />
+</colorTheme>

@@ -33,7 +33,8 @@ public class ColorThemeManager {
     private static final String[] THEME_FILES = new String[] {
             "zenburn.xml",
             "inkpot.xml",
-            "vibrantink.xml"
+            "vibrantink.xml",
+            "oblivion.xml"
     };
     private Map<String, Map<String, String>> themes;
     private Set<ThemePreferenceMapper> editors;
