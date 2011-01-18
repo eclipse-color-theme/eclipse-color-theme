@@ -1,11 +1,14 @@
 package com.github.fhd.eclipsecolortheme.preferences;
 
-import java.util.*;
+import java.util.Set;
 
-import org.eclipse.jface.preference.*;
-import org.eclipse.ui.*;
+import org.eclipse.jface.preference.FieldEditorPreferencePage;
+import org.eclipse.jface.preference.RadioGroupFieldEditor;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPreferencePage;
 
-import com.github.fhd.eclipsecolortheme.*;
+import com.github.fhd.eclipsecolortheme.Activator;
+import com.github.fhd.eclipsecolortheme.ColorThemeManager;
 
 /** The preference page for managing color themes. */
 public class ColorThemePreferencePage extends FieldEditorPreferencePage

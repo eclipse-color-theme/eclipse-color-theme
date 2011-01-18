@@ -1,9 +1,10 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
-import java.util.*;
+import java.util.Map;
 
-import org.eclipse.core.runtime.preferences.*;
-import org.osgi.service.prefs.*;
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
+import org.eclipse.core.runtime.preferences.InstanceScope;
+import org.osgi.service.prefs.BackingStoreException;
 
 /**
  * Maps color themes to Eclipse preferences.

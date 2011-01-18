@@ -1,6 +1,6 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
-import java.util.*;
+import java.util.Map;
 
 /**
  * Maps color themes to preferences for Eclipse's XML, HTML and CSS editors.

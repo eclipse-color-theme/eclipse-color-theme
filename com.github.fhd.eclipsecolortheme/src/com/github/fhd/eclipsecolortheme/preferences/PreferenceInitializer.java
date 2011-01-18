@@ -1,9 +1,9 @@
 package com.github.fhd.eclipsecolortheme.preferences;
 
-import org.eclipse.core.runtime.preferences.*;
-import org.eclipse.jface.preference.*;
+import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
+import org.eclipse.jface.preference.IPreferenceStore;
 
-import com.github.fhd.eclipsecolortheme.*;
+import com.github.fhd.eclipsecolortheme.Activator;
 
 /** Initialises this plugin's preferences. */
 public class PreferenceInitializer extends AbstractPreferenceInitializer {
