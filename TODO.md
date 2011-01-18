@@ -24,6 +24,7 @@
 * Add support for the most common editors:
   * Ant
   * PDE (plugin.xml etc.)
+  * SQL
   * ...
 
 Ideas
