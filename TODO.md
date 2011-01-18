@@ -16,7 +16,6 @@
   * Clojure
   * PDE (plugin.xml etc.)
   * Ant
-  * PHP
   * Python
 * Add a colour editor like the one in Textmate.
 * Re-apply the selected theme when the plugin is updated (or on each startup).

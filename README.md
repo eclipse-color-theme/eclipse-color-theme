@@ -42,12 +42,14 @@ Eclipse Color Theme currently supports the following editors:
 * CSS
 * JavaScript
 * C++
+* PHP
 
 Available themes:
 
 * [Inkpot](http://www.vim.org/scripts/script.php?script_id=1143)
 * [Zenburn](http://slinky.imukuppi.org/zenburnpage/)
 * [Vibrant Ink](http://code.google.com/p/vibrant-ink-textmate/)
+* [Oblivion](http://www.rogerdudler.com/projects/themebuilder/trunk/)
 
 All converted from [these preferences files](https://eclipsecolorthemes.jottit.com/).
 
