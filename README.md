@@ -43,6 +43,7 @@ Eclipse Color Theme currently supports the following editors:
 * JavaScript
 * C++
 * PHP
+* Ant
 
 Available themes:
 

@@ -1,5 +1,6 @@
 0.5.0
 ==================
+* Added support for the Ant editor.
 * Added support for the PHP editor.
 * Added the Oblivion theme.
 

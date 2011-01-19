@@ -18,6 +18,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.github.fhd.eclipsecolortheme.mapper.AntEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.CppEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.JavaEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.JavaPropertiesEditorMapper;
@@ -69,6 +70,7 @@ public class ColorThemeManager {
         editors.add(new JavaScriptEditorMapper());
         editors.add(new CppEditorMapper());
         editors.add(new PhpEditorMapper());
+        editors.add(new AntEditorMapper());
     }
 
     private static ColorTheme parseTheme(InputStream input)

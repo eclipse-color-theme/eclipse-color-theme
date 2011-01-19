@@ -22,7 +22,6 @@
 * Make it possible for themes to define text decorations (bold,
   italic, underlined).
 * Add support for the most common editors:
-  * Ant
   * PDE (plugin.xml etc.)
   * SQL
   * ...
