@@ -1,4 +1,4 @@
-0.5
+s0.5
 ===
 * Make colour theme keys non-redundant, consistent and
   understandeable.
@@ -11,7 +11,7 @@
   * staticField = field
   * field = foreground
   * interface = class
-  * staticMethodInvocation = foreground
+  * staticMethodInvocation = foreground 
 * Re-apply the selected theme when the plugin is updated (or on each
   startup).
 
@@ -25,6 +25,7 @@
   * PDE (plugin.xml etc.)
   * SQL
   * ...
+* Re-apply selected theme on preferences import.
 
 Ideas
 =====
