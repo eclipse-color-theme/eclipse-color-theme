@@ -22,7 +22,6 @@
   italic, underlined).
 * Add support for the most common editors:
   * PDE (plugin.xml etc.)
-  * SQL
   * ...
 * Re-apply the selected theme when the plugin is updated (or on each
   startup).

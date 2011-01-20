@@ -1,7 +1,8 @@
 0.5.0
 ==================
-* Added support for the Ant editor.
 * Added support for the PHP editor.
+* Added support for the Ant editor.
+* Added support for the SQL editor.
 * Added the Oblivion theme.
 
 0.4.0 (2011-01-13)

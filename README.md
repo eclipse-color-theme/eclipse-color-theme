@@ -44,6 +44,7 @@ Eclipse Color Theme currently supports the following editors:
 * C++
 * PHP
 * Ant
+* SQL
 
 Available themes:
 

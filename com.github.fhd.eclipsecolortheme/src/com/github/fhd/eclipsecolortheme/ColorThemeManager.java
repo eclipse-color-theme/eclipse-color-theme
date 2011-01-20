@@ -24,6 +24,7 @@ import com.github.fhd.eclipsecolortheme.mapper.JavaEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.JavaPropertiesEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.JavaScriptEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.PhpEditorMapper;
+import com.github.fhd.eclipsecolortheme.mapper.SqlEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.TextEditorMapper;
 import com.github.fhd.eclipsecolortheme.mapper.ThemePreferenceMapper;
 import com.github.fhd.eclipsecolortheme.mapper.WebEditorMapper;
@@ -71,6 +72,7 @@ public class ColorThemeManager {
         editors.add(new CppEditorMapper());
         editors.add(new PhpEditorMapper());
         editors.add(new AntEditorMapper());
+        editors.add(new SqlEditorMapper());
     }
 
     private static ColorTheme parseTheme(InputStream input)
