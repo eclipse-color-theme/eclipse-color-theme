@@ -99,5 +99,12 @@ public class PhpEditorMapper extends ThemePreferenceMapper {
 			preferences.putBoolean(basePath + "InternalConstantHighlighting.enabled", true);
 		}
 	}
+	
+	@Override
+    protected String entry(String color) {
+        return (color == null) ? null 
+                               : color.toLowerCase()
+                                 + " | null | false | false | false | false";
+    }
 
 }
