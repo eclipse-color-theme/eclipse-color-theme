@@ -1,4 +1,4 @@
-s0.5
+0.5
 ===
 * Make colour theme keys non-redundant, consistent and
   understandeable.
@@ -12,8 +12,7 @@ s0.5
   * field = foreground
   * interface = class
   * staticMethodInvocation = foreground 
-* Re-apply the selected theme when the plugin is updated (or on each
-  startup).
+* Move preferences page to General->Appereance
 
 1.0
 ===
@@ -25,7 +24,11 @@ s0.5
   * PDE (plugin.xml etc.)
   * SQL
   * ...
+* Re-apply the selected theme when the plugin is updated (or on each
+  startup).
 * Re-apply selected theme on preferences import.
+* Only apply preferences for existing plugins. Ask for re-apply when
+  plugins are installed.
 
 Ideas
 =====
