@@ -12,7 +12,6 @@
   * field = foreground
   * interface = class
   * staticMethodInvocation = foreground 
-* Move preferences page to General->Appereance
 
 1.0
 ===

@@ -5,9 +5,10 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            name="Color Theme"
+            category="org.eclipse.ui.preferencePages.Views"
             class="com.github.fhd.eclipsecolortheme.preferences.ColorThemePreferencePage"
-            id="com.github.fhd.eclipsecolortheme.preferences.ColorThemePreferencePage">
+            id="com.github.fhd.eclipsecolortheme.preferences.ColorThemePreferencePage"
+            name="Color Theme">
       </page>
    </extension>
    <extension
