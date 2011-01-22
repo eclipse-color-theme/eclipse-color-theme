@@ -1,9 +1,5 @@
 0.5
 ===
-* Make colour theme keys non-redundant, consistent and
-  understandeable.
-  * Change methodDeclarationName to methodDeclaration.
-  * Use "invocation" and "declaration" consistently.
 * Define more default color entry mappings, e.g.:
   * staticFinalField = staticField
   * staticField = field

@@ -14,7 +14,7 @@
     <class color="#87CEFA"/>
     <interface color="#87FAC4"/>
     <method color="#87CEFA"/>
-    <methodDeclarationName color="#CFBFAD"/>
+    <methodDeclaration color="#CFBFAD"/>
     <bracket color="#CFBFAD"/>
     <number color="#FFCD8B"/>
     <string color="#FFCD8B"/>

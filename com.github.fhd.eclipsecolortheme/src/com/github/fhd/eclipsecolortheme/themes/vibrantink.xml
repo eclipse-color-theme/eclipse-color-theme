@@ -19,7 +19,7 @@
     <interface color="#87F025"/>
     <enum color="#408000"/>
     <method color="#F7C527"/>
-    <methodDeclarationName color="#F1C438"/>
+    <methodDeclaration color="#F1C438"/>
     <bracket color="#FFFFFF"/>
     <string color="#477488"/>
     <operator color="#FFFFFF"/>

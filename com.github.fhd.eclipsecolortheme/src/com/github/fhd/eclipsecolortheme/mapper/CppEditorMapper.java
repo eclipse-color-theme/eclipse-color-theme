@@ -73,7 +73,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.field.color",
                       entry(theme.get(FIELD)));
         putPreference("semanticHighlighting.functionDeclaration.color",
-                      entry(theme.get(METHOD_DECLARATION_NAME)));
+                      entry(theme.get(METHOD_DECLARATION)));
         putPreference("semanticHighlighting.function.color",
                       entry(theme.get(STATIC_METHOD_INVOCATION)));
         putPreference("semanticHighlighting.localVariableDeclaration.color",
@@ -85,9 +85,9 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.parameterVariable.color",
                       entry(theme.get(PARAMETER_VARIABLE)));
         putPreference("semanticHighlighting.macroDefinition.color",
-                      entry(theme.get(METHOD_DECLARATION_NAME)));
+                      entry(theme.get(METHOD_DECLARATION)));
         putPreference("semanticHighlighting.methodDeclaration.color",
-                      entry(theme.get(METHOD_DECLARATION_NAME)));
+                      entry(theme.get(METHOD_DECLARATION)));
         putPreference("semanticHighlighting.method.color",
                       entry(theme.get(METHOD)));
         putPreference("semanticHighlighting.namespace.color",

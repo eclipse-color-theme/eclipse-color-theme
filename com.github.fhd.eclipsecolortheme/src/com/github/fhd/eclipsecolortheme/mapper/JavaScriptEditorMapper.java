@@ -34,7 +34,7 @@ public class JavaScriptEditorMapper extends ThemePreferenceMapper {
         putPreference("java_keyword_return", entry(theme.get(KEYWORD)));
         putPreference("java_keyword", entry(theme.get(KEYWORD)));
         putPreference("semanticHighlighting.methodDeclarationName.color",
-                      entry(theme.get(METHOD_DECLARATION_NAME)));
+                      entry(theme.get(METHOD_DECLARATION)));
         putPreference("java_doc_default", entry(theme.get(JAVADOC)));
         putPreference("java_doc_link", entry(theme.get(JAVADOC_LINK)));
         putPreference("java_doc_keyword", entry(theme.get(JAVADOC_KEYWORD)));

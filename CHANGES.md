@@ -7,6 +7,7 @@
 * Moved preference page to General->Appereance.
 * Closed/reopened editors when applying themes to prevent
   NullPointerExceptions in PHP Development Tools.
+* Cleaned the colour theme keys up.
 
 0.4.0 (2011-01-13)
 ==================

@@ -71,7 +71,7 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.method.color",
                       entry(theme.get(METHOD)));
         putPreference("semanticHighlighting.methodDeclarationName.color",
-                      entry(theme.get(METHOD_DECLARATION_NAME)));
+                      entry(theme.get(METHOD_DECLARATION)));
         putPreference("semanticHighlighting.staticMethodInvocation.color",
                       entry(theme.get(STATIC_METHOD_INVOCATION)));
         putPreference("semanticHighlighting.annotation.color",

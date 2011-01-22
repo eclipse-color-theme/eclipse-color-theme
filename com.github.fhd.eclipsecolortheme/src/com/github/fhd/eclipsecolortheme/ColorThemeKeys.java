@@ -32,10 +32,11 @@ public class ColorThemeKeys {
     public static final String INTERFACE = "interface";
     public static final String ENUM = "enum";
     public static final String METHOD = "method";
-    public static final String METHOD_DECLARATION_NAME =
-        "methodDeclarationName";
+    public static final String METHOD_DECLARATION = "methodDeclaration";
     public static final String ANNOTATION = "annotation";
     public static final String LOCAL_VARIABLE = "localVariable";
+    public static final String LOCAL_VARIABLE_DECLARATION =
+        "localVariableDeclaration";
     public static final String INHERITED_METHOD_INVOCATION =
         "inheritedMethodInvocation";
     public static final String ABSTRACT_METHOD_INVOCATION =
@@ -49,8 +50,6 @@ public class ColorThemeKeys {
     public static final String FIELD = "field";
     public static final String STATIC_FIELD = "staticField";
     public static final String STATIC_FINAL_FIELD = "staticFinalField";
-    public static final String LOCAL_VARIABLE_DECLARATION =
-        "localVariableDeclaration";
     public static final String PARAMETER_VARIABLE = "parameterVariable";
     public static final String TYPE_ARGUMENT = "typeArgument";
     public static final String TYPE_PARAMETER = "typeParameter";
