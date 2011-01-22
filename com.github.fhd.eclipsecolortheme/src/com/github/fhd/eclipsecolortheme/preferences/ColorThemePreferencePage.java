@@ -1,11 +1,20 @@
 package com.github.fhd.eclipsecolortheme.preferences;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.RadioGroupFieldEditor;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorReference;
 import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 
 import com.github.fhd.eclipsecolortheme.Activator;
 import com.github.fhd.eclipsecolortheme.ColorThemeManager;
@@ -45,9 +54,39 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
 
 	@Override
 	public boolean performOk() {
-	    colorThemeEditor.store();
-	    colorThemeManager.applyTheme(
-                getPreferenceStore().getString("colorTheme"));
+	    IWorkbenchPage activePage = PlatformUI.getWorkbench()
+                                              .getActiveWorkbenchWindow()
+                                              .getActivePage();
+
+	    try {
+	        Map<String, IEditorInput> formerEditors =
+	            new HashMap<String, IEditorInput>();
+	        for (IEditorReference editor : activePage.getEditorReferences())
+	            formerEditors.put(editor.getId(), editor.getEditorInput());
+
+	        if (!formerEditors.isEmpty()) {    
+	            MessageBox box = new MessageBox(getShell(),
+	                                            SWT.OK | SWT.CANCEL);
+	            box.setText("Reopen editors");
+	            box.setMessage("In order to change the color theme, all editors"
+	            		       + " have to be closed and reopened.");
+	            if (box.open() == SWT.CANCEL)
+	                return false;
+
+	            activePage.closeAllEditors(true);   
+	        }
+
+	        colorThemeEditor.store();
+            colorThemeManager.applyTheme(
+                    getPreferenceStore().getString("colorTheme"));
+
+	        for (String id : formerEditors.keySet())
+	            activePage.openEditor(formerEditors.get(id), id);
+	    } catch (PartInitException e) {
+            // TODO: Show a proper error message (StatusManager).
+	        e.printStackTrace();
+	    }
+
 	    return super.performOk();
 	}
 }

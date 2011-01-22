@@ -5,6 +5,8 @@
 * Added support for the SQL editor.
 * Added the Oblivion theme.
 * Moved preference page to General->Appereance.
+* Closed/reopened editors when applying themes to prevent
+  NullPointerExceptions in PHP Development Tools.
 
 0.4.0 (2011-01-13)
 ==================
