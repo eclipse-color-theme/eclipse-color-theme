@@ -47,8 +47,6 @@ public class TextEditorMapper extends ThemePreferenceMapper {
         putPreference("AbstractTextEditor.Color.FindScope",
                       entry(theme.get(FIND_SCOPE)));
         putPreference("printMarginColor", entry(theme.get(PRINT_MARGIN)));
-        putPreference("currentIPColor", entry(theme.get(CURRENT_IP)));
-        putPreference("secondaryIPColor", entry(theme.get(SECONDARY_IP)));
         putPreference("writeOccurrenceIndicationColor",
                       entry(theme.get(WRITE_OCCURRENCE_INDICATION)));
         putPreference("searchResultIndicationColor",
@@ -94,8 +92,6 @@ public class TextEditorMapper extends ThemePreferenceMapper {
         preferences.remove("deletionIndicationColor");
         preferences.remove("AbstractTextEditor.Color.FindScope");
         preferences.remove("printMarginColor");
-        preferences.remove("currentIPColor");
-        preferences.remove("secondaryIPColor");
         preferences.remove("writeOccurrenceIndicationColor");
         preferences.remove("searchResultIndicationColor");
     }

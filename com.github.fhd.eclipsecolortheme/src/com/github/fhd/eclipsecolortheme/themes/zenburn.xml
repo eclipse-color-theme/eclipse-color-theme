@@ -11,8 +11,6 @@
     <occurrenceIndication color="#616161"/>
     <writeOccurrenceIndication color="#948567"/>
     <findScope color="#BCADAD"/>
-    <currentIP color="#1A591A"/>
-    <secondaryIP color="#1A591A"/>
     <sourceHoverBackground color="#A19879"/>
     <singleLineComment color="#7F9F7F"/>
     <multiLineComment color="#7F9F7F"/>

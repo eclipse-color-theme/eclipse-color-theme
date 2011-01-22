@@ -4,8 +4,6 @@
   understandeable.
   * Change methodDeclarationName to methodDeclaration.
   * Use "invocation" and "declaration" consistently.
-  * Figure out what currentIP and secondaryIP do and remove if
-    possible.
 * Define more default color entry mappings, e.g.:
   * staticFinalField = staticField
   * staticField = field
