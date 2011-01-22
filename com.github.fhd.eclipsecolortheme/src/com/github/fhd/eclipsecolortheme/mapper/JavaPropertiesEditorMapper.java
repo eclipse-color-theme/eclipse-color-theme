@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.util.Map;
 
 /** Maps color themes to preferences for Eclipse's Java properties editor. */
@@ -12,11 +14,11 @@ public class JavaPropertiesEditorMapper extends ThemePreferenceMapper {
     @Override
     public void map(Map<String, String> theme) {
         putPreference("pf_coloring_comment",
-                      entry(theme.get("singleLineComment")));
-        putPreference("pf_coloring_key", entry(theme.get("foreground")));
-        putPreference("pf_coloring_assignment", entry(theme.get("foreground")));
-        putPreference("pf_coloring_value", entry(theme.get("string")));
-        putPreference("pf_coloring_argument", entry(theme.get("keyword")));
+                      entry(theme.get(SINGLE_LINE_COMMENT)));
+        putPreference("pf_coloring_key", entry(theme.get(FOREGROUND)));
+        putPreference("pf_coloring_assignment", entry(theme.get(FOREGROUND)));
+        putPreference("pf_coloring_value", entry(theme.get(STRING)));
+        putPreference("pf_coloring_argument", entry(theme.get(KEYWORD)));
     }
 
     @Override

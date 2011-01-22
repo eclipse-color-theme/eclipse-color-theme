@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.util.Map;
 
 /**
@@ -46,32 +48,32 @@ public class PhpEditorMapper extends ThemePreferenceMapper {
 
 	@Override
 	public void map(Map<String, String> theme) {
-		putPreference("codeStyleNormal", entry(theme.get("foreground")));
-		putPreference("editorColorKeyword", entry(theme.get("keyword")));
-		putPreference("editorColorBoundarymaker", entry(theme.get("foreground")));
-		putPreference("editorColorNumber", entry(theme.get("number")));
-		putPreference("editorColorComment", entry(theme.get("multiLineComment")));
-		putPreference("editorColorPhpdoc", entry(theme.get("javadoc")));
-		putPreference("editorColorHeredoc", entry(theme.get("javadoc")));
-		putPreference("editorColorVariable", entry(theme.get("localVariable")));
-		putPreference("editorColorString", entry(theme.get("string")));
-		putPreference("editorColorTask", entry(theme.get("commentTaskTag")));
+		putPreference("codeStyleNormal", entry(theme.get(FOREGROUND)));
+		putPreference("editorColorKeyword", entry(theme.get(KEYWORD)));
+		putPreference("editorColorBoundarymaker", entry(theme.get(FOREGROUND)));
+		putPreference("editorColorNumber", entry(theme.get(NUMBER)));
+		putPreference("editorColorComment", entry(theme.get(MULTI_LINE_COMMENT)));
+		putPreference("editorColorPhpdoc", entry(theme.get(JAVADOC)));
+		putPreference("editorColorHeredoc", entry(theme.get(JAVADOC)));
+		putPreference("editorColorVariable", entry(theme.get(LOCAL_VARIABLE)));
+		putPreference("editorColorString", entry(theme.get(STRING)));
+		putPreference("editorColorTask", entry(theme.get(COMMENT_TASK_TAG)));
 		// since PDT 2.2.1
-		putPreference("editorColorLineComment", entry(theme.get("singleLineComment")));
-		putPreference("editorColorPhpdocComment", entry(theme.get("javadoc")));
-		putPreference(basePath + "InternalFunctionHighlighting.color", entry(theme.get("method")));
-		putPreference(basePath + "InternalConstantHighlighting.color", entry(theme.get("staticFinalField")));
-		putPreference(basePath + "InternalClassHighlighting.color", entry(theme.get("class")));
-		putPreference(basePath + "ConstantHighlighting.color", entry(theme.get("staticFinalField")));
-		putPreference(basePath + "FieldHighlighting.color", entry(theme.get("field")));
-		putPreference(basePath + "StaticFieldHighlighting.color", entry(theme.get("staticField")));
-		putPreference(basePath + "StaticMethodHighlighting.color", entry(theme.get("method")));
-		putPreference(basePath + "ClassHighlighting.color", entry(theme.get("class")));
-		putPreference(basePath + "ParameterVariableHighlighting.color", entry(theme.get("parameterVariable")));
-		putPreference(basePath + "SuperGlobalHighlighting.color", entry(theme.get("variable")));
-		putPreference(basePath + "MethodHighlighting.color", entry(theme.get("method")));
-		putPreference(basePath + "FunctionHighlighting.color", entry(theme.get("method")));
-		putPreference(basePath + "DeprecatedHighlighting.color", entry(theme.get("deprecatedMember")));
+		putPreference("editorColorLineComment", entry(theme.get(SINGLE_LINE_COMMENT)));
+		putPreference("editorColorPhpdocComment", entry(theme.get(JAVADOC)));
+		putPreference(basePath + "InternalFunctionHighlighting.color", entry(theme.get(METHOD)));
+		putPreference(basePath + "InternalConstantHighlighting.color", entry(theme.get(STATIC_FINAL_FIELD)));
+		putPreference(basePath + "InternalClassHighlighting.color", entry(theme.get(CLASS)));
+		putPreference(basePath + "ConstantHighlighting.color", entry(theme.get(STATIC_FINAL_FIELD)));
+		putPreference(basePath + "FieldHighlighting.color", entry(theme.get(FIELD)));
+		putPreference(basePath + "StaticFieldHighlighting.color", entry(theme.get(STATIC_FIELD)));
+		putPreference(basePath + "StaticMethodHighlighting.color", entry(theme.get(METHOD)));
+		putPreference(basePath + "ClassHighlighting.color", entry(theme.get(CLASS)));
+		putPreference(basePath + "ParameterVariableHighlighting.color", entry(theme.get(PARAMETER_VARIABLE)));
+		putPreference(basePath + "SuperGlobalHighlighting.color", entry(theme.get(LOCAL_VARIABLE)));
+		putPreference(basePath + "MethodHighlighting.color", entry(theme.get(METHOD)));
+		putPreference(basePath + "FunctionHighlighting.color", entry(theme.get(METHOD)));
+		putPreference(basePath + "DeprecatedHighlighting.color", entry(theme.get(DEPRECATED_MEMBER)));
 		
 		
 		

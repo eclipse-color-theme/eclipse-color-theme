@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.util.Map;
 
 /** Maps color themes to preferences for Eclipse's Text editor. */
@@ -23,34 +25,34 @@ public class TextEditorMapper extends ThemePreferenceMapper {
                 true);
 
         putPreference("AbstractTextEditor.Color.Foreground",
-                      entry(theme.get("foreground")));
+                      entry(theme.get(FOREGROUND)));
         putPreference("AbstractTextEditor.Color.Background",
-                      entry(theme.get("background")));
+                      entry(theme.get(BACKGROUND)));
         putPreference("AbstractTextEditor.Color.SelectionForeground",
-                      entry(theme.get("selectionForeground")));
+                      entry(theme.get(SELECTION_FOREGROUND)));
         putPreference("AbstractTextEditor.Color.SelectionBackground",
-                      entry(theme.get("selectionBackground")));
-        putPreference("currentLineColor", entry(theme.get("currentLine")));
-        putPreference("lineNumberColor", entry(theme.get("lineNumber")));
+                      entry(theme.get(SELECTION_BACKGROUND)));
+        putPreference("currentLineColor", entry(theme.get(CURRENT_LINE)));
+        putPreference("lineNumberColor", entry(theme.get(LINE_NUMBER)));
         putPreference("filteredSearchResultIndicationColor",
-                      entry(theme.get("filteredSearchResultIndication")));
+                      entry(theme.get(FILTERED_SEARCH_RESULT_INDICATION)));
         putPreference("occurrenceIndicationColor",
-                      entry(theme.get("occurrenceIndication")));
+                      entry(theme.get(OCCURRENCE_INDICATION)));
         putPreference("javaScriptOccurrenceIndicationColor",
-                      entry(theme.get("occurrenceIndication")));
+                      entry(theme.get(OCCURRENCE_INDICATION)));
         putPreference("org.eclipse.cdt.ui.occurrenceIndicationColor",
-                      entry(theme.get("occurrenceIndication")));
+                      entry(theme.get(OCCURRENCE_INDICATION)));
         putPreference("deletionIndicationColor",
-                      entry(theme.get("deletionIndication")));
+                      entry(theme.get(DELETION_INDICATION)));
         putPreference("AbstractTextEditor.Color.FindScope",
-                      entry(theme.get("findScope")));
-        putPreference("printMarginColor", entry(theme.get("printMargin")));
-        putPreference("currentIPColor", entry(theme.get("currentIP")));
-        putPreference("secondaryIPColor", entry(theme.get("secondaryIP")));
+                      entry(theme.get(FIND_SCOPE)));
+        putPreference("printMarginColor", entry(theme.get(PRINT_MARGIN)));
+        putPreference("currentIPColor", entry(theme.get(CURRENT_IP)));
+        putPreference("secondaryIPColor", entry(theme.get(SECONDARY_IP)));
         putPreference("writeOccurrenceIndicationColor",
-                      entry(theme.get("writeOccurrenceIndication")));
+                      entry(theme.get(WRITE_OCCURRENCE_INDICATION)));
         putPreference("searchResultIndicationColor",
-                      entry(theme.get("searchResultIndication")));
+                      entry(theme.get(SEARCH_RESULT_INDICATION)));
     }
 
     @Override

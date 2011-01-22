@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.util.Map;
 
 /**
@@ -14,14 +16,14 @@ public class SqlEditorMapper extends ThemePreferenceMapper {
 	
 	@Override
 	public void map(Map<String, String> theme) {
-		putPreference("Type", entry(theme.get("class")));
-		putPreference("Keyword", entry(theme.get("keyword")));
-		putPreference("Double quoted string", entry(theme.get("string")));
-		putPreference("Identifier", entry(theme.get("method")));
-		putPreference("Single quoted string", entry(theme.get("string")));
-		putPreference("Single-line comment", entry(theme.get("singleLineComment")));
-		putPreference("Multi-line comment", entry(theme.get("multiLineComment")));
-		putPreference("Others", entry(theme.get("foreground")));
+		putPreference("Type", entry(theme.get(CLASS)));
+		putPreference("Keyword", entry(theme.get(KEYWORD)));
+		putPreference("Double quoted string", entry(theme.get(STRING)));
+		putPreference("Identifier", entry(theme.get(METHOD)));
+		putPreference("Single quoted string", entry(theme.get(STRING)));
+		putPreference("Single-line comment", entry(theme.get(SINGLE_LINE_COMMENT)));
+		putPreference("Multi-line comment", entry(theme.get(MULTI_LINE_COMMENT)));
+		putPreference("Others", entry(theme.get(FOREGROUND)));
 	}
 
 	@Override

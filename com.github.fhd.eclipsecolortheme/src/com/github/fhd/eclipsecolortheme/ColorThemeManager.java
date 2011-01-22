@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -121,12 +123,12 @@ public class ColorThemeManager {
     }
 
     private static void amendThemeEntries(Map<String, String> theme) {
-        applyDefault(theme, "method", "foreground");
-        applyDefault(theme, "field", "foreground");
-        applyDefault(theme, "javadoc", "multiLineComment");
-        applyDefault(theme, "javadocLink", "javadoc");
-        applyDefault(theme, "javadocTag", "javadoc");
-        applyDefault(theme, "javadocKeyword", "javadoc");
+        applyDefault(theme, METHOD, FOREGROUND);
+        applyDefault(theme, FIELD, FOREGROUND);
+        applyDefault(theme, JAVADOC, MULTI_LINE_COMMENT);
+        applyDefault(theme, JAVADOC_LINK, JAVADOC);
+        applyDefault(theme, JAVADOC_TAG, JAVADOC);
+        applyDefault(theme, JAVADOC_KEYWORD, JAVADOC);
     }
 
     private static void applyDefault(Map<String, String> theme, String key,

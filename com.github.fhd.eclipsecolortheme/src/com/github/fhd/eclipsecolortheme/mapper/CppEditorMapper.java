@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.util.Map;
 
 /** Maps color themes to preferences for Eclipse's Java editor. */
@@ -43,65 +45,65 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean("semanticHighlighting.parameterVariable.enabled",
                                false);
 
-        putPreference("c_default", entry(theme.get("foreground")));
-        putPreference("c_braces", entry(theme.get("bracket")));
-        putPreference("c_type", entry(theme.get("keyword")));
-        putPreference("c_keyword", entry(theme.get("keyword")));
-        putPreference("c_numbers", entry(theme.get("number")));
-        putPreference("c_operators", entry(theme.get("operator")));
-        putPreference("c_string", entry(theme.get("string")));
+        putPreference("c_default", entry(theme.get(FOREGROUND)));
+        putPreference("c_braces", entry(theme.get(BRACKET)));
+        putPreference("c_type", entry(theme.get(KEYWORD)));
+        putPreference("c_keyword", entry(theme.get(KEYWORD)));
+        putPreference("c_numbers", entry(theme.get(NUMBER)));
+        putPreference("c_operators", entry(theme.get(OPERATOR)));
+        putPreference("c_string", entry(theme.get(STRING)));
         putPreference("c_multi_line_comment",
-                      entry(theme.get("multiLineComment")));
+                      entry(theme.get(MULTI_LINE_COMMENT)));
         putPreference("c_single_line_comment",
-                      entry(theme.get("singleLineComment")));
-        putPreference("c_comment_task_tag", entry(theme.get("commentTaskTag")));
-        putPreference("asm_directive", entry(theme.get("keyword")));
-        putPreference("asm_label", entry(theme.get("foreground")));
-        putPreference("pp_directive", entry(theme.get("keyword")));
-        putPreference("pp_header", entry(theme.get("string")));
-        putPreference("pp_default", entry(theme.get("foreground")));
+                      entry(theme.get(SINGLE_LINE_COMMENT)));
+        putPreference("c_comment_task_tag", entry(theme.get(COMMENT_TASK_TAG)));
+        putPreference("asm_directive", entry(theme.get(KEYWORD)));
+        putPreference("asm_label", entry(theme.get(FOREGROUND)));
+        putPreference("pp_directive", entry(theme.get(KEYWORD)));
+        putPreference("pp_header", entry(theme.get(STRING)));
+        putPreference("pp_default", entry(theme.get(FOREGROUND)));
         putPreference("semanticHighlighting.class.color",
-                      entry(theme.get("class")));
+                      entry(theme.get(CLASS)));
         putPreference("semanticHighlighting.enum.color",
-                      entry(theme.get("enum")));
+                      entry(theme.get(ENUM)));
         putPreference("semanticHighlighting.enumerator.color",
-                      entry(theme.get("staticFinalField")));
+                      entry(theme.get(STATIC_FINAL_FIELD)));
         putPreference("semanticHighlighting.externalSDK.color",
-                      entry(theme.get("staticMethodInvocation")));
+                      entry(theme.get(STATIC_METHOD_INVOCATION)));
         putPreference("semanticHighlighting.field.color",
-                      entry(theme.get("field")));
+                      entry(theme.get(FIELD)));
         putPreference("semanticHighlighting.functionDeclaration.color",
-                      entry(theme.get("methodDeclarationName")));
+                      entry(theme.get(METHOD_DECLARATION_NAME)));
         putPreference("semanticHighlighting.function.color",
-                      entry(theme.get("staticMethodInvocation")));
+                      entry(theme.get(STATIC_METHOD_INVOCATION)));
         putPreference("semanticHighlighting.localVariableDeclaration.color",
-                      entry(theme.get("localVariableDeclaration")));
+                      entry(theme.get(LOCAL_VARIABLE_DECLARATION)));
         putPreference("semanticHighlighting.localVariable.color",
-                      entry(theme.get("localVariable")));
+                      entry(theme.get(LOCAL_VARIABLE)));
         putPreference("semanticHighlighting.typeParameter.color",
-                      entry(theme.get("typeParameter")));
+                      entry(theme.get(TYPE_PARAMETER)));
         putPreference("semanticHighlighting.parameterVariable.color",
-                      entry(theme.get("parameterVariable")));
+                      entry(theme.get(PARAMETER_VARIABLE)));
         putPreference("semanticHighlighting.macroDefinition.color",
-                      entry(theme.get("methodDeclarationName")));
+                      entry(theme.get(METHOD_DECLARATION_NAME)));
         putPreference("semanticHighlighting.methodDeclaration.color",
-                      entry(theme.get("methodDeclarationName")));
+                      entry(theme.get(METHOD_DECLARATION_NAME)));
         putPreference("semanticHighlighting.method.color",
-                      entry(theme.get("method")));
+                      entry(theme.get(METHOD)));
         putPreference("semanticHighlighting.namespace.color",
-                      entry(theme.get("interface")));
+                      entry(theme.get(INTERFACE)));
         putPreference("semanticHighlighting.staticMethod.color",
-                      entry(theme.get("staticMethodInvocation")));
+                      entry(theme.get(STATIC_METHOD_INVOCATION)));
         putPreference("semanticHighlighting.staticField.color",
-                      entry(theme.get("staticField")));
+                      entry(theme.get(STATIC_FIELD)));
         putPreference("semanticHighlighting.typedef.color",
-                      entry(theme.get("class")));
+                      entry(theme.get(CLASS)));
         putPreference("org.eclipse.cdt.internal.ui.text.doctools.multi",
-                      entry(theme.get("javadoc")));
+                      entry(theme.get(JAVADOC)));
         putPreference("org.eclipse.cdt.internal.ui.text.doctools.single",
-                      entry(theme.get("javadoc")));
+                      entry(theme.get(JAVADOC)));
         putPreference("org.eclipse.cdt.internal.ui.text.doctools.recognizedTag",
-                      entry(theme.get("javadocTag")));
+                      entry(theme.get(JAVADOC_TAG)));
     }
 
     @Override

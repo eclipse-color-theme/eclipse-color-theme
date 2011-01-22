@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.util.Map;
 
 /**
@@ -16,12 +18,12 @@ public class AntEditorMapper extends ThemePreferenceMapper {
 	
 	@Override
 	public void map(Map<String, String> theme) {
-		putPreference(basePath + "textColor", entry(theme.get("foreground")));
-		putPreference(basePath + "tagsColor", entry(theme.get("method")));
-		putPreference(basePath + "dtdColor", entry(theme.get("method")));
-		putPreference(basePath + "commentsColor", entry(theme.get("multiLineComment")));
-		putPreference(basePath + "constantStringsColor", entry(theme.get("string")));
-		putPreference(basePath + "processingInstructionsColor", entry(theme.get("foreground")));
+		putPreference(basePath + "textColor", entry(theme.get(FOREGROUND)));
+		putPreference(basePath + "tagsColor", entry(theme.get(METHOD)));
+		putPreference(basePath + "dtdColor", entry(theme.get(METHOD)));
+		putPreference(basePath + "commentsColor", entry(theme.get(MULTI_LINE_COMMENT)));
+		putPreference(basePath + "constantStringsColor", entry(theme.get(STRING)));
+		putPreference(basePath + "processingInstructionsColor", entry(theme.get(FOREGROUND)));
 	}
 
 	@Override

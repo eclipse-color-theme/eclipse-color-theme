@@ -1,5 +1,7 @@
 package com.github.fhd.eclipsecolortheme.mapper;
 
+import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+
 import java.util.Map;
 
 /** Maps color themes to preferences for Eclipse's JavaScript editor. */
@@ -18,29 +20,29 @@ public class JavaScriptEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean(
                 "semanticHighlighting.localVariableDeclaration.enabled", false);
 
-        putPreference("java_default", entry(theme.get("foreground")));
+        putPreference("java_default", entry(theme.get(FOREGROUND)));
         putPreference("java_single_line_comment",
-                      entry(theme.get("singleLineComment")));
+                      entry(theme.get(SINGLE_LINE_COMMENT)));
         putPreference("java_multi_line_comment",
-                      entry(theme.get("multiLineComment")));
+                      entry(theme.get(MULTI_LINE_COMMENT)));
 
         putPreference("java_comment_task_tag",
-                      entry(theme.get("commentTaskTag")));
-        putPreference("java_string", entry(theme.get("string")));
-        putPreference("java_bracket", entry(theme.get("bracket")));
-        putPreference("java_operator", entry(theme.get("operator")));
-        putPreference("java_keyword_return", entry(theme.get("keyword")));
-        putPreference("java_keyword", entry(theme.get("keyword")));
+                      entry(theme.get(COMMENT_TASK_TAG)));
+        putPreference("java_string", entry(theme.get(STRING)));
+        putPreference("java_bracket", entry(theme.get(BRACKET)));
+        putPreference("java_operator", entry(theme.get(OPERATOR)));
+        putPreference("java_keyword_return", entry(theme.get(KEYWORD)));
+        putPreference("java_keyword", entry(theme.get(KEYWORD)));
         putPreference("semanticHighlighting.methodDeclarationName.color",
-                      entry(theme.get("methodDeclarationName")));
-        putPreference("java_doc_default", entry(theme.get("javadoc")));
-        putPreference("java_doc_link", entry(theme.get("javadocLink")));
-        putPreference("java_doc_keyword", entry(theme.get("javadocKeyword")));
-        putPreference("java_doc_tag", entry(theme.get("javadocTag")));
+                      entry(theme.get(METHOD_DECLARATION_NAME)));
+        putPreference("java_doc_default", entry(theme.get(JAVADOC)));
+        putPreference("java_doc_link", entry(theme.get(JAVADOC_LINK)));
+        putPreference("java_doc_keyword", entry(theme.get(JAVADOC_KEYWORD)));
+        putPreference("java_doc_tag", entry(theme.get(JAVADOC_TAG)));
         putPreference("semanticHighlighting.localVariable.color",
-                      entry(theme.get("localVariable")));
+                      entry(theme.get(LOCAL_VARIABLE)));
         putPreference("semanticHighlighting.localVariableDeclaration.color",
-                      entry(theme.get("localVariableDeclaration")));
+                      entry(theme.get(LOCAL_VARIABLE_DECLARATION)));
     }
 
     @Override
