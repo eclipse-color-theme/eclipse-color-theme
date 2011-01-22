@@ -1,12 +1,3 @@
-0.5
-===
-* Define more default color entry mappings, e.g.:
-  * staticFinalField = staticField
-  * staticField = field
-  * field = foreground
-  * interface = class
-  * staticMethodInvocation = foreground 
-
 1.0
 ===
 * Add theme file import.
@@ -37,3 +28,9 @@ Ideas
   * Project Explorer
   * Outline
   * ...
+* Define more default color entry mappings, e.g.:
+  * staticFinalField = staticField
+  * staticField = field
+  * field = foreground
+  * interface = class
+  * staticMethodInvocation = foreground 
