@@ -30,6 +30,8 @@
 
 Ideas
 =====
+* Don't re-apply the theme when pressing *OK* if it has already been
+  applied by pressing *Apply*.
 * Add a colour editor like the one in Textmate and theme export.
 * Add support for more editors, e.g.:
   * Python
