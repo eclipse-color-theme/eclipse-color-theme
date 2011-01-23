@@ -13,16 +13,19 @@ public class CppEditorMapper extends ThemePreferenceMapper {
 
     @Override
     public void map(Map<String, String> theme) {
+        preferences.putBoolean("semanticHighlighting.function.enabled", false);
+        preferences.putBoolean(
+                "semanticHighlighting.functionDeclaration.enabled", false);
         preferences.putBoolean("semanticHighlighting.class.enabled", false);
         preferences.putBoolean("semanticHighlighting.staticField.enabled",
                                false);
         preferences.putBoolean("semanticHighlighting.interface.enabled", false);
         preferences.putBoolean("semanticHighlighting.enum.enabled", false);
-        preferences.putBoolean(
-                "semanticHighlighting.staticMethodInvocation.enabled", false);
+        preferences.putBoolean("semanticHighlighting.staticMethod.enabled",
+                               false);
         preferences.putBoolean("semanticHighlighting.method.enabled", false);
         preferences.putBoolean(
-                "semanticHighlighting.methodDeclarationName.enabled", false);
+                "semanticHighlighting.methodDeclaration.enabled", false);
         preferences.putBoolean("semanticHighlighting.annotation.enabled",
                                false);
         preferences.putBoolean("semanticHighlighting.field.enabled", false);
@@ -111,6 +114,9 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         if ("semanticHighlighting.function.color".equals(key))
             preferences.putBoolean("semanticHighlighting.function.enabled",
                                    true);
+        else if ("semanticHighlighting.functionDeclaration.color".equals(key))
+            preferences.putBoolean(
+                    "semanticHighlighting.functionDeclaration.enabled", true);
         else if ("semanticHighlighting.enum.color".equals(key))
             preferences.putBoolean("semanticHighlighting.enum.enabled",
                                    true);
@@ -139,6 +145,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
     @Override
     public void clear() {
         preferences.remove("semanticHighlighting.function.enabled");
+        preferences.remove("semanticHighlighting.functionDeclaration.enabled");
         preferences.remove(
                 "semanticHighlighting.localVariableDeclaration.enabled");
         preferences.remove("semanticHighlighting.localVariable.enabled");
