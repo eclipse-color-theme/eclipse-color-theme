@@ -37,12 +37,9 @@ public class ColorThemeKeys {
     public static final String LOCAL_VARIABLE = "localVariable";
     public static final String LOCAL_VARIABLE_DECLARATION =
         "localVariableDeclaration";
-    public static final String INHERITED_METHOD_INVOCATION =
-        "inheritedMethodInvocation";
-    public static final String ABSTRACT_METHOD_INVOCATION =
-        "abstractMethodInvocation";
-    public static final String STATIC_METHOD_INVOCATION =
-        "staticMethodInvocation";
+    public static final String INHERITED_METHOD = "inheritedMethod";
+    public static final String ABSTRACT_METHOD = "abstractMethod";
+    public static final String STATIC_METHOD = "staticMethod";
     public static final String JAVADOC = "javadoc";
     public static final String JAVADOC_TAG = "javadocTag";
     public static final String JAVADOC_KEYWORD = "javadocKeyword";

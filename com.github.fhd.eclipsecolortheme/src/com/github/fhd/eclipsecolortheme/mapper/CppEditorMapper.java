@@ -32,11 +32,6 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         preferences.putBoolean("semanticHighlighting.deprecatedMember.enabled",
                                false);
         preferences.putBoolean("semanticHighlighting.number.enabled", false);
-        preferences.putBoolean(
-                "semanticHighlighting.inheritedMethodInvocation.enabled",
-                false);
-        preferences.putBoolean(
-                "semanticHighlighting.abstractMethodInvocation.enabled", false);
         preferences.putBoolean("semanticHighlighting.localVariable.enabled",
                                false);
         preferences.putBoolean(
@@ -72,13 +67,13 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.enumerator.color",
                       entry(theme.get(STATIC_FINAL_FIELD)));
         putPreference("semanticHighlighting.externalSDK.color",
-                      entry(theme.get(STATIC_METHOD_INVOCATION)));
+                      entry(theme.get(STATIC_METHOD)));
         putPreference("semanticHighlighting.field.color",
                       entry(theme.get(FIELD)));
         putPreference("semanticHighlighting.functionDeclaration.color",
                       entry(theme.get(METHOD_DECLARATION)));
         putPreference("semanticHighlighting.function.color",
-                      entry(theme.get(STATIC_METHOD_INVOCATION)));
+                      entry(theme.get(STATIC_METHOD)));
         putPreference("semanticHighlighting.localVariableDeclaration.color",
                       entry(theme.get(LOCAL_VARIABLE_DECLARATION)));
         putPreference("semanticHighlighting.localVariable.color",
@@ -96,7 +91,7 @@ public class CppEditorMapper extends ThemePreferenceMapper {
         putPreference("semanticHighlighting.namespace.color",
                       entry(theme.get(INTERFACE)));
         putPreference("semanticHighlighting.staticMethod.color",
-                      entry(theme.get(STATIC_METHOD_INVOCATION)));
+                      entry(theme.get(STATIC_METHOD)));
         putPreference("semanticHighlighting.staticField.color",
                       entry(theme.get(STATIC_FIELD)));
         putPreference("semanticHighlighting.typedef.color",

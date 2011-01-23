@@ -29,7 +29,7 @@
     <operator color="#F0EFD0"/>
     <keyword color="#EFEFAF"/>
     <annotation color="#808080"/>
-    <staticMethodInvocation color="#C4C4B7"/>
+    <staticMethod color="#C4C4B7"/>
     <localVariable color="#D4C4A9"/>
     <localVariableDeclaration color="#D4C4A9"/>
     <field color="#B3B784"/>

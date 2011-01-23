@@ -24,9 +24,9 @@
     <string color="#477488"/>
     <operator color="#FFFFFF"/>
     <keyword color="#EC691E"/>
-    <staticMethodInvocation color="#FFFFFF"/>
-    <inheritedMethodInvocation color="#E3B735"/>
-    <abstractMethodInvocation color="#F1C436"/>
+    <staticMethod color="#FFFFFF"/>
+    <inheritedMethod color="#E3B735"/>
+    <abstractMethod color="#F1C436"/>
     <localVariable color="#3C758D"/>
     <localVariableDeclaration color="#357A92"/>
     <field color="#357A8F"/>
