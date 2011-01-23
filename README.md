@@ -4,8 +4,8 @@ Eclipse Color Theme
 Color themes for Eclipse.
 
 Eclipse Color Theme makes it possible to switch color themes
-conveniently and without side effects. Support for importing and
-exporting of themes is planned.
+conveniently and without side effects. Support for importing themes is
+planned.
 
 You can install the plugin from the
 [update site](http://fhd.github.com/eclipse-color-theme).  After
@@ -13,8 +13,8 @@ installing, go to *Window->Preferences->General->Appearance->Color
 Theme* to change the color theme.
 
 When updating the plugin via Eclipse, go to the preferences page and
-press *OK* once, otherwise you won't see any changes. I'm planning to
-fix this.
+press *OK* once, otherwise you won't see any changes. We're planning
+to fix this.
 
 [![Flattr this](http://api.flattr.com/button/flattr-badge-large.png "Flattr this")](http://flattr.com/thing/111560/Eclipse-Color-Theme)
 
@@ -55,8 +55,6 @@ Available themes:
 * [Vibrant Ink](http://code.google.com/p/vibrant-ink-textmate/)
 * [Oblivion](http://www.rogerdudler.com/?p=362)
 
-All converted from [these preferences files](https://eclipsecolorthemes.jottit.com/).
-
 Adding a theme
 --------------
 
@@ -69,9 +67,9 @@ you're satisfied. Then add the file name to the constant `FILE_NAMES`
 in `ColorThemeManager`.
 
 The keys are quite Java-specific right now, but the entries are mapped
-to other editors (e.g. the *method* key is used for XML/HTML
-tags). None of the current file uses all keys, so you'll have to look
-at each to see what's possible.
+to other editors (e.g. the *method* key is used for XML/HTML tags). To
+see all possible keys, have a look at the constants in
+`ColorThemeKeys`.
 
 Adding an editor
 ----------------
@@ -92,7 +90,7 @@ colour theme's keys to those of the editor.
 License
 -------
 
-Copyright (C) 2011 Felix H. Dahlke
+Copyright (C) 2011 Felix H. Dahlke and Roger Dudler
 
 This is open source software, licensed under the Eclipse Public
 License. See the file COPYING for details.

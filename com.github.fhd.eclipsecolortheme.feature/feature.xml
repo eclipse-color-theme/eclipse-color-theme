@@ -3,14 +3,14 @@
       id="com.github.fhd.eclipsecolortheme.feature"
       label="Eclipse Color Theme"
       version="0.5.0.qualifier"
-      provider-name="Felix H. Dahlke">
+      provider-name="GitHub">
 
    <description url="http://github.com/fhd/eclipse-color-theme">
       Color themes for Eclipse.
    </description>
 
    <copyright>
-      Copyright (C) 2011 Felix H. Dahlke
+      Copyright (C) 2011 Felix H. Dahlke and Roger Dudler
    </copyright>
 
    <license url="http://www.eclipse.org/legal/epl-v10.html">

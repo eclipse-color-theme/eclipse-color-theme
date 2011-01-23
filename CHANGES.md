@@ -1,4 +1,4 @@
-0.5.0
+0.5.0 (2011-01-23)
 ==================
 * Added support for the PHP editor.
 * Added support for the Ant editor.
