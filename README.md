@@ -16,8 +16,6 @@ When updating the plugin via Eclipse, go to the preferences page and
 press *OK* once, otherwise you won't see any changes. We're planning
 to fix this.
 
-[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png "Flattr this")](http://flattr.com/thing/111560/Eclipse-Color-Theme)
-
 Rationale
 ---------
 
