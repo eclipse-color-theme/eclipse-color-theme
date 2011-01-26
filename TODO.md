@@ -1,7 +1,3 @@
-0.6
-===
-* Add a few more themes.
-
 1.0
 ===
 * Improve the preference page.

@@ -40,7 +40,10 @@ public class ColorThemeManager {
             "zenburn.xml",
             "inkpot.xml",
             "vibrantink.xml",
-            "oblivion.xml"
+            "oblivion.xml",
+            "obsidian.xml",
+            "tango.xml",
+            "havenjark.xml"
     };
     private Map<String, Map<String, String>> themes;
     private Set<ThemePreferenceMapper> editors;

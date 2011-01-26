@@ -51,6 +51,9 @@ Available themes:
 * [Zenburn](http://www.eclipsecolorthemes.org/?view=theme&id=2)
 * [Vibrant Ink](http://www.eclipsecolorthemes.org/?view=theme&id=3)
 * [Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=19)
+* [Obsidian](http://www.eclipsecolorthemes.org/?view=theme&id=21)
+* [Tango](http://www.eclipsecolorthemes.org/?view=theme&id=27)
+* [Havenjark](http://www.eclipsecolorthemes.org/?view=theme&id=25)
 
 You can download more themes from [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
 

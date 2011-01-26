@@ -1,6 +1,10 @@
 0.6.0
 ==================
 * Added simple theme file import.
+* Updated the Oblivion theme.
+* Added the Obisidian theme.
+* Added the Tango theme.
+* Added the Havenjark theme.
 
 0.5.1 (2011-01-26)
 ==================
