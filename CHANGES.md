@@ -1,6 +1,7 @@
 0.6.0
 ==================
 * Fixed restore to default for the Java editor.
+* Improved occurrence highlighting.
 
 0.5.0 (2011-01-23)
 ==================

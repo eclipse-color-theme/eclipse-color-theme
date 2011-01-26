@@ -4,7 +4,7 @@
     <background color="#191919"/>
     <selectionBackground color="#414C3B"/>
     <currentLine color="#222220"/>
-    <occurrenceIndication color="#616161"/>
+    <occurrenceIndication color="#414141"/>
     <deletionIndication color="#FF0000"/>
     <findScope color="#191919"/>
     <printMargin color="#4C4C4C"/>
