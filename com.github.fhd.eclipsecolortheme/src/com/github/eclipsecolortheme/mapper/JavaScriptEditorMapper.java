@@ -1,6 +1,6 @@
-package com.github.fhd.eclipsecolortheme.mapper;
+package com.github.eclipsecolortheme.mapper;
 
-import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+import static com.github.eclipsecolortheme.ColorThemeKeys.*;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.github.fhd.eclipsecolortheme.mapper;
+package com.github.eclipsecolortheme.mapper;
 
 import java.util.Map;
 

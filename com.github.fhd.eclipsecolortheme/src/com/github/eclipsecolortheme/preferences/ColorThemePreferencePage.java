@@ -1,4 +1,4 @@
-package com.github.fhd.eclipsecolortheme.preferences;
+package com.github.eclipsecolortheme.preferences;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,8 +16,8 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
-import com.github.fhd.eclipsecolortheme.Activator;
-import com.github.fhd.eclipsecolortheme.ColorThemeManager;
+import com.github.eclipsecolortheme.Activator;
+import com.github.eclipsecolortheme.ColorThemeManager;
 
 /** The preference page for managing color themes. */
 public class ColorThemePreferencePage extends FieldEditorPreferencePage

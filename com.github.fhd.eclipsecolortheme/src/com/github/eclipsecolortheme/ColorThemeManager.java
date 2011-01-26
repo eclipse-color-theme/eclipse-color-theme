@@ -1,6 +1,6 @@
-package com.github.fhd.eclipsecolortheme;
+package com.github.eclipsecolortheme;
 
-import static com.github.fhd.eclipsecolortheme.ColorThemeKeys.*;
+import static com.github.eclipsecolortheme.ColorThemeKeys.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,17 +20,17 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.github.fhd.eclipsecolortheme.mapper.AntEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.CppEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.JavaEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.JavaPropertiesEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.JavaScriptEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.PhpEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.SqlEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.TextEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.ThemePreferenceMapper;
-import com.github.fhd.eclipsecolortheme.mapper.WebEditorMapper;
-import com.github.fhd.eclipsecolortheme.mapper.WebEditorMapper.Type;
+import com.github.eclipsecolortheme.mapper.AntEditorMapper;
+import com.github.eclipsecolortheme.mapper.CppEditorMapper;
+import com.github.eclipsecolortheme.mapper.JavaEditorMapper;
+import com.github.eclipsecolortheme.mapper.JavaPropertiesEditorMapper;
+import com.github.eclipsecolortheme.mapper.JavaScriptEditorMapper;
+import com.github.eclipsecolortheme.mapper.PhpEditorMapper;
+import com.github.eclipsecolortheme.mapper.SqlEditorMapper;
+import com.github.eclipsecolortheme.mapper.TextEditorMapper;
+import com.github.eclipsecolortheme.mapper.ThemePreferenceMapper;
+import com.github.eclipsecolortheme.mapper.WebEditorMapper;
+import com.github.eclipsecolortheme.mapper.WebEditorMapper.Type;
 
 /** Loads and applies color themes. */
 public class ColorThemeManager {
@@ -51,7 +51,7 @@ public class ColorThemeManager {
                 InputStream input =  Thread.currentThread()
                                            .getContextClassLoader()
                                            .getResourceAsStream(
-                                "com/github/fhd/eclipsecolortheme/themes/"
+                                "com/github/eclipsecolortheme/themes/"
                                 + themeFile);
                 ColorTheme theme = parseTheme(input);
                 amendThemeEntries(theme.getEntries());

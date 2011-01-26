@@ -6,15 +6,15 @@
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.eclipse.ui.preferencePages.Views"
-            class="com.github.fhd.eclipsecolortheme.preferences.ColorThemePreferencePage"
-            id="com.github.fhd.eclipsecolortheme.preferences.ColorThemePreferencePage"
+            class="com.github.eclipsecolortheme.preferences.ColorThemePreferencePage"
+            id="com.github.eclipsecolortheme.preferences.ColorThemePreferencePage"
             name="Color Theme">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="com.github.fhd.eclipsecolortheme.preferences.PreferenceInitializer">
+            class="com.github.eclipsecolortheme.preferences.PreferenceInitializer">
       </initializer>
    </extension>
 

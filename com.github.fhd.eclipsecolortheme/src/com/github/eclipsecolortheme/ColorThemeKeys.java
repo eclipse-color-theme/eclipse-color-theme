@@ -1,4 +1,4 @@
-package com.github.fhd.eclipsecolortheme;
+package com.github.eclipsecolortheme;
 
 /** Keys that can be used in a colour theme. */
 public class ColorThemeKeys {

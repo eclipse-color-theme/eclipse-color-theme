@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.github.fhd.eclipsecolortheme.feature"
+      id="com.github.eclipsecolortheme.feature"
       label="Eclipse Color Theme"
       version="0.6.0.qualifier"
       provider-name="GitHub">
 
-   <description url="http://github.com/fhd/eclipse-color-theme">
+   <description url="http://github.com/eclipse-color-theme/eclipse-color-theme">
       Color themes for Eclipse.
    </description>
 
@@ -103,7 +103,7 @@ This Agreement is governed by the laws of the State of New York and the intellec
    </license>
 
    <plugin
-         id="com.github.fhd.eclipsecolortheme"
+         id="com.github.eclipsecolortheme"
          download-size="0"
          install-size="0"
          version="0.0.0"

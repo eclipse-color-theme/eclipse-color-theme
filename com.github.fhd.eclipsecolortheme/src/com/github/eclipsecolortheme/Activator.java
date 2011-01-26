@@ -1,4 +1,4 @@
-package com.github.fhd.eclipsecolortheme;
+package com.github.eclipsecolortheme;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
