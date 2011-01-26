@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Eclipse Color Theme
 Bundle-SymbolicName: com.github.fhd.eclipsecolortheme;singleton:=true
-Bundle-Version: 0.6.0.qualifier
+Bundle-Version: 0.5.1.qualifier
 Bundle-Activator: com.github.fhd.eclipsecolortheme.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
