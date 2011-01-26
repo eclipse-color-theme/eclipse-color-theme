@@ -1,5 +1,6 @@
 0.6.0
 ==================
+* Fixed restore to default for the Java editor.
 
 0.5.0 (2011-01-23)
 ==================

@@ -180,12 +180,19 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
                 "semanticHighlighting.methodDeclarationName.enabled");
         preferences.remove("semanticHighlighting.annotation.enabled");
         preferences.remove("semanticHighlighting.field.enabled");
-        preferences.remove("semanticHighlighting.deprecatedMember.enabled");
+        preferences.remove(
+                "semanticHighlighting.deprecatedMember.enabled");
         preferences.remove("semanticHighlighting.number.enabled");
+        preferences.remove(
+                "semanticHighlighting.inheritedMethodInvocation.enabled");
+        preferences.remove(
+                "semanticHighlighting.abstractMethodInvocation.enabled");
         preferences.remove("semanticHighlighting.localVariable.enabled");
         preferences.remove(
                 "semanticHighlighting.localVariableDeclaration.enabled");
-        preferences.remove("semanticHighlighting.methodDeclarationName.bold");
+        preferences.remove("semanticHighlighting.typeArgument.enabled");
+        preferences.remove("semanticHighlighting.typeParameter.enabled");
+        preferences.remove("semanticHighlighting.parameterVariable.enabled");
         preferences.remove("java_default");
         preferences.remove("java_single_line_comment");
         preferences.remove("java_multi_line_comment");
@@ -199,22 +206,51 @@ public class JavaEditorMapper extends ThemePreferenceMapper {
         preferences.remove("java_keyword");
         preferences.remove("semanticHighlighting.class.color");
         preferences.remove("semanticHighlighting.interface.color");
+        preferences.remove("semanticHighlighting.enum.color");
         preferences.remove("semanticHighlighting.method.color");
         preferences.remove("semanticHighlighting.methodDeclarationName.color");
+        preferences.remove("semanticHighlighting.staticMethodInvocation.color");
+        preferences.remove("semanticHighlighting.annotation.color");
         preferences.remove("java_doc_default");
         preferences.remove("java_doc_link");
         preferences.remove("java_doc_keyword");
         preferences.remove("java_doc_tag");
+        preferences.remove("semanticHighlighting.localVariable.color");
         preferences.remove(
                 "semanticHighlighting.inheritedMethodInvocation.color");
         preferences.remove(
                 "semanticHighlighting.abstractMethodInvocation.color");
-        preferences.remove("semanticHighlighting.localVariable.color");
         preferences.remove(
                 "semanticHighlighting.localVariableDeclaration.color");
-        preferences.remove("semanticHighlighting.staticFinalField.color");
         preferences.remove("semanticHighlighting.typeArgument.color");
         preferences.remove("semanticHighlighting.typeParameter.color");
         preferences.remove("semanticHighlighting.parameterVariable.color");
+        preferences.remove("semanticHighlighting.field.color");
+        preferences.remove("semanticHighlighting.staticField.color");
+        preferences.remove("semanticHighlighting.staticFinalField.color");
+        preferences.remove("semanticHighlighting.deprecatedMember.color");
+        preferences.remove("semanticHighlighting.class.enabled");
+        preferences.remove("semanticHighlighting.staticField.enabled");
+        preferences.remove("semanticHighlighting.interface.enabled");
+        preferences.remove("semanticHighlighting.enum.enabled");
+        preferences.remove(
+                "semanticHighlighting.staticMethodInvocation.enabled");
+        preferences.remove("semanticHighlighting.method.enabled");
+        preferences.remove(
+                "semanticHighlighting.methodDeclarationName.enabled");
+        preferences.remove("semanticHighlighting.annotation.enabled");
+        preferences.remove("semanticHighlighting.field.enabled");
+        preferences.remove("semanticHighlighting.deprecatedMember.enabled");
+        preferences.remove("semanticHighlighting.number.enabled");
+        preferences.remove(
+                "semanticHighlighting.inheritedMethodInvocation.enabled");
+        preferences.remove(
+                "semanticHighlighting.abstractMethodInvocation.enabled");
+        preferences.remove("semanticHighlighting.localVariable.enabled");
+        preferences.remove(
+                "semanticHighlighting.localVariableDeclaration.enabled");
+        preferences.remove("semanticHighlighting.typeArgument.enabled");
+        preferences.remove("semanticHighlighting.typeParameter.enabled");
+        preferences.remove("semanticHighlighting.parameterVariable.enabled");
     }        
 }
