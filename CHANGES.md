@@ -1,4 +1,4 @@
-0.6.0
+0.6.0 (2011-01-26)
 ==================
 * Added simple theme file import.
 * Updated the Oblivion theme.
