@@ -2,6 +2,7 @@ package com.github.eclipsecolortheme;
 
 import static com.github.eclipsecolortheme.ColorThemeKeys.*;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -13,6 +14,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.osgi.service.prefs.BackingStoreException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -46,6 +48,25 @@ public class ColorThemeManager {
     /** Creates a new color theme manager. */
     public ColorThemeManager() {
         themes = new HashMap<String, Map<String, String>>();
+        readStockThemes(themes);
+        readImportedThemes(themes);
+
+        editors = new HashSet<ThemePreferenceMapper>();
+        editors.add(new TextEditorMapper());
+        editors.add(new JavaEditorMapper());
+        editors.add(new JavaPropertiesEditorMapper());
+        editors.add(new WebEditorMapper(Type.XML));
+        editors.add(new WebEditorMapper(Type.HTML));
+        editors.add(new WebEditorMapper(Type.CSS));
+        editors.add(new JavaScriptEditorMapper());
+        editors.add(new CppEditorMapper());
+        editors.add(new PhpEditorMapper());
+        editors.add(new AntEditorMapper());
+        editors.add(new SqlEditorMapper());
+    }
+
+    private static void readStockThemes(
+            Map<String, Map<String, String>> themes) {
         for (String themeFile : THEME_FILES) {
             try {
                 InputStream input =  Thread.currentThread()
@@ -62,22 +83,33 @@ public class ColorThemeManager {
                 e.printStackTrace();
             }
         }
-
-        editors = new HashSet<ThemePreferenceMapper>();
-        editors.add(new TextEditorMapper());
-        editors.add(new JavaEditorMapper());
-        editors.add(new JavaPropertiesEditorMapper());
-        editors.add(new WebEditorMapper(Type.XML));
-        editors.add(new WebEditorMapper(Type.HTML));
-        editors.add(new WebEditorMapper(Type.CSS));
-        editors.add(new JavaScriptEditorMapper());
-        editors.add(new CppEditorMapper());
-        editors.add(new PhpEditorMapper());
-        editors.add(new AntEditorMapper());
-        editors.add(new SqlEditorMapper());
     }
 
-    private static ColorTheme parseTheme(InputStream input)
+    private static void readImportedThemes(
+            Map<String, Map<String, String>> themes) {
+        IPreferenceStore store = getPreferenceStore();
+        
+        for (int i = 1; ; i++) {
+            String xml = store.getString("importedColorTheme" + i);
+            if (xml.isEmpty())
+                break;
+            try {
+                ColorTheme theme =
+                        parseTheme(new ByteArrayInputStream(xml.getBytes()));
+                amendThemeEntries(theme.getEntries());
+                themes.put(theme.getName(), theme.getEntries());
+            } catch (Exception e) {
+                System.err.println("Error while parsing imported theme");
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static IPreferenceStore getPreferenceStore() {
+        return Activator.getDefault().getPreferenceStore();
+    }
+
+    public static ColorTheme parseTheme(InputStream input)
             throws ParserConfigurationException, SAXException, IOException {
         ColorTheme theme = new ColorTheme();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -99,27 +131,6 @@ public class ColorThemeManager {
         theme.setEntries(entries);
 
         return theme;
-    }
-
-    private static class ColorTheme {
-        private String name;
-        private Map<String, String> entries;
-
-        public String getName() {
-            return name;
-        }
-        
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public Map<String, String> getEntries() {
-            return entries;
-        }
-
-        public void setEntries(Map<String, String> entries) {
-            this.entries = entries;
-        }
     }
 
     private static void amendThemeEntries(Map<String, String> theme) {
@@ -173,6 +184,34 @@ public class ColorThemeManager {
                 // TODO: Show a proper error message (StatusManager).
                 e.printStackTrace();
             }
+        }
+    }
+
+    /**
+     * Adds the color theme to the list and saves it to the preferences.
+     * @param content The content of the color theme file.
+     * @return The saved color theme, or <code>null</code> if the theme was not
+     *         valid.
+     */
+    public ColorTheme saveTheme(String content) {
+        ColorTheme theme;
+        try {
+            theme = ColorThemeManager.parseTheme(
+                    new ByteArrayInputStream(content.getBytes()));
+            String name = theme.getName();
+            if (themes.containsKey(name))
+                return null;
+            themes.put(name, theme.getEntries());
+            IPreferenceStore store = getPreferenceStore();
+            for (int i = 1; ; i++) {
+                if (!store.contains("importedColorTheme" + i)) {
+                    store.putValue("importedColorTheme" + i, content);
+                    break;
+                }
+            }
+            return theme;
+        } catch (Exception e) {
+            return null;
         }
     }
 }

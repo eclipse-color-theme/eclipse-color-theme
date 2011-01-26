@@ -1,11 +1,16 @@
 0.6
 ===
-* Add theme file import.
-* Add a link to eclipsecolorthemes.org.
 * Add a few more themes.
 
 1.0
 ===
+* Improve the preference page.
+  * Add a link to eclipsecolorthemes.org.
+  * Add newly imported themes to the list without requiring the user to reopen
+    the preferences page.
+  * Use a different control for theme selection.
+  * Display author and website of each theme.
+  * Make it possible to delete imported themes.
 * Move from hard coded mappings to mapping files.
 * Make it possible for themes to define text decorations (bold,
   italic, underlined).
@@ -26,7 +31,7 @@ Ideas
 * Don't re-apply the theme when pressing *OK* if it has already been
   applied by pressing *Apply*.
 * Add a colour editor like the one in Textmate and theme export.
-* Add support for more editors, e.g.:
+* Add support for more editors, e.g.
   * Clojure
 * Support multiple versions of each editor plugin instead of just the
   most current one.

@@ -3,9 +3,8 @@ Eclipse Color Theme
 
 Color themes for Eclipse.
 
-Eclipse Color Theme makes it possible to switch color themes
-conveniently and without side effects. Support for importing themes is
-planned.
+Eclipse Color Theme makes it possible to import and switch color
+themes conveniently and without side effects.
 
 You can install the plugin from the
 [update site](http://eclipse-color-theme.github.com/update).  After
@@ -48,10 +47,12 @@ Eclipse Color Theme currently supports the following editors:
 
 Available themes:
 
-* [Inkpot](http://www.vim.org/scripts/script.php?script_id=1143)
-* [Zenburn](http://slinky.imukuppi.org/zenburnpage/)
-* [Vibrant Ink](http://code.google.com/p/vibrant-ink-textmate/)
-* [Oblivion](http://www.rogerdudler.com/?p=362)
+* [Inkpot](http://www.eclipsecolorthemes.org/?view=theme&id=4)
+* [Zenburn](http://www.eclipsecolorthemes.org/?view=theme&id=2)
+* [Vibrant Ink](http://www.eclipsecolorthemes.org/?view=theme&id=3)
+* [Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=19)
+
+You can download more themes from [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
 
 Adding a theme
 --------------
