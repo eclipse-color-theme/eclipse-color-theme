@@ -1,12 +1,19 @@
-1.0
+0.6
 ===
 * Add theme file import.
-* Add at least one more theme (e.g. Wombat or Sunburst)
+* Add a link to eclipsecolorthemes.org.
+* Add a few more themes.
+
+1.0
+===
+* Move from hard coded mappings to mapping files.
 * Make it possible for themes to define text decorations (bold,
   italic, underlined).
 * Add support for the most common editors:
+  * JAR Manifest
   * PDE (plugin.xml etc.)
   * PHPEclipse
+  * PyDev
   * ...
 * Re-apply the selected theme when the plugin is updated (or on each
   startup).
@@ -20,7 +27,6 @@ Ideas
   applied by pressing *Apply*.
 * Add a colour editor like the one in Textmate and theme export.
 * Add support for more editors, e.g.:
-  * Python
   * Clojure
 * Support multiple versions of each editor plugin instead of just the
   most current one.
