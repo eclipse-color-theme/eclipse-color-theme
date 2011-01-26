@@ -11,9 +11,14 @@ You can install the plugin from the
 installing, go to *Window->Preferences->General->Appearance->Color
 Theme* to change the color theme.
 
-When updating the plugin via Eclipse, go to the preferences page and
-press *OK* once, otherwise you won't see any changes. We're planning
-to fix this.
+**Please note:**
+
+* When updating the plugin via Eclipse, go to the preferences page and
+  press *OK* once, otherwise you won't see any changes. We're planning
+  to fix this.
+* When updating from an earlier version than 0.6, please uninstall the
+  plugin and the update site, add the site listed above and install it
+  again from there. Otherwise you won't see any updates.
 
 Rationale
 ---------
@@ -55,7 +60,8 @@ Available themes:
 * [Tango](http://www.eclipsecolorthemes.org/?view=theme&id=27)
 * [Havenjark](http://www.eclipsecolorthemes.org/?view=theme&id=25)
 
-You can download more themes from [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
+You can download additional themes or create your own on
+[eclipsecolorthemes.org](http://eclipsecolorthemes.org).
 
 Adding a theme
 --------------

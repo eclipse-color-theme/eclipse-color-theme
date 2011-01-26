@@ -1,4 +1,4 @@
-1.0
+0.7
 ===
 * Improve the preference page.
   * Add a link to eclipsecolorthemes.org.
@@ -7,6 +7,9 @@
   * Use a different control for theme selection.
   * Display author and website of each theme.
   * Make it possible to delete imported themes.
+
+1.0
+===
 * Move from hard coded mappings to mapping files.
 * Make it possible for themes to define text decorations (bold,
   italic, underlined).
