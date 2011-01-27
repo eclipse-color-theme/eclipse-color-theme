@@ -128,9 +128,7 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
                                    "This issue will be addressed soon.");
                 } else {
                     box.setText("Theme not imported");
-                    box.setMessage("This is either not a valid theme file or " +
-                                   " a theme of the same name does already " +
-                                   "exist.");
+                    box.setMessage("This is not a valid theme file.");
                 }
                 box.open();
             }
