@@ -66,18 +66,10 @@ You can download additional themes or create your own on
 Adding a theme
 --------------
 
-To create a new theme, you'll have to get the source and build the
-plugin until theme importing/exporting is implemented.
-
-Create an XML file in the *com.github.fhd.eclipsecolortheme.themes*
-package next to *zenburn.xml* and change the colour values until
-you're satisfied. Then add the file name to the constant `FILE_NAMES`
-in `ColorThemeManager`.
-
-The keys are quite Java-specific right now, but the entries are mapped
-to other editors (e.g. the *method* key is used for XML/HTML tags). To
-see all possible keys, have a look at the constants in
-`ColorThemeKeys`.
+To create a new theme, go to
+[eclipsecolorthemes.org](http://eclipsecolorthemes.org), create it,
+download it in *.xml format and import it from the Color Theme
+preference page.
 
 Adding an editor
 ----------------
