@@ -52,10 +52,14 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
         for (String theme : themeNames)
 	        choices[i++] = new String[] {theme, theme};
 
-	    colorThemeEditor = new RadioGroupFieldEditor("colorTheme",
-		                                             "Current color theme:", 1,
-		                                             choices,
-		                                             getFieldEditorParent());
+        colorThemeEditor = new RadioGroupFieldEditor("colorTheme",
+                "Current color theme:", 1, choices, getFieldEditorParent()) {
+            @Override
+            protected void doLoadDefault() {
+                colorThemeManager.clearImportedThemes();
+                super.doLoadDefault();
+            }
+        };
 	    addField(colorThemeEditor);
 	}
 

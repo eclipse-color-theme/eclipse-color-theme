@@ -108,6 +108,17 @@ public class ColorThemeManager {
         }
     }
 
+    public void clearImportedThemes() {
+        IPreferenceStore store = getPreferenceStore();
+        int i = 1;
+        while (store.contains("importedColorThemeName" + i)
+                || store.contains("importedColorTheme" + i)) {
+            store.setToDefault("importedColorThemeName" + i);
+            store.setToDefault("importedColorTheme" + i);
+            i++;
+        }
+    }
+    
     private static IPreferenceStore getPreferenceStore() {
         return Activator.getDefault().getPreferenceStore();
     }
