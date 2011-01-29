@@ -1,7 +1,10 @@
+0.8.0
+==================
+
 0.7.0 (2011-01-29)
 ==================
 * Added a generic mapper that reads mappings from XML.
-* Addded support for the Python editor.
+* Added support for the Python editor.
 * Importing themes overwrites stock and previously imported themes.
 * Restoring defaults deletes all imported or replaced themes.
 * Added support for the JSP editor.
