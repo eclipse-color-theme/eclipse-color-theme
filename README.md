@@ -49,6 +49,7 @@ Eclipse Color Theme currently supports the following editors:
 * PHP
 * Ant
 * SQL
+* Python
 
 Available themes:
 
@@ -79,13 +80,15 @@ If you would like to add an editor, proceed as follows:
 1. Go to the *syntax coloring* preferences page of the editor,
 e.g. *C/C++->Editor->Syntax Coloring*.
 
-2. Look at the colour theme keys of one theme (I suggest you use
-Zenburn for that) in this plugin's `ColorThemeManager` class and set
-up the syntax colouring using the colours defined there.
+2. Look at the colour theme keys of one theme (See `ColorThemeKeys`
+for all available keys) and set up the syntax colouring using the
+colours defined there.
 
 3. Open the editor's preferences file, e.g. *workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.cdt.ui.prefs*
 and create a new subclass of `ThemePreferenceMapper` where you map the
-colour theme's keys to those of the editor.
+colour theme's keys to those of the editor. In the future, all mappings will be defined as XML, so you might as well see if the capabilities of the `GenericMapper` are sufficient for your mapping (it doesn't support custom entries or dependent entries right yet). If so, just create a new xml file named after the plugin ID in the `mapper` package.
+
+4. Instantiate and add your mapper in `ColorThemeManager`.
 
 License
 -------

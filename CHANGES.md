@@ -1,5 +1,7 @@
 0.7.0
 ==================
+* Added a generic mapper that reads mappings from XML.
+* Addded support for the Python editor.
 
 0.6.0 (2011-01-26)
 ==================

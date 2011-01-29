@@ -17,7 +17,6 @@
   * JAR Manifest
   * PDE (plugin.xml etc.)
   * PHPEclipse
-  * PyDev
   * ...
 * Re-apply the selected theme when the plugin is updated (or on each
   startup).

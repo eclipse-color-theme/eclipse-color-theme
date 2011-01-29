@@ -24,6 +24,7 @@ import org.xml.sax.SAXException;
 
 import com.github.eclipsecolortheme.mapper.AntEditorMapper;
 import com.github.eclipsecolortheme.mapper.CppEditorMapper;
+import com.github.eclipsecolortheme.mapper.GenericMapper;
 import com.github.eclipsecolortheme.mapper.JavaEditorMapper;
 import com.github.eclipsecolortheme.mapper.JavaPropertiesEditorMapper;
 import com.github.eclipsecolortheme.mapper.JavaScriptEditorMapper;
@@ -66,6 +67,7 @@ public class ColorThemeManager {
         editors.add(new PhpEditorMapper());
         editors.add(new AntEditorMapper());
         editors.add(new SqlEditorMapper());
+        editors.add(new GenericMapper("org.python.pydev"));
     }
 
     private static void readStockThemes(
