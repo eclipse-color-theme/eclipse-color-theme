@@ -1,4 +1,4 @@
-0.7
+0.8
 ===
 * Improve the preference page.
   * Add a link to eclipsecolorthemes.org.
