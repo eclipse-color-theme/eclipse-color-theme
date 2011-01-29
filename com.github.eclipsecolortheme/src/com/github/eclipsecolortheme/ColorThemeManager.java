@@ -112,13 +112,10 @@ public class ColorThemeManager {
 
     public void clearImportedThemes() {
         IPreferenceStore store = getPreferenceStore();
-        int i = 1;
-        while (store.contains("importedColorThemeName" + i)
-                || store.contains("importedColorTheme" + i)) {
-            store.setToDefault("importedColorThemeName" + i);
+        for (int i = 1; store.contains("importedColorTheme" + i); i++)
             store.setToDefault("importedColorTheme" + i);
-            i++;
-        }
+        themes.clear();
+        readStockThemes(themes);
     }
     
     private static IPreferenceStore getPreferenceStore() {
@@ -218,17 +215,11 @@ public class ColorThemeManager {
             String name = theme.getName();
             themes.put(name, theme.getEntries());
             IPreferenceStore store = getPreferenceStore();
-            for (int i = 1; ; i++) {
-                if (store.contains("importedColorThemeName" + i)&& store.getString("importedColorThemeName" + i).equals(name)) {
-                    store.putValue("importedColorTheme" + i, content);
-                    break;
-                }
+            for (int i = 1; ; i++)
                 if (!store.contains("importedColorTheme" + i)) {
-                    store.putValue("importedColorThemeName" + i, name);
                     store.putValue("importedColorTheme" + i, content);
                     break;
                 }
-            }
             return theme;
         } catch (Exception e) {
             return null;

@@ -2,6 +2,8 @@
 ==================
 * Added a generic mapper that reads mappings from XML.
 * Addded support for the Python editor.
+* Importing themes overwrites stock and previously imported themes.
+* Restoring defaults deletes all imported or replaced themes.
 
 0.6.0 (2011-01-26)
 ==================

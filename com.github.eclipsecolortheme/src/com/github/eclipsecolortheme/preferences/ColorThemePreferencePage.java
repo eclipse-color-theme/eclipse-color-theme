@@ -57,6 +57,16 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
             @Override
             protected void doLoadDefault() {
                 colorThemeManager.clearImportedThemes();
+                // TODO: Add the theme to the list immediately.
+                MessageBox box = new MessageBox(getShell(), SWT.OK);
+                box.setText("Defaults restored");
+                box.setMessage("All themes have been restored to their " +
+                               "defaults and imported themes have been " +
+                               "removed. However, these changes will not " +
+                               "take effect unless you close the preference " +
+                               "window and open it again. This issue will be " +
+                               "addressed soon.");
+                box.open();
                 super.doLoadDefault();
             }
         };
