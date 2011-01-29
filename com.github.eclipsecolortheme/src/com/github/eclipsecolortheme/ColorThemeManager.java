@@ -110,6 +110,17 @@ public class ColorThemeManager {
         }
     }
 
+    public void clearImportedThemes() {
+        IPreferenceStore store = getPreferenceStore();
+        int i = 1;
+        while (store.contains("importedColorThemeName" + i)
+                || store.contains("importedColorTheme" + i)) {
+            store.setToDefault("importedColorThemeName" + i);
+            store.setToDefault("importedColorTheme" + i);
+            i++;
+        }
+    }
+    
     private static IPreferenceStore getPreferenceStore() {
         return Activator.getDefault().getPreferenceStore();
     }
@@ -194,6 +205,7 @@ public class ColorThemeManager {
 
     /**
      * Adds the color theme to the list and saves it to the preferences.
+     * Existing themes will be overwritten with the new content.
      * @param content The content of the color theme file.
      * @return The saved color theme, or <code>null</code> if the theme was not
      *         valid.
@@ -204,12 +216,15 @@ public class ColorThemeManager {
             theme = ColorThemeManager.parseTheme(
                     new ByteArrayInputStream(content.getBytes()));
             String name = theme.getName();
-            if (themes.containsKey(name))
-                return null;
             themes.put(name, theme.getEntries());
             IPreferenceStore store = getPreferenceStore();
             for (int i = 1; ; i++) {
+                if (store.contains("importedColorThemeName" + i)&& store.getString("importedColorThemeName" + i).equals(name)) {
+                    store.putValue("importedColorTheme" + i, content);
+                    break;
+                }
                 if (!store.contains("importedColorTheme" + i)) {
+                    store.putValue("importedColorThemeName" + i, name);
                     store.putValue("importedColorTheme" + i, content);
                     break;
                 }
