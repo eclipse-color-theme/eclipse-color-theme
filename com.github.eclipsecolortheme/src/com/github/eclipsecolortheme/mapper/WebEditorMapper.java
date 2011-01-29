@@ -11,7 +11,8 @@ public class WebEditorMapper extends ThemePreferenceMapper {
     public enum Type {
         XML("org.eclipse.wst.xml.ui"),
         HTML("org.eclipse.wst.html.ui"),
-        CSS("org.eclipse.wst.css.ui");
+        CSS("org.eclipse.wst.css.ui"),
+        JSP("org.eclipse.jst.jsp.ui");
 
         private String plugin;
 
@@ -83,6 +84,20 @@ public class WebEditorMapper extends ThemePreferenceMapper {
             putPreference("ATMARK_RULE", entry(theme.get(METHOD)));
             putPreference("ATTRIBUTE_OPERATOR", entry(theme.get(METHOD)));
             putPreference("MEDIA", entry(theme.get(KEYWORD)));
+            break;
+        case JSP:
+        	putPreference("tagBorder", entry(theme.get(METHOD)));
+            putPreference("tagName", entry(theme.get(METHOD)));
+            putPreference("tagAttributeName", entry(theme.get(KEYWORD)));
+            putPreference("tagAttributeEquals",
+                          entry(theme.get(FOREGROUND)));
+            putPreference("tagAttributeValue",
+                          italicEntry(theme.get(STRING)));
+            putPreference("commentBorder",
+                          entry(theme.get(MULTI_LINE_COMMENT)));
+            putPreference("commentText", entry(theme.get(MULTI_LINE_COMMENT)));
+            putPreference("SCRIPT_AREA_BORDER", entry(theme.get(BRACKET)));
+            putPreference("jsp_content", entry(theme.get(FOREGROUND)));
             break;
         }
     }
@@ -159,6 +174,17 @@ public class WebEditorMapper extends ThemePreferenceMapper {
             preferences.remove("ATMARK_RULE");
             preferences.remove("ATTRIBUTE_OPERATOR");
             preferences.remove("MEDIA");
+            break;
+        case JSP:
+        	preferences.remove("tagBorder");
+        	preferences.remove("tagName");
+        	preferences.remove("tagAttributeName");
+        	preferences.remove("tagAttributeEquals");
+        	preferences.remove("tagAttributeValue");
+        	preferences.remove("commentBorder");
+        	preferences.remove("commentText");
+        	preferences.remove("SCRIPT_AREA_BORDER");
+        	preferences.remove("jsp_content");
             break;
         }
     }
