@@ -50,6 +50,7 @@ Eclipse Color Theme currently supports the following editors:
 * Ant
 * SQL
 * Python
+* JSP
 
 Available themes:
 

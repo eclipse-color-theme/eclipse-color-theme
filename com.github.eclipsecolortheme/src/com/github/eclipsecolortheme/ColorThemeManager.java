@@ -62,6 +62,7 @@ public class ColorThemeManager {
         editors.add(new WebEditorMapper(Type.XML));
         editors.add(new WebEditorMapper(Type.HTML));
         editors.add(new WebEditorMapper(Type.CSS));
+        editors.add(new WebEditorMapper(Type.JSP));
         editors.add(new JavaScriptEditorMapper());
         editors.add(new CppEditorMapper());
         editors.add(new PhpEditorMapper());
