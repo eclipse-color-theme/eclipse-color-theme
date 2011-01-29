@@ -17,6 +17,7 @@
 * Add support for the most common editors:
   * JAR Manifest
   * PDE (plugin.xml etc.)
+  * Scala
   * PHPEclipse
   * ...
 * Re-apply the selected theme when the plugin is updated (or on each
