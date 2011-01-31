@@ -17,8 +17,6 @@
 * Add support for the most common editors:
   * JAR Manifest
   * PDE (plugin.xml etc.)
-  * Scala
-  * PHPEclipse
   * ...
 * Re-apply the selected theme when the plugin is updated (or on each
   startup).
@@ -32,8 +30,12 @@ Ideas
   applied by pressing *Apply*.
 * Add a colour editor like the one in Textmate and theme export.
 * Add support for more editors, e.g.
+  * Scala
+  * PHPEclipse
   * Clojure
   * Ruby/JRuby
+  * ActionScript
+  * MXML
 * Support multiple versions of each editor plugin instead of just the
   most current one.
 * Theme more than just editors, e.g.:
