@@ -33,6 +33,7 @@ Ideas
 * Add a colour editor like the one in Textmate and theme export.
 * Add support for more editors, e.g.
   * Clojure
+  * Ruby/JRuby
 * Support multiple versions of each editor plugin instead of just the
   most current one.
 * Theme more than just editors, e.g.:
