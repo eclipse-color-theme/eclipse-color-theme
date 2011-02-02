@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.wst.html.ui" created="2011-02-02 16:27:58">
+    <mappings>
+        <mapping pluginKey="tagBorder" themeKey="localVariable" />
+        <mapping pluginKey="tagName" themeKey="localVariableDeclaration" />
+        <mapping pluginKey="tagAttributeName" themeKey="field" />
+        <mapping pluginKey="tagAttributeEquals" themeKey="foreground" />
+        <mapping pluginKey="tagAttributeValue" themeKey="string" />
+        <mapping pluginKey="xmlContent" themeKey="foreground" />
+        <mapping pluginKey="commentBorder" themeKey="multiLineComment" />
+        <mapping pluginKey="commentText" themeKey="multiLineComment" />
+        <mapping pluginKey="entityReference" themeKey="keyword" />
+        <mapping pluginKey="doctypeName" themeKey="method" />
+        <mapping pluginKey="doctypeExternalPubref" themeKey="method" />
+        <mapping pluginKey="doctypeExtrenalSysref" themeKey="method" />
+        <mapping pluginKey="doctypeExternalId" themeKey="method" />
+        <mapping pluginKey="declBoder" themeKey="method" />
+    </mappings>
+    <dependentMappings>
+    </dependentMappings>
+</eclipseColorThemeMapping>

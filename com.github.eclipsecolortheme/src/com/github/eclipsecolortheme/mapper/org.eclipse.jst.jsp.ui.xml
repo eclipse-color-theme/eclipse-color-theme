@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.jst.jsp.ui" created="2011-02-02 16:29:48">
+    <mappings>
+        <mapping pluginKey="tagBorder" themeKey="method" />
+        <mapping pluginKey="tagAttributeName" themeKey="keyword" />
+        <mapping pluginKey="tagAttributeEquals" themeKey="foreground" />
+        <mapping pluginKey="tagAttributeValue" themeKey="string" />
+        <mapping pluginKey="commentBorder" themeKey="multiLineComment" />
+        <mapping pluginKey="commentText" themeKey="multiLineComment" />
+        <mapping pluginKey="SCRIPT_AREA_BORDER" themeKey="bracket" />
+        <mapping pluginKey="jsp_content" themeKey="foreground" />
+    </mappings>
+    <dependentMappings>
+    </dependentMappings>
+</eclipseColorThemeMapping>

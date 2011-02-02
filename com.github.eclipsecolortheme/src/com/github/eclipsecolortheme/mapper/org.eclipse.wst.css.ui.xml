@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.wst.css.ui" created="2011-02-02 16:28:23">
+    <mappings>
+        <mapping pluginKey="PROPERTY_NAME" themeKey="field" />
+        <mapping pluginKey="CLASS" themeKey="method" />
+        <mapping pluginKey="ATTRIBUTE_VALUE" themeKey="method" />
+        <mapping pluginKey="UNIVERSAL" themeKey="method" />
+        <mapping pluginKey="COMBINATOR" themeKey="method" />
+        <mapping pluginKey="SEMI_COLON" themeKey="foreground" />
+        <mapping pluginKey="ATTRIBUTE_DELIM" themeKey="method" />
+        <mapping pluginKey="SELECTOR" themeKey="method" />
+        <mapping pluginKey="URI" themeKey="string" />
+        <mapping pluginKey="ATTRIBUTE_NAME" themeKey="method" />
+        <mapping pluginKey="COLON" themeKey="foreground" />
+        <mapping pluginKey="ID" themeKey="method" />
+        <mapping pluginKey="NORMAL" themeKey="foreground" />
+        <mapping pluginKey="STRING" themeKey="string" />
+        <mapping pluginKey="CURLY_BRACE" themeKey="bracket" />
+        <mapping pluginKey="PSEUDO" themeKey="method" />
+        <mapping pluginKey="COMMENT" themeKey="multiLineComment" />
+        <mapping pluginKey="PROPERTY_VALUE" themeKey="string" />
+        <mapping pluginKey="ATMARK_RULE" themeKey="method" />
+        <mapping pluginKey="ATTRIBUTE_OPERATOR" themeKey="method" />
+        <mapping pluginKey="MEDIA" themeKey="keyword" />
+    </mappings>
+    <dependentMappings>
+    </dependentMappings>
+</eclipseColorThemeMapping>

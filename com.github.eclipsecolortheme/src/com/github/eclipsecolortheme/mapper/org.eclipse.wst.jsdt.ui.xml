@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.wst.jsdt.ui" created="2011-02-02 16:25:30">
+    <mappings>
+        <mapping pluginKey="java_default" themeKey="foreground" />
+        <mapping pluginKey="java_single_line_comment" themeKey="singleLineComment" />
+        <mapping pluginKey="java_multi_line_comment" themeKey="multiLineComment" />
+        <mapping pluginKey="java_comment_task_tag" themeKey="commentTaskTag" />
+        <mapping pluginKey="java_string" themeKey="string" />
+        <mapping pluginKey="java_bracket" themeKey="bracket" />
+        <mapping pluginKey="java_operator" themeKey="operator" />
+        <mapping pluginKey="java_keyword_return" themeKey="keyword" />
+        <mapping pluginKey="java_keyword" themeKey="keyword" />
+        <mapping pluginKey="java_doc_default" themeKey="javadoc" />
+        <mapping pluginKey="java_doc_link" themeKey="javadocLink" />
+        <mapping pluginKey="java_doc_keyword" themeKey="javadocKeyword" />
+        <mapping pluginKey="java_doc_tag" themeKey="javadocTag" />
+        <mapping pluginKey="tagName" themeKey="method" />
+        <mapping pluginKey="semanticHighlighting.methodDeclarationName.color" themeKey="methodDeclaration" />
+        <mapping pluginKey="semanticHighlighting.localVariable.color" themeKey="localVariable" />
+        <mapping pluginKey="semanticHighlighting.localVariableDeclaration.color" themeKey="localVariableDeclaration" />
+    </mappings>
+    <dependentMappings>
+        <dependentMapping pluginKey="semanticHighlighting.methodDeclarationName.color" dependentPluginKey="semanticHighlighting.methodDeclarationName.enabled" />
+        <dependentMapping pluginKey="semanticHighlighting.localVariable.color" dependentPluginKey="semanticHighlighting.localVariable.enabled" />
+        <dependentMapping pluginKey="semanticHighlighting.localVariableDeclaration.color" dependentPluginKey="semanticHighlighting.localVariableDeclaration.enabled" />
+    </dependentMappings>
+</eclipseColorThemeMapping>

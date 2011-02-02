@@ -10,7 +10,6 @@
 
 1.0
 ===
-* Move from hard coded mappings to mapping files.
 * Add mapping file import support.
 * Make it possible for themes to define text decorations (bold,
   italic, underlined).

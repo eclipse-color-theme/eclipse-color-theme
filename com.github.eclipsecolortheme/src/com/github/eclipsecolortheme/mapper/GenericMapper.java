@@ -45,7 +45,24 @@ public class GenericMapper extends ThemePreferenceMapper {
                 mappings.put(extractAttribute(mappingNode, "pluginKey"),
                              extractAttribute(mappingNode, "themeKey"));
         }
-        // TODO: Parse and apply dependentEntries.
+        Node dependentMappingsNode = root.getElementsByTagName("dependentMappings").item(0);
+        NodeList dependentMappingNodes = dependentMappingsNode.getChildNodes();
+        for (int i = 0; i < dependentMappingNodes.getLength(); i++) {
+            Node dependentMappingNode = dependentMappingNodes.item(i);
+            if (dependentMappingNode.hasAttributes()) {
+            	String pluginKey = extractAttribute(dependentMappingNode, "pluginKey");
+            	String dependentPluginKey = extractAttribute(dependentMappingNode, "dependentPluginKey");
+            	String value = mappings.get(pluginKey);
+            	if (value != null) {
+            		// TODO support special dependency values
+            		if (dependentPluginKey.endsWith("SystemDefault")) {
+            			preferences.putBoolean(dependentPluginKey, false);
+            		} else {
+            			preferences.putBoolean(dependentPluginKey, true);
+            		}
+            	}
+            }
+        }
     }
 
     private static String extractAttribute(Node node, String name) {

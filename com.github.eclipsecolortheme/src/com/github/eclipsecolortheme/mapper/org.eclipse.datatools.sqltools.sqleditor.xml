@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.datatools.sqltools.sqleditor" created="2011-02-02 16:20:10">
+    <mappings>
+        <mapping pluginKey="Type" themeKey="class" />
+        <mapping pluginKey="Keyword" themeKey="keyword" />
+        <mapping pluginKey="Double quoted string" themeKey="string" />
+        <mapping pluginKey="Identifier" themeKey="method" />
+        <mapping pluginKey="Single quoted string" themeKey="string" />
+        <mapping pluginKey="Single-line comment" themeKey="singleLineComment" />
+        <mapping pluginKey="Multi-line comment" themeKey="multiLineComment" />
+        <mapping pluginKey="Others" themeKey="foreground" />
+    </mappings>
+    <dependentMappings>
+    </dependentMappings>
+</eclipseColorThemeMapping>

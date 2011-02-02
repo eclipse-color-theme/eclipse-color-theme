@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.ui.editors" created="2011-02-02 16:32:34">
+    <mappings>
+        <mapping pluginKey="AbstractTextEditor.Color.Foreground" themeKey="foreground" />
+        <mapping pluginKey="AbstractTextEditor.Color.Background" themeKey="background" />
+        <mapping pluginKey="AbstractTextEditor.Color.SelectionForeground" themeKey="selectionForeground" />
+        <mapping pluginKey="AbstractTextEditor.Color.SelectionBackground" themeKey="selectionBackground" />
+        <mapping pluginKey="currentLineColor" themeKey="currentLine" />
+        <mapping pluginKey="lineNumberColor" themeKey="lineNumber" />
+        <mapping pluginKey="filteredSearchResultIndicationColor" themeKey="filteredSearchResultIndication" />
+        <mapping pluginKey="occurrenceIndicationColor" themeKey="occurrenceIndication" />
+        <mapping pluginKey="javaScriptOccurrenceIndicationColor" themeKey="occurrenceIndication" />
+        <mapping pluginKey="deletionIndicationColor" themeKey="deletionIndication" />
+        <mapping pluginKey="AbstractTextEditor.Color.FindScope" themeKey="findScope" />
+        <mapping pluginKey="printMarginColor" themeKey="printMargin" />
+        <mapping pluginKey="writeOccurrenceIndicationColor" themeKey="writeOccurrenceIndication" />
+        <mapping pluginKey="searchResultIndicationColor" themeKey="searchResultIndication" />
+    </mappings>
+    <dependentMappings>
+        <dependentMapping pluginKey="AbstractTextEditor.Color.SelectionForeground" dependentPluginKey="AbstractTextEditor.Color.SelectionForeground.SystemDefault" />
+        <dependentMapping pluginKey="AbstractTextEditor.Color.SelectionBackground" dependentPluginKey="AbstractTextEditor.Color.SelectionBackground.SystemDefault" />
+        <dependentMapping pluginKey="AbstractTextEditor.Color.Background" dependentPluginKey="AbstractTextEditor.Color.Background.SystemDefault" />
+        <dependentMapping pluginKey="AbstractTextEditor.Color.Foreground" dependentPluginKey="AbstractTextEditor.Color.Foreground.SystemDefault" />
+    </dependentMappings>
+</eclipseColorThemeMapping>

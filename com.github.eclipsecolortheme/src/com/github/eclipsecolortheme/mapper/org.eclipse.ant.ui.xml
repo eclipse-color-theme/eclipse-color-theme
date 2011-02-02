@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.ant.ui" created="2011-02-02 16:19:38">
+    <mappings>
+        <mapping pluginKey="org.eclipse.ant.ui.textColor" themeKey="foreground" />
+        <mapping pluginKey="org.eclipse.ant.ui.tagsColor" themeKey="method" />
+        <mapping pluginKey="org.eclipse.ant.ui.dtdColor" themeKey="method" />
+        <mapping pluginKey="org.eclipse.ant.ui.commentsColor" themeKey="multiLineComment" />
+        <mapping pluginKey="org.eclipse.ant.ui.constantStringsColor" themeKey="string" />
+        <mapping pluginKey="org.eclipse.ant.ui.processingInstructionsColor" themeKey="foreground" />
+        <mapping pluginKey="org.eclipse.ant.ui.informationColor" themeKey="foreground" />
+        <mapping pluginKey="org.eclipse.ant.ui.errorColor" themeKey="class" />
+        <mapping pluginKey="org.eclipse.ant.ui.debugColor" themeKey="string" />
+        <mapping pluginKey="org.eclipse.ant.ui.warningColor" themeKey="foreground" />
+        <mapping pluginKey="org.eclipse.ant.ui.verboseColor" themeKey="foreground" />
+    </mappings>
+    <dependentMappings>
+    </dependentMappings>
+</eclipseColorThemeMapping>

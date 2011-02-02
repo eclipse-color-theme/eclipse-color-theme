@@ -1,6 +1,8 @@
 0.8.0
 ==================
 
+* Moved from hard coded mappings to mapping files.
+
 0.7.0 (2011-01-29)
 ==================
 * Added a generic mapper that reads mappings from XML.

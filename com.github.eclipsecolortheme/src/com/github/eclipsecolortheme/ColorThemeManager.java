@@ -1,6 +1,16 @@
 package com.github.eclipsecolortheme;
 
-import static com.github.eclipsecolortheme.ColorThemeKeys.*;
+import static com.github.eclipsecolortheme.ColorThemeKeys.BACKGROUND;
+import static com.github.eclipsecolortheme.ColorThemeKeys.FIELD;
+import static com.github.eclipsecolortheme.ColorThemeKeys.FOREGROUND;
+import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC;
+import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_KEYWORD;
+import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_LINK;
+import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_TAG;
+import static com.github.eclipsecolortheme.ColorThemeKeys.METHOD;
+import static com.github.eclipsecolortheme.ColorThemeKeys.MULTI_LINE_COMMENT;
+import static com.github.eclipsecolortheme.ColorThemeKeys.OCCURRENCE_INDICATION;
+import static com.github.eclipsecolortheme.ColorThemeKeys.WRITE_OCCURRENCE_INDICATION;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -22,18 +32,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.github.eclipsecolortheme.mapper.AntEditorMapper;
-import com.github.eclipsecolortheme.mapper.CppEditorMapper;
 import com.github.eclipsecolortheme.mapper.GenericMapper;
-import com.github.eclipsecolortheme.mapper.JavaEditorMapper;
-import com.github.eclipsecolortheme.mapper.JavaPropertiesEditorMapper;
-import com.github.eclipsecolortheme.mapper.JavaScriptEditorMapper;
-import com.github.eclipsecolortheme.mapper.PhpEditorMapper;
 import com.github.eclipsecolortheme.mapper.SqlEditorMapper;
-import com.github.eclipsecolortheme.mapper.TextEditorMapper;
 import com.github.eclipsecolortheme.mapper.ThemePreferenceMapper;
 import com.github.eclipsecolortheme.mapper.WebEditorMapper;
-import com.github.eclipsecolortheme.mapper.WebEditorMapper.Type;
 
 /** Loads and applies color themes. */
 public class ColorThemeManager {
@@ -56,19 +58,18 @@ public class ColorThemeManager {
         readImportedThemes(themes);
 
         editors = new HashSet<ThemePreferenceMapper>();
-        editors.add(new TextEditorMapper());
-        editors.add(new JavaEditorMapper());
-        editors.add(new JavaPropertiesEditorMapper());
-        editors.add(new WebEditorMapper(Type.XML));
-        editors.add(new WebEditorMapper(Type.HTML));
-        editors.add(new WebEditorMapper(Type.CSS));
-        editors.add(new WebEditorMapper(Type.JSP));
-        editors.add(new JavaScriptEditorMapper());
-        editors.add(new CppEditorMapper());
-        editors.add(new PhpEditorMapper());
-        editors.add(new AntEditorMapper());
-        editors.add(new SqlEditorMapper());
+        editors.add(new GenericMapper("org.eclipse.ui.editors"));
+        editors.add(new GenericMapper("org.eclipse.jdt.ui"));
+        editors.add(new GenericMapper("org.eclipse.ant.ui"));
+        editors.add(new GenericMapper("org.eclipse.cdt.ui"));
+        editors.add(new GenericMapper("org.eclipse.wst.jsdt.ui"));
         editors.add(new GenericMapper("org.python.pydev"));
+        editors.add(new WebEditorMapper("org.eclipse.wst.html.ui"));
+        editors.add(new WebEditorMapper("org.eclipse.wst.css.ui"));
+        editors.add(new WebEditorMapper("org.eclipse.wst.xml.ui"));
+        editors.add(new WebEditorMapper("org.eclipse.jst.jsp.ui"));
+        editors.add(new WebEditorMapper("org.eclipse.php.ui"));
+        editors.add(new SqlEditorMapper());
     }
 
     private static void readStockThemes(
