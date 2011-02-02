@@ -15,6 +15,8 @@
         <mapping pluginKey="printMarginColor" themeKey="printMargin" />
         <mapping pluginKey="writeOccurrenceIndicationColor" themeKey="writeOccurrenceIndication" />
         <mapping pluginKey="searchResultIndicationColor" themeKey="searchResultIndication" />
+        <mapping pluginKey="PHPWriteOccurrenceIndicationColor" themeKey="writeOccurrenceIndication" />
+        <mapping pluginKey="PHPReadOccurrenceIndicationColor" themeKey="occurrenceIndication" />
     </mappings>
     <dependentMappings>
         <dependentMapping pluginKey="AbstractTextEditor.Color.SelectionForeground" dependentPluginKey="AbstractTextEditor.Color.SelectionForeground.SystemDefault" />
