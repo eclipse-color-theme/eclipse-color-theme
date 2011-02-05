@@ -7,6 +7,9 @@
   * Use a different control for theme selection.
   * Display author and website of each theme.
   * Make it possible to delete imported themes.
+* Use the line number colour for the print margin.
+* Include all "top pick" themes from the website.
+* Add a mapping for the debug view's current line.
 
 1.0
 ===
