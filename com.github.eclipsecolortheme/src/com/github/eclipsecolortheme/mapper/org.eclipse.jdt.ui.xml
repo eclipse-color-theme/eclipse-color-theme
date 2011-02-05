@@ -16,7 +16,7 @@
         <mapping pluginKey="semanticHighlighting.interface.color" themeKey="interface" />
         <mapping pluginKey="semanticHighlighting.enum.color" themeKey="enum" />
         <mapping pluginKey="semanticHighlighting.method.color" themeKey="method" />
-        <mapping pluginKey="semanticHighlighting.methodDeclarationName.color" themeKey="method" />
+        <mapping pluginKey="semanticHighlighting.methodDeclarationName.color" themeKey="methodDeclaration" />
         <mapping pluginKey="semanticHighlighting.staticMethodInvocation.color" themeKey="staticMethod" />
         <mapping pluginKey="semanticHighlighting.annotation.color" themeKey="annotation" />
         <mapping pluginKey="java_doc_default" themeKey="javadoc" />
