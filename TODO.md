@@ -1,7 +1,6 @@
 0.8
 ===
 * Include all "top pick" themes from the website.
-* Add a mapping for the debug view's current line.
 
 1.0
 ===
