@@ -4,6 +4,7 @@
 * Used the line number colour for the print margin.
 * Coloured the debug instruction pointer.
 * Moved mappings to XML files.
+* Added all themes marked as "Top Pick" on eclipsecolorthemes.org.
 
 0.7.0 (2011-01-29)
 ==================

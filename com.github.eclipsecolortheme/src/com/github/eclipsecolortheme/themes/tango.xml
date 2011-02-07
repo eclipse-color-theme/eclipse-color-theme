@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Tango" version="0.1">
+<colorTheme name="Tango" modified="2011-01-26 13:23:56" author="Roger Dudler">
     <foreground color="#000000"/>
     <background color="#FFFFFF"/>
     <selectionForeground color="#000000"/>

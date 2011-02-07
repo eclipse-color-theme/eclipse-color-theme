@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Obsidian" modified="2011-02-01 16:43:47" author="Morinar">
+<colorTheme name="Pastel" modified="2011-01-30 00:51:47" author="Ian Kabeary" url="http://iank.ca">
     <foreground color="#E0E2E4"/>
-    <background color="#293134"/>
+    <background color="#1f2223"/>
     <selectionForeground color="#E0E2E4"/>
-    <selectionBackground color="#804000"/>
+    <selectionBackground color="#95bed8"/>
     <currentLine color="#2F393C"/>
     <lineNumber color="#81969A"/>
     <searchResultIndication color="#616161"/>
@@ -15,7 +15,7 @@
     <sourceHoverBackground color="#FFFFFF"/>
     <singleLineComment color="#7D8C93"/>
     <multiLineComment color="#7D8C93"/>
-    <commentTaskTag color="#FF8BFF"/>
+    <commentTaskTag color="#a57b61"/>
     <javadoc color="#7D8C93"/>
     <javadocLink color="#678CB1"/>
     <javadocTag color="#E0E2E4"/>
@@ -23,12 +23,12 @@
     <class color="#678CB1"/>
     <interface color="#678CB1"/>
     <method color="#678CB1"/>
-    <methodDeclaration color="#E8E2B7"/>
-    <bracket color="#E8E2B7"/>
-    <number color="#FFCD22"/>
-    <string color="#EC7600"/>
+    <methodDeclaration color="#95bed8"/>
+    <bracket color="#95bed8"/>
+    <number color="#c78d9b"/>
+    <string color="#c78d9b"/>
     <operator color="#E8E2B7"/>
-    <keyword color="#93C763"/>
+    <keyword color="#a57b61"/>
     <annotation color="#A082BD"/>
     <staticMethod color="#E0E2E4"/>
     <localVariable color="#E0E2E4"/>

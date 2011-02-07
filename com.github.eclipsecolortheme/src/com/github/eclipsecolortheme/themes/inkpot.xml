@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Inkpot" version="0.1">
+<colorTheme name="Inkpot" modified="2011-01-23 10:11:14" author="Ciaran McCreesh" url="http://www.vim.org/scripts/script.php?script_id=1143">
     <foreground color="#CFBFAD"/>
     <background color="#1F1F27"/>
     <selectionForeground color="#404040"/>

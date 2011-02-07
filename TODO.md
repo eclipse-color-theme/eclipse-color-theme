@@ -1,7 +1,3 @@
-0.8
-===
-* Include all "top pick" themes from the website.
-
 1.0
 ===
 * Improve the preference page.

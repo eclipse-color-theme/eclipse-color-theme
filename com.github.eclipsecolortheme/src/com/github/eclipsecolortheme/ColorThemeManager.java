@@ -30,13 +30,24 @@ import com.github.eclipsecolortheme.mapper.WebEditorMapper;
 /** Loads and applies color themes. */
 public class ColorThemeManager {
     private static final String[] THEME_FILES = new String[] {
-            "zenburn.xml",
+            "black-pastel.xml",
+            "frontenddev.xml",
+            "gedit-original-oblivion.xml",
+            "havenjark.xml",
             "inkpot.xml",
-            "vibrantink.xml",
+            "minimal.xml",
+            "nightlion-aptana-theme.xml",
+            "notepad++-like.xml",
             "oblivion.xml",
             "obsidian.xml",
+            "pastel.xml",
+            "recogneyes.xml",
+            "schuss.xml",
+            "sublime-text-2.xml",
             "tango.xml",
-            "havenjark.xml"
+            "vibrantink.xml",
+            "wombat.xml",
+            "zenburn.xml"
     };
     private Map<String, Map<String, String>> themes;
     private Set<ThemePreferenceMapper> editors;

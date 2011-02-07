@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Vibrant Ink" modified="2011-01-23 10:03:53" author="indiehead" url="http://code.google.com/p/vibrant-ink-textmate/">
+<colorTheme name="frontenddev" modified="2011-02-01 01:56:53" author="Plebe" url="http://web.com">
     <foreground color="#FFFFFF"/>
-    <background color="#191919"/>
-    <selectionForeground color="#FFFFFF"/>
-    <selectionBackground color="#414C3B"/>
+    <background color="#000000"/>
+    <selectionForeground color="#333333"/>
+    <selectionBackground color="#333333"/>
     <currentLine color="#222220"/>
-    <lineNumber color="#666666"/>
+    <lineNumber color="#999999"/>
     <occurrenceIndication color="#616161"/>
     <findScope color="#191919"/>
     <deletionIndication color="#FF0000"/>
-    <singleLineComment color="#8146A2"/>
-    <multiLineComment color="#8C3FC8"/>
-    <commentTaskTag color="#800080"/>
-    <javadoc color="#8C3FC8"/>
-    <javadocLink color="#814582"/>
+    <singleLineComment color="#666666"/>
+    <multiLineComment color="#666666"/>
+    <commentTaskTag color="#666666"/>
+    <javadoc color="#666666"/>
+    <javadocLink color="#666666"/>
     <javadocTag color="#800080"/>
     <javadocKeyword color="#800080"/>
     <class color="#9CF828"/>
@@ -21,21 +21,22 @@
     <method color="#F7C527"/>
     <methodDeclaration color="#F1C438"/>
     <bracket color="#FFFFFF"/>
-    <number color="#477488"/>
-    <string color="#477488"/>
+    <number color="#FF0000"/>
+    <string color="#00a40f"/>
     <operator color="#FFFFFF"/>
-    <keyword color="#EC691E"/>
+    <keyword color="#999999"/>
+    <annotation color="#999999"/>
     <staticMethod color="#FFFFFF"/>
-    <localVariable color="#3C758D"/>
-    <localVariableDeclaration color="#357A92"/>
-    <field color="#357A8F"/>
+    <localVariable color="#F7C527"/>
+    <localVariableDeclaration color="#F7C527"/>
+    <field color="#c38705"/>
     <staticField color="#FFFFFF"/>
     <staticFinalField color="#80FF00"/>
     <deprecatedMember color="#FFFFFF"/>
     <enum color="#408000"/>
     <inheritedMethod color="#E3B735"/>
     <abstractMethod color="#F1C436"/>
-    <parameterVariable color="#408000"/>
+    <parameterVariable color="#069609"/>
     <typeArgument color="#D9B0AC"/>
     <typeParameter color="#CDB1AD"/>
 </colorTheme>

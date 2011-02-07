@@ -54,13 +54,24 @@ Eclipse Color Theme currently supports the following editors:
 
 Available themes:
 
-* [Inkpot](http://www.eclipsecolorthemes.org/?view=theme&id=4)
-* [Zenburn](http://www.eclipsecolorthemes.org/?view=theme&id=2)
-* [Vibrant Ink](http://www.eclipsecolorthemes.org/?view=theme&id=3)
-* [Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=19)
+* [Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=1)
 * [Obsidian](http://www.eclipsecolorthemes.org/?view=theme&id=21)
+* [Zenburn](http://www.eclipsecolorthemes.org/?view=theme&id=2)
+* [RecognEyes](http://www.eclipsecolorthemes.org/?view=theme&id=30)
+* [Inkpot](http://www.eclipsecolorthemes.org/?view=theme&id=4)
+* [Vibrant Ink](http://www.eclipsecolorthemes.org/?view=theme&id=3)
 * [Tango](http://www.eclipsecolorthemes.org/?view=theme&id=27)
 * [Havenjark](http://www.eclipsecolorthemes.org/?view=theme&id=25)
+* [frontenddev](http://www.eclipsecolorthemes.org/?view=theme&id=90)
+* [NightLion Aptana Theme](http://www.eclipsecolorthemes.org/?view=theme&id=47)
+* [Schuss](http://www.eclipsecolorthemes.org/?view=theme&id=29)
+* [Notepadd++ Like](http://www.eclipsecolorthemes.org/?view=theme&id=91)
+* [Sublime Text 2](http://www.eclipsecolorthemes.org/?view=theme&id=66)
+* [Wombat](http://www.eclipsecolorthemes.org/?view=theme&id=118)
+* [Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=68)
+* [minimal](http://www.eclipsecolorthemes.org/?view=theme&id=43)
+* [Gedit Original Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=115)
+* [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
 
 You can download additional themes or create your own on
 [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
