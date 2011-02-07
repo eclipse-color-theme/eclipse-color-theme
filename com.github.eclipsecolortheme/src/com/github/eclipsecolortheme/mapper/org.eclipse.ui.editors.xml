@@ -17,6 +17,8 @@
         <mapping pluginKey="searchResultIndicationColor" themeKey="searchResultIndication" />
         <mapping pluginKey="PHPWriteOccurrenceIndicationColor" themeKey="writeOccurrenceIndication" />
         <mapping pluginKey="PHPReadOccurrenceIndicationColor" themeKey="occurrenceIndication" />
+        <mapping pluginKey="currentIPColor" themeKey="debugCurrentInstructionPointer" />
+        <mapping pluginKey="secondaryIPColor" themeKey="debugSecondaryInstructionPointer" />
     </mappings>
     <dependentMappings>
         <dependentMapping pluginKey="AbstractTextEditor.Color.SelectionForeground" dependentPluginKey="AbstractTextEditor.Color.SelectionForeground.SystemDefault" />

@@ -50,4 +50,8 @@ public class ColorThemeKeys {
     public static final String TYPE_ARGUMENT = "typeArgument";
     public static final String TYPE_PARAMETER = "typeParameter";
     public static final String DEPRECATED_MEMBER = "deprecatedMember";
+    public static final String DEBUG_CURRENT_INSTRUCTION_POINTER =
+            "debugCurrentInstructionPointer";
+    public static final String DEBUG_SECONDARY_INSTRUCTION_POINTER =
+            "debugSecondaryInstructionPointer";
 }

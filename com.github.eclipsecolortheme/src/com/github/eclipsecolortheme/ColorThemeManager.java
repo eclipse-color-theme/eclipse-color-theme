@@ -148,6 +148,8 @@ public class ColorThemeManager {
         applyDefault(theme, JAVADOC_KEYWORD, JAVADOC);
         applyDefault(theme, OCCURRENCE_INDICATION, BACKGROUND);
         applyDefault(theme, WRITE_OCCURRENCE_INDICATION, OCCURRENCE_INDICATION);
+        applyDefault(theme, DEBUG_CURRENT_INSTRUCTION_POINTER, CURRENT_LINE);
+        applyDefault(theme, DEBUG_SECONDARY_INSTRUCTION_POINTER, CURRENT_LINE);
     }
 
     private static void applyDefault(Map<String, String> theme, String key,
