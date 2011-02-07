@@ -1,4 +1,4 @@
-0.8.0
+0.8.0 (2011-02-07)
 ==================
 * Moved from hard coded mappings to mapping files.
 * Used the line number colour for the print margin.
