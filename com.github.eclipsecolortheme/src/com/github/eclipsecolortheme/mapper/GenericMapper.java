@@ -17,6 +17,8 @@ import org.xml.sax.SAXException;
 
 public class GenericMapper extends ThemePreferenceMapper {
     private Map<String, String> mappings = new HashMap<String, String>();
+    private Map<String, String> dependentMappings =
+            new HashMap<String, String>();
 
     public GenericMapper(String pluginId) {
         super(pluginId);
@@ -45,22 +47,18 @@ public class GenericMapper extends ThemePreferenceMapper {
                 mappings.put(extractAttribute(mappingNode, "pluginKey"),
                              extractAttribute(mappingNode, "themeKey"));
         }
-        Node dependentMappingsNode = root.getElementsByTagName("dependentMappings").item(0);
+
+        Node dependentMappingsNode =
+                root.getElementsByTagName("dependentMappings").item(0);
         NodeList dependentMappingNodes = dependentMappingsNode.getChildNodes();
         for (int i = 0; i < dependentMappingNodes.getLength(); i++) {
             Node dependentMappingNode = dependentMappingNodes.item(i);
             if (dependentMappingNode.hasAttributes()) {
-            	String pluginKey = extractAttribute(dependentMappingNode, "pluginKey");
-            	String dependentPluginKey = extractAttribute(dependentMappingNode, "dependentPluginKey");
-            	String value = mappings.get(pluginKey);
-            	if (value != null) {
-            		// TODO support special dependency values
-            		if (dependentPluginKey.endsWith("SystemDefault")) {
-            			preferences.putBoolean(dependentPluginKey, false);
-            		} else {
-            			preferences.putBoolean(dependentPluginKey, true);
-            		}
-            	}
+            	String pluginKey = extractAttribute(dependentMappingNode,
+            	                                    "pluginKey");
+            	String dependentPluginKey = extractAttribute(
+                        dependentMappingNode, "dependentPluginKey");
+            	dependentMappings.put(pluginKey, dependentPluginKey);
             }
         }
     }
@@ -71,18 +69,35 @@ public class GenericMapper extends ThemePreferenceMapper {
 
     @Override
     public void map(Map<String, String> theme) {
-        for (String pluginKey : mappings.keySet())
-            // TODO: Read entry format from XML.
-            putPreference(pluginKey, entry(theme.get(mappings.get(pluginKey))));
+        for (String dependentPluginKey : dependentMappings.values())
+            activateDependentEntry(dependentPluginKey, false);
+
+        for (String pluginKey : mappings.keySet()) {
+            String themeValue = theme.get(mappings.get(pluginKey));
+            if (themeValue != null) {
+                preferences.put(pluginKey, entry(themeValue));
+                String dependentPluginKey = dependentMappings.get(pluginKey);
+                if (dependentPluginKey != null)
+                    activateDependentEntry(dependentPluginKey, true);
+            }
+        }
     }
 
-    @Override
-    protected void putDependentEntries(String key) {
+    private void activateDependentEntry(String dependentPluginKey,
+                                        boolean active) {
+        // TODO: Don't hard code this.
+        if (dependentPluginKey.endsWith("SystemDefault"))
+            preferences.putBoolean(dependentPluginKey, !active);
+        else
+            preferences.putBoolean(dependentPluginKey, active);
     }
 
     @Override
     public void clear() {
         for (String pluginKey : mappings.keySet())
             preferences.remove(pluginKey);
+
+        for (String dependentPluginKey : dependentMappings.values())
+            preferences.remove(dependentPluginKey);
     }
 }

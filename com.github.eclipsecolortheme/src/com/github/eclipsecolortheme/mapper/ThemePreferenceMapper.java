@@ -38,27 +38,6 @@ public abstract class ThemePreferenceMapper {
     public abstract void map(Map<String, String> theme);
 
     /**
-     * Sets @a key to @a value in the associated Eclipse preferences and sets
-     * all dependent preferences.
-     * @param key The preferences key.
-     * @param value The preferences value. Ignored if <code>null</code>.
-     */
-    protected void putPreference(String key, String value) {
-        if (value == null)
-            return;
-
-        putDependentEntries(key);
-        preferences.put(key, value);
-    }
-
-    /**
-     * Modifies the associated Eclipse preferences to set any values required
-     * for @a key to take effect.
-     * @param key The key whose dependent entries should be set.
-     */
-    protected abstract void putDependentEntries(String key);
-
-    /**
      * Clears the associated Eclipse preferences.
      * This resets every preference to its default value.
      */
