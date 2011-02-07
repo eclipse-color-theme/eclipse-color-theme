@@ -2,6 +2,8 @@
 ==================
 * Moved from hard coded mappings to mapping files.
 * Used the line number colour for the print margin.
+* Made PHP variables readable in themes that do not colour local
+  variables.
 
 0.7.0 (2011-01-29)
 ==================

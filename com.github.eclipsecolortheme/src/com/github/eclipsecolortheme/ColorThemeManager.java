@@ -1,16 +1,6 @@
 package com.github.eclipsecolortheme;
 
-import static com.github.eclipsecolortheme.ColorThemeKeys.BACKGROUND;
-import static com.github.eclipsecolortheme.ColorThemeKeys.FIELD;
-import static com.github.eclipsecolortheme.ColorThemeKeys.FOREGROUND;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_KEYWORD;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_LINK;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_TAG;
-import static com.github.eclipsecolortheme.ColorThemeKeys.METHOD;
-import static com.github.eclipsecolortheme.ColorThemeKeys.MULTI_LINE_COMMENT;
-import static com.github.eclipsecolortheme.ColorThemeKeys.OCCURRENCE_INDICATION;
-import static com.github.eclipsecolortheme.ColorThemeKeys.WRITE_OCCURRENCE_INDICATION;
+import static com.github.eclipsecolortheme.ColorThemeKeys.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -151,6 +141,7 @@ public class ColorThemeManager {
     private static void amendThemeEntries(Map<String, String> theme) {
         applyDefault(theme, METHOD, FOREGROUND);
         applyDefault(theme, FIELD, FOREGROUND);
+        applyDefault(theme, LOCAL_VARIABLE, FOREGROUND);
         applyDefault(theme, JAVADOC, MULTI_LINE_COMMENT);
         applyDefault(theme, JAVADOC_LINK, JAVADOC);
         applyDefault(theme, JAVADOC_TAG, JAVADOC);
