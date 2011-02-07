@@ -1,6 +1,5 @@
 0.8
 ===
-* Use the line number colour for the print margin.
 * Include all "top pick" themes from the website.
 * Add a mapping for the debug view's current line.
 

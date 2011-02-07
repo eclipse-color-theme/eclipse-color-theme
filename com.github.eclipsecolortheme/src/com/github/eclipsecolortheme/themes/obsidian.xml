@@ -37,7 +37,6 @@
     <staticField color="#678CB1"/>
     <staticFinalField color="#E0E2E4"/>
     <deprecatedMember color="#E0E2E4"/>
-    <printMargin color="#293134"/>
     <enum color="#E0E2E4"/>
     <inheritedMethod color="#E0E2E4"/>
     <abstractMethod color="#E0E2E4"/>

@@ -12,7 +12,7 @@
         <mapping pluginKey="javaScriptOccurrenceIndicationColor" themeKey="occurrenceIndication" />
         <mapping pluginKey="deletionIndicationColor" themeKey="deletionIndication" />
         <mapping pluginKey="AbstractTextEditor.Color.FindScope" themeKey="findScope" />
-        <mapping pluginKey="printMarginColor" themeKey="printMargin" />
+        <mapping pluginKey="printMarginColor" themeKey="lineNumber" />
         <mapping pluginKey="writeOccurrenceIndicationColor" themeKey="writeOccurrenceIndication" />
         <mapping pluginKey="searchResultIndicationColor" themeKey="searchResultIndication" />
         <mapping pluginKey="PHPWriteOccurrenceIndicationColor" themeKey="writeOccurrenceIndication" />

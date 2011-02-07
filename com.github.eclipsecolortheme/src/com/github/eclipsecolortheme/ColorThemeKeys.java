@@ -17,7 +17,6 @@ public class ColorThemeKeys {
         "writeOccurrenceIndication";
     public static final String DELETION_INDICATION = "deletionIndication";
     public static final String FIND_SCOPE = "findScope";
-    public static final String PRINT_MARGIN = "printMargin";
     public static final String SINGLE_LINE_COMMENT = "singleLineComment";
     public static final String MULTI_LINE_COMMENT = "multiLineComment";
     public static final String COMMENT_TASK_TAG = "commentTaskTag";
