@@ -96,9 +96,10 @@ e.g. *C/C++->Editor->Syntax Coloring*.
 for all available keys) and set up the syntax colouring using the
 colours defined there.
 
-3. Open the editor's preferences file, e.g. *workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.cdt.ui.prefs*
-and create a new subclass of `ThemePreferenceMapper` where you map the
-colour theme's keys to those of the editor. In the future, all mappings will be defined as XML, so you might as well see if the capabilities of the `GenericMapper` are sufficient for your mapping (it doesn't support custom entries or dependent entries right yet). If so, just create a new xml file named after the plugin ID in the `mapper` package.
+3. Open the editor's preferences file,
+e.g. *workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.cdt.ui.prefs*
+and create a new XML file named after the plugin ID in the `mapper`
+package which maps the colour theme's keys to those of the editor.
 
 4. Instantiate and add your mapper in `ColorThemeManager`.
 
