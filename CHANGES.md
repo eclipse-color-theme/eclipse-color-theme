@@ -1,9 +1,8 @@
 0.8.0 (2011-02-07)
 ==================
-* Moved from hard coded mappings to mapping files.
+* Moved mappings to XML files.
 * Used the line number colour for the print margin.
 * Coloured the debug instruction pointer.
-* Moved mappings to XML files.
 * Added all themes marked as "Top Pick" on eclipsecolorthemes.org.
 * Displayed the author's name next to each theme.
 
