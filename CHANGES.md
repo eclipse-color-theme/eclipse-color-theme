@@ -5,6 +5,7 @@
 * Coloured the debug instruction pointer.
 * Moved mappings to XML files.
 * Added all themes marked as "Top Pick" on eclipsecolorthemes.org.
+* Displayed the author's name next to each theme.
 
 0.7.0 (2011-01-29)
 ==================

@@ -4,6 +4,7 @@ import java.util.Map;
 
 public class ColorTheme {
     private String name;
+    private String author;
     private Map<String, String> entries;
 
     public String getName() {
@@ -12,6 +13,14 @@ public class ColorTheme {
     
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+    
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public Map<String, String> getEntries() {

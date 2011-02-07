@@ -49,12 +49,12 @@ public class ColorThemeManager {
             "wombat.xml",
             "zenburn.xml"
     };
-    private Map<String, Map<String, String>> themes;
+    private Map<String, ColorTheme> themes;
     private Set<ThemePreferenceMapper> editors;
 
     /** Creates a new color theme manager. */
     public ColorThemeManager() {
-        themes = new HashMap<String, Map<String, String>>();
+        themes = new HashMap<String, ColorTheme>();
         readStockThemes(themes);
         readImportedThemes(themes);
 
@@ -73,8 +73,7 @@ public class ColorThemeManager {
         editors.add(new SqlEditorMapper());
     }
 
-    private static void readStockThemes(
-            Map<String, Map<String, String>> themes) {
+    private static void readStockThemes(Map<String, ColorTheme> themes) {
         for (String themeFile : THEME_FILES) {
             try {
                 InputStream input =  Thread.currentThread()
@@ -84,7 +83,7 @@ public class ColorThemeManager {
                                 + themeFile);
                 ColorTheme theme = parseTheme(input);
                 amendThemeEntries(theme.getEntries());
-                themes.put(theme.getName(), theme.getEntries());
+                themes.put(theme.getName(), theme);
             } catch (Exception e) {
                 System.err.println("Error while parsing theme from file: '"
                                    + themeFile + "'");
@@ -93,8 +92,7 @@ public class ColorThemeManager {
         }
     }
 
-    private static void readImportedThemes(
-            Map<String, Map<String, String>> themes) {
+    private static void readImportedThemes(Map<String, ColorTheme> themes) {
         IPreferenceStore store = getPreferenceStore();
         
         for (int i = 1; ; i++) {
@@ -105,7 +103,7 @@ public class ColorThemeManager {
                 ColorTheme theme =
                         parseTheme(new ByteArrayInputStream(xml.getBytes()));
                 amendThemeEntries(theme.getEntries());
-                themes.put(theme.getName(), theme.getEntries());
+                themes.put(theme.getName(), theme);
             } catch (Exception e) {
                 System.err.println("Error while parsing imported theme");
                 e.printStackTrace();
@@ -133,6 +131,7 @@ public class ColorThemeManager {
         Document document = builder.parse(input);
         Element root = document.getDocumentElement();
         theme.setName(root.getAttribute("name"));
+        theme.setAuthor(root.getAttribute("author"));
 
         Map<String, String> entries = new HashMap<String, String>();
         NodeList entryNodes = root.getChildNodes();
@@ -170,21 +169,21 @@ public class ColorThemeManager {
     }
     
     /**
-     * Returns the names of all available color themes.
-     * @return the names of all available color themes.
+     * Returns all available color themes.
+     * @return all available color themes.
      */
-    public Set<String> getThemeNames() {
-        return themes.keySet();
+    public Set<ColorTheme> getThemes() {
+        return new HashSet<ColorTheme>(themes.values());
     }
 
     /**
-     * Returns the theme stored under @a name.
-     * @param name The theme to return.
-     * @return The requested theme or <code>null</code> if none with that name
-     *         exists.
+     * Returns the theme entries stored under @a name.
+     * @param name The theme whose entries to return.
+     * @return The requested theme's entries or <code>null</code> if no theme
+     *         with that name exists.
      */
-    public Map<String, String> getTheme(String name) {
-        return themes.get(name);
+    public Map<String, String> getThemeEntries(String name) {
+        return themes.get(name).getEntries();
     }
 
     /**
@@ -195,7 +194,7 @@ public class ColorThemeManager {
         for (ThemePreferenceMapper editor : editors) {
             editor.clear();
             if (themes.get(theme) != null)
-                editor.map(themes.get(theme));
+                editor.map(themes.get(theme).getEntries());
 
             try {
                 editor.flush();
@@ -219,7 +218,7 @@ public class ColorThemeManager {
             theme = ColorThemeManager.parseTheme(
                     new ByteArrayInputStream(content.getBytes()));
             String name = theme.getName();
-            themes.put(name, theme.getEntries());
+            themes.put(name, theme);
             IPreferenceStore store = getPreferenceStore();
             for (int i = 1; ; i++)
                 if (!store.contains("importedColorTheme" + i)) {
