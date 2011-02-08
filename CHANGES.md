@@ -1,6 +1,9 @@
 0.9.0
 ==================
 
+* Added the Mr theme.
+* Cleaned up the Ant color keys.
+
 0.8.0 (2011-02-07)
 ==================
 * Moved mappings to XML files.
