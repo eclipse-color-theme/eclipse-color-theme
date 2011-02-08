@@ -47,7 +47,8 @@ public class ColorThemeManager {
             "tango.xml",
             "vibrantink.xml",
             "wombat.xml",
-            "zenburn.xml"
+            "zenburn.xml",
+            "mr.xml"
     };
     private Map<String, ColorTheme> themes;
     private Set<ThemePreferenceMapper> editors;
