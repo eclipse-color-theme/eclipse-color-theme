@@ -7,11 +7,6 @@
         <mapping pluginKey="org.eclipse.ant.ui.commentsColor" themeKey="multiLineComment" />
         <mapping pluginKey="org.eclipse.ant.ui.constantStringsColor" themeKey="string" />
         <mapping pluginKey="org.eclipse.ant.ui.processingInstructionsColor" themeKey="foreground" />
-        <mapping pluginKey="org.eclipse.ant.ui.informationColor" themeKey="foreground" />
-        <mapping pluginKey="org.eclipse.ant.ui.errorColor" themeKey="class" />
-        <mapping pluginKey="org.eclipse.ant.ui.debugColor" themeKey="string" />
-        <mapping pluginKey="org.eclipse.ant.ui.warningColor" themeKey="foreground" />
-        <mapping pluginKey="org.eclipse.ant.ui.verboseColor" themeKey="foreground" />
     </mappings>
     <dependentMappings>
     </dependentMappings>
