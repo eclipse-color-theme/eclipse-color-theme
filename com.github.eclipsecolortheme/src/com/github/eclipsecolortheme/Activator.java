@@ -6,7 +6,7 @@ import org.osgi.framework.BundleContext;
 
 /** This plugin's activator. */
 public class Activator extends AbstractUIPlugin {
-    public static final String PLUGIN_ID = "eclipse-color-theme";
+    public static final String PLUGIN_ID = "com.github.eclipsecolortheme";
     private static Activator plugin;
 
     /** Creates a new activator. */
