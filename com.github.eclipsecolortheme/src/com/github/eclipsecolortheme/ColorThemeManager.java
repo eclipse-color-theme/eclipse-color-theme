@@ -44,13 +44,7 @@ import com.github.eclipsecolortheme.mapper.ThemePreferenceMapper;
 
 /** Loads and applies color themes. */
 public class ColorThemeManager {
-	private static final String[] THEME_FILES = new String[] {
-			"black-pastel.xml", "frontenddev.xml",
-			"gedit-original-oblivion.xml", "havenjark.xml", "inkpot.xml",
-			"minimal.xml", "nightlion-aptana-theme.xml", "notepad++-like.xml",
-			"oblivion.xml", "obsidian.xml", "pastel.xml", "recogneyes.xml",
-			"schuss.xml", "sublime-text-2.xml", "tango.xml", "vibrantink.xml",
-			"wombat.xml", "zenburn.xml", "mr.xml" };
+	
 	private Map<String, ColorTheme> themes;
 	private Set<ThemePreferenceMapper> editors;
 
@@ -89,19 +83,22 @@ public class ColorThemeManager {
 	}
 
 	private static void readStockThemes(Map<String, ColorTheme> themes) {
-		for (String themeFile : THEME_FILES) {
-			try {
-				InputStream input = Thread.currentThread()
-						.getContextClassLoader()
-						.getResourceAsStream("themes/" + themeFile);
+		IConfigurationElement[] config = Platform.getExtensionRegistry()
+				.getConfigurationElementsFor(
+						Activator.EXTENSION_POINT_ID_THEME);
+		try {
+			for (IConfigurationElement e : config) {
+				String xml = e.getAttribute("theme");
+				String contributorPluginId = e.getContributor().getName();
+				Bundle bundle = Platform.getBundle(contributorPluginId);
+				InputStream input = (InputStream) bundle.getResource(xml)
+						.getContent();
 				ColorTheme theme = parseTheme(input);
 				amendThemeEntries(theme.getEntries());
 				themes.put(theme.getName(), theme);
-			} catch (Exception e) {
-				System.err.println("Error while parsing theme from file: '"
-						+ themeFile + "'");
-				e.printStackTrace();
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

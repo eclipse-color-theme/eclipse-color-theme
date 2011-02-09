@@ -2,6 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension-point id="com.github.eclipsecolortheme.mapper" name="Editor Mapping" schema="schema/com.github.eclipsecolortheme.mapper.exsd"/>
+   <extension-point id="com.github.eclipsecolortheme.theme" name="Eclipse Color Theme" schema="schema/com.github.eclipsecolortheme.theme.exsd"/>
 
    <extension
          point="org.eclipse.ui.preferencePages">
@@ -20,78 +21,138 @@
    </extension>
    <extension
          point="com.github.eclipsecolortheme.mapper">
-      <editor
+      <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="Ant"
             pluginId="org.eclipse.ant.ui"
             xml="mappings/org.eclipse.ant.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="C"
             pluginId="org.eclipse.cdt.ui"
             xml="mappings/org.eclipse.cdt.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.SqlEditorMapper"
             name="SQL"
             pluginId="org.eclipse.datatools.sqltools.sqleditor"
             xml="mappings/org.eclipse.datatools.sqltools.sqleditor.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="Java"
             pluginId="org.eclipse.jdt.ui"
             xml="mappings/org.eclipse.jdt.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
             name="JSP"
             pluginId="org.eclipse.jst.jsp.ui"
             xml="mappings/org.eclipse.jst.jsp.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
             name="PHP"
             pluginId="org.eclipse.php.ui"
             xml="mappings/org.eclipse.php.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="Text"
             pluginId="org.eclipse.ui.editors"
             xml="mappings/org.eclipse.ui.editors.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
             name="CSS"
             pluginId="org.eclipse.wst.css.ui"
             xml="mappings/org.eclipse.wst.css.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
             name="HTML"
             pluginId="org.eclipse.wst.html.ui"
             xml="mappings/org.eclipse.wst.html.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
             name="JavaScript"
             pluginId="org.eclipse.wst.jsdt.ui"
             xml="mappings/org.eclipse.wst.jsdt.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
             name="XML"
             pluginId="org.eclipse.wst.xml.ui"
             xml="mappings/org.eclipse.wst.xml.ui.xml">
-      </editor>
-      <editor
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="Python"
             pluginId="org.python.pydev"
             xml="mappings/org.python.pydev.xml">
-      </editor>
+      </mapper>
+   </extension>
+   <extension
+         point="com.github.eclipsecolortheme.theme">
+      <theme
+            theme="themes/black-pastel.xml">
+      </theme>
+      <theme
+            theme="themes/frontenddev.xml">
+      </theme>
+      <theme
+            theme="themes/gedit-original-oblivion.xml">
+      </theme>
+      <theme
+            theme="themes/havenjark.xml">
+      </theme>
+      <theme
+            theme="themes/inkpot.xml">
+      </theme>
+      <theme
+            theme="themes/minimal.xml">
+      </theme>
+      <theme
+            theme="themes/mr.xml">
+      </theme>
+      <theme
+            theme="themes/nightlion-aptana-theme.xml">
+      </theme>
+      <theme
+            theme="themes/notepad++-like.xml">
+      </theme>
+      <theme
+            theme="themes/oblivion.xml">
+      </theme>
+      <theme
+            theme="themes/obsidian.xml">
+      </theme>
+      <theme
+            theme="themes/pastel.xml">
+      </theme>
+      <theme
+            theme="themes/recogneyes.xml">
+      </theme>
+      <theme
+            theme="themes/schuss.xml">
+      </theme>
+      <theme
+            theme="themes/sublime-text-2.xml">
+      </theme>
+      <theme
+            theme="themes/tango.xml">
+      </theme>
+      <theme
+            theme="themes/vibrantink.xml">
+      </theme>
+      <theme
+            theme="themes/wombat.xml">
+      </theme>
+      <theme
+            theme="themes/zenburn.xml">
+      </theme>
    </extension>
 
 </plugin>

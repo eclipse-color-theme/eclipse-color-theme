@@ -3,7 +3,7 @@
 <schema targetNamespace="com.github.eclipsecolortheme" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="com.github.eclipsecolortheme" id="com.github.eclipsecolortheme.editor" name="Editor"/>
+         <meta.schema plugin="com.github.eclipsecolortheme" id="com.github.eclipsecolortheme.theme" name="Eclipse Color Theme"/>
       </appinfo>
       <documentation>
          [Enter description of this extension point.]
@@ -17,8 +17,8 @@
          </appinfo>
       </annotation>
       <complexType>
-         <sequence minOccurs="1" maxOccurs="unbounded">
-            <element ref="mapper"/>
+         <sequence>
+            <element ref="theme" minOccurs="1" maxOccurs="unbounded"/>
          </sequence>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,42 +47,15 @@
       </complexType>
    </element>
 
-   <element name="mapper">
+   <element name="theme">
       <complexType>
-         <attribute name="class" type="string" use="required">
-            <annotation>
-               <documentation>
-                  
-               </documentation>
-               <appinfo>
-                  <meta.attribute kind="java" basedOn="com.github.eclipsecolortheme.mapper.ThemePreferenceMapper:"/>
-               </appinfo>
-            </annotation>
-         </attribute>
-         <attribute name="xml" type="string">
+         <attribute name="theme" type="string" use="required">
             <annotation>
                <documentation>
                   
                </documentation>
                <appinfo>
                   <meta.attribute kind="resource"/>
-               </appinfo>
-            </annotation>
-         </attribute>
-         <attribute name="name" type="string">
-            <annotation>
-               <documentation>
-                  
-               </documentation>
-            </annotation>
-         </attribute>
-         <attribute name="pluginId" type="string" use="required">
-            <annotation>
-               <documentation>
-                  Plugin ID where preferences are stored
-               </documentation>
-               <appinfo>
-                  <meta.attribute kind="identifier"/>
                </appinfo>
             </annotation>
          </attribute>
