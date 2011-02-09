@@ -72,6 +72,7 @@ Available themes:
 * [minimal](http://www.eclipsecolorthemes.org/?view=theme&id=43)
 * [Gedit Original Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=115)
 * [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
+* [Mr](http://www.eclipsecolorthemes.org/?view=theme&id=32)
 
 You can download additional themes or create your own on
 [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
