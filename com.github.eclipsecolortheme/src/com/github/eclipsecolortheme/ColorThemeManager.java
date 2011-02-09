@@ -134,14 +134,26 @@ public class ColorThemeManager {
         theme.setName(root.getAttribute("name"));
         theme.setAuthor(root.getAttribute("author"));
 
-        Map<String, String> entries = new HashMap<String, String>();
+        Map<String, ColorThemeSetting> entries = new HashMap<String, ColorThemeSetting>();
         NodeList entryNodes = root.getChildNodes();
         for (int i = 0; i < entryNodes.getLength(); i++) {
             Node entryNode = entryNodes.item(i);
             if (entryNode.hasAttributes()) {
-                entries.put(entryNode.getNodeName(),
-                            entryNode.getAttributes().getNamedItem("color")
-                            .getNodeValue());
+            	String color = entryNode.getAttributes().getNamedItem("color").getNodeValue();
+            	Node nodeBold= entryNode.getAttributes().getNamedItem("bold");
+            	Node nodeItalic = entryNode.getAttributes().getNamedItem("italic");
+            	Node nodeUnderline = entryNode.getAttributes().getNamedItem("underline");
+            	Node nodeStrikethrough = entryNode.getAttributes().getNamedItem("strikethrough");
+            	ColorThemeSetting setting = new ColorThemeSetting(color);
+            	if (nodeBold != null) 
+            		setting.setBoldEnabled(Boolean.parseBoolean(nodeBold.getNodeValue()));
+            	if (nodeItalic != null) 
+            		setting.setItalicEnabled(Boolean.parseBoolean(nodeItalic.getNodeValue()));
+            	if (nodeStrikethrough != null) 
+            		setting.setStrikethroughEnabled(Boolean.parseBoolean(nodeStrikethrough.getNodeValue()));
+            	if (nodeUnderline != null) 
+            		setting.setUnderlineEnabled(Boolean.parseBoolean(nodeUnderline.getNodeValue()));
+                entries.put(entryNode.getNodeName(), setting);
             }
         }
         theme.setEntries(entries);
@@ -149,7 +161,7 @@ public class ColorThemeManager {
         return theme;
     }
 
-    private static void amendThemeEntries(Map<String, String> theme) {
+    private static void amendThemeEntries(Map<String, ColorThemeSetting> theme) {
         applyDefault(theme, METHOD, FOREGROUND);
         applyDefault(theme, FIELD, FOREGROUND);
         applyDefault(theme, LOCAL_VARIABLE, FOREGROUND);
@@ -163,7 +175,7 @@ public class ColorThemeManager {
         applyDefault(theme, DEBUG_SECONDARY_INSTRUCTION_POINTER, CURRENT_LINE);
     }
 
-    private static void applyDefault(Map<String, String> theme, String key,
+    private static void applyDefault(Map<String, ColorThemeSetting> theme, String key,
                                      String defaultKey) {
         if (!theme.containsKey(key))
             theme.put(key, theme.get(defaultKey));
@@ -183,7 +195,7 @@ public class ColorThemeManager {
      * @return The requested theme's entries or <code>null</code> if no theme
      *         with that name exists.
      */
-    public Map<String, String> getThemeEntries(String name) {
+    public Map<String, ColorThemeSetting> getThemeEntries(String name) {
         return themes.get(name).getEntries();
     }
 

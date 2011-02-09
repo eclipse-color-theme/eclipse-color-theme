@@ -20,6 +20,4 @@
         <mapping pluginKey="piBorder" themeKey="method" />
         <mapping pluginKey="piContent" themeKey="foreground" />
     </mappings>
-    <dependentMappings>
-    </dependentMappings>
 </eclipseColorThemeMapping>

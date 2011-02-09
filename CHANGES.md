@@ -3,6 +3,8 @@
 
 * Added the Mr theme.
 * Cleaned up the Ant color keys.
+* Refactored mapping logic.
+* Added support for text decorations (bold, italic, underline, strikethrough).
 
 0.8.0 (2011-02-07)
 ==================

@@ -8,6 +8,4 @@
         <mapping pluginKey="org.eclipse.ant.ui.constantStringsColor" themeKey="string" />
         <mapping pluginKey="org.eclipse.ant.ui.processingInstructionsColor" themeKey="foreground" />
     </mappings>
-    <dependentMappings>
-    </dependentMappings>
 </eclipseColorThemeMapping>

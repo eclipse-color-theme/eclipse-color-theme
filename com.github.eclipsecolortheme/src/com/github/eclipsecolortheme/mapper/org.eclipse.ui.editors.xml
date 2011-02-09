@@ -20,10 +20,4 @@
         <mapping pluginKey="currentIPColor" themeKey="debugCurrentInstructionPointer" />
         <mapping pluginKey="secondaryIPColor" themeKey="debugSecondaryInstructionPointer" />
     </mappings>
-    <dependentMappings>
-        <dependentMapping pluginKey="AbstractTextEditor.Color.SelectionForeground" dependentPluginKey="AbstractTextEditor.Color.SelectionForeground.SystemDefault" />
-        <dependentMapping pluginKey="AbstractTextEditor.Color.SelectionBackground" dependentPluginKey="AbstractTextEditor.Color.SelectionBackground.SystemDefault" />
-        <dependentMapping pluginKey="AbstractTextEditor.Color.Background" dependentPluginKey="AbstractTextEditor.Color.Background.SystemDefault" />
-        <dependentMapping pluginKey="AbstractTextEditor.Color.Foreground" dependentPluginKey="AbstractTextEditor.Color.Foreground.SystemDefault" />
-    </dependentMappings>
 </eclipseColorThemeMapping>

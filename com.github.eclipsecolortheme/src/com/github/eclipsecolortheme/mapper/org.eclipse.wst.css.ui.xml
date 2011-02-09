@@ -23,6 +23,4 @@
         <mapping pluginKey="ATTRIBUTE_OPERATOR" themeKey="method" />
         <mapping pluginKey="MEDIA" themeKey="keyword" />
     </mappings>
-    <dependentMappings>
-    </dependentMappings>
 </eclipseColorThemeMapping>

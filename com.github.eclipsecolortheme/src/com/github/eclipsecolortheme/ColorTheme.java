@@ -5,7 +5,7 @@ import java.util.Map;
 public class ColorTheme {
     private String name;
     private String author;
-    private Map<String, String> entries;
+    private Map<String, ColorThemeSetting> entries;
 
     public String getName() {
         return name;
@@ -23,11 +23,11 @@ public class ColorTheme {
         this.author = author;
     }
 
-    public Map<String, String> getEntries() {
+    public Map<String, ColorThemeSetting> getEntries() {
         return entries;
     }
 
-    public void setEntries(Map<String, String> entries) {
+    public void setEntries(Map<String, ColorThemeSetting> entries) {
         this.entries = entries;
     }
 }

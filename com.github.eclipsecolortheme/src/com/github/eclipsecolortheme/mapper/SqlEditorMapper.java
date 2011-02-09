@@ -1,5 +1,7 @@
 package com.github.eclipsecolortheme.mapper;
 
+import com.github.eclipsecolortheme.mapping.ColorThemeMapping;
+import com.github.eclipsecolortheme.mapping.ColorThemeSqlMapping;
 
 /**
  * Maps color themes to preferences for Eclipse's SQL editor.
@@ -12,9 +14,8 @@ public class SqlEditorMapper extends GenericMapper {
 	}
 	
 	@Override
-    protected String entry(String color) {
-		String rgb = this.hexToRGB(color).replace(" ", "");
-        return (color == null) ? null : "0,0,0,0,0," + rgb;
+    protected ColorThemeMapping createMapping(String pluginKey, String themeKey) {
+    	return new ColorThemeSqlMapping(pluginKey, themeKey);
     }
 
 }

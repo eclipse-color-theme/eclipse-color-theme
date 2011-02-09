@@ -6,6 +6,8 @@ import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.osgi.service.prefs.BackingStoreException;
 
+import com.github.eclipsecolortheme.ColorThemeSetting;
+
 /**
  * Maps color themes to Eclipse preferences.
  * XXX: Subject to refactoring/rewrite, mappings require way too much code.
@@ -35,22 +37,13 @@ public abstract class ThemePreferenceMapper {
      * Maps the @a theme to the associated Eclipse preferences.
      * @param theme The color theme to map.
      */
-    public abstract void map(Map<String, String> theme);
+    public abstract void map(Map<String, ColorThemeSetting> theme);
 
     /**
      * Clears the associated Eclipse preferences.
      * This resets every preference to its default value.
      */
     public abstract void clear();
-
-    /**
-     * Creates a preference entry for this editor.
-     * @param color The color to set.
-     * @return A preference entry.
-     */
-    protected String entry(String color) {
-        return (color == null) ? null : hexToRGB(color);
-    }
 
     /**
      * Converts a hexadecimal color value to an RGB string.

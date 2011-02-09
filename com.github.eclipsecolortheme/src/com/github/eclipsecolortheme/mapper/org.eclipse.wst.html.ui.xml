@@ -16,6 +16,4 @@
         <mapping pluginKey="doctypeExternalId" themeKey="method" />
         <mapping pluginKey="declBoder" themeKey="method" />
     </mappings>
-    <dependentMappings>
-    </dependentMappings>
 </eclipseColorThemeMapping>

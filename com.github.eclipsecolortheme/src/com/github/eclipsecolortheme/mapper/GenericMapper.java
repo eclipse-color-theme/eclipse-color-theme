@@ -15,10 +15,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.github.eclipsecolortheme.ColorThemeSetting;
+import com.github.eclipsecolortheme.mapping.ColorThemeMapping;
+import com.github.eclipsecolortheme.mapping.ColorThemeSemanticHighlightingMapping;
+
 public class GenericMapper extends ThemePreferenceMapper {
-    private Map<String, String> mappings = new HashMap<String, String>();
-    private Map<String, String> dependentMappings =
-            new HashMap<String, String>();
+	
+    private Map<String, ColorThemeMapping> mappings = new HashMap<String, ColorThemeMapping>();
 
     public GenericMapper(String pluginId) {
         super(pluginId);
@@ -39,65 +42,76 @@ public class GenericMapper extends ThemePreferenceMapper {
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse(input);
         Element root = document.getDocumentElement();
-        Node mappingsNode = root.getElementsByTagName("mappings").item(0);
-        NodeList mappingNodes = mappingsNode.getChildNodes();
+        parseMappings(root);
+        parseSemanticHighlightingMappings(root);
+    }
+    
+    private void parseMappings(Element root) {
+    	Node mappingsNode = root.getElementsByTagName("mappings").item(0);
+    	NodeList mappingNodes = mappingsNode.getChildNodes();
         for (int i = 0; i < mappingNodes.getLength(); i++) {
             Node mappingNode = mappingNodes.item(i);
-            if (mappingNode.hasAttributes())
-                mappings.put(extractAttribute(mappingNode, "pluginKey"),
-                             extractAttribute(mappingNode, "themeKey"));
-        }
-
-        Node dependentMappingsNode =
-                root.getElementsByTagName("dependentMappings").item(0);
-        NodeList dependentMappingNodes = dependentMappingsNode.getChildNodes();
-        for (int i = 0; i < dependentMappingNodes.getLength(); i++) {
-            Node dependentMappingNode = dependentMappingNodes.item(i);
-            if (dependentMappingNode.hasAttributes()) {
-            	String pluginKey = extractAttribute(dependentMappingNode,
-            	                                    "pluginKey");
-            	String dependentPluginKey = extractAttribute(
-                        dependentMappingNode, "dependentPluginKey");
-            	dependentMappings.put(pluginKey, dependentPluginKey);
+            if (mappingNode.hasAttributes()) {
+            	String pluginKey = extractAttribute(mappingNode, "pluginKey");
+            	String themeKey = extractAttribute(mappingNode, "themeKey");
+            	mappings.put(pluginKey, createMapping(pluginKey, themeKey));
             }
         }
     }
+    
+    private void parseSemanticHighlightingMappings(Element root) {
+    	Node mappingsNode = root.getElementsByTagName("semanticHighlightingMappings").item(0);
+    	if (mappingsNode != null) {
+	    	NodeList mappingNodes = mappingsNode.getChildNodes();
+	        for (int i = 0; i < mappingNodes.getLength(); i++) {
+	            Node mappingNode = mappingNodes.item(i);
+	            if (mappingNode.hasAttributes()) {
+	            	String pluginKey = extractAttribute(mappingNode, "pluginKey");
+	            	String themeKey = extractAttribute(mappingNode, "themeKey");
+	            	mappings.put(pluginKey, createSemanticHighlightingMapping(pluginKey, themeKey));
+	            }
+	        }
+    	}
+    }
+    
+    protected ColorThemeMapping createMapping(String pluginKey, String themeKey) {
+    	return new ColorThemeMapping(pluginKey, themeKey);
+    }
 
+    protected ColorThemeSemanticHighlightingMapping createSemanticHighlightingMapping(String pluginKey, String themeKey) {
+    	return new ColorThemeSemanticHighlightingMapping(pluginKey, themeKey);
+    }
+    
     private static String extractAttribute(Node node, String name) {
         return node.getAttributes().getNamedItem(name).getNodeValue();
     }
 
     @Override
-    public void map(Map<String, String> theme) {
-        for (String dependentPluginKey : dependentMappings.values())
-            activateDependentEntry(dependentPluginKey, false);
-
-        for (String pluginKey : mappings.keySet()) {
-            String themeValue = theme.get(mappings.get(pluginKey));
-            if (themeValue != null) {
-                preferences.put(pluginKey, entry(themeValue));
-                String dependentPluginKey = dependentMappings.get(pluginKey);
-                if (dependentPluginKey != null)
-                    activateDependentEntry(dependentPluginKey, true);
-            }
+    public void map(Map<String, ColorThemeSetting> theme) {
+    	
+    	// Add those text editor specific dependencies
+    	// TODO: bad location, move to somewhere else...
+    	preferences.putBoolean("AbstractTextEditor.Color.Background.SystemDefault", false);
+    	preferences.putBoolean("AbstractTextEditor.Color.Foreground.SystemDefault", false);
+    	preferences.putBoolean("AbstractTextEditor.Color.SelectionBackground.SystemDefault", false);
+    	preferences.putBoolean("AbstractTextEditor.Color.SelectionForeground.SystemDefault", false);
+    	
+    	// put preferences according to mappings
+    	for (String pluginKey : mappings.keySet()) {
+    		ColorThemeMapping mapping = mappings.get(pluginKey);
+    		ColorThemeSetting setting = theme.get(mapping.getThemeKey());
+    		if (setting != null) {
+    			mapping.putPreferences(preferences, setting);
+    		}
         }
-    }
-
-    private void activateDependentEntry(String dependentPluginKey,
-                                        boolean active) {
-        // TODO: Don't hard code this.
-        if (dependentPluginKey.endsWith("SystemDefault"))
-            preferences.putBoolean(dependentPluginKey, !active);
-        else
-            preferences.putBoolean(dependentPluginKey, active);
+    	
     }
 
     @Override
     public void clear() {
-        for (String pluginKey : mappings.keySet())
-            preferences.remove(pluginKey);
-
-        for (String dependentPluginKey : dependentMappings.values())
-            preferences.remove(dependentPluginKey);
+        for (String pluginKey : mappings.keySet()) {
+        	ColorThemeMapping mapping = mappings.get(pluginKey);
+            mapping.removePreferences(preferences);
+        }
     }
 }

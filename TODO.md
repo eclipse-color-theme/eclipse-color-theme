@@ -11,8 +11,6 @@
 1.0
 ===
 * Add mapping file import support.
-* Make it possible for themes to define text decorations (bold,
-  italic, underlined).
 * Add support for the most common editors:
   * JAR Manifest
   * PDE (plugin.xml etc.)

@@ -10,6 +10,4 @@
         <mapping pluginKey="SCRIPT_AREA_BORDER" themeKey="bracket" />
         <mapping pluginKey="jsp_content" themeKey="foreground" />
     </mappings>
-    <dependentMappings>
-    </dependentMappings>
 </eclipseColorThemeMapping>

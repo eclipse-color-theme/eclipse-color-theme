@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<eclipseColorThemeMapping plugin="org.python.pydev"
-                          created="2011-01-29 08:31:16">
+<eclipseColorThemeMapping plugin="org.python.pydev" created="2011-01-29 08:31:16">
     <mappings>
-        <mapping pluginKey="EDITOR_MATCHING_BRACKETS_COLOR"
-                 themeKey="bracket"/>
+        <mapping pluginKey="EDITOR_MATCHING_BRACKETS_COLOR" themeKey="bracket"/>
         <mapping pluginKey="CODE_COLOR" themeKey="foreground"/>
         <mapping pluginKey="KEYWORD_COLOR" themeKey="keyword"/>
         <mapping pluginKey="FUNC_NAME_COLOR" themeKey="method"/>
@@ -15,6 +13,4 @@
         <mapping pluginKey="DECORATOR_COLOR" themeKey="foreground"/>
         <mapping pluginKey="CLASS_NAME_COLOR" themeKey="class"/>
     </mappings>
-    <dependentMappings>
-    </dependentMappings>
 </eclipseColorThemeMapping> 

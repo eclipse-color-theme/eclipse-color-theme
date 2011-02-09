@@ -10,6 +10,4 @@
         <mapping pluginKey="Multi-line comment" themeKey="multiLineComment" />
         <mapping pluginKey="Others" themeKey="foreground" />
     </mappings>
-    <dependentMappings>
-    </dependentMappings>
 </eclipseColorThemeMapping>
