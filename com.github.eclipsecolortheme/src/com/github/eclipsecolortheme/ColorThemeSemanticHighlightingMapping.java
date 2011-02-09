@@ -1,13 +1,11 @@
-package com.github.eclipsecolortheme.mapper;
+package com.github.eclipsecolortheme;
 
 import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 
-import com.github.eclipsecolortheme.ColorThemeMapping;
-import com.github.eclipsecolortheme.ColorThemeSetting;
 
-public class SemanticHighlightingMapping extends ColorThemeMapping {
+public class ColorThemeSemanticHighlightingMapping extends ColorThemeMapping {
 
-	public SemanticHighlightingMapping(String pluginKey,
+	public ColorThemeSemanticHighlightingMapping(String pluginKey,
 			String themeKey) {
 		super(pluginKey, themeKey);
 	}

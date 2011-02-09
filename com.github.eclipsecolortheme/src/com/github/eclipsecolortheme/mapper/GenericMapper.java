@@ -17,6 +17,7 @@ import org.xml.sax.SAXException;
 
 import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
+import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
 
 public class GenericMapper extends ThemePreferenceMapper {
 	
@@ -77,8 +78,8 @@ public class GenericMapper extends ThemePreferenceMapper {
     	return new ColorThemeMapping(pluginKey, themeKey);
     }
 
-    protected SemanticHighlightingMapping createSemanticHighlightingMapping(String pluginKey, String themeKey) {
-    	return new SemanticHighlightingMapping(pluginKey, themeKey);
+    protected ColorThemeSemanticHighlightingMapping createSemanticHighlightingMapping(String pluginKey, String themeKey) {
+    	return new ColorThemeSemanticHighlightingMapping(pluginKey, themeKey);
     }
     
     private static String extractAttribute(Node node, String name) {
