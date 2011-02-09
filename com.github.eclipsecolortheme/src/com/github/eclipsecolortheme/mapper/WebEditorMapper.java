@@ -1,9 +1,7 @@
 package com.github.eclipsecolortheme.mapper;
 
-import com.github.eclipsecolortheme.mapping.ColorThemeMapping;
-import com.github.eclipsecolortheme.mapping.ColorThemeSemanticHighlightingMapping;
-import com.github.eclipsecolortheme.mapping.ColorThemeSemanticHighlightingWebMapping;
-import com.github.eclipsecolortheme.mapping.ColorThemeWebMapping;
+import com.github.eclipsecolortheme.ColorThemeMapping;
+
 
 /**
  * Maps color themes to preferences for Eclipse's XML, HTML and CSS editors.
@@ -16,13 +14,13 @@ public class WebEditorMapper extends GenericMapper {
     
     @Override
     protected ColorThemeMapping createMapping(String pluginKey, String themeKey) {
-    	return new ColorThemeWebMapping(pluginKey, themeKey);
+    	return new WebMapping(pluginKey, themeKey);
     }
     
     @Override
-    protected ColorThemeSemanticHighlightingMapping createSemanticHighlightingMapping(
+    protected SemanticHighlightingMapping createSemanticHighlightingMapping(
     		String pluginKey, String themeKey) {
-    	return new ColorThemeSemanticHighlightingWebMapping(pluginKey, themeKey);
+    	return new SemanticHighlightingWebMapping(pluginKey, themeKey);
     }
     
 }

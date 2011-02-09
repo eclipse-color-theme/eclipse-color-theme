@@ -15,9 +15,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
-import com.github.eclipsecolortheme.mapping.ColorThemeMapping;
-import com.github.eclipsecolortheme.mapping.ColorThemeSemanticHighlightingMapping;
 
 public class GenericMapper extends ThemePreferenceMapper {
 	
@@ -26,7 +25,7 @@ public class GenericMapper extends ThemePreferenceMapper {
     public GenericMapper(String pluginId) {
         super(pluginId);
         InputStream input =  Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("com/github/eclipsecolortheme/mapper/"
+                .getResourceAsStream("com/github/eclipsecolortheme/mappings/"
                                      + pluginId + ".xml");
         try {
             parseMapping(input);
@@ -78,8 +77,8 @@ public class GenericMapper extends ThemePreferenceMapper {
     	return new ColorThemeMapping(pluginKey, themeKey);
     }
 
-    protected ColorThemeSemanticHighlightingMapping createSemanticHighlightingMapping(String pluginKey, String themeKey) {
-    	return new ColorThemeSemanticHighlightingMapping(pluginKey, themeKey);
+    protected SemanticHighlightingMapping createSemanticHighlightingMapping(String pluginKey, String themeKey) {
+    	return new SemanticHighlightingMapping(pluginKey, themeKey);
     }
     
     private static String extractAttribute(Node node, String name) {

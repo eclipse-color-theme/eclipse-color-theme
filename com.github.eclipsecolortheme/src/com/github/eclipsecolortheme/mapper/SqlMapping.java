@@ -1,12 +1,13 @@
-package com.github.eclipsecolortheme.mapping;
+package com.github.eclipsecolortheme.mapper;
 
 import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 
+import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
 
-public class ColorThemeSqlMapping extends ColorThemeMapping {
+public class SqlMapping extends ColorThemeMapping {
 
-	public ColorThemeSqlMapping(String pluginKey, String themeKey) {
+	public SqlMapping(String pluginKey, String themeKey) {
 		super(pluginKey, themeKey);
 	}
 	
