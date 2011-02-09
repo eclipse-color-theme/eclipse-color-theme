@@ -11,10 +11,6 @@ import com.github.eclipsecolortheme.ColorThemeSetting;
  */
 public class SqlEditorMapper extends GenericMapper {
 
-	public SqlEditorMapper() {
-		super("org.eclipse.datatools.sqltools.sqleditor");
-	}
-
 	@Override
 	protected ColorThemeMapping createMapping(String pluginKey, String themeKey) {
 		return new Mapping(pluginKey, themeKey);

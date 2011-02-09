@@ -18,11 +18,27 @@ public abstract class ThemePreferenceMapper {
 
     /**
      * Creates a new mapper.
+     */
+    public ThemePreferenceMapper() {
+        // NOOP
+    }
+    
+    /**
+     * Creates a new mapper.
      * @param plugin The ID of the Eclipse plugin whose preferences should be
      *               altered.
      */
     public ThemePreferenceMapper(String plugin) {
-        preferences = new InstanceScope().getNode(plugin);
+        setPluginId(plugin);
+    }
+    
+    /**
+     * Sets the plugin ID and loads preferences.
+     * @param plugin The ID of the Eclipse plugin whose preferences should be
+     *               altered.
+     */
+    public void setPluginId(String plugin) {
+    	preferences = new InstanceScope().getNode(plugin);
     }
 
     /**

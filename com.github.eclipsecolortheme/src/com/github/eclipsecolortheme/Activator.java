@@ -6,7 +6,10 @@ import org.osgi.framework.BundleContext;
 
 /** This plugin's activator. */
 public class Activator extends AbstractUIPlugin {
+	
     public static final String PLUGIN_ID = "com.github.eclipsecolortheme";
+    public static final String EXTENSION_POINT_ID_MAPPER = PLUGIN_ID + ".mapper";
+    
     private static Activator plugin;
 
     /** Creates a new activator. */

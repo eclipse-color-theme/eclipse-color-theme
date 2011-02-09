@@ -22,21 +22,15 @@ import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
 public class GenericMapper extends ThemePreferenceMapper {
 	
     private Map<String, ColorThemeMapping> mappings = new HashMap<String, ColorThemeMapping>();
-
-    public GenericMapper(String pluginId) {
-        super(pluginId);
-        InputStream input =  Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("com/github/eclipsecolortheme/mappings/"
-                                     + pluginId + ".xml");
-        try {
-            parseMapping(input);
-        } catch (Exception e) {
-            System.err.println("Failed to parse mapping for " + pluginId);
-            e.printStackTrace();
-        }
-    }
-
-    private void parseMapping(InputStream input)
+    
+    /**
+     * Parse mapping from input file.
+     * @param input InputStream for an XML file
+     * @throws SAXException
+     * @throws IOException
+     * @throws ParserConfigurationException
+     */
+    public void parseMapping(InputStream input)
             throws SAXException, IOException, ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();

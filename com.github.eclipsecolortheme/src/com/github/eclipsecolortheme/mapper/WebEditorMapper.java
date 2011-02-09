@@ -12,10 +12,6 @@ import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
  */
 public class WebEditorMapper extends GenericMapper {
     
-    public WebEditorMapper(String pluginId) {
-        super(pluginId);
-    }
-    
     @Override
     protected ColorThemeMapping createMapping(String pluginKey, String themeKey) {
     	return new Mapping(pluginKey, themeKey);
