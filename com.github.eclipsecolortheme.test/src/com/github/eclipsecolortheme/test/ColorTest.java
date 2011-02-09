@@ -9,7 +9,7 @@ import com.github.eclipsecolortheme.Color;
 public class ColorTest {
 
 	@Test
-	public void testColor() {
+	public void color() {
 		Color color = new Color("#FFAA00");
 		Assert.assertEquals("255,170,0", color.asRGB());
 		Assert.assertEquals("#FFAA00", color.asHex().toUpperCase());
