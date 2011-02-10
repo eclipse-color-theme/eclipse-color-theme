@@ -6,7 +6,7 @@
          <meta.schema plugin="com.github.eclipsecolortheme" id="com.github.eclipsecolortheme.mapper" name="Mapper"/>
       </appinfo>
       <documentation>
-         
+         The mapper extension point allows plug-ins to contribute color preference mappings for eclipse editors.
       </documentation>
    </annotation>
 
@@ -52,7 +52,7 @@
          <attribute name="class" type="string" use="required">
             <annotation>
                <documentation>
-                  
+                  the fully qualified name of a class that implements &lt;samp&gt;com.github.eclipsecolortheme.mapper.ThemePreferenceMapper&lt;/samp&gt;
                </documentation>
                <appinfo>
                   <meta.attribute kind="java" basedOn="com.github.eclipsecolortheme.mapper.ThemePreferenceMapper:"/>
@@ -62,7 +62,7 @@
          <attribute name="xml" type="string">
             <annotation>
                <documentation>
-                  
+                  Path to xml mapping definition file
                </documentation>
                <appinfo>
                   <meta.attribute kind="resource"/>
@@ -72,14 +72,14 @@
          <attribute name="name" type="string">
             <annotation>
                <documentation>
-                  
+                  the human-readable name of this editors name
                </documentation>
             </annotation>
          </attribute>
          <attribute name="pluginId" type="string" use="required">
             <annotation>
                <documentation>
-                  Plugin ID where preferences are stored
+                  the fully qualified base identifier for preferences used in this editor (normally the plugin id)
                </documentation>
                <appinfo>
                   <meta.attribute kind="identifier"/>
@@ -98,8 +98,58 @@
       </documentation>
    </annotation>
 
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         The following example shows usage with a generic mapper.
+&lt;p&gt;
+&lt;pre class=&quot;Example&quot;&gt;
+&amp;lt;&lt;b&gt;extension point&lt;/b&gt;=&quot;com.github.eclipsecolortheme.mapper&quot;&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;&lt;b&gt;mapper&lt;/b&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;class&lt;/b&gt;=&quot;com.github.eclipsecolortheme.mapper.GenericMapper&quot;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;name&lt;/b&gt;=&quot;Ant&quot;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;pluginId&lt;/b&gt;=&quot;org.eclipse.ant.ui&quot;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;xml&lt;/b&gt;=&quot;mappings/org.eclipse.ant.ui.xml&quot;&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/&lt;b&gt;mapper&lt;/b&gt;&amp;gt;
+&amp;lt;/&lt;b&gt;extension&lt;/b&gt;&amp;gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
 
 
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         There are some ready-to-use implementations of &lt;samp&gt;ThemePreferenceMapper&lt;/samp&gt; available
+&lt;ul&gt;
+    &lt;li&gt;com.github.eclipsecolortheme.mapper.GenericMapper&lt;/li&gt;
+    &lt;li&gt;com.github.eclipsecolortheme.mapper.WebEditorMapper&lt;/li&gt;
+&lt;/ul&gt;
+
+The &lt;samp&gt;com.github.eclipsecolortheme.mapper.WebEditorMapper&lt;/samp&gt; implementation provides a web editor specific value format for color preferences, currently used by &lt;samp&gt;org.eclipse.wst.*&lt;/samp&gt; and &lt;samp&gt;org.eclipse.php.ui&lt;/samp&gt; mappers
+
+The com.github.eclipsecolortheme plug-in provides mappings of a few predefined editors.
+&lt;ul&gt;
+    &lt;li&gt;org.eclipse.ant.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.cdt.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.datatools.sqltools.sqleditor&lt;/li&gt;
+    &lt;li&gt;org.eclipse.jdt.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.jst.jsp.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.php.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.ui.editors&lt;/li&gt;
+    &lt;li&gt;org.eclipse.wst.css.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.wst.html.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.wst.jsdt.ui&lt;/li&gt;
+    &lt;li&gt;org.eclipse.wst.xml.ui&lt;/li&gt;
+    &lt;li&gt;org.python.pydev&lt;/li&gt;
+&lt;/ul&gt;
+      </documentation>
+   </annotation>
 
 
 </schema>

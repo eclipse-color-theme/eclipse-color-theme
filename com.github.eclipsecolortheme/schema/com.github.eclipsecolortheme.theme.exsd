@@ -6,7 +6,7 @@
          <meta.schema plugin="com.github.eclipsecolortheme" id="com.github.eclipsecolortheme.theme" name="Color Theme"/>
       </appinfo>
       <documentation>
-         
+         The color theme extension point allows plug-ins to contribute XML theme files to the theme library.
       </documentation>
    </annotation>
 
@@ -49,7 +49,7 @@
 
    <element name="theme">
       <complexType>
-         <attribute name="theme" type="string" use="required">
+         <attribute name="file" type="string" use="required">
             <annotation>
                <documentation>
                   
@@ -71,8 +71,36 @@
       </documentation>
    </annotation>
 
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         &lt;pre class=&quot;Example&quot;&gt;
+&lt;extension point=&quot;com.github.eclipsecolortheme.theme&quot;&gt;
+    &lt;theme file=&quot;themes/black-pastel.xml&quot;&gt;&lt;/theme&gt;
+&lt;/extension&gt;
+&lt;/pre&gt;
+      </documentation>
+   </annotation>
 
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         The file attribute must represent an XML resource located in the contributor plugin.
+      </documentation>
+   </annotation>
 
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         The com.github.eclipsecolortheme plug-in provides a few predefined themes.
+      </documentation>
+   </annotation>
 
 
 </schema>

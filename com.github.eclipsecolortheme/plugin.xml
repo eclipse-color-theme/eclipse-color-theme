@@ -97,61 +97,61 @@
    <extension
          point="com.github.eclipsecolortheme.theme">
       <theme
-            theme="themes/black-pastel.xml">
+            file="themes/black-pastel.xml">
       </theme>
       <theme
-            theme="themes/frontenddev.xml">
+            file="themes/frontenddev.xml">
       </theme>
       <theme
-            theme="themes/gedit-original-oblivion.xml">
+            file="themes/gedit-original-oblivion.xml">
       </theme>
       <theme
-            theme="themes/havenjark.xml">
+            file="themes/havenjark.xml">
       </theme>
       <theme
-            theme="themes/inkpot.xml">
+            file="themes/inkpot.xml">
       </theme>
       <theme
-            theme="themes/minimal.xml">
+            file="themes/minimal.xml">
       </theme>
       <theme
-            theme="themes/mr.xml">
+            file="themes/mr.xml">
       </theme>
       <theme
-            theme="themes/nightlion-aptana-theme.xml">
+            file="themes/nightlion-aptana-theme.xml">
       </theme>
       <theme
-            theme="themes/notepad++-like.xml">
+            file="themes/notepad++-like.xml">
       </theme>
       <theme
-            theme="themes/oblivion.xml">
+            file="themes/oblivion.xml">
       </theme>
       <theme
-            theme="themes/obsidian.xml">
+            file="themes/obsidian.xml">
       </theme>
       <theme
-            theme="themes/pastel.xml">
+            file="themes/pastel.xml">
       </theme>
       <theme
-            theme="themes/recogneyes.xml">
+            file="themes/recogneyes.xml">
       </theme>
       <theme
-            theme="themes/schuss.xml">
+            file="themes/schuss.xml">
       </theme>
       <theme
-            theme="themes/sublime-text-2.xml">
+            file="themes/sublime-text-2.xml">
       </theme>
       <theme
-            theme="themes/tango.xml">
+            file="themes/tango.xml">
       </theme>
       <theme
-            theme="themes/vibrantink.xml">
+            file="themes/vibrantink.xml">
       </theme>
       <theme
-            theme="themes/wombat.xml">
+            file="themes/wombat.xml">
       </theme>
       <theme
-            theme="themes/zenburn.xml">
+            file="themes/zenburn.xml">
       </theme>
    </extension>
 
