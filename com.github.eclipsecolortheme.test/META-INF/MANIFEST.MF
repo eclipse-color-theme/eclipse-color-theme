@@ -6,4 +6,5 @@ Bundle-Version: 0.9.0.qualifier
 Bundle-Vendor: GitHub
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: com.github.eclipsecolortheme;bundle-version="0.9.0",
- org.junit
+ org.junit,
+ org.eclipse.core.runtime;bundle-version="3.6.0"

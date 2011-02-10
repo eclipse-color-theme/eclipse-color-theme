@@ -29,9 +29,9 @@ public class Color {
 	}
 	
 	public String asHex() {
-		String hexr = Integer.toHexString(r);
-		String hexg = Integer.toHexString(g);
-		String hexb = Integer.toHexString(b);
+		String hexr = Integer.toHexString(r).toUpperCase();
+		String hexg = Integer.toHexString(g).toUpperCase();
+		String hexb = Integer.toHexString(b).toUpperCase();
 		return "#" + (hexr.length() == 2 ? hexr : "0" + hexr) + "" + (hexg.length() == 2 ? hexg : "0" + hexg) + "" + (hexb.length() == 2 ? hexb : "0" + hexb);
 	}
 	
