@@ -82,14 +82,6 @@ public class GenericMapper extends ThemePreferenceMapper {
 
     @Override
     public void map(Map<String, ColorThemeSetting> theme) {
-    	
-    	// Add those text editor specific dependencies
-    	// TODO: bad location, move to somewhere else...
-    	preferences.putBoolean("AbstractTextEditor.Color.Background.SystemDefault", false);
-    	preferences.putBoolean("AbstractTextEditor.Color.Foreground.SystemDefault", false);
-    	preferences.putBoolean("AbstractTextEditor.Color.SelectionBackground.SystemDefault", false);
-    	preferences.putBoolean("AbstractTextEditor.Color.SelectionForeground.SystemDefault", false);
-    	
     	// put preferences according to mappings
     	for (String pluginKey : mappings.keySet()) {
     		ColorThemeMapping mapping = mappings.get(pluginKey);
@@ -98,7 +90,6 @@ public class GenericMapper extends ThemePreferenceMapper {
     			mapping.putPreferences(preferences, setting);
     		}
         }
-    	
     }
 
     @Override

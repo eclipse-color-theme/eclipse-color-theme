@@ -58,7 +58,7 @@
             xml="mappings/org.eclipse.php.ui.xml">
       </mapper>
       <mapper
-            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            class="com.github.eclipsecolortheme.mapper.TextEditorMapper"
             name="Text"
             pluginId="org.eclipse.ui.editors"
             xml="mappings/org.eclipse.ui.editors.xml">
