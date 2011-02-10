@@ -88,7 +88,7 @@ public class ColorThemeManager {
 						Activator.EXTENSION_POINT_ID_THEME);
 		try {
 			for (IConfigurationElement e : config) {
-				String xml = e.getAttribute("theme");
+				String xml = e.getAttribute("file");
 				String contributorPluginId = e.getContributor().getName();
 				Bundle bundle = Platform.getBundle(contributorPluginId);
 				InputStream input = (InputStream) bundle.getResource(xml)
