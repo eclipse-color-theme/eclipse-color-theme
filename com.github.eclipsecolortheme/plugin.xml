@@ -94,7 +94,7 @@
             xml="mappings/org.python.pydev.xml">
       </mapper>
       <mapper
-            class="com.github.eclipsecolortheme.mapper.TextEditorMapper"
+            class="com.github.eclipsecolortheme.mapper.PerlEditorMapper"
             name="Perl"
             pluginId="org.epic.perleditor"
             xml="mappings/org.epic.perleditor.xml">
