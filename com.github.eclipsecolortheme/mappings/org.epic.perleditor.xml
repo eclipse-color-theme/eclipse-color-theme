@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<eclipseColorThemeMapping plugin="org.epic.perleditor" created="2011-02-11 10:41:24"> 
+    <mappings> 
+        <mapping pluginKey="numberColor" themeKey="number" /> 
+        <mapping pluginKey="AbstractTextEditor.Color.Background" themeKey="background" /> 
+        <mapping pluginKey="markupColor" themeKey="foreground" /> 
+        <mapping pluginKey="operatorColor" themeKey="operator" /> 
+        <mapping pluginKey="AbstractTextEditor.Color.Foreground" themeKey="foreground" /> 
+        <mapping pluginKey="currentLineColor" themeKey="currentLine" /> 
+        <mapping pluginKey="searchResultIndicationColor" themeKey="searchResultIndication" /> 
+        <mapping pluginKey="printMarginColor" themeKey="lineNumber" /> 
+        <mapping pluginKey="functionColor" themeKey="method" /> 
+        <mapping pluginKey="lineNumberColor" themeKey="lineNumber" /> 
+        <mapping pluginKey="keyword1Color" themeKey="keyword" /> 
+        <mapping pluginKey="keyword2Color" themeKey="method" /> 
+        <mapping pluginKey="literal1Color" themeKey="string" /> 
+        <mapping pluginKey="literal2Color" themeKey="string" /> 
+        <mapping pluginKey="comment1Color" themeKey="singleLineComment" /> 
+        <mapping pluginKey="comment2Color" themeKey="multiLineComment" /> 
+        <mapping pluginKey="variableColor" themeKey="localVariable" /> 
+        <mapping pluginKey="invalidColor" themeKey="deprecatedMember" /> 
+        <mapping pluginKey="labelColor" themeKey="foreground" /> 
+        <mapping pluginKey="errorIndicationColor" themeKey="class" /> 
+        <mapping pluginKey="othersIndicationColor" themeKey="foreground" /> 
+        <mapping pluginKey="warningIndicationColor" themeKey="string" /> 
+        <mapping pluginKey="taskIndicationColor" themeKey="commentTaskTag" /> 
+        <mapping pluginKey="bookmarkIndicationColor" themeKey="javadocLink" /> 
+    </mappings> 
+</eclipseColorThemeMapping> 
