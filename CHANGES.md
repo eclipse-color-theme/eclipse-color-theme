@@ -7,6 +7,7 @@
 * Added support for text decorations (bold, italic, underline, strikethrough).
 * Added an Extension Point for Mappers.
 * Added an Extension Point for Themes.
+* Added support for the Perl editor.
 
 0.8.0 (2011-02-07)
 ==================
