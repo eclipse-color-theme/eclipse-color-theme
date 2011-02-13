@@ -1,20 +1,6 @@
 package com.github.eclipsecolortheme;
 
-import static com.github.eclipsecolortheme.ColorThemeKeys.BACKGROUND;
-import static com.github.eclipsecolortheme.ColorThemeKeys.CURRENT_LINE;
-import static com.github.eclipsecolortheme.ColorThemeKeys.DEBUG_CURRENT_INSTRUCTION_POINTER;
-import static com.github.eclipsecolortheme.ColorThemeKeys.DEBUG_SECONDARY_INSTRUCTION_POINTER;
-import static com.github.eclipsecolortheme.ColorThemeKeys.FIELD;
-import static com.github.eclipsecolortheme.ColorThemeKeys.FOREGROUND;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_KEYWORD;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_LINK;
-import static com.github.eclipsecolortheme.ColorThemeKeys.JAVADOC_TAG;
-import static com.github.eclipsecolortheme.ColorThemeKeys.LOCAL_VARIABLE;
-import static com.github.eclipsecolortheme.ColorThemeKeys.METHOD;
-import static com.github.eclipsecolortheme.ColorThemeKeys.MULTI_LINE_COMMENT;
-import static com.github.eclipsecolortheme.ColorThemeKeys.OCCURRENCE_INDICATION;
-import static com.github.eclipsecolortheme.ColorThemeKeys.WRITE_OCCURRENCE_INDICATION;
+import static com.github.eclipsecolortheme.ColorThemeKeys.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -142,6 +128,7 @@ public class ColorThemeManager {
 		Element root = document.getDocumentElement();
 		theme.setName(root.getAttribute("name"));
 		theme.setAuthor(root.getAttribute("author"));
+		theme.setWebsite(root.getAttribute("website"));
 
 		Map<String, ColorThemeSetting> entries = new HashMap<String, ColorThemeSetting>();
 		NodeList entryNodes = root.getChildNodes();
@@ -200,7 +187,6 @@ public class ColorThemeManager {
 
 	/**
 	 * Returns all available color themes.
-	 * 
 	 * @return all available color themes.
 	 */
 	public Set<ColorTheme> getThemes() {
@@ -208,22 +194,18 @@ public class ColorThemeManager {
 	}
 
 	/**
-	 * Returns the theme entries stored under @a name.
-	 * 
-	 * @param name
-	 *            The theme whose entries to return.
-	 * @return The requested theme's entries or <code>null</code> if no theme
-	 *         with that name exists.
+	 * Returns the theme stored under the supplied name. 
+	 * @param name The name of the theme.
+	 * @return The requested theme or <code>null</code> if none was stored under
+	 *         the supplied name.
 	 */
-	public Map<String, ColorThemeSetting> getThemeEntries(String name) {
-		return themes.get(name).getEntries();
-	}
+    public ColorTheme getTheme(String name) {
+        return themes.get(name);
+    }
 
 	/**
 	 * Changes the preferences of other plugins to apply the color theme.
-	 * 
-	 * @param theme
-	 *            The name of the color theme to apply.
+	 * @param theme The name of the color theme to apply.
 	 */
 	public void applyTheme(String theme) {
 		for (ThemePreferenceMapper editor : editors) {
@@ -243,9 +225,7 @@ public class ColorThemeManager {
 	/**
 	 * Adds the color theme to the list and saves it to the preferences.
 	 * Existing themes will be overwritten with the new content.
-	 * 
-	 * @param content
-	 *            The content of the color theme file.
+	 * @param content The content of the color theme file.
 	 * @return The saved color theme, or <code>null</code> if the theme was not
 	 *         valid.
 	 */

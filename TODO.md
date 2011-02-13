@@ -1,12 +1,3 @@
-0.9
-===
-* Improve the preference page.
-  * Add a link to eclipsecolorthemes.org.
-  * Add newly imported themes to the list without requiring the user to reopen
-    the preferences page.
-  * Use a different control for theme selection.
-  * Display author and website of each theme.
-
 1.0
 ===
 * Add support for the most common editors:

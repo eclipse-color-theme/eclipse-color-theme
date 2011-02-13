@@ -9,14 +9,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.eclipse.jface.preference.FieldEditorPreferencePage;
-import org.eclipse.jface.preference.RadioGroupFieldEditor;
+import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.RowData;
+import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.swt.program.Program;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Link;
+import org.eclipse.swt.widgets.List;
+import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorReference;
@@ -31,53 +39,104 @@ import com.github.eclipsecolortheme.ColorTheme;
 import com.github.eclipsecolortheme.ColorThemeManager;
 
 /** The preference page for managing color themes. */
-public class ColorThemePreferencePage extends FieldEditorPreferencePage
+public class ColorThemePreferencePage extends PreferencePage
                                       implements IWorkbenchPreferencePage {
-    private ColorThemeManager colorThemeManager;
-    private RadioGroupFieldEditor colorThemeEditor;
+    private ColorThemeManager colorThemeManager = new ColorThemeManager();
+    private Composite container;
+    private List themeSelectionList;
+    private Composite themeSelection;
+    private Composite themeDetails;
+    private Label authorLabel;
+    private Link websiteLink;
 
     /** Creates a new color theme preference page. */
 	public ColorThemePreferencePage() {
-		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
-		colorThemeManager = new ColorThemeManager();
-	}
-
-	@Override
-	public void createFieldEditors() {
-	    Set<ColorTheme> themes = colorThemeManager.getThemes();
-	    String[][] choices = new String[themes.size() + 1][2];
-	    int i = 0;
-	    choices[i++] = new String[] {"Default", "Default"};
-        for (ColorTheme theme : themes)
-	        choices[i++] = new String[] {theme.getName() + " (by "
-	                                     + theme.getAuthor() + ")"
-	                                     ,theme.getName()};
-
-        colorThemeEditor = new RadioGroupFieldEditor("colorTheme",
-                "Current color theme:", 1, choices, getFieldEditorParent()) {
-            @Override
-            protected void doLoadDefault() {
-                colorThemeManager.clearImportedThemes();
-                // TODO: Add the theme to the list immediately.
-                MessageBox box = new MessageBox(getShell(), SWT.OK);
-                box.setText("Defaults restored");
-                box.setMessage("All themes have been restored to their " +
-                               "defaults and imported themes have been " +
-                               "removed. However, these changes will not " +
-                               "take effect unless you close the preference " +
-                               "window and open it again. This issue will be " +
-                               "addressed soon.");
-                box.open();
-                super.doLoadDefault();
-            }
-        };
-	    addField(colorThemeEditor);
 	}
 
 	@Override
 	public void init(IWorkbench workbench) {
 	}
+
+	@Override
+	protected Control createContents(Composite parent) {
+	    container = new Composite(parent, SWT.NONE);
+	    RowLayout rowLayout = new RowLayout(SWT.VERTICAL);
+        container.setLayout(rowLayout);
+
+        Label themeSelectionLabel = new Label(container, SWT.NONE);
+        themeSelectionLabel.setText("Theme:");
+
+        themeSelection = new Composite(container, SWT.NONE);
+        RowLayout themeSelectionLayout = new RowLayout(SWT.HORIZONTAL);
+        themeSelectionLayout.spacing = 10;
+        themeSelection.setLayout(themeSelectionLayout);
+        themeSelectionList = new List(themeSelection, SWT.NONE);
+        fillThemeSelectionList();
+
+        themeDetails = new Composite(themeSelection, SWT.NONE);
+        themeDetails.setLayout(rowLayout);
+        authorLabel = new Label(themeDetails, SWT.NONE);
+        websiteLink = new Link(themeDetails, SWT.NONE);
+
+        themeSelectionList.addListener(SWT.Selection, new Listener() {
+            @Override
+            public void handleEvent(Event event) {
+                updateDetails(colorThemeManager.getTheme(
+                        themeSelectionList.getSelection()[0]));
+            }
+        });
+        
+        String activeThemeName = getPreferenceStore().getString("colorTheme");
+        if (colorThemeManager.getTheme(activeThemeName) == null)
+            activeThemeName = "Default";
+        themeSelectionList.setSelection(new String[] {activeThemeName});
+        updateDetails(colorThemeManager.getTheme(activeThemeName));
+
+        Link ectLink = new Link(container, SWT.NONE);
+        ectLink.setText("Download more themes or create your own on "
+                        + "<a>eclipsecolorthemes.org</a>.");
+        setLinkTarget(ectLink, "http://eclipsecolorthemes.org");
+        return container;
+	}
+
+    private void fillThemeSelectionList() {
+        themeSelectionList.add("Default");
+        Set<ColorTheme> themes = colorThemeManager.getThemes();
+        for (ColorTheme theme : themes)
+            themeSelectionList.add(theme.getName());
+    }
+
+	private static void setLinkTarget(Link link, final String target) {
+        link.addListener(SWT.Selection, new Listener() {
+            @Override
+            public void handleEvent(Event event) {
+                Program.launch(target);
+            }
+        });
+	}
+
+    private void updateDetails(ColorTheme theme) {
+        if (theme == null)
+            themeDetails.setVisible(false);
+        else {
+            authorLabel.setText("Author: " + theme.getAuthor());
+            String website = theme.getWebsite();
+            if (website == null || website.isEmpty())
+                websiteLink.setVisible(false);
+            else {
+                websiteLink.setText("Website: <a>" + website + "</a>");
+                for (Listener listener : websiteLink.getListeners(
+                        SWT.Selection))
+                    websiteLink.removeListener(SWT.Selection, listener);
+                setLinkTarget(websiteLink, website);
+                websiteLink.setVisible(true);
+            }
+            themeDetails.setVisible(true);
+            authorLabel.pack();
+        }
+        container.pack();
+    }
 
 	@Override
 	public boolean performOk() {
@@ -103,9 +162,9 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
 	            activePage.closeAllEditors(true);   
 	        }
 
-	        colorThemeEditor.store();
-            colorThemeManager.applyTheme(
-                    getPreferenceStore().getString("colorTheme"));
+	        String selectedThemeName = themeSelectionList.getSelection()[0];
+	        getPreferenceStore().setValue("colorTheme", selectedThemeName);
+            colorThemeManager.applyTheme(selectedThemeName);
 
 	        for (String id : formerEditors.keySet())
 	            activePage.openEditor(formerEditors.get(id), id);
@@ -118,6 +177,14 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
 	}
 
 	@Override
+	protected void performDefaults() {
+	    getPreferenceStore().setToDefault("colorTheme");
+	    colorThemeManager.clearImportedThemes();
+	    reloadThemeSelectionList();
+	    super.performDefaults();
+	}
+
+	@Override
 	protected void contributeButtons(Composite parent) {
         Button button = new Button(parent, SWT.NONE);
         button.setText("&Import a theme...");
@@ -125,7 +192,7 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
             @Override
             public void widgetSelected(SelectionEvent event) {
                 FileDialog dialog = new FileDialog(getShell());
-                String file= dialog.open();
+                String file = dialog.open();
                 ColorTheme theme;
                 try {
                     String content = readFile(new File(file));
@@ -133,23 +200,23 @@ public class ColorThemePreferencePage extends FieldEditorPreferencePage
                 } catch (IOException e) {
                     theme = null;
                 }
-                MessageBox box = new MessageBox(getShell(), SWT.OK);
                 if (theme != null) {
-                    // TODO: Add the theme to the list immediately.
-                    box.setText("Theme imported");
-                    box.setMessage("The theme '" + theme.getName() + "' has " +
-                                   "been imported successfully. However, in " +
-                                   "order to use it, please close the " +
-                                   "preferences window and open it again. " +
-                                   "This issue will be addressed soon.");
+                    reloadThemeSelectionList();
                 } else {
+                    MessageBox box = new MessageBox(getShell(), SWT.OK);
                     box.setText("Theme not imported");
                     box.setMessage("This is not a valid theme file.");
+                    box.open();
                 }
-                box.open();
             }
         });
 	}
+
+    private void reloadThemeSelectionList() {
+        themeSelectionList.removeAll();
+        fillThemeSelectionList();
+        container.pack();
+    }
 
 	private static String readFile(File file) throws IOException {
 	    Reader in = new BufferedReader(new FileReader(file));

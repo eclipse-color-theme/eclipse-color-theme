@@ -1,12 +1,12 @@
 0.9.0
 ==================
-
 * Added the Mr theme.
 * Cleaned up the Ant color keys.
 * Refactored mapping logic.
 * Added support for text decorations (bold, italic, underline, strikethrough).
 * Added an Extension Point for Mappers.
 * Added an Extension Point for Themes.
+* Improved the preference page.
 
 0.8.0 (2011-02-07)
 ==================
