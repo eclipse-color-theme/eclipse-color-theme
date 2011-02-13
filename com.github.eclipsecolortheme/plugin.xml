@@ -93,6 +93,12 @@
             pluginId="org.python.pydev"
             xml="mappings/org.python.pydev.xml">
       </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.PerlEditorMapper"
+            name="Perl"
+            pluginId="org.epic.perleditor"
+            xml="mappings/org.epic.perleditor.xml">
+      </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
