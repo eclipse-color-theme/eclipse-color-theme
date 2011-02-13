@@ -86,10 +86,10 @@ To create a new theme, go to
 download it in *.xml format and import it from the Color Theme
 preference page.
 
-Adding an editor
+Adding a mapping
 ----------------
 
-If you would like to add an editor, proceed as follows:
+If you would like to add an editor mapping, proceed as follows:
 
 1. Go to the *syntax coloring* preferences page of the editor,
 e.g. *C/C++->Editor->Syntax Coloring*.
@@ -100,10 +100,10 @@ colours defined there.
 
 3. Open the editor's preferences file,
 e.g. *workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.cdt.ui.prefs*
-and create a new XML file named after the plugin ID in the `mapper`
-package which maps the colour theme's keys to those of the editor.
+and create a new XML file named after the plugin ID in the *mapper*
+directory which maps the colour theme's keys to those of the editor.
 
-4. Instantiate and add your mapper in `ColorThemeManager`.
+4. Open *plugin.xml* and add the new mapping file to the extension point *com.github.eclipsecolortheme.theme*.
 
 License
 -------
