@@ -154,7 +154,7 @@ public class ColorThemePreferencePage extends PreferencePage
             if (website == null || website.isEmpty())
                 websiteLink.setVisible(false);
             else {
-                websiteLink.setText("Website: <a>" + website + "</a>");
+                websiteLink.setText("<a>" + website + "</a>");
                 for (Listener listener : websiteLink.getListeners(
                         SWT.Selection))
                     websiteLink.removeListener(SWT.Selection, listener);
