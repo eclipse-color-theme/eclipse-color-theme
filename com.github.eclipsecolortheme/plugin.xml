@@ -105,6 +105,12 @@
             pluginId="org.codehaus.groovy.eclipse.ui"
             xml="mappings/org.codehaus.groovy.eclipse.ui.xml">
       </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.FlashEditorMapper"
+            name="Flash"
+            pluginId="com.powerflasher.fdt.ui"
+            xml="mappings/com.powerflasher.fdt.ui.xml">
+      </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">

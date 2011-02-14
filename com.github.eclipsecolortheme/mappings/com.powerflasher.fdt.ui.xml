@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.powerflasher.fdt.ui" created="2011-02-14 21:22:54">
+    <mappings>
+        <mapping pluginKey="STRING_color" themeKey="string" />
+        <mapping pluginKey="CHARACTER_color" themeKey="string" />
+        <mapping pluginKey="JAVADOC_color" themeKey="javadoc" />
+        <mapping pluginKey="JAVADOC_TAG_color" themeKey="javadocTag" />
+        <mapping pluginKey="JAVADOC_KEYWORD_color" themeKey="javadocKeyword" />
+        <mapping pluginKey="JAVADOC_TODO_color" themeKey="javadocTag" />
+        <mapping pluginKey="JAVADOC_LINK_color" themeKey="javadocLink" />
+        <mapping pluginKey="SINGLELINE_COMMENT_color" themeKey="singleLineComment" />
+        <mapping pluginKey="SINGLELINE_COMMENT_TODO_color" themeKey="javadocTag" />
+        <mapping pluginKey="MULTILINE_COMMENT_color" themeKey="multiLineComment" />
+        <mapping pluginKey="MULTILINE_COMMENT_TODO_color" themeKey="javadocTag" />
+        <mapping pluginKey="AS_PRIVATE_color" themeKey="keyword" />
+        <mapping pluginKey="AS_TYPE_color" themeKey="class" />
+        <mapping pluginKey="AS_INTERNAL_color" themeKey="keyword" />
+        <mapping pluginKey="AS_RETURN_color" themeKey="keyword" />
+        <mapping pluginKey="AS_CONSTANTS_color" themeKey="constant" />
+        <mapping pluginKey="AS_PROTECTED_color" themeKey="keyword" />
+        <mapping pluginKey="AS_PUBLIC_color" themeKey="keyword" />
+        <mapping pluginKey="AS_KEYWORD_color" themeKey="keyword" />
+        <mapping pluginKey="AS_DEFAULT_color" themeKey="foreground" />
+        <mapping pluginKey="AS_CORE_color" themeKey="class" />
+    </mappings>
+    <semanticHighlightingMappings>
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Class" themeKey="class" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.StaticSetter" themeKey="staticMethod" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.StaticField" themeKey="staticField" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Field" themeKey="field" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.StaticFunction" themeKey="staticMethod" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.TopLevelFunction" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Getter" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.StaticGetter" themeKey="staticMethod" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.TopLevelVariable" themeKey="localVariable" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Setter" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Interface" themeKey="interface" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLAttributeName" themeKey="field" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLTagName" themeKey="localVariableDeclaration" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLAttributeValue" themeKey="string" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLNamespaceName" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.Namespace" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.RegEx" themeKey="string" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.NamespaceModifier" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLCDATAText" themeKey="foreground" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLComment" themeKey="multiLineComment" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLText" themeKey="foreground" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLCDATATag" themeKey="foreground" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.TopLevelNamespace" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLIDParameter" themeKey="parameterVariable" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLEventName" themeKey="number" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLComment" themeKey="multiLineComment" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLNamespace" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLApplicationTag" themeKey="localVariableDeclaration" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLAirApplicationTag" themeKey="localVariableDeclaration" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLState" themeKey="typeParameter" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLInlineAS3" themeKey="typeArgument" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLComponentTag" themeKey="localVariableDeclaration" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLStyleName" themeKey="enum" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLOtherTag" themeKey="localVariableDeclaration" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLSetter" themeKey="method" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLModuleTag" themeKey="localVariableDeclaration" />
+		<semanticHighlightingMapping pluginKey="com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLString" themeKey="string" />
+    </semanticHighlightingMappings>
+</eclipseColorThemeMapping>
