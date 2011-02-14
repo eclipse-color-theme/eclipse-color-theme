@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Havenjark" modified="2011-01-26 11:19:13" author="Rodrigo Franco" url="https://github.com/caffo">
+<colorTheme id="25" name="Havenjark" modified="2011-01-26 11:19:13" author="Rodrigo Franco" url="https://github.com/caffo">
     <foreground color="#C0B6A8"/>
     <background color="#2D3639"/>
     <selectionForeground color="#C0B6A8"/>

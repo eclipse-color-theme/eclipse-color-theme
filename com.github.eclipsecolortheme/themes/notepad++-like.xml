@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Notepad++ Like" modified="2011-02-01 09:02:31" author="Vokiel">
+<colorTheme id="91" name="Notepad++ Like" modified="2011-02-01 09:02:31" author="Vokiel">
     <foreground color="#8000FF"/>
     <background color="#FFFFFF"/>
     <selectionForeground color="#000000"/>

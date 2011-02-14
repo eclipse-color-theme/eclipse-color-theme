@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Mr" modified="2011-01-26 22:56:17" author="Jongosi" website="http://TwinCreations.co.uk">
+<colorTheme id="32" name="Mr" modified="2011-01-26 22:56:17" author="Jongosi" website="http://TwinCreations.co.uk">
     <foreground color="#333333"/>
     <background color="#FFFFFF"/>
     <selectionForeground color="#333333"/>

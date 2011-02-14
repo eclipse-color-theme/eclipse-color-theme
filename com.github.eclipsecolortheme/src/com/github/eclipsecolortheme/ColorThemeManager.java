@@ -126,6 +126,7 @@ public class ColorThemeManager {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse(input);
 		Element root = document.getDocumentElement();
+		theme.setId(root.getAttribute("id"));
 		theme.setName(root.getAttribute("name"));
 		theme.setAuthor(root.getAttribute("author"));
 		theme.setWebsite(root.getAttribute("website"));

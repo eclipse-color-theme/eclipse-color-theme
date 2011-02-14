@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Obsidian" modified="2011-02-01 16:43:47" author="Morinar">
+<colorTheme id="21" name="Obsidian" modified="2011-02-01 16:43:47" author="Morinar">
     <foreground color="#E0E2E4"/>
     <background color="#293134"/>
     <selectionForeground color="#E0E2E4"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Sublime Text 2" modified="2011-01-29 11:20:12" author="Filip Minev">
+<colorTheme id="66" name="Sublime Text 2" modified="2011-01-29 11:20:12" author="Filip Minev">
     <foreground color="#CFBFAD"/>
     <background color="#272822"/>
     <selectionForeground color="#404040"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Zenburn" modified="2011-01-21 12:48:22" author="Janni Nurminen" url="http://slinky.imukuppi.org/2006/10/31/just-some-alien-fruit-salad-to-keep-you-in-the-zone/">
+<colorTheme id="2" name="Zenburn" modified="2011-01-21 12:48:22" author="Janni Nurminen" url="http://slinky.imukuppi.org/2006/10/31/just-some-alien-fruit-salad-to-keep-you-in-the-zone/">
     <foreground color="#F6F3E8"/>
     <background color="#404040"/>
     <selectionForeground color="#000000"/>

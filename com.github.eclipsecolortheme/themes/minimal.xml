@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="minimal" modified="2011-01-27 17:26:58" author="meers davy">
+<colorTheme id="43" name="minimal" modified="2011-01-27 17:26:58" author="meers davy">
     <foreground color="#000000"/>
     <background color="#ffffff"/>
     <selectionForeground color="#000066"/>

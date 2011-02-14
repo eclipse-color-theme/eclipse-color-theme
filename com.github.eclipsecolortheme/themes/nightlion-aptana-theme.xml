@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="NightLion Aptana Theme" modified="2011-01-27 21:46:18" author="NightLion" url="http://www.nightlion.net/themes/2009/aptana-dark-color-theme/">
+<colorTheme id="47" name="NightLion Aptana Theme" modified="2011-01-27 21:46:18" author="NightLion" url="http://www.nightlion.net/themes/2009/aptana-dark-color-theme/">
     <foreground color="#E2E2E2"/>
     <background color="#1E1E1E"/>
     <selectionForeground color="#FFFFFF"/>

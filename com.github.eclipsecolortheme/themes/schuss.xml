@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Schuss" modified="2011-01-26 17:47:43" author="Vasil Stoychev">
+<colorTheme id="29" name="Schuss" modified="2011-01-26 17:47:43" author="Vasil Stoychev">
     <foreground color="#430400"/>
     <background color="#FFFFFF"/>
     <selectionForeground color="#FFFFFF"/>

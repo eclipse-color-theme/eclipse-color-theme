@@ -5,15 +5,18 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.program.Program;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
@@ -47,6 +50,7 @@ public class ColorThemePreferencePage extends PreferencePage
     private Composite themeDetails;
     private Label authorLabel;
     private Link websiteLink;
+    private Browser browser;
 
     /** Creates a new color theme preference page. */
 	public ColorThemePreferencePage() {
@@ -60,21 +64,42 @@ public class ColorThemePreferencePage extends PreferencePage
 	@Override
 	protected Control createContents(Composite parent) {
 	    container = new Composite(parent, SWT.NONE);
-	    RowLayout rowLayout = new RowLayout(SWT.VERTICAL);
-        container.setLayout(rowLayout);
+	    GridData gridData = new GridData();
+	    GridLayout containerLayout = new GridLayout(1, true);
+        container.setLayout(containerLayout);
 
         Label themeSelectionLabel = new Label(container, SWT.NONE);
         themeSelectionLabel.setText("Theme:");
+        themeSelectionLabel.setLayoutData(gridData);
 
+        gridData = new GridData(GridData.FILL_BOTH);
         themeSelection = new Composite(container, SWT.NONE);
-        RowLayout themeSelectionLayout = new RowLayout(SWT.HORIZONTAL);
-        themeSelectionLayout.spacing = 10;
+        GridLayout themeSelectionLayout = new GridLayout(2, false);
+        themeSelectionLayout.marginWidth = 0;
+        themeSelectionLayout.marginHeight = 0;
         themeSelection.setLayout(themeSelectionLayout);
+        themeSelection.setLayoutData(gridData);
+        
+        gridData = new GridData(GridData.FILL_BOTH);
+        gridData.minimumWidth = 200;
         themeSelectionList = new List(themeSelection, SWT.BORDER);
+        themeSelectionList.setLayoutData(gridData);
         fillThemeSelectionList();
 
+        gridData = new GridData();
+        gridData.widthHint = 400;
+        gridData.verticalAlignment = SWT.TOP;
+        GridLayout themeDetailsLayout = new GridLayout(1, true);
+        themeDetailsLayout.marginWidth = 0;
+        themeDetailsLayout.marginHeight = 0;
         themeDetails = new Composite(themeSelection, SWT.NONE);
-        themeDetails.setLayout(rowLayout);
+        themeDetails.setLayoutData(gridData);
+        themeDetails.setLayout(themeDetailsLayout);
+        gridData = new GridData(GridData.FILL_HORIZONTAL);
+        gridData.heightHint = 308;
+        browser = new Browser(themeDetails, SWT.BORDER);
+        browser.setLayoutData(gridData);
+        browser.setText("<html><body></body></html>");
         authorLabel = new Label(themeDetails, SWT.NONE);
         websiteLink = new Link(themeDetails, SWT.NONE);
 
@@ -102,8 +127,14 @@ public class ColorThemePreferencePage extends PreferencePage
     private void fillThemeSelectionList() {
         themeSelectionList.add("Default");
         Set<ColorTheme> themes = colorThemeManager.getThemes();
-        for (ColorTheme theme : themes)
-            themeSelectionList.add(theme.getName());
+        String[] items = new String[themes.size()];
+        int i = 0;
+        for (ColorTheme theme : themes) {
+        	items[i] = theme.getName();
+        	i++;
+    	}
+        Arrays.sort(items);
+        themeSelectionList.setItems(items);
     }
 
 	private static void setLinkTarget(Link link, final String target) {
@@ -119,7 +150,7 @@ public class ColorThemePreferencePage extends PreferencePage
         if (theme == null)
             themeDetails.setVisible(false);
         else {
-            authorLabel.setText("Author: " + theme.getAuthor());
+            authorLabel.setText("Created by " + theme.getAuthor());
             String website = theme.getWebsite();
             if (website == null || website.isEmpty())
                 websiteLink.setVisible(false);
@@ -131,10 +162,12 @@ public class ColorThemePreferencePage extends PreferencePage
                 setLinkTarget(websiteLink, website);
                 websiteLink.setVisible(true);
             }
+            String id = theme.getId();
+            browser.setUrl("http://www.eclipsecolorthemes.org/static/themes/java/" + id + ".html");
             themeDetails.setVisible(true);
             authorLabel.pack();
+            websiteLink.pack();
         }
-        container.pack();
     }
 
 	@Override

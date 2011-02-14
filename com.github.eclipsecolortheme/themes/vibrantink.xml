@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme name="Vibrant Ink" modified="2011-01-23 10:03:53" author="indiehead" url="http://code.google.com/p/vibrant-ink-textmate/">
+<colorTheme id="3" name="Vibrant Ink" modified="2011-01-23 10:03:53" author="indiehead" url="http://code.google.com/p/vibrant-ink-textmate/">
     <foreground color="#FFFFFF"/>
     <background color="#191919"/>
     <selectionForeground color="#FFFFFF"/>
