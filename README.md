@@ -52,6 +52,7 @@ Eclipse Color Theme currently supports the following editors:
 * Python
 * JSP
 * Perl
+* Groovy
 
 Available themes:
 
