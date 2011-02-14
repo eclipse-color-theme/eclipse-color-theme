@@ -5,8 +5,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
@@ -125,16 +126,14 @@ public class ColorThemePreferencePage extends PreferencePage
 	}
 
     private void fillThemeSelectionList() {
-        themeSelectionList.add("Default");
         Set<ColorTheme> themes = colorThemeManager.getThemes();
-        String[] items = new String[themes.size()];
-        int i = 0;
-        for (ColorTheme theme : themes) {
-        	items[i] = theme.getName();
-        	i++;
-    	}
-        Arrays.sort(items);
-        themeSelectionList.setItems(items);
+        java.util.List<String> themeNames = new LinkedList<String>();
+        for (ColorTheme theme : themes)
+        	themeNames.add(theme.getName());
+        Collections.sort(themeNames);
+        themeNames.add(0, "Default");
+        themeSelectionList.setItems(
+                themeNames.toArray(new String[themeNames.size()]));
     }
 
 	private static void setLinkTarget(Link link, final String target) {
@@ -163,7 +162,9 @@ public class ColorThemePreferencePage extends PreferencePage
                 websiteLink.setVisible(true);
             }
             String id = theme.getId();
-            browser.setUrl("http://www.eclipsecolorthemes.org/static/themes/java/" + id + ".html");
+            browser.setUrl(
+                    "http://www.eclipsecolorthemes.org/static/themes/java/"
+                    + id + ".html");
             themeDetails.setVisible(true);
             authorLabel.pack();
             websiteLink.pack();
@@ -247,6 +248,8 @@ public class ColorThemePreferencePage extends PreferencePage
     private void reloadThemeSelectionList() {
         themeSelectionList.removeAll();
         fillThemeSelectionList();
+        themeSelectionList.setSelection(new String[]{"Default"});
+        updateDetails(null);
         container.pack();
     }
 
