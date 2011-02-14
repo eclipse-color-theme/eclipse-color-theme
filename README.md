@@ -53,6 +53,7 @@ Eclipse Color Theme currently supports the following editors:
 * JSP
 * Perl
 * Groovy
+* FDT
 
 Available themes:
 

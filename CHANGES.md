@@ -8,6 +8,7 @@
 * Added an Extension Point for Themes.
 * Added support for the Perl editor.
 * Added support for the Groovy editor.
+* Added support for the FDT editor.
 * Improved the preference page.
 
 0.8.0 (2011-02-07)
