@@ -70,7 +70,7 @@ public class ColorThemePreferencePage extends PreferencePage
         RowLayout themeSelectionLayout = new RowLayout(SWT.HORIZONTAL);
         themeSelectionLayout.spacing = 10;
         themeSelection.setLayout(themeSelectionLayout);
-        themeSelectionList = new List(themeSelection, SWT.NONE);
+        themeSelectionList = new List(themeSelection, SWT.BORDER);
         fillThemeSelectionList();
 
         themeDetails = new Composite(themeSelection, SWT.NONE);
