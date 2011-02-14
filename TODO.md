@@ -9,7 +9,6 @@
 * Re-apply selected theme on preferences import.
 * Only apply preferences for existing plugins. Ask for re-apply when
   plugins are installed.
-* Add a preview for the selected theme to the preferences page.
 * Make it possible to delete imported themes.
 * Don't re-apply the theme when pressing *OK* if it has already been
   applied by pressing *Apply*.
