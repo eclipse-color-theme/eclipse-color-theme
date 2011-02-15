@@ -76,7 +76,7 @@
             xml="mappings/org.eclipse.wst.html.ui.xml">
       </mapper>
       <mapper
-            class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="JavaScript"
             pluginId="org.eclipse.wst.jsdt.ui"
             xml="mappings/org.eclipse.wst.jsdt.ui.xml">
