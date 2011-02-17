@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.adobe.flexide.as.mxml" created="2011-02-17 07:55:18">
+    <mappings>
+        <mapping pluginKey="mxmlTagColor" themeKey="localVariable" />
+        <mapping pluginKey="mxmlTextColor" themeKey="foreground" />
+        <mapping pluginKey="mxmlStringColor" themeKey="string" />
+        <mapping pluginKey="mxmlComponentTagColor" themeKey="field" />
+        <mapping pluginKey="mxmlProcessingInstructionColor" themeKey="method" />
+        <mapping pluginKey="mxmlCommentColor" themeKey="multiLineComment" />
+        <mapping pluginKey="asASDocColor" themeKey="javadoc" />
+    </mappings>
+</eclipseColorThemeMapping>
