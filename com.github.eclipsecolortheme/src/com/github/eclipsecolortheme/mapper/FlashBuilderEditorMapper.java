@@ -1,7 +1,5 @@
 package com.github.eclipsecolortheme.mapper;
 
-import java.util.Map;
-
 import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 
 import com.github.eclipsecolortheme.ColorThemeMapping;
@@ -9,7 +7,7 @@ import com.github.eclipsecolortheme.ColorThemeSetting;
 
 public class FlashBuilderEditorMapper extends GenericMapper {
 
-	private class FlashBuilderEditorMapper extends ColorThemeMapping {
+	private class Mapping extends ColorThemeMapping {
 
 		public Mapping(String pluginKey, String themeKey) {
 			super(pluginKey, themeKey);
