@@ -1,3 +1,10 @@
+0.10.0
+======
+
+Added support for the ActionScript editor. (Adobe Flash Builder)
+Added support for the MXML editor. (Adobe Flash Builder)
+Added support for the CSS editor. (Adobe Flash Builder)
+
 0.9.1 (2011-02-15)
 ==================
 * Fixed the JavaScript mapping.
