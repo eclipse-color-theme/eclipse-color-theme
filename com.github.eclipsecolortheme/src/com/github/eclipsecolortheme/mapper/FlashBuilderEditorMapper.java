@@ -16,15 +16,16 @@ public class FlashBuilderEditorMapper extends GenericMapper {
 		@Override
 		public void putPreferences(IEclipsePreferences preferences,
 				ColorThemeSetting setting) {
+			String baseKey = pluginKey.replaceAll("Color", "");
 			preferences.put(pluginKey, setting.getColor().asHex());
 			if (setting.isBoldEnabled() != null)
-				preferences.putBoolean(pluginKey + "Bold", setting.isBoldEnabled());
+				preferences.putBoolean(baseKey + "Bold", setting.isBoldEnabled());
 			if (setting.isItalicEnabled() != null)
-				preferences.putBoolean(pluginKey + "Italic", setting.isItalicEnabled());
+				preferences.putBoolean(baseKey + "Italic", setting.isItalicEnabled());
 			if (setting.isUnderlineEnabled() != null)
-				preferences.putBoolean(pluginKey + "Underline", setting.isUnderlineEnabled());
+				preferences.putBoolean(baseKey + "Underline", setting.isUnderlineEnabled());
 			if (setting.isStrikethroughEnabled() != null)
-				preferences.putBoolean(pluginKey + "Strikethrough", setting.isStrikethroughEnabled());
+				preferences.putBoolean(baseKey + "Strikethrough", setting.isStrikethroughEnabled());
 		}
 
 	}
