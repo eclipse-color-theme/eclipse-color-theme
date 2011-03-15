@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.adobe.flexide.as.css" created="2011-02-17 07:53:26">
+    <mappings>
+	    <mapping pluginKey="cssPropertyNameColor" themeKey="field" />
+        <mapping pluginKey="cssPropertyValueColor" themeKey="string" />
+        <mapping pluginKey="cssSymbolColor" themeKey="keyword" />
+        <mapping pluginKey="cssNamespaceColor" themeKey="foreground" />
+        <mapping pluginKey="cssSelectorColor" themeKey="localVariable" />
+        <mapping pluginKey="cssFontFaceColor" themeKey="keyword" />
+        <mapping pluginKey="cssMediaColor" themeKey="keyword" />
+        <mapping pluginKey="cssCommentColor" themeKey="multiLineComment" />
+        <mapping pluginKey="cssTextColor" themeKey="foreground" />
+        <mapping pluginKey="cssStringColor" themeKey="string" />
+        <mapping pluginKey="cssImportColor" themeKey="keyword" />
+    </mappings>
+</eclipseColorThemeMapping>

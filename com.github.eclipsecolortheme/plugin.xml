@@ -107,9 +107,27 @@
       </mapper>
       <mapper
             class="com.github.eclipsecolortheme.mapper.FlashEditorMapper"
-            name="Flash"
+            name="ActionScript/MXML (FDT)"
             pluginId="com.powerflasher.fdt.ui"
             xml="mappings/com.powerflasher.fdt.ui.xml">
+      </mapper>
+	  <mapper
+            class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
+            name="ActionScript (Flash Builder)"
+            pluginId="com.adobe.flexide.as.core"
+            xml="mappings/com.adobe.flexide.as.core.xml">
+      </mapper>
+	  <mapper
+            class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
+            name="MXML (Flash Builder)"
+            pluginId="com.adobe.flexide.as.mxml"
+            xml="mappings/com.adobe.flexide.as.mxml.xml">
+      </mapper>
+	  <mapper
+            class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
+            name="CSS (Flash Builder)"
+            pluginId="com.adobe.flexide.as.css"
+            xml="mappings/com.adobe.flexide.as.css.xml">
       </mapper>
    </extension>
    <extension

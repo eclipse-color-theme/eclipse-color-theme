@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.adobe.flexide.as.core" created="2011-02-17 07:50:05">
+    <mappings>
+        <mapping pluginKey="asASDocColor" themeKey="javadoc" />
+        <mapping pluginKey="asOperatorColor" themeKey="operator" />
+        <mapping pluginKey="asVarColor" themeKey="localVariable" />
+        <mapping pluginKey="asMetadataColor" themeKey="foreground" />
+        <mapping pluginKey="asClassColor" themeKey="class" />
+        <mapping pluginKey="asPackageColor" themeKey="foreground" />
+        <mapping pluginKey="asTraceColor" themeKey="foreground" />
+        <mapping pluginKey="asBracketColor" themeKey="bracket" />
+        <mapping pluginKey="asReservedColor" themeKey="keyword" />
+        <mapping pluginKey="asTextColor" themeKey="foreground" />
+        <mapping pluginKey="asCommentColor" themeKey="multiLineComment" />
+        <mapping pluginKey="asStringColor" themeKey="string" />
+        <mapping pluginKey="asInterfaceColor" themeKey="interface" />
+        <mapping pluginKey="asFunctionColor" themeKey="method" />
+    </mappings>
+</eclipseColorThemeMapping>
