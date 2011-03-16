@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="52" name="Monokai" modified="2011-02-26 10:41:43" author="Truong Xuan Tinh" website="http://www.tinhtruong.info">
+    <searchResultIndication color="#D8D8D8" />
+    <filteredSearchResultIndication color="#D8D8D8" />
+    <occurrenceIndication color="#000000" />
+    <writeOccurrenceIndication color="#000000" />
+    <findScope color="#000000" />
+    <deletionIndication color="#D25252" />
+    <sourceHoverBackground color="#000000" />
+    <singleLineComment color="#75715E" italic="false" />
+    <multiLineComment color="#75715e" italic="false" />
+    <commentTaskTag color="#CCDF32" />
+    <javadoc color="#75715E" italic="false" />
+    <javadocLink color="#D9E577" />
+    <javadocTag color="#D9E577" />
+    <javadocKeyword color="#D9E577" />
+    <class color="#FFFFFF" />
+    <interface color="#D197D9" />
+    <method color="#FFFFFF" />
+    <methodDeclaration color="#BED6FF" />
+    <bracket color="#D8D8D8" />
+    <number color="#7FB347" />
+    <string color="#E6DB74" />
+    <operator color="#D8D8D8" />
+    <keyword color="#66CCB3" />
+    <annotation color="#FFFFFF" />
+    <staticMethod color="#BED6FF" />
+    <localVariable color="#79ABFF" />
+    <localVariableDeclaration color="#BED6FF" />
+    <field color="#BED6FF" />
+    <staticField color="#EFC090" />
+    <staticFinalField color="#EFC090" />
+    <deprecatedMember color="#F8F8F2" underline="false" strikethrough="false" />
+    <enum color="#66D9EF" />
+    <inheritedMethod color="#BED6FF" />
+    <abstractMethod color="#BED6FF" />
+    <parameterVariable color="#79ABFF" />
+    <typeArgument color="#BFA4A4" />
+    <typeParameter color="#BFA4A4" />
+    <constant color="#EFB571" bold="false" underline="false" strikethrough="false" />
+    <background color="#272822" />
+    <currentLine color="#3E3D32" />
+    <foreground color="#F8F8F2" />
+    <lineNumber color="#F8F8F2" />
+    <selectionBackground color="#757575" />
+    <selectionForeground color="#D0D0D0" />
+</colorTheme>

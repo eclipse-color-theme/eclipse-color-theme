@@ -189,6 +189,9 @@
       <theme
             file="themes/zenburn.xml">
       </theme>
+      <theme
+            file="themes/monokai.xml">
+      </theme>
    </extension>
 
 </plugin>
