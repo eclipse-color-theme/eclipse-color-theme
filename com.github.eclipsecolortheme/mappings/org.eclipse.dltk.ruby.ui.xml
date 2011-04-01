@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.dltk.ruby.ui" created="2011-04-01 23:43:34">
+	<mappings>
+		<mapping pluginKey="sourceHoverBackgroundColor" themeKey="sourceHoverBackground" />
+		<mapping pluginKey="content_assist_completion_replacement_background" themeKey="background" />
+		<mapping pluginKey="content_assist_completion_replacement_foreground" themeKey="foreground" />
+		<mapping pluginKey="content_assist_parameters_background" themeKey="background" />
+		<mapping pluginKey="content_assist_parameters_foreground" themeKey="foreground" />
+		<mapping pluginKey="editor.matching_brackets_color" themeKey="bracket" />
+		<mapping pluginKey="ruby.symbols" themeKey="field" />
+		<mapping pluginKey="const" themeKey="staticFinalField" />
+		<mapping pluginKey="variable" themeKey="localVariable" />
+		<mapping pluginKey="variable.instance" themeKey="class" />
+		<mapping pluginKey="variable.global" themeKey="staticField" />
+        <mapping pluginKey="variable.class" themeKey="class" />
+        <mapping pluginKey="variable.pseudo" themeKey="localVariable" />
+        <mapping pluginKey="DLTK_string.eval" themeKey="string" />
+		<mapping pluginKey="DLTK_default" themeKey="foreground" />
+		<mapping pluginKey="DLTK_keyword" themeKey="keyword" />
+		<mapping pluginKey="DLTK_single_line_comment" themeKey="singleLineComment" />
+		<mapping pluginKey="DLTK_doc" themeKey="javadoc" />
+		<mapping pluginKey="DLTK_keyword_return" themeKey="keyword" />
+		<mapping pluginKey="DLTK_string" themeKey="string" />
+		<mapping pluginKey="DLTK_number" themeKey="number" />
+		<mapping pluginKey="DLTK_string.regexp" themeKey="string" />
+		<mapping pluginKey="DLTK_doc.topic" themeKey="javadocTag" />
+		<mapping pluginKey="DLTK_comment_task_tag" themeKey="commentTaskTag" />
+	</mappings>
+</eclipseColorThemeMapping>

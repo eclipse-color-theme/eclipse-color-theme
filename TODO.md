@@ -20,7 +20,7 @@ Ideas
   * Scala
   * PHPEclipse
   * Clojure
-  * Ruby/JRuby
+  * JRuby
 * Support multiple versions of each editor plugin instead of just the
   most current one.
 * Theme more than just editors, e.g.:

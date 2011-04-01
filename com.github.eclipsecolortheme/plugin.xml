@@ -129,6 +129,12 @@
             pluginId="com.adobe.flexide.as.css"
             xml="mappings/com.adobe.flexide.as.css.xml">
       </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.RubyMapper"
+         name="Ruby"
+         pluginId="org.eclipse.dltk.ruby.ui"
+         xml="mappings/org.eclipse.dltk.ruby.ui.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
