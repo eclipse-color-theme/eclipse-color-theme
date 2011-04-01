@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.scala-ide.sdt.core" created="2011-03-30 18:31:19">
+    <mappings>
+      <mapping pluginKey="syntaxColouring.singleLineComment.colour" themeKey="singleLineComment" />
+      <mapping pluginKey="syntaxColouring.multiLineComment.colour" themeKey="multiLineComment" />
+      <mapping pluginKey="syntaxColouring.scaladoc.colour" themeKey="javadoc" />
+      <mapping pluginKey="syntaxColouring.operator.colour" themeKey="operator" />
+      <mapping pluginKey="syntaxColouring.keyword.colour" themeKey="keyword" />
+      <mapping pluginKey="syntaxColouring.return.colour" themeKey="keyword" />
+      <mapping pluginKey="syntaxColouring.string.colour" themeKey="string" />
+      <mapping pluginKey="syntaxColouring.multiLineString.colour" themeKey="string" />
+      <mapping pluginKey="syntaxColouring.bracket.colour" themeKey="bracket" />
+      <mapping pluginKey="syntaxColouring.default.colour" themeKey="foreground" />
+      <mapping pluginKey="syntaxColouring.xml.comment" themeKey="multiLineComment" />
+      <mapping pluginKey="syntaxColouring.xml.attributeValue" themeKey="string" />
+      <mapping pluginKey="syntaxColouring.xml.attributeName" themeKey="keyword" />
+      <mapping pluginKey="syntaxColouring.xml.equals" themeKey="foreground" />
+      <mapping pluginKey="syntaxColouring.xml.tagDelimiter" themeKey="foreground" />
+      <mapping pluginKey="syntaxColouring.xml.tagName" themeKey="foreground" />
+      <mapping pluginKey="syntaxColouring.xml.processingInstruction" themeKey="foreground" />
+      <mapping pluginKey="syntaxColouring.xml.cdata" themeKey="foreground" />
+    </mappings>
+</eclipseColorThemeMapping>

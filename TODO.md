@@ -17,7 +17,6 @@ Ideas
 =====
 * Add mapping file import support.
 * Add support for more editors, e.g.
-  * Scala
   * PHPEclipse
   * Clojure
   * JRuby

@@ -135,6 +135,12 @@
          pluginId="org.eclipse.dltk.ruby.ui"
          xml="mappings/org.eclipse.dltk.ruby.ui.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Scala"
+         pluginId="org.scala-ide.sdt.core"
+         xml="mappings/org.scala-ide.sdt.core.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
