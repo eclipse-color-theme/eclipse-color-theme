@@ -19,5 +19,6 @@
         <mapping pluginKey="PHPReadOccurrenceIndicationColor" themeKey="occurrenceIndication" />
         <mapping pluginKey="currentIPColor" themeKey="debugCurrentInstructionPointer" />
         <mapping pluginKey="secondaryIPColor" themeKey="debugSecondaryInstructionPointer" />
+        <mapping pluginKey="pydevOccurrenceIndicationColor" themeKey="occurenceIndication" />
     </mappings>
 </eclipseColorThemeMapping>
