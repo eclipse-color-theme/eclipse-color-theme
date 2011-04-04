@@ -5,6 +5,7 @@
 * Added support for the CSS editor. (Adobe Flash Builder)
 * Added support for the Ruby editor.
 * Added support for the Scala editor.
+* Added support for the FreeMarker editor. (JBoss Tools)
 * Added the Monokai theme.
 * Fixed some coloring issues with PyDev.
 

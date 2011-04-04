@@ -57,6 +57,7 @@ Eclipse Color Theme currently supports the following editors:
 * ActionScript/MXML (Adobe Flash Builder)
 * Ruby
 * Scala
+* FreeMarker (JBoss Tools)
 
 Available themes:
 
