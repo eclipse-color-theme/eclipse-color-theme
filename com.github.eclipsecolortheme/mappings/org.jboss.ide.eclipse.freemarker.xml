@@ -3,7 +3,7 @@
     <mappings>
       <mapping pluginKey="color.directive" themeKey="method" />
       <mapping pluginKey="color.text" themeKey="foreground" />
-      <mapping pluginKey="color.oppositeRegion" themeKey="sourceHoverBackground" />
+      <mapping pluginKey="color.oppositeRegion" themeKey="occurrenceIndication" />
       <mapping pluginKey="color.xmlTag" themeKey="localVariable" />
       <mapping pluginKey="color.xmlComment" themeKey="multiLineComment" />
       <mapping pluginKey="color.interpolation" themeKey="keyword" />
