@@ -12,5 +12,7 @@
         <mapping pluginKey="COMMENT_COLOR" themeKey="multiLineComment"/>
         <mapping pluginKey="DECORATOR_COLOR" themeKey="foreground"/>
         <mapping pluginKey="CLASS_NAME_COLOR" themeKey="class"/>
+        <mapping pluginKey="PARENS_COLOR" themeKey="operator"/>
+        <mapping pluginKey="OPERATORS_COLOR" themeKey="operator"/>
     </mappings>
 </eclipseColorThemeMapping> 

@@ -6,6 +6,7 @@
 * Added support for the Ruby editor.
 * Added support for the Scala editor.
 * Added the Monokai theme.
+* Fixed some coloring issues with PyDev.
 
 0.9.1 (2011-02-15)
 ==================
