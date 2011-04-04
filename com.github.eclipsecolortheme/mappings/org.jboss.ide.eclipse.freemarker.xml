@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.jboss.ide.eclipse.freemarker" created="2011-04-04 20:18:22">
+    <mappings>
+      <mapping pluginKey="color.directive" themeKey="method" />
+      <mapping pluginKey="color.text" themeKey="foreground" />
+      <mapping pluginKey="color.oppositeRegion" themeKey="sourceHoverBackground" />
+      <mapping pluginKey="color.xmlTag" themeKey="localVariable" />
+      <mapping pluginKey="color.xmlComment" themeKey="multiLineComment" />
+      <mapping pluginKey="color.interpolation" themeKey="keyword" />
+      <mapping pluginKey="color.string" themeKey="string" />
+      <mapping pluginKey="color.comment" themeKey="singleLineComment" />
+    </mappings>
+</eclipseColorThemeMapping>
