@@ -7,6 +7,9 @@
 * Added support for the Scala editor.
 * Added support for the FreeMarker editor. (JBoss Tools)
 * Added the Monokai theme.
+* Added the Roboticket theme.
+* Added the Sunburst theme.
+* Added the Retta theme.
 * Fixed some coloring issues with PyDev.
 
 0.9.1 (2011-02-15)

@@ -81,6 +81,9 @@ Available themes:
 * [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
 * [Mr](http://www.eclipsecolorthemes.org/?view=theme&id=32)
 * [Monokai](http://www.eclipsecolorthemes.org/?view=theme&id=52)
+* [Roboticket](http://www.eclipsecolorthemes.org/?view=theme&id=93)
+* [Sunburst](http://www.eclipsecolorthemes.org/?view=theme&id=383)
+* [Retta](http://www.eclipsecolorthemes.org/?view=theme&id=1004)
 
 You can download additional themes or create your own on
 [eclipsecolorthemes.org](http://eclipsecolorthemes.org).

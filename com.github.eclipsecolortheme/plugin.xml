@@ -211,6 +211,15 @@
       <theme
             file="themes/monokai.xml">
       </theme>
+      <theme
+            file="themes/roboticket.xml">
+      </theme>
+      <theme
+            file="themes/sunburst.xml">
+      </theme>
+      <theme
+            file="themes/retta.xml">
+      </theme>
    </extension>
 
 </plugin>
