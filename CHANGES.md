@@ -1,3 +1,6 @@
+0.11.0
+======
+
 0.10.0 (2011-04-06)
 ===================
 * Added support for the ActionScript editor. (Adobe Flash Builder)
