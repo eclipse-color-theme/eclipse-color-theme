@@ -1,5 +1,5 @@
-0.10.0
-======
+0.10.0 (2011-04-06)
+===================
 * Added support for the ActionScript editor. (Adobe Flash Builder)
 * Added support for the MXML editor. (Adobe Flash Builder)
 * Added support for the CSS editor. (Adobe Flash Builder)
