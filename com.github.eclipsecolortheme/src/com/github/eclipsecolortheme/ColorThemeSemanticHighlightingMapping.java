@@ -5,7 +5,7 @@ import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 
 public class ColorThemeSemanticHighlightingMapping extends ColorThemeMapping {
 
-	private String separator = ".";
+	protected String separator = ".";
 	
 	public ColorThemeSemanticHighlightingMapping(String pluginKey,
 			String themeKey) {
