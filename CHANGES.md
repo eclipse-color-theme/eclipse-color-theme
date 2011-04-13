@@ -1,10 +1,14 @@
 0.11.0
 ======
 
+0.10.2 (2011-04-13)
+===================
+* Fixed the Adobe Flash Builder mapping.
+
 0.10.1 (2011-04-13)
 ===================
 * Fixed the PHP mapping (Semantic Highlighting broken).
-* Fixed the Adobe Flash Builder Mapping (Annotations).
+* Fixed the Adobe Flash Builder mapping (Annotations).
 
 0.10.0 (2011-04-06)
 ===================
