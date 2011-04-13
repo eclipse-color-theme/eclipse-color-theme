@@ -120,14 +120,14 @@
 	  <mapper
             class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
             name="MXML (Flash Builder)"
-            pluginId="com.adobe.flexide.as.mxml"
-            xml="mappings/com.adobe.flexide.as.mxml.xml">
+            pluginId="com.adobe.flexide.mxml.core"
+            xml="mappings/com.adobe.flexide.mxml.core.xml">
       </mapper>
 	  <mapper
             class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
             name="CSS (Flash Builder)"
-            pluginId="com.adobe.flexide.as.css"
-            xml="mappings/com.adobe.flexide.as.css.xml">
+            pluginId="com.adobe.flexide.css.core"
+            xml="mappings/com.adobe.flexide.css.core.xml">
       </mapper>
    
    <mapper

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<eclipseColorThemeMapping plugin="com.adobe.flexide.as.css" created="2011-02-17 07:53:26">
+<eclipseColorThemeMapping plugin="com.adobe.flexide.css.core" created="2011-02-17 07:53:26">
     <mappings>
 	    <mapping pluginKey="cssPropertyNameColor" themeKey="field" />
         <mapping pluginKey="cssPropertyValueColor" themeKey="string" />
