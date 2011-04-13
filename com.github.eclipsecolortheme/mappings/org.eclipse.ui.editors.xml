@@ -21,5 +21,6 @@
         <mapping pluginKey="secondaryIPColor" themeKey="debugSecondaryInstructionPointer" />
         <mapping pluginKey="pydevOccurrenceIndicationColor" themeKey="occurenceIndication" />
         <mapping pluginKey="matchingTagIndicationColor" themeKey="occurenceIndication" />
+        <mapping pluginKey="asOccurencesIndicationColor" themeKey="occurenceIndication" />
     </mappings>
 </eclipseColorThemeMapping>

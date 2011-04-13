@@ -4,6 +4,7 @@
 0.10.1 (2011-04-08)
 ===================
 * Fixed the PHP mapping (Semantic Highlighting broken).
+* Fixed the Adobe Flash Builder Mapping (Annotations).
 
 0.10.0 (2011-04-06)
 ===================
