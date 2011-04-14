@@ -2,7 +2,6 @@
 ===
 * Add support for the most common editors:
   * JAR Manifest
-  * PDE (plugin.xml etc.)
   * ...
 * Re-apply the selected theme when the plugin is updated (or on each
   startup).

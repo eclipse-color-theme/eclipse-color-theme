@@ -58,6 +58,7 @@ Eclipse Color Theme currently supports the following editors:
 * Ruby
 * Scala
 * FreeMarker (JBoss Tools)
+* PDE
 
 Available themes:
 
