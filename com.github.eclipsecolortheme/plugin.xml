@@ -148,6 +148,12 @@
          pluginId="org.eclipse.dltk.ruby.ui"
          xml="mappings/org.eclipse.dltk.ruby.ui.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="PDE"
+         pluginId="org.eclipse.pde.ui"
+         xml="mappings/org.eclipse.pde.ui.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">

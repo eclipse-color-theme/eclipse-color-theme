@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.pde.ui" created="2011-04-14 22:01:34">
+    <mappings>
+		<mapping pluginKey="editor.color.string" themeKey="string" />
+		<mapping pluginKey="editor.color.header_assignment" themeKey="operator" />
+		<mapping pluginKey="editor.color.header_value" themeKey="string" />
+		<mapping pluginKey="editor.color.default" themeKey="foreground" />
+		<mapping pluginKey="editor.color.header_attributes" themeKey="localVariable" />
+		<mapping pluginKey="editor.color.tag" themeKey="localVariable" />
+		<mapping pluginKey="editor.color.header_key" themeKey="keyword" />
+		<mapping pluginKey="editor.color.instr" themeKey="method" />
+		<mapping pluginKey="editor.color.header_osgi" themeKey="keyword" />
+		<mapping pluginKey="editor.color.xml_comment" themeKey="multiLineComment" />
+		<mapping pluginKey="editor.color.externalized_string" themeKey="string" />
+    </mappings>
+</eclipseColorThemeMapping>
