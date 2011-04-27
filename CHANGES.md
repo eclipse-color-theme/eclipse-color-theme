@@ -1,6 +1,7 @@
 0.11.0
 ======
 * Added support for the PDE editor.
+* Added support for the ColdFusion editor (CFEclipse).
 
 0.10.2 (2011-04-13)
 ===================
