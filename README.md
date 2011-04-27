@@ -59,6 +59,7 @@ Eclipse Color Theme currently supports the following editors:
 * Scala
 * FreeMarker (JBoss Tools)
 * PDE
+* ColdFusion (CFEclipse)
 
 Available themes:
 

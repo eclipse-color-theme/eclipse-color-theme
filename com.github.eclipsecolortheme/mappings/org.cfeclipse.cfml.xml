@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.cfeclipse.cfml" created="2011-04-27 22:29:00">
+    <mappings>
+        <mapping pluginKey="SQLTextColor" themeKey="foreground"/>
+        <mapping pluginKey="SQLOperatorColor" themeKey="operator"/>
+        <mapping pluginKey="SQLCommentColor" themeKey="multiLineComment"/>
+        <mapping pluginKey="SQLStringColor" themeKey="string"/>
+        <mapping pluginKey="SQLKeywordColor" themeKey="keyword"/>
+        <mapping pluginKey="cfstringColor" themeKey="string"/>
+        <mapping pluginKey="cfnumberColor" themeKey="number"/>
+        <mapping pluginKey="cfkeywordColor" themeKey="keyword"/>
+        <mapping pluginKey="cfscriptKeywordColor" themeKey="keyword"/>
+        <mapping pluginKey="cfscriptTextColor" themeKey="foreground"/>
+        <mapping pluginKey="cfscriptfunctionColor" themeKey="method"/>
+        <mapping pluginKey="cfscriptStringColor" themeKey="string"/>
+        <mapping pluginKey="cftaglibColor" themeKey="javadocTag"/>
+        <mapping pluginKey="cftagColor" themeKey="localVariable"/>
+        <mapping pluginKey="cfcommentBackgroundColor" themeKey="background"/>
+        <mapping pluginKey="cfcommentColor" themeKey="multiLineComment"/>
+        <mapping pluginKey="cfeclipse.editor.bracketMatchingColor" themeKey="occurenceIndication"/>
+        <mapping pluginKey="htmFormTagColor" themeKey="localVariable"/>
+        <mapping pluginKey="htmTagColor" themeKey="localVariable"/>
+        <mapping pluginKey="htmTableTagColor" themeKey="localVariable"/>
+        <mapping pluginKey="htmCommentColor" themeKey="multiLineComment"/>
+        <mapping pluginKey="stringColor" themeKey="string"/>
+        <mapping pluginKey="printMarginColor" themeKey="printMargin"/>
+        <mapping pluginKey="occurrenceAnnotation.color" themeKey="occurenceIndication"/>
+        <mapping pluginKey="AbstractTextEditor.Color.Background" themeKey="background"/>
+        <mapping pluginKey="javascriptFunction" themeKey="method"/>
+        <mapping pluginKey="javascriptColor" themeKey="foreground"/>
+        <mapping pluginKey="currentLineColor" themeKey="currentLine"/>
+        <mapping pluginKey="cssTextColor" themeKey="foreground"/>
+        <mapping pluginKey="unknowTagColors" themeKey="deprecatedMember"/>
+        <mapping pluginKey="defaultTextColor" themeKey="foreground"/>
+    </mappings>
+</eclipseColorThemeMapping>

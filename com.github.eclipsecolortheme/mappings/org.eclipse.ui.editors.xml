@@ -22,5 +22,6 @@
         <mapping pluginKey="pydevOccurrenceIndicationColor" themeKey="occurrenceIndication" />
         <mapping pluginKey="matchingTagIndicationColor" themeKey="occurrenceIndication" />
         <mapping pluginKey="asOccurencesIndicationColor" themeKey="occurrenceIndication" />
+        <mapping pluginKey="occurrenceAnnotation.color" themeKey="occurenceIndication" />
     </mappings>
 </eclipseColorThemeMapping>

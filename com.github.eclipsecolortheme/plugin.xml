@@ -154,6 +154,12 @@
          pluginId="org.eclipse.pde.ui"
          xml="mappings/org.eclipse.pde.ui.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="CFML"
+         pluginId="org.cfeclipse.cfml"
+         xml="mappings/org.cfeclipse.cfml.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
