@@ -148,7 +148,7 @@ public class ColorThemePreferencePage extends PreferencePage
         else {
             authorLabel.setText("Created by " + theme.getAuthor());
             String website = theme.getWebsite();
-            if (website == null || website.isEmpty())
+            if (website == null || website.length() == 0)
                 websiteLink.setVisible(false);
             else {
                 websiteLink.setText("<a>" + website + "</a>");

@@ -93,7 +93,7 @@ public class ColorThemeManager {
 
 		for (int i = 1;; i++) {
 			String xml = store.getString("importedColorTheme" + i);
-			if (xml.isEmpty())
+			if (xml == null || xml.length() == 0)
 				break;
 			try {
 				ColorTheme theme = parseTheme(new ByteArrayInputStream(
