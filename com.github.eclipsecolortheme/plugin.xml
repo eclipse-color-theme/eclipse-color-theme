@@ -166,6 +166,12 @@
          pluginId="org.eclipse.dltk.tcl.ui"
          xml="mappings/org.eclipse.dltk.tcl.ui.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.TexlipseEditorMapper"
+         name="LaTeX"
+         pluginId="net.sourceforge.texlipse"
+         xml="mappings/net.sourceforge.texclipse.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">

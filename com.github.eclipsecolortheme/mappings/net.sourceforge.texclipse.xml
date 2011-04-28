@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="net.sourceforge.texclipse" created="2011-04-27 23:30:00">
+    <mappings>
+        <mapping pluginKey="typ.BibColor" themeKey="class"/><!-- Type -->
+        <mapping pluginKey="key.BibColor" themeKey="keyword"/><!-- Keyword -->
+        <mapping pluginKey="str.BibColor" themeKey="string"/><!-- String -->
+        <mapping pluginKey="def.BibColor" themeKey="foreground"/><!-- Default -->
+        <mapping pluginKey="slc.BibColor" themeKey="singleLineComment"/><!-- Single Line Comment -->
+        <mapping pluginKey="num.TexColor" themeKey="number"/><!-- Number -->
+        <mapping pluginKey="equ.TexColor" themeKey="string"/><!-- Math -->
+        <mapping pluginKey="def.TexColor" themeKey="foreground"/><!-- Text -->
+        <mapping pluginKey="com.TexColor" themeKey="multiLineComment"/><!-- Comment -->
+        <mapping pluginKey="cmd.TexColor" themeKey="method"/><!-- Command -->
+        <mapping pluginKey="sqr.TexColor" themeKey="parameterVariable"/><!-- Optional Argument -->
+        <mapping pluginKey="spe.TexColor" themeKey="annotation"/><!-- Special Character -->
+        <mapping pluginKey="crl.TexColor" themeKey="localVariable"/><!-- Argument -->
+        <mapping pluginKey="verb.TexColor" themeKey="field"/><!-- Verbatim -->
+    </mappings>
+</eclipseColorThemeMapping>
