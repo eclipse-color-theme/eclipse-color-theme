@@ -62,6 +62,7 @@ Eclipse Color Theme currently supports the following editors:
 * ColdFusion (CFEclipse)
 * TCL
 * BibTex/LaTeX (TeXlipse)
+* R (StatET)
 
 Available themes:
 

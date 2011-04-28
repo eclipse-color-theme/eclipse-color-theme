@@ -172,6 +172,18 @@
          pluginId="net.sourceforge.texlipse"
          xml="mappings/net.sourceforge.texclipse.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.StatetBaseEditorMapper"
+         name="StatET"
+         pluginId="de.walware.statet.base.ui"
+         xml="mappings/de.walware.statet.base.ui.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.StatetEditorMapper"
+         name="R"
+         pluginId="de.walware.statet.r.ui"
+         xml="mappings/de.walware.statet.r.ui.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">

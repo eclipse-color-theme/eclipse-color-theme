@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="de.walware.statet.base.ui" created="2011-04-27 21:20:00">
+    <mappings>
+        <mapping pluginKey="MatchingBrackets.color" themeKey="occurrenceIndication"/>
+        <mapping pluginKey="editors/options/Proposals.background" themeKey="background"/>
+        <mapping pluginKey="editors/options/Parameters.background" themeKey="background"/>
+        <mapping pluginKey="editors/options/Proposals.foreground" themeKey="foreground"/>
+        <mapping pluginKey="editors/options/Parameters.foreground" themeKey="foreground"/>
+    </mappings>
+</eclipseColorThemeMapping>

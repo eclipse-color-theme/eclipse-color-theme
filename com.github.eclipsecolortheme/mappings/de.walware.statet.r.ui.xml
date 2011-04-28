@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="de.walware.statet.r.ui" created="2011-04-27 21:20:00">
+    <mappings>
+        <mapping pluginKey="rdBrackets.color" themeKey="foreground"/>
+        <mapping pluginKey="text_Rd_rdOtherTag.color" themeKey="localVariable"/>
+        <mapping pluginKey="text_Rd_rdSubSectionTag.color" themeKey="method"/>
+        <mapping pluginKey="text_Rd_rdComment.color" themeKey="multiLineComment"/>
+        <mapping pluginKey="text_Rd_rdDefault.color" themeKey="foreground"/>
+        <mapping pluginKey="text_Rd_rdSectionTag.color" themeKey="class"/>
+        <mapping pluginKey="text_Rd_taskTag.color" themeKey="commentTaskTag"/>
+        <mapping pluginKey="text_Rd_rdUnlistedTag.color" themeKey="field"/>
+        <mapping pluginKey="text_Rd_rdPlatformSpecif.color" themeKey="field"/>
+        <mapping pluginKey="text_R_rAssignment.Equalsign.color" themeKey="operator"/>
+        <mapping pluginKey="text_R_taskTag.color" themeKey="commentTaskTag"/>
+        <mapping pluginKey="text_R_rIndexing.color" themeKey="operator"/>
+        <mapping pluginKey="text_R_rUndefined.color" themeKey="deprecatedMember"/>
+        <mapping pluginKey="text_R_rDefault.color" themeKey="foreground"/>
+		<mapping pluginKey="text_R_rAssignment.color" themeKey="operator"/>
+		<mapping pluginKey="text_R_rLogicalConstants.color" themeKey="staticFinalField"/>
+		<mapping pluginKey="text_R_rSeparators.color" themeKey="operator"/>
+		<mapping pluginKey="text_R_rOtherOperators.color" themeKey="operator"/>
+		<mapping pluginKey="text_R_rFlowcontrol.color" themeKey="keyword"/>
+		<mapping pluginKey="text_R_rSpecialConstants.color" themeKey="staticFinalField"/>
+		<mapping pluginKey="text_R_rGrouping.color" themeKey="bracket"/>
+		<mapping pluginKey="text_R_rNumbers.color" themeKey="number"/>
+		<mapping pluginKey="text_R_rComment.color" themeKey="multiLineComment"/>
+		<mapping pluginKey="text_R_rString.color" themeKey="string"/>
+		<mapping pluginKey="text_R_rRoxygen.color" themeKey="javadoc"/>
+		<mapping pluginKey="text_R_rRoxygenTag.color" themeKey="javadocTag"/>
+    </mappings>
+</eclipseColorThemeMapping>

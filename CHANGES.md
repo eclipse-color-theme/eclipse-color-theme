@@ -4,6 +4,7 @@
 * Added support for the ColdFusion editor (CFEclipse).
 * Added support for the TCL editor.
 * Added support for the TeXlipse editor.
+* Added support for the R editor (StatET).
 * Fixed some color mappings in C/C++ editor.
 * Fixed some color values in Oblivion theme.
 
