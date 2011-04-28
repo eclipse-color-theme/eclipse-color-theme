@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.dltk.tcl.ui" created="2011-04-28 06:42:16">
+    <mappings>
+        <mapping pluginKey="sourceHoverBackgroundColor" themeKey="sourceHoverBackground" />
+        <mapping pluginKey="content_assist_completion_replacement_background" themeKey="background" />
+        <mapping pluginKey="content_assist_completion_replacement_foreground" themeKey="foreground" />
+        <mapping pluginKey="content_assist_parameters_background" themeKey="background" />
+        <mapping pluginKey="content_assist_parameters_foreground" themeKey="foreground" />
+        <mapping pluginKey="editor.matching_brackets_color" themeKey="occurenceIndication" />
+        <mapping pluginKey="tcl_variable" themeKey="localVariable" />
+        <mapping pluginKey="DLTK_default" themeKey="foreground" />
+        <mapping pluginKey="DLTK_base_class" themeKey="class" />
+        <mapping pluginKey="DLTK_argument" themeKey="foreground" />
+        <mapping pluginKey="DLTK_keyword" themeKey="keyword" />
+        <mapping pluginKey="DLTK_single_line_comment" themeKey="foreground" />
+        <mapping pluginKey="DLTK_class_definition" themeKey="class" />
+        <mapping pluginKey="DLTK_keyword_return" themeKey="keyword" />
+        <mapping pluginKey="DLTK_string" themeKey="string" />
+        <mapping pluginKey="DLTK_number" themeKey="number" />
+        <mapping pluginKey="DLTK_function_definition" themeKey="method" />
+        <mapping pluginKey="DLTK_comment_task_tag" themeKey="commentTaskTag" />
+    </mappings>
+</eclipseColorThemeMapping>

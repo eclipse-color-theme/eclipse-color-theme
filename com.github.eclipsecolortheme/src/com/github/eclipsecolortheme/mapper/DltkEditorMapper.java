@@ -7,7 +7,7 @@ import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
 
-public class DltkRubyMapper extends GenericMapper {
+public class DltkEditorMapper extends GenericMapper {
 
 	private class Mapping extends ColorThemeMapping {
 

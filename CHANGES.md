@@ -2,6 +2,7 @@
 ======
 * Added support for the PDE editor.
 * Added support for the ColdFusion editor (CFEclipse).
+* Added support for the TCL editor.
 * Fixed some color mappings in C/C++ editor.
 * Fixed some color values in Oblivion theme.
 

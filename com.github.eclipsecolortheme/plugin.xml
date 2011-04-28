@@ -143,7 +143,7 @@
          xml="mappings/org.jboss.ide.eclipse.freemarker.xml">
    </mapper>
    <mapper
-         class="com.github.eclipsecolortheme.mapper.DltkRubyMapper"
+         class="com.github.eclipsecolortheme.mapper.DltkEditorMapper"
          name="Ruby"
          pluginId="org.eclipse.dltk.ruby.ui"
          xml="mappings/org.eclipse.dltk.ruby.ui.xml">
@@ -159,6 +159,12 @@
          name="CFML"
          pluginId="org.cfeclipse.cfml"
          xml="mappings/org.cfeclipse.cfml.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.DltkEditorMapper"
+         name="TCL"
+         pluginId="org.eclipse.dltk.tcl.ui"
+         xml="mappings/org.eclipse.dltk.tcl.ui.xml">
    </mapper>
    </extension>
    <extension
