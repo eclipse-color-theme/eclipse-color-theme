@@ -20,6 +20,12 @@
         <mapping pluginKey="org.eclipse.cdt.internal.ui.text.doctools.single" themeKey="javadoc" /> 
         <mapping pluginKey="org.eclipse.cdt.internal.ui.text.doctools.recognizedTag" themeKey="javadocTag" />
         <mapping pluginKey="sourceHoverBackgroundColor" themeKey="sourceHoverBackground" /> 
+        <mapping pluginKey="matchingBracketsColor" themeKey="occurenceIndication" />
+        <mapping pluginKey="content_assist_parameters_foreground" themeKey="foreground" />
+        <mapping pluginKey="content_assist_parameters_background" themeKey="background" />
+        <mapping pluginKey="content_assist_proposals_foreground" themeKey="foreground" />
+        <mapping pluginKey="content_assist_proposals_background" themeKey="background" />
+        <mapping pluginKey="inactiveCodeColor" themeKey="occurenceIndication" />
     </mappings> 
     <semanticHighlightingMappings> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.class" themeKey="class" /> 

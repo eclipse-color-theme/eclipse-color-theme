@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme id="1" name="Oblivion" modified="2011-02-11 14:35:49" author="Roger Dudler" website="http://www.rogerdudler.com/?p=362">
-    <searchResultIndication color="#D8D8D8" />
-    <filteredSearchResultIndication color="#D8D8D8" />
+<colorTheme id="1" name="Oblivion" modified="2011-04-28 09:42:16" author="Roger Dudler" website="http://www.rogerdudler.com/?p=362">
+    <searchResultIndication color="#000000" />
+    <filteredSearchResultIndication color="#000000" />
     <occurrenceIndication color="#000000" />
     <writeOccurrenceIndication color="#000000" />
     <findScope color="#111111" />

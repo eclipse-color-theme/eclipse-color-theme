@@ -2,7 +2,8 @@
 ======
 * Added support for the PDE editor.
 * Added support for the ColdFusion editor (CFEclipse).
-* Fixed source hover background color in C/C++ editor.
+* Fixed some color mappings in C/C++ editor.
+* Fixed some color values in Oblivion theme.
 
 0.10.2 (2011-04-13)
 ===================
