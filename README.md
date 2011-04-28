@@ -60,6 +60,8 @@ Eclipse Color Theme currently supports the following editors:
 * FreeMarker (JBoss Tools)
 * PDE
 * ColdFusion (CFEclipse)
+* TCL
+* BibTex/LaTeX (TeXlipse)
 
 Available themes:
 
