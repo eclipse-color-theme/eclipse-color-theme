@@ -7,6 +7,7 @@
 * Added support for the R editor (StatET).
 * Fixed some color mappings in C/C++ editor.
 * Fixed some color values in Oblivion theme.
+* Changed minimum execution environment to J2SE-1.5.
 
 0.10.2 (2011-04-13)
 ===================
