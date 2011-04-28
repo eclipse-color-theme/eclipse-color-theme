@@ -58,7 +58,6 @@ public class ColorThemePreferencePage extends PreferencePage
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
 	}
 
-	@Override
 	public void init(IWorkbench workbench) {
 	}
 
@@ -105,7 +104,6 @@ public class ColorThemePreferencePage extends PreferencePage
         websiteLink = new Link(themeDetails, SWT.NONE);
 
         themeSelectionList.addListener(SWT.Selection, new Listener() {
-            @Override
             public void handleEvent(Event event) {
                 updateDetails(colorThemeManager.getTheme(
                         themeSelectionList.getSelection()[0]));
@@ -138,7 +136,6 @@ public class ColorThemePreferencePage extends PreferencePage
 
 	private static void setLinkTarget(Link link, final String target) {
         link.addListener(SWT.Selection, new Listener() {
-            @Override
             public void handleEvent(Event event) {
                 Program.launch(target);
             }
