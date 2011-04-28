@@ -18,7 +18,8 @@
         <mapping pluginKey="pp_default" themeKey="foreground" /> 
         <mapping pluginKey="org.eclipse.cdt.internal.ui.text.doctools.multi" themeKey="javadoc" /> 
         <mapping pluginKey="org.eclipse.cdt.internal.ui.text.doctools.single" themeKey="javadoc" /> 
-        <mapping pluginKey="org.eclipse.cdt.internal.ui.text.doctools.recognizedTag" themeKey="javadocTag" /> 
+        <mapping pluginKey="org.eclipse.cdt.internal.ui.text.doctools.recognizedTag" themeKey="javadocTag" />
+        <mapping pluginKey="sourceHoverBackgroundColor" themeKey="sourceHoverBackground" /> 
     </mappings> 
     <semanticHighlightingMappings> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.class" themeKey="class" /> 

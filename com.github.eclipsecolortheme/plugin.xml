@@ -28,7 +28,7 @@
             xml="mappings/org.eclipse.ant.ui.xml">
       </mapper>
       <mapper
-            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            class="com.github.eclipsecolortheme.mapper.CEditorMapper"
             name="C"
             pluginId="org.eclipse.cdt.ui"
             xml="mappings/org.eclipse.cdt.ui.xml">
