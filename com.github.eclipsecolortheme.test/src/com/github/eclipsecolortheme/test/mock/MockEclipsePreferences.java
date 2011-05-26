@@ -52,13 +52,11 @@ public class MockEclipsePreferences implements IEclipsePreferences {
 	}
 
 	public void putBoolean(String key, boolean value) {
-		// TODO Auto-generated method stub
-
+		store.put(key, String.valueOf(value));
 	}
 
 	public boolean getBoolean(String key, boolean def) {
-		// TODO Auto-generated method stub
-		return false;
+		return Boolean.parseBoolean(get(key, String.valueOf(def)));
 	}
 
 	public void putFloat(String key, float value) {
