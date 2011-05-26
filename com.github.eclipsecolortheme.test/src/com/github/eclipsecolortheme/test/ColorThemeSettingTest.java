@@ -1,60 +1,69 @@
 package com.github.eclipsecolortheme.test;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.nullValue;
+import static org.junit.Assert.assertThat;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import com.github.eclipsecolortheme.Color;
 import com.github.eclipsecolortheme.ColorThemeSetting;
 
 public class ColorThemeSettingTest {
+	private ColorThemeSetting setting;
 
+	@Before
+	public void setUp() {
+		setting = new ColorThemeSetting("#00FFAA");
+	}
+	
 	@Test
-	public void colorThemeSetting() {
-		ColorThemeSetting setting = new ColorThemeSetting("#00FFAA");
-		assertNull(setting.isBoldEnabled());
-		assertNull(setting.isItalicEnabled());
-		assertNull(setting.isStrikethroughEnabled());
-		assertNull(setting.isUnderlineEnabled());
+	public void initialValues() {
+		assertThat(setting.isBoldEnabled(), nullValue());
+		assertThat(setting.isItalicEnabled(), nullValue());
+		assertThat(setting.isStrikethroughEnabled(), nullValue());
+		assertThat(setting.isUnderlineEnabled(), nullValue());
+	}
+	
+	@Test
+	public void getColor() {
 		Color color = setting.getColor();
-		assertNotNull(color);
-		assertEquals("#00FFAA", color.asHex());
+		assertThat(color, notNullValue());
+		assertThat(color.asHex(), is("#00FFAA"));
 	}
 	
 	@Test
 	public void decorationBold() {
-		ColorThemeSetting setting = new ColorThemeSetting("#00FFAA");
 		setting.setBoldEnabled(true);
-		assertTrue(setting.isBoldEnabled());
+		assertThat(setting.isBoldEnabled(), is(true));
 		setting.setBoldEnabled(false);
-		assertFalse(setting.isBoldEnabled());
+		assertThat(setting.isBoldEnabled(), is(false));
 	}
 	
 	@Test
 	public void decorationItalic() {
-		ColorThemeSetting setting = new ColorThemeSetting("#00FFAA");
 		setting.setBoldEnabled(true);
-		assertTrue(setting.isBoldEnabled());
+		assertThat(setting.isBoldEnabled(), is(true));
 		setting.setBoldEnabled(false);
-		assertFalse(setting.isBoldEnabled());
+		assertThat(setting.isBoldEnabled(), is(false));
 	}
 	
 	@Test
 	public void decorationUnderline() {
-		ColorThemeSetting setting = new ColorThemeSetting("#00FFAA");
 		setting.setBoldEnabled(true);
-		assertTrue(setting.isBoldEnabled());
+		assertThat(setting.isBoldEnabled(), is(true));
 		setting.setBoldEnabled(false);
-		assertFalse(setting.isBoldEnabled());
+		assertThat(setting.isBoldEnabled(), is(false));
 	}
 	
 	@Test
 	public void decorationStrikethrough() {
-		ColorThemeSetting setting = new ColorThemeSetting("#00FFAA");
 		setting.setStrikethroughEnabled(true);
-		assertTrue(setting.isStrikethroughEnabled());
+		assertThat(setting.isStrikethroughEnabled(), is(true));
 		setting.setStrikethroughEnabled(false);
-		assertFalse(setting.isStrikethroughEnabled());
+		assertThat(setting.isStrikethroughEnabled(), is(false));
 	}
 
 }
