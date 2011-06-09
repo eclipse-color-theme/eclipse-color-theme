@@ -4,6 +4,7 @@
 * Don't re-apply the theme when pressing *OK* if it has already been
   applied by pressing *Apply*.
 * Make theme previews work offline.
+* Change plugin ID and package to org.eclipsecolorthemes.eclipsecolortheme.
 
 Ideas
 =====
