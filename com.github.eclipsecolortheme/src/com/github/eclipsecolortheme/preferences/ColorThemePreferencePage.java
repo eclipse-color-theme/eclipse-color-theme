@@ -175,29 +175,29 @@ public class ColorThemePreferencePage extends PreferencePage
                                               .getActivePage();
 
 	    try {
-	        Map<String, IEditorInput> formerEditors =
-	            new HashMap<String, IEditorInput>();
+	        Map<IEditorInput, String> formerEditors =
+	            new HashMap<IEditorInput, String>();
 	        for (IEditorReference editor : activePage.getEditorReferences())
-	            formerEditors.put(editor.getId(), editor.getEditorInput());
+	            formerEditors.put(editor.getEditorInput(), editor.getId());
 
 	        if (!formerEditors.isEmpty()) {    
 	            MessageBox box = new MessageBox(getShell(),
 	                                            SWT.OK | SWT.CANCEL);
 	            box.setText("Reopen editors");
-	            box.setMessage("In order to change the color theme, all editors"
-	            		       + " have to be closed and reopened.");
+	            box.setMessage("In order to change the color theme, all"
+	            		       + " editors have to be closed and reopened.");
 	            if (box.open() == SWT.CANCEL)
 	                return false;
 
-	            activePage.closeAllEditors(true);   
+	            activePage.closeAllEditors(true);
 	        }
-
+	        
 	        String selectedThemeName = themeSelectionList.getSelection()[0];
 	        getPreferenceStore().setValue("colorTheme", selectedThemeName);
             colorThemeManager.applyTheme(selectedThemeName);
 
-	        for (String id : formerEditors.keySet())
-	            activePage.openEditor(formerEditors.get(id), id);
+	        for (IEditorInput editorInput : formerEditors.keySet())
+	            activePage.openEditor(editorInput, formerEditors.get(editorInput));
 	    } catch (PartInitException e) {
             // TODO: Show a proper error message (StatusManager).
 	        e.printStackTrace();

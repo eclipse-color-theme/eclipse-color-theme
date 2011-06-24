@@ -1,6 +1,7 @@
 0.12.0
 ======
 * Fixed an issue with Java 5 support.
+* Reopened all previously closed editors after applying a theme, not just some.
 
 0.11.0 (2011-04-28)
 ===================
