@@ -1,5 +1,9 @@
-0.11.0
+0.12.0
 ======
+* Fixed an issue with Java 5 support.
+
+0.11.0 (2011-04-28)
+===================
 * Added support for the PDE editor.
 * Added support for the ColdFusion editor (CFEclipse).
 * Added support for the TCL editor.
