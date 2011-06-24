@@ -1,5 +1,5 @@
-0.12.0
-======
+0.11.1 (2011-06-24)
+===================
 * Fixed an issue with Java 5 support.
 * Reopened all previously closed editors after applying a theme, not just some.
 * Made color themes apply correctly in open CDT editors.
