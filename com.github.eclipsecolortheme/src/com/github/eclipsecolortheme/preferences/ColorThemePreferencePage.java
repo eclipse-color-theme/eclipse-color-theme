@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -175,29 +176,43 @@ public class ColorThemePreferencePage extends PreferencePage
                                               .getActivePage();
 
 	    try {
-	        Map<IEditorInput, String> formerEditors =
+	    	java.util.List<IEditorReference> editorsToClose =
+	    		new ArrayList<IEditorReference>();
+	    	Map<IEditorInput, String> editorsToReopen =
 	            new HashMap<IEditorInput, String>();
-	        for (IEditorReference editor : activePage.getEditorReferences())
-	            formerEditors.put(editor.getEditorInput(), editor.getId());
+	        for (IEditorReference editor : activePage.getEditorReferences()) {
+	        	String id = editor.getId();
+	        	/*
+	        	 * C++ editors are not closed/reopened because it messes their
+	        	 * colors up.
+	        	 * TODO: Make this configurable in the mapping file.
+	        	 */
+	        	if (!id.equals("org.eclipse.cdt.ui.editor.CEditor")) {
+	        		editorsToClose.add(editor);
+	        		editorsToReopen.put(editor.getEditorInput(), id);
+	        	}
+	        }
 
-	        if (!formerEditors.isEmpty()) {    
+	        if (!editorsToClose.isEmpty()) {    
 	            MessageBox box = new MessageBox(getShell(),
 	                                            SWT.OK | SWT.CANCEL);
 	            box.setText("Reopen editors");
-	            box.setMessage("In order to change the color theme, all"
+	            box.setMessage("In order to change the color theme, some"
 	            		       + " editors have to be closed and reopened.");
 	            if (box.open() == SWT.CANCEL)
 	                return false;
 
-	            activePage.closeAllEditors(true);
-	        }
+	            activePage.closeEditors(editorsToClose.toArray(
+	                new IEditorReference[editorsToClose.size()]), true);
+	        }	        
 	        
 	        String selectedThemeName = themeSelectionList.getSelection()[0];
 	        getPreferenceStore().setValue("colorTheme", selectedThemeName);
             colorThemeManager.applyTheme(selectedThemeName);
 
-	        for (IEditorInput editorInput : formerEditors.keySet())
-	            activePage.openEditor(editorInput, formerEditors.get(editorInput));
+	        for (IEditorInput editorInput : editorsToReopen.keySet())
+	            activePage.openEditor(editorInput,
+	                                  editorsToReopen.get(editorInput));
 	    } catch (PartInitException e) {
             // TODO: Show a proper error message (StatusManager).
 	        e.printStackTrace();
