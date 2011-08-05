@@ -11,6 +11,6 @@
         <mapping pluginKey="editor/colors/variable" themeKey="localVariable"/>
         <mapping pluginKey="editor/colors/arrow" themeKey="operator"/>
         <mapping pluginKey="editor/colors/atom" themeKey="foreground"/>
-        <mapping pluginKey="editor.colors.macro" themeKey="constant"/>
+        <mapping pluginKey="editor/colors/macro" themeKey="constant"/>
     </mappings>
 </eclipseColorThemeMapping> 
