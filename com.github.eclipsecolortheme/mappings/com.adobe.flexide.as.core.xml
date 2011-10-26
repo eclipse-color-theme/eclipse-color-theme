@@ -4,10 +4,10 @@
         <mapping pluginKey="asASDocColor" themeKey="javadoc" />
         <mapping pluginKey="asOperatorColor" themeKey="operator" />
         <mapping pluginKey="asVarColor" themeKey="localVariable" />
-        <mapping pluginKey="asMetadataColor" themeKey="foreground" />
+        <mapping pluginKey="asMetadataColor" themeKey="annotation" />
         <mapping pluginKey="asClassColor" themeKey="class" />
-        <mapping pluginKey="asPackageColor" themeKey="foreground" />
-        <mapping pluginKey="asTraceColor" themeKey="foreground" />
+        <mapping pluginKey="asPackageColor" themeKey="interface" />
+        <mapping pluginKey="asTraceColor" themeKey="staticMethod" />
         <mapping pluginKey="asBracketColor" themeKey="bracket" />
         <mapping pluginKey="asReservedColor" themeKey="keyword" />
         <mapping pluginKey="asTextColor" themeKey="foreground" />
