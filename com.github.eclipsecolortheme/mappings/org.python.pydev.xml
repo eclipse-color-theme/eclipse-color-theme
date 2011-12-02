@@ -4,13 +4,13 @@
         <mapping pluginKey="EDITOR_MATCHING_BRACKETS_COLOR" themeKey="bracket"/>
         <mapping pluginKey="CODE_COLOR" themeKey="foreground"/>
         <mapping pluginKey="KEYWORD_COLOR" themeKey="keyword"/>
+        <mapping pluginKey="SELF_COLOR" themeKey="keyword"/>
         <mapping pluginKey="FUNC_NAME_COLOR" themeKey="method"/>
         <mapping pluginKey="BACKQUOTES_COLOR" themeKey="foreground"/>
         <mapping pluginKey="NUMBER_COLOR" themeKey="number"/>
         <mapping pluginKey="STRING_COLOR" themeKey="string"/>
-        <mapping pluginKey="SELF_COLOR" themeKey="foreground"/>
         <mapping pluginKey="COMMENT_COLOR" themeKey="multiLineComment"/>
-        <mapping pluginKey="DECORATOR_COLOR" themeKey="foreground"/>
+        <mapping pluginKey="DECORATOR_COLOR" themeKey="annotation"/>
         <mapping pluginKey="CLASS_NAME_COLOR" themeKey="class"/>
         <mapping pluginKey="PARENS_COLOR" themeKey="operator"/>
         <mapping pluginKey="OPERATORS_COLOR" themeKey="operator"/>
