@@ -27,7 +27,7 @@
         <semanticHighlightingMapping pluginKey="semanticHighlighting.interface" themeKey="interface" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.enum" themeKey="enum" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.method" themeKey="method" /> 
-        <semanticHighlightingMapping pluginKey="semanticHighlighting.methodDeclarationName" themeKey="method" /> 
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.methodDeclarationName" themeKey="methodDeclaration" />
         <semanticHighlightingMapping pluginKey="semanticHighlighting.staticMethodInvocation" themeKey="staticMethod" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.annotation" themeKey="annotation" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.localVariable" themeKey="localVariable" /> 
