@@ -88,6 +88,12 @@
             xml="mappings/org.eclipse.wst.xml.ui.xml">
       </mapper>
       <mapper
+            class="com.github.eclipsecolortheme.mapper.ErlangEditorMapper"
+            name="Erlang"
+            pluginId="org.erlide.ui"
+            xml="mappings/org.erlide.ui.xml">
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.PythonEditorMapper"
             name="Python"
             pluginId="org.python.pydev"
