@@ -190,6 +190,12 @@
          pluginId="de.walware.statet.r.ui"
          xml="mappings/de.walware.statet.r.ui.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="haXe (eclihx)"
+         pluginId="eclihx.ui"
+         xml="mappings/eclihx.ui.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">

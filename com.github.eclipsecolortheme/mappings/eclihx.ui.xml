@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="eclihx.ui" created="2012-01-14 19:49:08">
+	<mappings>
+		<mapping pluginKey="hx_editor_comment_color" themeKey="singleLineComment"/>
+		<mapping pluginKey="hx_editor_multiline_comment_color" themeKey="multiLineComment"/>
+		<mapping pluginKey="hx_editor_string_color" themeKey="string"/>
+		<mapping pluginKey="hx_editor_regexpr_color" themeKey="foreground"/>
+		<mapping pluginKey="hx_editor_bracket_color" themeKey="bracket"/>
+		<mapping pluginKey="hx_editor_brace_color" themeKey="bracket"/>		
+		<mapping pluginKey="hx_editor_number_color" themeKey="number"/>	
+		<mapping pluginKey="hx_editor_declare_keywords_color" themeKey="keyword"/>
+		<mapping pluginKey="hx_editor_keywords_color" themeKey="keyword"/>
+		<mapping pluginKey="hx_editor_type_color" themeKey="class"/>		
+		<mapping pluginKey="hx_editor_conditional_compilation_color" themeKey="keyword"/>
+		<mapping pluginKey="hx_editor_template_color" themeKey="string"/>
+		<mapping pluginKey="hx_editor_haxe_doc_color" themeKey="javadoc"/>
+		<mapping pluginKey="hx_editor_default_color" themeKey="foreground"/>
+		<mapping pluginKey="hxml_editor_default_color" themeKey="foreground"/>
+		<mapping pluginKey="hxml_editor_option_color" themeKey="keyword"/>
+		<mapping pluginKey="hxml_editor_comment_color" themeKey="singleLineComment"/>
+	</mappings>
+</eclipseColorThemeMapping>
