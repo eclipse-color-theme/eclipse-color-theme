@@ -63,6 +63,8 @@ Eclipse Color Theme currently supports the following editors:
 * TCL
 * BibTex/LaTeX (TeXlipse)
 * R (StatET)
+* Erlang (ErlIDE)
+* haXe (eclihx)
 
 Available themes:
 
