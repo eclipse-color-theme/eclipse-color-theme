@@ -2,6 +2,7 @@
 ======
 * Added support for the Erlang editor (ErlIDE).
 * Added support for the haXe editor (eclihx).
+* Fixed some mappings (JDT, Flash Builder and PyDev editors).
 
 0.11.1 (2011-06-24)
 ===================
