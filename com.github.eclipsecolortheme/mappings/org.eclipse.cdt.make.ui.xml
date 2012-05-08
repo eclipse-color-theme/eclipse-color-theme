@@ -1,0 +1,10 @@
+<eclipseColorThemeMapping plugin="org.eclipse.cdt.make.ui" created="2012-05-07 15:25:08">
+  <mappings>
+    <mapping pluginKey="org.eclipse.cdt.make.ui.editor.comment" themeKey="multiLineComment"/>
+    <mapping pluginKey="org.eclipse.cdt.make.ui.editor.default" themeKey="foreground"/>
+    <mapping pluginKey="org.eclipse.cdt.make.ui.editor.function" themeKey="method"/>
+    <mapping pluginKey="org.eclipse.cdt.make.ui.editor.keyword" themeKey="keyword"/>
+    <mapping pluginKey="org.eclipse.cdt.make.ui.editor.macro_def" themeKey="methodDeclaration"/>
+    <mapping pluginKey="org.eclipse.cdt.make.ui.editor.macro_ref" themeKey="methodDeclaration"/>
+  </mappings>
+</eclipseColorThemeMapping>

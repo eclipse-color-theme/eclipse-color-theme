@@ -23,6 +23,12 @@
          point="com.github.eclipsecolortheme.mapper">
       <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Make"
+            pluginId="org.eclipse.cdt.make.ui"
+            xml="mappings/org.eclipse.cdt.make.ui.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="Ant"
             pluginId="org.eclipse.ant.ui"
             xml="mappings/org.eclipse.ant.ui.xml">
@@ -135,7 +141,7 @@
             pluginId="com.adobe.flexide.css.core"
             xml="mappings/com.adobe.flexide.css.core.xml">
       </mapper>
-   
+
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
          name="Scala"
