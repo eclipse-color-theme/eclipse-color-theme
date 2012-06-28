@@ -196,6 +196,12 @@
          pluginId="eclihx.ui"
          xml="mappings/eclihx.ui.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.ClojureMapper"
+         name="Clojure"
+         pluginId="ccw.core"
+         xml="mappings/ccw.core.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
