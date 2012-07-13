@@ -12,6 +12,8 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
@@ -45,6 +47,9 @@ import com.github.eclipsecolortheme.ColorThemeManager;
 /** The preference page for managing color themes. */
 public class ColorThemePreferencePage extends PreferencePage
                                       implements IWorkbenchPreferencePage {
+    /** whether the user has already been asked to close and re-open editors */
+    private static boolean userAskedToClose = false;
+    
     private ColorThemeManager colorThemeManager = new ColorThemeManager();
     private Composite container;
     private List themeSelectionList;
@@ -67,11 +72,8 @@ public class ColorThemePreferencePage extends PreferencePage
 	    container = new Composite(parent, SWT.NONE);
 	    GridData gridData = new GridData();
 	    GridLayout containerLayout = new GridLayout(1, true);
-        container.setLayout(containerLayout);
-
-        Label themeSelectionLabel = new Label(container, SWT.NONE);
-        themeSelectionLabel.setText("Theme:");
-        themeSelectionLabel.setLayoutData(gridData);
+	    containerLayout.marginWidth = 0;
+      container.setLayout(containerLayout);
 
         gridData = new GridData(GridData.FILL_BOTH);
         themeSelection = new Composite(container, SWT.NONE);
@@ -81,13 +83,13 @@ public class ColorThemePreferencePage extends PreferencePage
         themeSelection.setLayout(themeSelectionLayout);
         themeSelection.setLayoutData(gridData);
         
-        gridData = new GridData(GridData.FILL_BOTH);
-        gridData.minimumWidth = 200;
-        themeSelectionList = new List(themeSelection, SWT.BORDER);
+        gridData = new GridData(GridData.FILL_VERTICAL);
+        gridData.minimumWidth = 120;
+        themeSelectionList = new List(themeSelection, SWT.BORDER | SWT.V_SCROLL);
         themeSelectionList.setLayoutData(gridData);
         fillThemeSelectionList();
 
-        gridData = new GridData();
+        gridData = new GridData(GridData.FILL_BOTH);
         gridData.widthHint = 400;
         gridData.verticalAlignment = SWT.TOP;
         GridLayout themeDetailsLayout = new GridLayout(1, true);
@@ -96,14 +98,16 @@ public class ColorThemePreferencePage extends PreferencePage
         themeDetails = new Composite(themeSelection, SWT.NONE);
         themeDetails.setLayoutData(gridData);
         themeDetails.setLayout(themeDetailsLayout);
-        gridData = new GridData(GridData.FILL_HORIZONTAL);
-        gridData.heightHint = 308;
+        gridData = new GridData(GridData.FILL_BOTH);
+        gridData.heightHint = 320;
         browser = new Browser(themeDetails, SWT.BORDER);
         browser.setLayoutData(gridData);
         browser.setText("<html><body></body></html>");
         authorLabel = new Label(themeDetails, SWT.NONE);
+        GridDataFactory.swtDefaults().grab(true, false).applyTo(authorLabel);
         websiteLink = new Link(themeDetails, SWT.NONE);
-
+        GridDataFactory.swtDefaults().grab(true, false).applyTo(websiteLink);
+        
         themeSelectionList.addListener(SWT.Selection, new Listener() {
             public void handleEvent(Event event) {
                 updateDetails(colorThemeManager.getTheme(
@@ -129,7 +133,7 @@ public class ColorThemePreferencePage extends PreferencePage
         java.util.List<String> themeNames = new LinkedList<String>();
         for (ColorTheme theme : themes)
         	themeNames.add(theme.getName());
-        Collections.sort(themeNames);
+        Collections.sort(themeNames, String.CASE_INSENSITIVE_ORDER);
         themeNames.add(0, "Default");
         themeSelectionList.setItems(
                 themeNames.toArray(new String[themeNames.size()]));
@@ -194,14 +198,15 @@ public class ColorThemePreferencePage extends PreferencePage
 	        }
 
 	        if (!editorsToClose.isEmpty()) {    
-	            MessageBox box = new MessageBox(getShell(),
-	                                            SWT.OK | SWT.CANCEL);
-	            box.setText("Reopen editors");
-	            box.setMessage("In order to change the color theme, some"
-	            		       + " editors have to be closed and reopened.");
-	            if (box.open() == SWT.CANCEL)
+	            if (!userAskedToClose) {
+	              if (!MessageDialog.openConfirm(getShell(), "Reopen Editors", 
+	                  "In order to change the color theme, some editors have to be closed and reopened.")) {
 	                return false;
+	              }
 
+  	            userAskedToClose = true;
+	            }
+	            
 	            activePage.closeEditors(editorsToClose.toArray(
 	                new IEditorReference[editorsToClose.size()]), true);
 	        }	        
@@ -231,6 +236,8 @@ public class ColorThemePreferencePage extends PreferencePage
 
 	@Override
 	protected void contributeButtons(Composite parent) {
+	      ((GridLayout) parent.getLayout()).numColumns++;
+	      
         Button button = new Button(parent, SWT.NONE);
         button.setText("&Import a theme...");
         button.addSelectionListener(new SelectionAdapter() {
