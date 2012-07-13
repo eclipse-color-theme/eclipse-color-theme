@@ -9,4 +9,5 @@ Require-Bundle: org.eclipse.ui,
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: com.github.eclipsecolortheme,
- com.github.eclipsecolortheme.mapper
+ com.github.eclipsecolortheme.mapper,
+ com.github.eclipsecolortheme.preferences
