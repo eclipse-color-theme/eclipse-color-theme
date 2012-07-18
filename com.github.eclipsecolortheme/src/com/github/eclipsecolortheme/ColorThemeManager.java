@@ -15,7 +15,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.ILog;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.osgi.framework.Bundle;
 import org.osgi.service.prefs.BackingStoreException;
@@ -30,9 +32,10 @@ import com.github.eclipsecolortheme.mapper.ThemePreferenceMapper;
 
 /** Loads and applies color themes. */
 public class ColorThemeManager {
-	
+
 	private Map<String, ColorTheme> themes;
 	private Set<ThemePreferenceMapper> editors;
+	private static final ILog LOG = Activator.getDefault().getLog();
 
 	/** Creates a new color theme manager. */
 	public ColorThemeManager() {
@@ -41,9 +44,7 @@ public class ColorThemeManager {
 		readImportedThemes(themes);
 
 		editors = new HashSet<ThemePreferenceMapper>();
-		IConfigurationElement[] config = Platform.getExtensionRegistry()
-				.getConfigurationElementsFor(
-						Activator.EXTENSION_POINT_ID_MAPPER);
+		IConfigurationElement[] config = Platform.getExtensionRegistry().getConfigurationElementsFor(Activator.EXTENSION_POINT_ID_MAPPER);
 		try {
 			for (IConfigurationElement e : config) {
 				final Object o = e.createExecutableExtension("class");
@@ -53,38 +54,33 @@ public class ColorThemeManager {
 					mapper.setPluginId(pluginId);
 					if (o instanceof GenericMapper) {
 						String xml = e.getAttribute("xml");
-						String contributorPluginId = e.getContributor()
-								.getName();
+						String contributorPluginId = e.getContributor().getName();
 						Bundle bundle = Platform.getBundle(contributorPluginId);
-						InputStream input = (InputStream) bundle.getResource(
-								xml).getContent();
+						InputStream input = (InputStream) bundle.getResource(xml).getContent();
 						((GenericMapper) mapper).parseMapping(input);
 					}
 					editors.add(mapper);
 				}
 			}
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			LOG.log(new Status(Status.ERROR, Activator.PLUGIN_ID, ex.getMessage()));
 		}
 	}
 
 	private static void readStockThemes(Map<String, ColorTheme> themes) {
-		IConfigurationElement[] config = Platform.getExtensionRegistry()
-				.getConfigurationElementsFor(
-						Activator.EXTENSION_POINT_ID_THEME);
+		IConfigurationElement[] config = Platform.getExtensionRegistry().getConfigurationElementsFor(Activator.EXTENSION_POINT_ID_THEME);
 		try {
 			for (IConfigurationElement e : config) {
 				String xml = e.getAttribute("file");
 				String contributorPluginId = e.getContributor().getName();
 				Bundle bundle = Platform.getBundle(contributorPluginId);
-				InputStream input = (InputStream) bundle.getResource(xml)
-						.getContent();
+				InputStream input = (InputStream) bundle.getResource(xml).getContent();
 				ColorTheme theme = parseTheme(input);
 				amendThemeEntries(theme.getEntries());
 				themes.put(theme.getName(), theme);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.log(new Status(Status.ERROR, Activator.PLUGIN_ID, e.getMessage()));
 		}
 	}
 
@@ -96,13 +92,11 @@ public class ColorThemeManager {
 			if (xml == null || xml.length() == 0)
 				break;
 			try {
-				ColorTheme theme = parseTheme(new ByteArrayInputStream(
-						xml.getBytes()));
+				ColorTheme theme = parseTheme(new ByteArrayInputStream(xml.getBytes()));
 				amendThemeEntries(theme.getEntries());
 				themes.put(theme.getName(), theme);
 			} catch (Exception e) {
-				System.err.println("Error while parsing imported theme");
-				e.printStackTrace();
+				LOG.log(new Status(Status.ERROR, Activator.PLUGIN_ID, e.getMessage()));
 			}
 		}
 	}
@@ -119,8 +113,7 @@ public class ColorThemeManager {
 		return Activator.getDefault().getPreferenceStore();
 	}
 
-	public static ColorTheme parseTheme(InputStream input)
-			throws ParserConfigurationException, SAXException, IOException {
+	public static ColorTheme parseTheme(InputStream input) throws ParserConfigurationException, SAXException, IOException {
 		ColorTheme theme = new ColorTheme();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
@@ -136,28 +129,20 @@ public class ColorThemeManager {
 		for (int i = 0; i < entryNodes.getLength(); i++) {
 			Node entryNode = entryNodes.item(i);
 			if (entryNode.hasAttributes()) {
-				String color = entryNode.getAttributes().getNamedItem("color")
-						.getNodeValue();
+				String color = entryNode.getAttributes().getNamedItem("color").getNodeValue();
 				Node nodeBold = entryNode.getAttributes().getNamedItem("bold");
-				Node nodeItalic = entryNode.getAttributes().getNamedItem(
-						"italic");
-				Node nodeUnderline = entryNode.getAttributes().getNamedItem(
-						"underline");
-				Node nodeStrikethrough = entryNode.getAttributes()
-						.getNamedItem("strikethrough");
+				Node nodeItalic = entryNode.getAttributes().getNamedItem("italic");
+				Node nodeUnderline = entryNode.getAttributes().getNamedItem("underline");
+				Node nodeStrikethrough = entryNode.getAttributes().getNamedItem("strikethrough");
 				ColorThemeSetting setting = new ColorThemeSetting(color);
 				if (nodeBold != null)
-					setting.setBoldEnabled(Boolean.parseBoolean(nodeBold
-							.getNodeValue()));
+					setting.setBoldEnabled(Boolean.parseBoolean(nodeBold.getNodeValue()));
 				if (nodeItalic != null)
-					setting.setItalicEnabled(Boolean.parseBoolean(nodeItalic
-							.getNodeValue()));
+					setting.setItalicEnabled(Boolean.parseBoolean(nodeItalic.getNodeValue()));
 				if (nodeStrikethrough != null)
-					setting.setStrikethroughEnabled(Boolean
-							.parseBoolean(nodeStrikethrough.getNodeValue()));
+					setting.setStrikethroughEnabled(Boolean.parseBoolean(nodeStrikethrough.getNodeValue()));
 				if (nodeUnderline != null)
-					setting.setUnderlineEnabled(Boolean
-							.parseBoolean(nodeUnderline.getNodeValue()));
+					setting.setUnderlineEnabled(Boolean.parseBoolean(nodeUnderline.getNodeValue()));
 				entries.put(entryNode.getNodeName(), setting);
 			}
 		}
@@ -180,14 +165,14 @@ public class ColorThemeManager {
 		applyDefault(theme, DEBUG_SECONDARY_INSTRUCTION_POINTER, CURRENT_LINE);
 	}
 
-	private static void applyDefault(Map<String, ColorThemeSetting> theme,
-			String key, String defaultKey) {
+	private static void applyDefault(Map<String, ColorThemeSetting> theme, String key, String defaultKey) {
 		if (!theme.containsKey(key))
 			theme.put(key, theme.get(defaultKey));
 	}
 
 	/**
 	 * Returns all available color themes.
+	 * 
 	 * @return all available color themes.
 	 */
 	public Set<ColorTheme> getThemes() {
@@ -195,18 +180,21 @@ public class ColorThemeManager {
 	}
 
 	/**
-	 * Returns the theme stored under the supplied name. 
-	 * @param name The name of the theme.
-	 * @return The requested theme or <code>null</code> if none was stored under
-	 *         the supplied name.
+	 * Returns the theme stored under the supplied name.
+	 * 
+	 * @param name
+	 *            The name of the theme.
+	 * @return The requested theme or <code>null</code> if none was stored under the supplied name.
 	 */
-    public ColorTheme getTheme(String name) {
-        return themes.get(name);
-    }
+	public ColorTheme getTheme(String name) {
+		return themes.get(name);
+	}
 
 	/**
 	 * Changes the preferences of other plugins to apply the color theme.
-	 * @param theme The name of the color theme to apply.
+	 * 
+	 * @param theme
+	 *            The name of the color theme to apply.
 	 */
 	public void applyTheme(String theme) {
 		for (ThemePreferenceMapper editor : editors) {
@@ -217,24 +205,22 @@ public class ColorThemeManager {
 			try {
 				editor.flush();
 			} catch (BackingStoreException e) {
-				// TODO: Show a proper error message (StatusManager).
-				e.printStackTrace();
+				LOG.log(new Status(Status.ERROR, Activator.PLUGIN_ID, e.getMessage()));
 			}
 		}
 	}
 
 	/**
-	 * Adds the color theme to the list and saves it to the preferences.
-	 * Existing themes will be overwritten with the new content.
-	 * @param content The content of the color theme file.
-	 * @return The saved color theme, or <code>null</code> if the theme was not
-	 *         valid.
+	 * Adds the color theme to the list and saves it to the preferences. Existing themes will be overwritten with the new content.
+	 * 
+	 * @param content
+	 *            The content of the color theme file.
+	 * @return The saved color theme, or <code>null</code> if the theme was not valid.
 	 */
 	public ColorTheme saveTheme(String content) {
 		ColorTheme theme;
 		try {
-			theme = ColorThemeManager.parseTheme(new ByteArrayInputStream(
-					content.getBytes()));
+			theme = ColorThemeManager.parseTheme(new ByteArrayInputStream(content.getBytes()));
 			String name = theme.getName();
 			themes.put(name, theme);
 			IPreferenceStore store = getPreferenceStore();
@@ -245,7 +231,50 @@ public class ColorThemeManager {
 				}
 			return theme;
 		} catch (Exception e) {
+			LOG.log(new Status(Status.ERROR, Activator.PLUGIN_ID, e.getMessage()));
 			return null;
 		}
+	}
+
+	/**
+	 * Check if a given theme is an imported theme
+	 * 
+	 * @param themeID
+	 *            /theme name
+	 * @return
+	 */
+	public boolean isImportedTheme(String themeID) {
+		if (themeID != null) {
+			Map<String, ColorTheme> imported = new HashMap<String, ColorTheme>();
+			ColorThemeManager.readImportedThemes(imported);
+			return imported.containsKey(themeID);
+		}
+		return false;
+	}
+
+	/**
+	 * Remove a color theme from the preference store
+	 * 
+	 * @param theme
+	 */
+	public boolean deleteImportedTheme(ColorTheme theme) {
+		IPreferenceStore store = getPreferenceStore();
+
+		for (int i = 1;; i++) {
+			String xml = store.getString("importedColorTheme" + i);
+			if (xml == null || xml.length() == 0)
+				break;
+			try {
+				ColorTheme curtheme = parseTheme(new ByteArrayInputStream(xml.getBytes()));
+				if (curtheme.equals(theme)) {
+					store.setValue("importedColorTheme" + i, "");
+					themes.remove(theme.getName());
+					return true;
+				}
+			} catch (Exception e) {
+				LOG.log(new Status(Status.ERROR, Activator.PLUGIN_ID, e.getMessage()));
+			}
+		}
+		return false;
 	}
 }

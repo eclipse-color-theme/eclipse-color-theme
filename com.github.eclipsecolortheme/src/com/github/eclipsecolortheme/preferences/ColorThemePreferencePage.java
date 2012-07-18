@@ -45,8 +45,8 @@ import com.github.eclipsecolortheme.ColorTheme;
 import com.github.eclipsecolortheme.ColorThemeManager;
 
 /** The preference page for managing color themes. */
-public class ColorThemePreferencePage extends PreferencePage implements
-		IWorkbenchPreferencePage {
+public class ColorThemePreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
+	private static final String COLOR_THEME = "colorTheme"; //$NON-NLS-1$
 	private ColorThemeManager colorThemeManager = new ColorThemeManager();
 	private Composite container;
 	private List themeSelectionList;
@@ -55,6 +55,8 @@ public class ColorThemePreferencePage extends PreferencePage implements
 	private Label authorLabel;
 	private Link websiteLink;
 	private Browser browser;
+	private Button deleteThemebutton;
+	private Button importThemeButton;
 	private static final ILog LOG = Activator.getDefault().getLog();
 
 	/** Creates a new color theme preference page. */
@@ -73,7 +75,7 @@ public class ColorThemePreferencePage extends PreferencePage implements
 		container.setLayout(containerLayout);
 
 		Label themeSelectionLabel = new Label(container, SWT.NONE);
-		themeSelectionLabel.setText("Theme:");
+		themeSelectionLabel.setText(Messages.ColorThemePreferencePage_1);
 		themeSelectionLabel.setLayoutData(gridData);
 
 		gridData = new GridData(GridData.FILL_BOTH);
@@ -86,9 +88,19 @@ public class ColorThemePreferencePage extends PreferencePage implements
 
 		gridData = new GridData(GridData.FILL_BOTH);
 		gridData.minimumWidth = 200;
-		themeSelectionList = new List(themeSelection, SWT.BORDER);
+		themeSelectionList = new List(themeSelection, SWT.BORDER | SWT.SINGLE);
 		themeSelectionList.setLayoutData(gridData);
 		fillThemeSelectionList();
+		themeSelectionList.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (!themeSelectionList.getSelection()[0].equals(Messages.Default_Theme) && colorThemeManager.isImportedTheme(themeSelectionList.getSelection()[0])) {
+					deleteThemebutton.setEnabled(true);
+				} else {
+					deleteThemebutton.setEnabled(false);
+				}
+			}
+		});
 
 		gridData = new GridData();
 		gridData.widthHint = 400;
@@ -103,27 +115,25 @@ public class ColorThemePreferencePage extends PreferencePage implements
 		gridData.heightHint = 308;
 		browser = new Browser(themeDetails, SWT.BORDER);
 		browser.setLayoutData(gridData);
-		browser.setText("<html><body></body></html>");
+		browser.setText("<html><body></body></html>"); //$NON-NLS-1$
 		authorLabel = new Label(themeDetails, SWT.NONE);
 		websiteLink = new Link(themeDetails, SWT.NONE);
 
 		themeSelectionList.addListener(SWT.Selection, new Listener() {
 			public void handleEvent(Event event) {
-				updateDetails(colorThemeManager.getTheme(themeSelectionList
-						.getSelection()[0]));
+				updateDetails(colorThemeManager.getTheme(themeSelectionList.getSelection()[0]));
 			}
 		});
 
-		String activeThemeName = getPreferenceStore().getString("colorTheme");
+		String activeThemeName = getPreferenceStore().getString(COLOR_THEME);
 		if (colorThemeManager.getTheme(activeThemeName) == null)
-			activeThemeName = "Default";
+			activeThemeName = Messages.Default_Theme;
 		themeSelectionList.setSelection(new String[] { activeThemeName });
 		updateDetails(colorThemeManager.getTheme(activeThemeName));
 
 		Link ectLink = new Link(container, SWT.NONE);
-		ectLink.setText("Download more themes or create your own on "
-				+ "<a>eclipsecolorthemes.org</a>.");
-		setLinkTarget(ectLink, "http://eclipsecolorthemes.org");
+		ectLink.setText(Messages.ColorThemePreferencePage_4 + "<a>eclipsecolorthemes.org</a>."); //$NON-NLS-1$
+		setLinkTarget(ectLink, "http://eclipsecolorthemes.org"); //$NON-NLS-1$
 		return container;
 	}
 
@@ -133,9 +143,8 @@ public class ColorThemePreferencePage extends PreferencePage implements
 		for (ColorTheme theme : themes)
 			themeNames.add(theme.getName());
 		Collections.sort(themeNames);
-		themeNames.add(0, "Default");
-		themeSelectionList.setItems(themeNames.toArray(new String[themeNames
-				.size()]));
+		themeNames.add(0, Messages.Default_Theme);
+		themeSelectionList.setItems(themeNames.toArray(new String[themeNames.size()]));
 	}
 
 	private static void setLinkTarget(Link link, final String target) {
@@ -150,21 +159,20 @@ public class ColorThemePreferencePage extends PreferencePage implements
 		if (theme == null)
 			themeDetails.setVisible(false);
 		else {
-			authorLabel.setText("Created by " + theme.getAuthor());
+			authorLabel.setText(Messages.ColorThemePreferencePage_8 + theme.getAuthor());
 			String website = theme.getWebsite();
 			if (website == null || website.length() == 0)
 				websiteLink.setVisible(false);
 			else {
-				websiteLink.setText("<a>" + website + "</a>");
-				for (Listener listener : websiteLink
-						.getListeners(SWT.Selection))
+				websiteLink.setText("<a>" + website + "</a>"); //$NON-NLS-1$ //$NON-NLS-2$
+				for (Listener listener : websiteLink.getListeners(SWT.Selection))
 					websiteLink.removeListener(SWT.Selection, listener);
 				setLinkTarget(websiteLink, website);
 				websiteLink.setVisible(true);
 			}
 			String id = theme.getId();
-			browser.setUrl("http://www.eclipsecolorthemes.org/static/themes/java/"
-					+ id + ".html");
+			browser.setUrl("http://www.eclipsecolorthemes.org/static/themes/java/" //$NON-NLS-1$
+					+ id + ".html"); //$NON-NLS-1$
 			themeDetails.setVisible(true);
 			authorLabel.pack();
 			websiteLink.pack();
@@ -174,15 +182,11 @@ public class ColorThemePreferencePage extends PreferencePage implements
 	@Override
 	public boolean performOk() {
 		String selectedThemeName = themeSelectionList.getSelection()[0];
-		if (selectedThemeName != null
-				&& selectedThemeName.equals(getPreferenceStore().getString(
-						"colorTheme"))) {
-			LOG.log(new Status(Status.INFO, Activator.PLUGIN_ID,
-					"Theme already applied"));
+		if (selectedThemeName != null && selectedThemeName.equals(getPreferenceStore().getString(COLOR_THEME))) {
+			LOG.log(new Status(Status.INFO, Activator.PLUGIN_ID, Messages.ColorThemePreferencePage_13));
 			return true;
 		}
-		IWorkbenchPage activePage = PlatformUI.getWorkbench()
-				.getActiveWorkbenchWindow().getActivePage();
+		IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 
 		try {
 			java.util.List<IEditorReference> editorsToClose = new ArrayList<IEditorReference>();
@@ -190,10 +194,9 @@ public class ColorThemePreferencePage extends PreferencePage implements
 			for (IEditorReference editor : activePage.getEditorReferences()) {
 				String id = editor.getId();
 				/*
-				 * C++ editors are not closed/reopened because it messes their
-				 * colors up. TODO: Make this configurable in the mapping file.
+				 * C++ editors are not closed/reopened because it messes their colors up. TODO: Make this configurable in the mapping file.
 				 */
-				if (!id.equals("org.eclipse.cdt.ui.editor.CEditor")) {
+				if (!id.equals("org.eclipse.cdt.ui.editor.CEditor")) { //$NON-NLS-1$
 					editorsToClose.add(editor);
 					editorsToReopen.put(editor.getEditorInput(), id);
 				}
@@ -201,26 +204,21 @@ public class ColorThemePreferencePage extends PreferencePage implements
 
 			if (!editorsToClose.isEmpty()) {
 				MessageBox box = new MessageBox(getShell(), SWT.OK | SWT.CANCEL);
-				box.setText("Reopen editors");
-				box.setMessage("In order to change the color theme, some"
-						+ " editors have to be closed and reopened.");
+				box.setText(Messages.ColorThemePreferencePage_15);
+				box.setMessage(Messages.ColorThemePreferencePage_16 + Messages.ColorThemePreferencePage_17);
 				if (box.open() == SWT.CANCEL)
 					return false;
 
-				activePage.closeEditors(editorsToClose
-						.toArray(new IEditorReference[editorsToClose.size()]),
-						true);
+				activePage.closeEditors(editorsToClose.toArray(new IEditorReference[editorsToClose.size()]), true);
 			}
 
-			getPreferenceStore().setValue("colorTheme", selectedThemeName);
+			getPreferenceStore().setValue(COLOR_THEME, selectedThemeName);
 			colorThemeManager.applyTheme(selectedThemeName);
 
 			for (IEditorInput editorInput : editorsToReopen.keySet())
-				activePage.openEditor(editorInput,
-						editorsToReopen.get(editorInput));
+				activePage.openEditor(editorInput, editorsToReopen.get(editorInput));
 		} catch (PartInitException e) {
-			// TODO: Show a proper error message (StatusManager).
-			e.printStackTrace();
+			LOG.log(new Status(Status.ERROR, Activator.PLUGIN_ID, e.getMessage()));
 		}
 
 		return super.performOk();
@@ -228,7 +226,7 @@ public class ColorThemePreferencePage extends PreferencePage implements
 
 	@Override
 	protected void performDefaults() {
-		getPreferenceStore().setToDefault("colorTheme");
+		getPreferenceStore().setToDefault(COLOR_THEME);
 		colorThemeManager.clearImportedThemes();
 		reloadThemeSelectionList();
 		super.performDefaults();
@@ -236,9 +234,9 @@ public class ColorThemePreferencePage extends PreferencePage implements
 
 	@Override
 	protected void contributeButtons(Composite parent) {
-		Button button = new Button(parent, SWT.NONE);
-		button.setText("&Import a theme...");
-		button.addSelectionListener(new SelectionAdapter() {
+		importThemeButton = new Button(parent, SWT.NONE);
+		importThemeButton.setText(Messages.ColorThemePreferencePage_18);
+		importThemeButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent event) {
 				FileDialog dialog = new FileDialog(getShell());
@@ -254,18 +252,28 @@ public class ColorThemePreferencePage extends PreferencePage implements
 					reloadThemeSelectionList();
 				} else {
 					MessageBox box = new MessageBox(getShell(), SWT.OK);
-					box.setText("Theme not imported");
-					box.setMessage("This is not a valid theme file.");
+					box.setText(Messages.ColorThemePreferencePage_19);
+					box.setMessage(Messages.ColorThemePreferencePage_20);
 					box.open();
 				}
 			}
 		});
+		deleteThemebutton = new Button(parent, SWT.NONE);
+		deleteThemebutton.setText(Messages.ColorThemePreferencePage_21);
+		deleteThemebutton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent event) {
+				colorThemeManager.deleteImportedTheme(colorThemeManager.getTheme(themeSelectionList.getSelection()[0]));
+				reloadThemeSelectionList();
+			}
+		});
+		deleteThemebutton.setEnabled(false);
 	}
 
 	private void reloadThemeSelectionList() {
 		themeSelectionList.removeAll();
 		fillThemeSelectionList();
-		themeSelectionList.setSelection(new String[] { "Default" });
+		themeSelectionList.setSelection(new String[] { Messages.Default_Theme });
 		updateDetails(null);
 		container.pack();
 	}
