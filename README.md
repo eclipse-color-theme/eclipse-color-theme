@@ -65,6 +65,7 @@ Eclipse Color Theme currently supports the following editors:
 * R (StatET)
 * Erlang (ErlIDE)
 * haXe (eclihx)
+* Clojure (Counterclockwise)
 
 Available themes:
 
