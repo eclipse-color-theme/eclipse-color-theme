@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- keys extracted from ccw.core/ccw.preferences.PreferenceConstants --> 
+<eclipseColorThemeMapping plugin="ccw.core" created="2012-06-27 22:57"> 
+    <mappings>
+    	<mapping pluginKey="ccw.preferences.editor_color.string" themeKey="string" />
+    	<mapping pluginKey="ccw.preferences.editor_color.other-literals" themeKey="constant" />
+    	<mapping pluginKey="ccw.preferences.editor_color.regex" themeKey="string" />
+    	<mapping pluginKey="ccw.preferences.editor_color.int" themeKey="number" />
+    	<mapping pluginKey="ccw.preferences.editor_color.float" themeKey="number" />
+    	<mapping pluginKey="ccw.preferences.editor_color.char" themeKey="string" />
+    	
+    	<mapping pluginKey="ccw.preferences.editor_color.literalSymbol" themeKey="localVariableDeclaration" />
+    	<mapping pluginKey="ccw.preferences.editor_color.symbol" themeKey="localVariable" />
+    	
+    	<mapping pluginKey="ccw.preferences.editor_color.FUNCTION" themeKey="method" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableFUNCTION" themeKey="methodDeclaration" />
+    	<mapping pluginKey="ccw.preferences.editor_color.MACRO" themeKey="keyword" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableMACRO" themeKey="keyword" />
+    	<mapping pluginKey="ccw.preferences.editor_color.SPECIAL_FORM" themeKey="keyword" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableSPECIAL_FORM" themeKey="keyword" />
+        <mapping pluginKey="ccw.preferences.editor_color.GLOBAL_VAR" themeKey="staticField" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableGLOBAL_VAR" themeKey="staticFinalField" />
+    	<mapping pluginKey="ccw.preferences.editor_color.JAVA_CLASS" themeKey="interface" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableJAVA_CLASS" themeKey="class" />
+    	<mapping pluginKey="ccw.preferences.editor_color.JAVA_INSTANCE_METHOD" themeKey="class" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableJAVA_INSTANCE_METHOD" themeKey="interface" />
+    	<mapping pluginKey="ccw.preferences.editor_color.JAVA_STATIC_METHOD" themeKey="class" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableJAVA_STATIC_METHOD" themeKey="interface" />
+    	<mapping pluginKey="ccw.preferences.editor_color.RAW_SYMBOL" themeKey="foreground" />
+    	<mapping pluginKey="ccw.preferences.editor_color.callableRAW_SYMBOL" themeKey="foreground" />
+        
+    	<mapping pluginKey="ccw.preferences.editor_color.keyword" themeKey="field" />
+        <mapping pluginKey="ccw.preferences.editor_color.comment" themeKey="javadoc" />
+    	<mapping pluginKey="ccw.preferences.editor_color.whitespace" themeKey="bracket" />
+    	<mapping pluginKey="ccw.preferences.editor_color.meta" themeKey="annotation" />
+    </mappings> 
+</eclipseColorThemeMapping> 
