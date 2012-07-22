@@ -73,7 +73,7 @@ public class ColorThemePreferencePage extends PreferencePage
 	    GridData gridData = new GridData();
 	    GridLayout containerLayout = new GridLayout(1, true);
 	    containerLayout.marginWidth = 0;
-      container.setLayout(containerLayout);
+        container.setLayout(containerLayout);
 
         gridData = new GridData(GridData.FILL_BOTH);
         themeSelection = new Composite(container, SWT.NONE);
