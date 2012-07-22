@@ -208,6 +208,12 @@
          pluginId="ccw.core"
          xml="mappings/ccw.core.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Go"
+         pluginId="goclipse"
+         xml="mappings/goclipse.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
