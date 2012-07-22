@@ -47,9 +47,6 @@ import com.github.eclipsecolortheme.ColorThemeManager;
 /** The preference page for managing color themes. */
 public class ColorThemePreferencePage extends PreferencePage
                                       implements IWorkbenchPreferencePage {
-    /** whether the user has already been asked to close and re-open editors */
-    private static boolean userAskedToClose = false;
-    
     private ColorThemeManager colorThemeManager = new ColorThemeManager();
     private Composite container;
     private List themeSelectionList;
@@ -198,18 +195,14 @@ public class ColorThemePreferencePage extends PreferencePage
 	        }
 
 	        if (!editorsToClose.isEmpty()) {    
-	            if (!userAskedToClose) {
-	              if (!MessageDialog.openConfirm(getShell(), "Reopen Editors", 
-	                  "In order to change the color theme, some editors have to be closed and reopened.")) {
+	            if (!MessageDialog.openConfirm(getShell(), "Reopen Editors",
+	                "In order to change the color theme, some editors have to be closed and reopened.")) {
 	                return false;
-	              }
-
-  	            userAskedToClose = true;
 	            }
 	            
 	            activePage.closeEditors(editorsToClose.toArray(
 	                new IEditorReference[editorsToClose.size()]), true);
-	        }	        
+	        }
 	        
 	        String selectedThemeName = themeSelectionList.getSelection()[0];
 	        getPreferenceStore().setValue("colorTheme", selectedThemeName);
