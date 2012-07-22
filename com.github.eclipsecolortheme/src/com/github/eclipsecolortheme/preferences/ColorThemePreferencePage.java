@@ -99,7 +99,7 @@ public class ColorThemePreferencePage extends PreferencePage
         themeDetails.setLayoutData(gridData);
         themeDetails.setLayout(themeDetailsLayout);
         gridData = new GridData(GridData.FILL_BOTH);
-        gridData.heightHint = 320;
+        gridData.heightHint = 306;
         browser = new Browser(themeDetails, SWT.BORDER);
         browser.setLayoutData(gridData);
         browser.setText("<html><body></body></html>");
