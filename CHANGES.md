@@ -5,6 +5,8 @@
 * Fixed some mappings (JDT, Flash Builder and PyDev editors).
 * Added support for the Clojure editor (Counterclockwise).
 * Added support for the CDT Makefile editor.
+* Improved the preference page layout.
+* Added support for the Go editor (GoClipse).
 
 0.11.1 (2011-06-24)
 ===================
