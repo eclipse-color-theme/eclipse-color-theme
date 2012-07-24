@@ -1,3 +1,6 @@
+0.13.0
+======
+
 0.12.0 (2012-07-24)
 ===================
 * Added support for the Erlang editor (ErlIDE).
