@@ -55,6 +55,7 @@ public class ColorThemePreferencePage extends PreferencePage
     private Label authorLabel;
     private Link websiteLink;
     private Browser browser;
+	private Button deleteThemebutton;
 
     /** Creates a new color theme preference page. */
 	public ColorThemePreferencePage() {
@@ -107,6 +108,11 @@ public class ColorThemePreferencePage extends PreferencePage
         
         themeSelectionList.addListener(SWT.Selection, new Listener() {
             public void handleEvent(Event event) {
+            	if(colorThemeManager.isImportedTheme(themeSelectionList.getSelection()[0])) {
+            		deleteThemebutton.setEnabled(true);
+            	} else {
+            		deleteThemebutton.setEnabled(true);
+            	}
                 updateDetails(colorThemeManager.getTheme(
                         themeSelectionList.getSelection()[0]));
             }
@@ -172,6 +178,10 @@ public class ColorThemePreferencePage extends PreferencePage
 
 	@Override
 	public boolean performOk() {
+		String selectedThemeName=themeSelectionList.getSelection()[0];
+		if(selectedThemeName!=null&&selectedThemeName.equals(getPreferenceStore().getString("colorTheme"))) {
+			return true;
+		}
 	    IWorkbenchPage activePage = PlatformUI.getWorkbench()
                                               .getActiveWorkbenchWindow()
                                               .getActivePage();
@@ -204,7 +214,6 @@ public class ColorThemePreferencePage extends PreferencePage
 	                new IEditorReference[editorsToClose.size()]), true);
 	        }
 	        
-	        String selectedThemeName = themeSelectionList.getSelection()[0];
 	        getPreferenceStore().setValue("colorTheme", selectedThemeName);
             colorThemeManager.applyTheme(selectedThemeName);
 
@@ -255,6 +264,17 @@ public class ColorThemePreferencePage extends PreferencePage
                 }
             }
         });
+        deleteThemebutton = new Button(parent, SWT.NONE);
+        deleteThemebutton.setText("&Delete");
+        deleteThemebutton.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent event) {
+                colorThemeManager.deleteImportedTheme(colorThemeManager
+                        .getTheme(themeSelectionList.getSelection()[0]));
+                reloadThemeSelectionList();
+            }
+        });
+        deleteThemebutton.setEnabled(false);
 	}
 
     private void reloadThemeSelectionList() {

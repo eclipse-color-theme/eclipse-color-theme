@@ -5,6 +5,7 @@ import static com.github.eclipsecolortheme.ColorThemeKeys.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -247,5 +248,57 @@ public class ColorThemeManager {
 		} catch (Exception e) {
 			return null;
 		}
+	}
+	/**
+	 * Check if given theme is imported
+	 * @param themeID
+	 * @return
+	 */
+	public boolean isImportedTheme(String themeID) {
+		if(themeID!=null) {
+			Map<String,ColorTheme> imported=new HashMap<String, ColorTheme>();
+			readImportedThemes(imported);
+			return imported.containsKey(themeID);
+		}
+		return false;
+	}
+	/**
+	 * Delete an imported theme from the preference store
+	 * @param theme
+	 * @return
+	 */
+	public boolean deleteImportedTheme(ColorTheme theme) {
+		IPreferenceStore store=getPreferenceStore();
+		for(int i=1;;i++) {
+			String xml=store.getString("importedColorTheme" + i);
+			if(xml==null||xml.isEmpty()) {
+				break;
+			}
+			try {
+				if(theme.equals(parseTheme(new ByteArrayInputStream(xml.getBytes("UTF-8"))))) {
+					store.setToDefault("importedColorTheme" + i);
+					themes.remove(theme.getName());
+					//left shift all stored themes
+					for(int j=i+1;;j++) {
+						String nextXML=store.getString("importedColorTheme" + j);
+						if(nextXML==null||nextXML.isEmpty()) {
+							break;
+						}
+						store.setValue("importedColorTheme" + (j-1), nextXML);
+					}
+					return true;
+				}
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			} catch (ParserConfigurationException e) {
+				e.printStackTrace();
+			} catch (SAXException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		return false;
 	}
 }
