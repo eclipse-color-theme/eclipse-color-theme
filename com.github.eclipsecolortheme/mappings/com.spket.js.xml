@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.spket.js" created="2013-01-16 18:00:00">
+    <mappings>
+        <mapping pluginKey="java_doc_default" themeKey="javadoc" />
+        <mapping pluginKey="java_doc_keyword" themeKey="javadocKeyword" />
+        <mapping pluginKey="java_doc_link" themeKey="javadocLink" />
+        <mapping pluginKey="java_doc_tag" themeKey="javadocTag" />
+        <mapping pluginKey="js_default" themeKey="foreground" />
+        <mapping pluginKey="js_keyword" themeKey="keyword" />
+        <mapping pluginKey="js_keyword_return" themeKey="keyword" />
+        <mapping pluginKey="js_reserved" themeKey="keyword" />
+        <mapping pluginKey="js_ml_comment" themeKey="multiLineComment" />
+        <mapping pluginKey="js_sl_comment" themeKey="singleLineComment" />
+        <mapping pluginKey="js_operator" themeKey="operator" />
+        <mapping pluginKey="js_regexp" themeKey="string" />
+        <mapping pluginKey="js_string" themeKey="string" />
+        <mapping pluginKey="js_task_tag" themeKey="javadocTag" />
+        <mapping pluginKey="js_ssi" themeKey="staticMethod" />
+    </mappings>
+</eclipseColorThemeMapping>
