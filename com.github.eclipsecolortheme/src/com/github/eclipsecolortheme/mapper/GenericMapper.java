@@ -21,7 +21,7 @@ import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
 
 public class GenericMapper extends ThemePreferenceMapper {
 	
-    private Map<String, ColorThemeMapping> mappings = new HashMap<String, ColorThemeMapping>();
+    protected Map<String, ColorThemeMapping> mappings = new HashMap<String, ColorThemeMapping>();
     
     /**
      * Parse mapping from input file.
