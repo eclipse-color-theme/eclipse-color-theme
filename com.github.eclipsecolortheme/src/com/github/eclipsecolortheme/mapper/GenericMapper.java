@@ -21,8 +21,9 @@ import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
 
 public class GenericMapper extends ThemePreferenceMapper {
 	
-    protected Map<String, ColorThemeMapping> mappings = new HashMap<String, ColorThemeMapping>();
-    
+	private Map<String, ColorThemeMapping> mappings = new HashMap<String, ColorThemeMapping>();
+    protected ColorThemeSetting defaultBackground;
+	
     /**
      * Parse mapping from input file.
      * @param input InputStream for an XML file
@@ -83,6 +84,7 @@ public class GenericMapper extends ThemePreferenceMapper {
     @Override
     public void map(Map<String, ColorThemeSetting> theme) {
     	// put preferences according to mappings
+    	defaultBackground = theme.get("background");
     	for (String pluginKey : mappings.keySet()) {
     		ColorThemeMapping mapping = mappings.get(pluginKey);
     		ColorThemeSetting setting = theme.get(mapping.getThemeKey());
