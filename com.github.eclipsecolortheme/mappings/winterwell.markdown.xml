@@ -3,5 +3,6 @@
     <mapping pluginKey="Pref_Default" themeKey="foreground"/>
     <mapping pluginKey="Pref_Header" themeKey="commentTaskTag"/>
     <mapping pluginKey="Pref_Comment" themeKey="multiLineComment"/>
+    <mapping pluginKey="Pref_Link" themeKey="javadocLink"/>
   </mappings>
 </eclipseColorThemeMapping>
