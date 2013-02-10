@@ -32,6 +32,7 @@ import org.eclipse.swt.widgets.Link;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.ToolTip;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorReference;
 import org.eclipse.ui.IWorkbench;
@@ -55,6 +56,7 @@ public class ColorThemePreferencePage extends PreferencePage
     private Label authorLabel;
     private Link websiteLink;
     private Browser browser;
+    private Button forceDefaultBG;
 
     /** Creates a new color theme preference page. */
 	public ColorThemePreferencePage() {
@@ -122,6 +124,12 @@ public class ColorThemePreferencePage extends PreferencePage
         ectLink.setText("Download more themes or create your own on "
                         + "<a>eclipsecolorthemes.org</a>.");
         setLinkTarget(ectLink, "http://eclipsecolorthemes.org");
+
+        forceDefaultBG = new Button(container, SWT.CHECK);
+        forceDefaultBG.setText("Set all background colors to the default");
+        forceDefaultBG.setSelection(getPreferenceStore().getBoolean("forceDefaultBG"));
+        forceDefaultBG.setToolTipText("Forces the background color of all color styles to be 'background' color of the theme");
+        
         return container;
 	}
 
@@ -206,6 +214,7 @@ public class ColorThemePreferencePage extends PreferencePage
 	        
 	        String selectedThemeName = themeSelectionList.getSelection()[0];
 	        getPreferenceStore().setValue("colorTheme", selectedThemeName);
+	        getPreferenceStore().setValue("forceDefaultBG", forceDefaultBG.getSelection());
             colorThemeManager.applyTheme(selectedThemeName);
 
 	        for (IEditorInput editorInput : editorsToReopen.keySet())
@@ -224,6 +233,7 @@ public class ColorThemePreferencePage extends PreferencePage
 	    getPreferenceStore().setToDefault("colorTheme");
 	    colorThemeManager.clearImportedThemes();
 	    reloadThemeSelectionList();
+	    getPreferenceStore().setToDefault("forceDefaultBG");
 	    super.performDefaults();
 	}
 
@@ -272,6 +282,7 @@ public class ColorThemePreferencePage extends PreferencePage
 	    int length;
 	    while ((length = in.read(chars)) > 0)
 	        sb.append(chars, 0, length);
+	    in.close();
 	    return sb.toString();
 	}
 }

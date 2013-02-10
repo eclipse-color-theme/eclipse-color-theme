@@ -9,12 +9,14 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.github.eclipsecolortheme.Activator;
 import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
 import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
@@ -84,7 +86,12 @@ public class GenericMapper extends ThemePreferenceMapper {
     @Override
     public void map(Map<String, ColorThemeSetting> theme) {
     	// put preferences according to mappings
-    	defaultBackground = theme.get("background");
+        IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+        if (store.getBoolean("forceDefaultBG")) {
+        	defaultBackground = theme.get("background");
+        } else {
+        	defaultBackground = new ColorThemeSetting();
+        }
     	for (String pluginKey : mappings.keySet()) {
     		ColorThemeMapping mapping = mappings.get(pluginKey);
     		ColorThemeSetting setting = theme.get(mapping.getThemeKey());

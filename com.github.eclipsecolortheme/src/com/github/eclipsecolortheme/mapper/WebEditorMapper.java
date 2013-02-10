@@ -5,7 +5,6 @@ import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
-import java.util.Map;
 
 /**
  * Maps color themes to preferences for Eclipse's XML, HTML and CSS editors.
@@ -33,7 +32,7 @@ public class WebEditorMapper extends GenericMapper {
 		public void putPreferences(IEclipsePreferences preferences,
 				ColorThemeSetting setting) {
 			String value = setting.getColor().asHex() + " | "
-					+ defaultBackground.getColor().asHex() + " | "
+					+ defaultBackground.getHexColor() + " | "
 					+ setting.isBoldEnabled() + " | " 
 					+ setting.isItalicEnabled() + " | " 
 					+ setting.isStrikethroughEnabled() + " | "
