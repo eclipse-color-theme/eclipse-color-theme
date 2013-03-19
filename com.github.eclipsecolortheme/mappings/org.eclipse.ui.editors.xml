@@ -23,6 +23,6 @@
         <mapping pluginKey="matchingTagIndicationColor" themeKey="occurrenceIndication" />
         <mapping pluginKey="asOccurencesIndicationColor" themeKey="occurrenceIndication" />
         <mapping pluginKey="occurrenceAnnotation.color" themeKey="occurenceIndication" />
-        <mapping pluginKey="org.eclipse.cdt.ui.occurrenceIndicationColor" themeKey="occurenceIndication" />
+        <mapping pluginKey="org.eclipse.cdt.ui.occurrenceIndicationColor" themeKey="occurrenceIndication" />
     </mappings>
 </eclipseColorThemeMapping>

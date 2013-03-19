@@ -25,7 +25,7 @@
         <mapping pluginKey="content_assist_parameters_background" themeKey="background" />
         <mapping pluginKey="content_assist_proposals_foreground" themeKey="foreground" />
         <mapping pluginKey="content_assist_proposals_background" themeKey="background" />
-        <mapping pluginKey="inactiveCodeColor" themeKey="occurenceIndication" />
+        <mapping pluginKey="inactiveCodeColor" themeKey="occurrenceIndication" />
     </mappings> 
     <semanticHighlightingMappings> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.class" themeKey="class" /> 
