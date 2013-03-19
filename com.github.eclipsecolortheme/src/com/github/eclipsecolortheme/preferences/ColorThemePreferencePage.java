@@ -272,6 +272,7 @@ public class ColorThemePreferencePage extends PreferencePage
 	    int length;
 	    while ((length = in.read(chars)) > 0)
 	        sb.append(chars, 0, length);
+	    in.close();
 	    return sb.toString();
 	}
 }

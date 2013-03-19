@@ -37,6 +37,7 @@ public abstract class ThemePreferenceMapper {
      * @param plugin The ID of the Eclipse plugin whose preferences should be
      *               altered.
      */
+    @SuppressWarnings("deprecation")
     public void setPluginId(String plugin) {
     	preferences = new InstanceScope().getNode(plugin);
     }
