@@ -63,6 +63,12 @@
             pluginId="org.eclipse.php.ui"
             xml="mappings/org.eclipse.php.ui.xml">
       </mapper>
+            <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Puppet Geppetto"
+            pluginId="org.cloudsmith.geppetto.pp.dsl.PP"
+            xml="mappings/org.cloudsmith.geppetto.pp.dsl.PP.xml">
+      </mapper>
       <mapper
             class="com.github.eclipsecolortheme.mapper.TextEditorMapper"
             name="Text"

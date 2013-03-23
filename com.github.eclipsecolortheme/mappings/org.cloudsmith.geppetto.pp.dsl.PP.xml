@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.cloudsmith.geppetto.pp.dsl.PP" created="2013-03-22 21:00:00">
+    <mappings>
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.comment.color" themeKey="singleLineComment" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.default.color" themeKey="foreground" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_bold.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_fixed.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_h1.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_h2.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_h3.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_h4.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_h5.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_italic.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.doc_plain.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.documentation.color" themeKey="javadoc" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.error.color" themeKey="foreground" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.keyword.color" themeKey="keyword" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.literalkw.color" themeKey="keyword" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.number.color" themeKey="number" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.punctuation.color" themeKey="foreground" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.regexp.color" themeKey="string" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.resourceRef.color" themeKey="class" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.resourceTitle.color" themeKey="constant" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.spaces.color" themeKey="foreground" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.string.color" themeKey="string" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.task.color" themeKey="commentTaskTag" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.template.color" themeKey="foreground" />
+        <mapping pluginKey="org.cloudsmith.geppetto.pp.dsl.PP.syntaxColorer.tokenStyles.variable.color" themeKey="foreground" />
+    </mappings>
+</eclipseColorThemeMapping>
