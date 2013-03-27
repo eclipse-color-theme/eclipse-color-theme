@@ -38,5 +38,5 @@
     <foreground color="#FFFFFF" />
     <lineNumber color="#999999" />
     <selectionBackground color="#333333" />
-    <selectionForeground color="#333333" />
+    <selectionForeground color="#9CF828" />
 </colorTheme>
