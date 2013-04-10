@@ -64,6 +64,12 @@
             xml="mappings/org.eclipse.php.ui.xml">
       </mapper>
       <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Puppet Geppetto"
+            pluginId="org.cloudsmith.geppetto.pp.dsl.PP"
+            xml="mappings/org.cloudsmith.geppetto.pp.dsl.PP.xml">
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.TextEditorMapper"
             name="Text"
             pluginId="org.eclipse.ui.editors"
@@ -123,19 +129,19 @@
             pluginId="com.powerflasher.fdt.ui"
             xml="mappings/com.powerflasher.fdt.ui.xml">
       </mapper>
-	  <mapper
+      <mapper
             class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
             name="ActionScript (Flash Builder)"
             pluginId="com.adobe.flexide.as.core"
             xml="mappings/com.adobe.flexide.as.core.xml">
       </mapper>
-	  <mapper
+      <mapper
             class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
             name="MXML (Flash Builder)"
             pluginId="com.adobe.flexide.mxml.core"
             xml="mappings/com.adobe.flexide.mxml.core.xml">
       </mapper>
-	  <mapper
+      <mapper
             class="com.github.eclipsecolortheme.mapper.FlashBuilderEditorMapper"
             name="CSS (Flash Builder)"
             pluginId="com.adobe.flexide.css.core"
