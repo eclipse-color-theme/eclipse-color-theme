@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<eclipseColorThemeMapping plugin="org.eclipse.php.ui" created="2011-02-08 22:34:57"> 
+    <mappings> 
+        <mapping pluginKey="codeStyleNormal" themeKey="foreground" /> 
+        <mapping pluginKey="editorColorKeyword" themeKey="keyword" /> 
+        <mapping pluginKey="editorColorBoundarymaker" themeKey="foreground" /> 
+        <mapping pluginKey="editorStmtColorBoundarymaker" themeKey="foreground" /> 
+        <mapping pluginKey="editorBlocknameColor" themeKey="keyword" /> 
+        <mapping pluginKey="editorColorNumber" themeKey="number" /> 
+        <mapping pluginKey="editorColorComment" themeKey="multiLineComment" /> 
+        <mapping pluginKey="editorColorPhpdoc" themeKey="javadoc" /> 
+        <mapping pluginKey="editorColorHeredoc" themeKey="javadoc" /> 
+        <mapping pluginKey="editorColorVariable" themeKey="localVariable" /> 
+        <mapping pluginKey="editorColorString" themeKey="string" /> 
+        <mapping pluginKey="editorColorTask" themeKey="commentTaskTag" /> 
+        <mapping pluginKey="editorColorLineComment" themeKey="singleLineComment" /> 
+        <mapping pluginKey="editorColorPHPDocComment" themeKey="javadoc" /> 
+    </mappings> 
+    <semanticHighlightingMappings> 
+    </semanticHighlightingMappings> 
+</eclipseColorThemeMapping> 
