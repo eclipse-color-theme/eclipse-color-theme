@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.sourceforge.jsonedit.core" created="2011-03-30 18:31:19">
+    <mappings>
+      <mapping pluginKey="colorString" themeKey="string" />
+      <mapping pluginKey="colorDefault" themeKey="foreground" />
+      <mapping pluginKey="colorValue" themeKey="field" />
+      <mapping pluginKey="colorNull" themeKey="foreground" />
+    </mappings>
+</eclipseColorThemeMapping>

@@ -220,6 +220,12 @@
          pluginId="goclipse"
          xml="mappings/goclipse.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Json"
+         pluginId="org.sourceforge.jsonedit.core"
+         xml="mappings/org.sourceforge.jsonedit.core.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
