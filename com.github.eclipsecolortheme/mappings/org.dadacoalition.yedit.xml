@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<eclipseColorThemeMapping plugin="org.dadacoalition.yedit" created="2013-05-20 16:05:34"> 
+    <mappings> 
+        <mapping pluginKey="colorCommentPreference" themeKey="singleLineComment" /> 
+        <mapping pluginKey="colorKeyPreference" themeKey="method" /> 
+        <mapping pluginKey="colorScalarPreference" themeKey="string" /> 
+        <mapping pluginKey="colorDefaultPreference" themeKey="foreground" /> 
+        <mapping pluginKey="colorDocumentPreference" themeKey="foreground" /> 
+        <mapping pluginKey="colorAnchorPreferences" themeKey="foreground" /> 
+        <mapping pluginKey="colorAliasPreferences" themeKey="foreground" /> 
+        <mapping pluginKey="colorTagPropertyPreferences" themeKey="foreground" /> 
+        <mapping pluginKey="colorFlowCharacterPreferences" themeKey="foreground" /> 
+        <mapping pluginKey="colorConstantPreferences" themeKey="method" /> 
+    </mappings> 
+</eclipseColorThemeMapping> 
