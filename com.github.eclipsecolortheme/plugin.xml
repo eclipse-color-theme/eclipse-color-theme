@@ -232,6 +232,12 @@
          pluginId="org.sourceforge.jsonedit.core"
          xml="mappings/org.sourceforge.jsonedit.core.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Yaml"
+         pluginId="org.dadacoalition.yedit"
+         xml="mappings/org.dadacoalition.yedit.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
