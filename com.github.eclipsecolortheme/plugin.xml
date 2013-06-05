@@ -220,6 +220,12 @@
          pluginId="goclipse"
          xml="mappings/goclipse.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
+         name="Twig"
+         pluginId="com.dubture.twig.ui"
+         xml="mappings/com.dubture.twig.ui.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">

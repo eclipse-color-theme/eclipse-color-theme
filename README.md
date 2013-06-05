@@ -67,6 +67,7 @@ Eclipse Color Theme currently supports the following editors:
 * haXe (eclihx)
 * Clojure (Counterclockwise)
 * Go (GoClipse)
+* Twig 
 
 Available themes:
 
