@@ -70,6 +70,7 @@ Eclipse Color Theme currently supports the following editors:
 * Twig 
 * Json (Json Eclipse Plugin)
 * Yaml (Yedit)
+* Xtend
 
 Available themes:
 

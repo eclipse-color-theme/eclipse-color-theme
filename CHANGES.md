@@ -5,6 +5,7 @@
 * Added support for the Twig editor.
 * Added support for Json Eclipse Plugin.
 * Added support for the Yaml editor (Yedit).
+* Added support for the Xtend editor.
 
 0.12.0 (2012-07-24)
 ===================
