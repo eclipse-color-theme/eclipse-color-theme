@@ -68,7 +68,8 @@ Eclipse Color Theme currently supports the following editors:
 * Clojure (Counterclockwise)
 * Go (GoClipse)
 * Twig 
-* Json Eclipse Plugin
+* Json (Json Eclipse Plugin)
+* Yaml (Yedit)
 
 Available themes:
 

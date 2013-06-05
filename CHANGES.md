@@ -4,6 +4,7 @@
 * Added support for the Puppet DSL editor (Gepetto).
 * Added support for the Twig editor.
 * Added support for Json Eclipse Plugin.
+* Added support for the Yaml editor (Yedit).
 
 0.12.0 (2012-07-24)
 ===================
