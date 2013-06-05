@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<eclipseColorThemeMapping plugin="org.eclipse.xtend.core.Xtend" created="2013-05-31 16:38:00"> 
+    <mappings> 
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.number.color" themeKey="number" />
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.keyword.color" themeKey="keyword" />
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.string.color" themeKey="string" />
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.comment.color" themeKey="singleLineComment" /> 
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.comment.color" themeKey="multiLineComment" /> 
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.punctuation.color" themeKey="operator" />
+		<mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.default.color" themeKey="foreground"/>
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.extension.method.invacation.color" themeKey="method"/>
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.field.color" themeKey="field" />
+    	<mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.static.field.color" themeKey="staticField"/>
+    	<mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.static.method.invocation.color" themeKey="staticMethod"/>
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.extension.method.invacation.color" themeKey="method"/>
+        <mapping pluginKey="org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.annotation.color" themeKey="annotation"/>
+        <mapping pluginKey="AbstractTextEditor.Color.Foreground" themeKey="foreground"/>
+        <mapping pluginKey="AbstractTextEditor.Color.Background" themeKey="background"/> 
+    </mappings>
+</eclipseColorThemeMapping>

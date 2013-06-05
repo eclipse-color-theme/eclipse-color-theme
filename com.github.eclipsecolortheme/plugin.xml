@@ -221,6 +221,7 @@
          xml="mappings/goclipse.xml">
    </mapper>
    <mapper
+<<<<<<< HEAD
          class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
          name="Twig"
          pluginId="com.dubture.twig.ui"
@@ -237,6 +238,12 @@
          name="Yaml"
          pluginId="org.dadacoalition.yedit"
          xml="mappings/org.dadacoalition.yedit.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Xtend"
+         pluginId="org.eclipse.xtend.core.Xtend"
+         xml="mappings/org.eclipse.xtend.ide.xml">
    </mapper>
    </extension>
    <extension
