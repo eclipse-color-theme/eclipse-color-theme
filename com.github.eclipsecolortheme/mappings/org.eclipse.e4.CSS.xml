@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.wst.css.ui" created="2013-01-18 18:00:00">
+    <mappings>
+    	<mapping pluginKey="ClassID" themeKey="method" />
+    	<mapping pluginKey="Declaration" themeKey="methodDeclaration" />
+    	<mapping pluginKey="Element" themeKey="class" />
+    	<mapping pluginKey="comment" themeKey="multiLineComment" />
+    	<mapping pluginKey="default" themeKey="foreground" />
+    	<mapping pluginKey="error" themeKey="commentTaskTag" />
+    	<mapping pluginKey="keyword" themeKey="keyword" />
+    	<mapping pluginKey="punctuation" themeKey="bracket" />
+    	<mapping pluginKey="string" themeKey="string" />
+    	<mapping pluginKey="number" themeKey="number" />
+    </mappings>
+</eclipseColorThemeMapping>

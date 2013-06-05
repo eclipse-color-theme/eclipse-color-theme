@@ -31,7 +31,8 @@ public class WebEditorMapper extends GenericMapper {
 		@Override
 		public void putPreferences(IEclipsePreferences preferences,
 				ColorThemeSetting setting) {
-			String value = setting.getColor().asHex() + " | null | "
+			String value = setting.getColor().asHex() + " | "
+					+ defaultBackground.getHexColor() + " | "
 					+ setting.isBoldEnabled() + " | " 
 					+ setting.isItalicEnabled() + " | " 
 					+ setting.isStrikethroughEnabled() + " | "

@@ -12,6 +12,10 @@ public class ColorThemeSetting {
 		this.color = new Color(color);
 	}
 
+	public ColorThemeSetting() {
+//		this.color = null;
+	}
+
 	public void setBoldEnabled(Boolean boldEnabled) {
 		this.boldEnabled = boldEnabled;
 	}
@@ -30,6 +34,22 @@ public class ColorThemeSetting {
 	
 	public Color getColor() {
 		return color;
+	}
+
+	public String getHexColor() {
+		if (color == null) {
+			return "null";
+		} else {
+			return color.asHex();
+		}
+	}
+	
+	public String getRGBColor() {
+		if (color == null) {
+			return "";
+		} else {
+			return color.asHex();
+		}
 	}
 
 	public Boolean isBoldEnabled() {

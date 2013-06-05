@@ -14,6 +14,7 @@
         <mapping pluginKey="doctypeExternalPubref" themeKey="method" />
         <mapping pluginKey="doctypeExtrenalSysref" themeKey="method" />
         <mapping pluginKey="doctypeExternalId" themeKey="method" />
+        <mapping pluginKey="declBoder" themeKey="method" />
         <mapping pluginKey="declBorder" themeKey="method" />
         <mapping pluginKey="cdataBorder" themeKey="method" />
         <mapping pluginKey="cdataText" themeKey="foreground" />

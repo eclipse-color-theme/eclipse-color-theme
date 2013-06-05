@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.debug.ui" created="2013-01-16 18:00:00">
+    <mappings>
+        <mapping pluginKey="org.eclipse.debug.ui.inColor" themeKey="foreground" />
+        <mapping pluginKey="org.eclipse.debug.ui.outColor" themeKey="foreground" />
+        <mapping pluginKey="org.eclipse.debug.ui.consoleBackground" themeKey="background" />
+        <mapping pluginKey="org.eclipse.debug.ui.errorColor" themeKey="commentTaskTag" />
+    </mappings>
+</eclipseColorThemeMapping>

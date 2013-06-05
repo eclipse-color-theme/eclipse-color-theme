@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.wst.dtd.ui" created="2013-01-16 18:00:00">
+    <mappings>
+        <mapping pluginKey="dtdDefault" themeKey="foreground" />
+        <mapping pluginKey="dtdKeyword" themeKey="keyword" />
+        <mapping pluginKey="dtdData" themeKey="foreground" />
+        <mapping pluginKey="dtdString" themeKey="string" />
+        <mapping pluginKey="dtdSymbol" themeKey="field" />
+        <mapping pluginKey="dtdTag" themeKey="localVariableDeclaration" />
+        <mapping pluginKey="dtdTagName" themeKey="localVariableDeclaration" />
+        <mapping pluginKey="dtdComment" themeKey="multiLineComment" />
+    </mappings>
+</eclipseColorThemeMapping>

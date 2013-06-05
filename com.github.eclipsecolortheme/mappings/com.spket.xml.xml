@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.spket.xml" created="2013-01-16 18:00:00">
+    <mappings>
+        <mapping pluginKey="xml_default" themeKey="foreground" />
+        <mapping pluginKey="xml_attr_value" themeKey="string" />
+        <mapping pluginKey="xml_cdata" themeKey="foreground" />
+        <mapping pluginKey="xml_comments" themeKey="multiLineComment" />
+        <mapping pluginKey="xml_task_tag" themeKey="commentTaskTag" />
+        <mapping pluginKey="xml_proc_instr" themeKey="foreground" />
+        <mapping pluginKey="xml_doctype" themeKey="method" />
+        <mapping pluginKey="xml_tags" themeKey="localVariableDeclaration" />
+    </mappings>
+</eclipseColorThemeMapping>
