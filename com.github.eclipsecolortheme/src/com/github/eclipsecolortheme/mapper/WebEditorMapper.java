@@ -32,7 +32,7 @@ public class WebEditorMapper extends GenericMapper {
         public void putPreferences(IEclipsePreferences preferences,
                 ColorThemeSetting setting) {
             String value = setting.getColor().asHex() + " | "
-                    + defaultBackground.getHexColor() + " | "
+                    + defaultBackground.getHexColorOrNull() + " | "
                     + setting.isBoldEnabled() + " | " 
                     + setting.isItalicEnabled() + " | " 
                     + setting.isStrikethroughEnabled() + " | "

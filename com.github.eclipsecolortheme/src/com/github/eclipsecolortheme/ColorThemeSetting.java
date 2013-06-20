@@ -13,7 +13,6 @@ public class ColorThemeSetting {
     }
 
     public ColorThemeSetting() {
-//        this.color = null;
     }
 
     public void setBoldEnabled(Boolean boldEnabled) {
@@ -36,7 +35,7 @@ public class ColorThemeSetting {
         return color;
     }
 
-    public String getHexColor() {
+    public String getHexColorOrNull() {
         if (color == null) {
             return "null";
         } else {
@@ -44,7 +43,7 @@ public class ColorThemeSetting {
         }
     }
     
-    public String getRGBColor() {
+    public String getHexColorOrEmpty() {
         if (color == null) {
             return "";
         } else {

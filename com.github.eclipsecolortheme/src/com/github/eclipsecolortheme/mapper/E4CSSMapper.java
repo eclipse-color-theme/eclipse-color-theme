@@ -15,7 +15,7 @@ public class E4CSSMapper extends GenericMapper {
         @Override
         public void putPreferences(IEclipsePreferences preferences, ColorThemeSetting setting) {
             preferences.put(KEY_PREFIX + '.' + pluginKey + ".color", setting.getColor().asRGB());
-            preferences.put(KEY_PREFIX + '.' + pluginKey + ".bgColor", defaultBackground.getRGBColor());
+            preferences.put(KEY_PREFIX + '.' + pluginKey + ".bgColor", defaultBackground.getHexColorOrEmpty());
         }
     }
     

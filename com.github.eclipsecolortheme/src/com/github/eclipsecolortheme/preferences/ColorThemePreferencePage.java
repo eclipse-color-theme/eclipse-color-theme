@@ -280,9 +280,12 @@ public class ColorThemePreferencePage extends PreferencePage
         StringBuilder sb = new StringBuilder();
         char[] chars = new char[1 << 16];
         int length;
-        while ((length = in.read(chars)) > 0)
-            sb.append(chars, 0, length);
-        in.close();
+        try {
+            while ((length = in.read(chars)) > 0)
+                sb.append(chars, 0, length);
+        } finally {
+            in.close();
+        }
         return sb.toString();
     }
 }
