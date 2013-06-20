@@ -38,17 +38,15 @@ public class ColorThemeSetting {
     public String getHexColorOrNull() {
         if (color == null) {
             return "null";
-        } else {
-            return color.asHex();
         }
+        return color.asHex();
     }
     
     public String getHexColorOrEmpty() {
         if (color == null) {
             return "";
-        } else {
-            return color.asHex();
         }
+        return color.asHex();
     }
 
     public Boolean isBoldEnabled() {
