@@ -221,7 +221,6 @@
          xml="mappings/goclipse.xml">
    </mapper>
    <mapper
-<<<<<<< HEAD
          class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
          name="Twig"
          pluginId="com.dubture.twig.ui"
