@@ -11,6 +11,7 @@
     <mapping pluginKey="syntaxColoring.string.color"                    themeKey="string" />
     <mapping pluginKey="syntaxColoring.multiLineString.color"           themeKey="string" />
     <mapping pluginKey="syntaxColoring.bracket.color"                   themeKey="bracket" />
+    <mapping pluginKey="syntaxColoring.numberLiteral.color"             themeKey="number" />
     <mapping pluginKey="syntaxColoring.default.color"                   themeKey="foreground" />
 
     <mapping pluginKey="syntaxColoring.xml.comment.color"               themeKey="multiLineComment" />
