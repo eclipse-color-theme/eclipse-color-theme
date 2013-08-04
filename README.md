@@ -71,6 +71,10 @@ Eclipse Color Theme currently supports the following editors:
 * Json (Json Eclipse Plugin)
 * Yaml (Yedit)
 * Xtend
+* Markdown
+* Spket IDE (JavaScript and XML)
+* XSL
+* DTD
 
 Available themes:
 

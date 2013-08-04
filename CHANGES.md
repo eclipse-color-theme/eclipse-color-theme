@@ -6,6 +6,12 @@
 * Added support for Json Eclipse Plugin.
 * Added support for the Yaml editor (Yedit).
 * Added support for the Xtend editor.
+* Fixed background in XML, HTML and CSS editor.
+* Added support for the Markdown editor.
+* Theme the debug and CVS console.
+* Added support for the Spket JavaScript and XML editros.
+* Added support for the XSL editor.
+* Added support for the DTD editor.
 
 0.12.0 (2012-07-24)
 ===================
