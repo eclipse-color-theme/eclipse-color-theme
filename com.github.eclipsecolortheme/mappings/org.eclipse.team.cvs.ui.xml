@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.team.cvs.ui" created="2013-01-16 18:00:00">
+    <mappings>
+        <mapping pluginKey="pref_console_command_color" themeKey="singleLineComment" />
+        <mapping pluginKey="pref_console_message_color" themeKey="foreground" />
+        <mapping pluginKey="pref_console_error_color" themeKey="class" />
+    </mappings>
+</eclipseColorThemeMapping>

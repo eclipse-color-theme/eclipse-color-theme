@@ -11,5 +11,6 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
     public void initializeDefaultPreferences() {
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         store.setDefault("colorTheme", "default");
+        store.setDefault("forceDefaultBG", false);
     }
 }

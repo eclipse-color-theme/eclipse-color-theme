@@ -147,6 +147,55 @@
             pluginId="com.adobe.flexide.css.core"
             xml="mappings/com.adobe.flexide.css.core.xml">
       </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Markdown"
+            pluginId="winterwell.markdown"
+            xml="mappings/winterwell.markdown.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Console"
+            pluginId="org.eclipse.debug.ui"
+            xml="mappings/org.eclipse.debug.ui.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="CVS"
+            pluginId="org.eclipse.team.cvs.ui"
+            xml="mappings/org.eclipse.team.cvs.ui.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Spket JavaScript"
+            pluginId="com.spket.js"
+            xml="mappings/com.spket.js.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Spket XML"
+            pluginId="com.spket.xml"
+            xml="mappings/com.spket.xml.xml">
+      </mapper>
+      
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
+            name="XSL"
+            pluginId="org.eclipse.wst.xsl.ui"
+            xml="mappings/org.eclipse.wst.xsl.ui.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
+            name="DTD"
+            pluginId="org.eclipse.wst.dtd.ui"
+            xml="mappings/org.eclipse.wst.dtd.ui.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.E4CSSMapper"
+            name="e4 CSS"
+            pluginId="org.eclipse.e4.CSS"
+            xml="mappings/org.eclipse.e4.CSS.xml">
+      </mapper>
 
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"

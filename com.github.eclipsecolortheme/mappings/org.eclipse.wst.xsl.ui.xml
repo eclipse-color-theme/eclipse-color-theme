@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.wst.xsl.ui" created="2013-01-16 18:00:00">
+    <mappings>
+        <mapping pluginKey="xsltagAttributeName" themeKey="field" />
+        <mapping pluginKey="xsltagAttributeValue" themeKey="string" />
+        <mapping pluginKey="xsltagBorder" themeKey="localVariable" />
+        <mapping pluginKey="xsltagName" themeKey="localVariableDeclaration" />
+    </mappings>
+</eclipseColorThemeMapping>

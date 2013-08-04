@@ -32,6 +32,7 @@ import org.eclipse.swt.widgets.Link;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.ToolTip;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorReference;
 import org.eclipse.ui.IWorkbench;
@@ -55,21 +56,22 @@ public class ColorThemePreferencePage extends PreferencePage
     private Label authorLabel;
     private Link websiteLink;
     private Browser browser;
+    private Button forceDefaultBG;
 
     /** Creates a new color theme preference page. */
-	public ColorThemePreferencePage() {
-		setPreferenceStore(Activator.getDefault().getPreferenceStore());
-	}
+    public ColorThemePreferencePage() {
+        setPreferenceStore(Activator.getDefault().getPreferenceStore());
+    }
 
-	public void init(IWorkbench workbench) {
-	}
+    public void init(IWorkbench workbench) {
+    }
 
-	@Override
-	protected Control createContents(Composite parent) {
-	    container = new Composite(parent, SWT.NONE);
-	    GridData gridData = new GridData();
-	    GridLayout containerLayout = new GridLayout(1, true);
-	    containerLayout.marginWidth = 0;
+    @Override
+    protected Control createContents(Composite parent) {
+        container = new Composite(parent, SWT.NONE);
+        GridData gridData = new GridData();
+        GridLayout containerLayout = new GridLayout(1, true);
+        containerLayout.marginWidth = 0;
         container.setLayout(containerLayout);
 
         gridData = new GridData(GridData.FILL_BOTH);
@@ -122,27 +124,33 @@ public class ColorThemePreferencePage extends PreferencePage
         ectLink.setText("Download more themes or create your own on "
                         + "<a>eclipsecolorthemes.org</a>.");
         setLinkTarget(ectLink, "http://eclipsecolorthemes.org");
+
+        forceDefaultBG = new Button(container, SWT.CHECK);
+        forceDefaultBG.setText("Set all background colors to the default");
+        forceDefaultBG.setSelection(getPreferenceStore().getBoolean("forceDefaultBG"));
+        forceDefaultBG.setToolTipText("Forces the background color of all color styles to be 'background' color of the theme");
+        
         return container;
-	}
+    }
 
     private void fillThemeSelectionList() {
         Set<ColorTheme> themes = colorThemeManager.getThemes();
         java.util.List<String> themeNames = new LinkedList<String>();
         for (ColorTheme theme : themes)
-        	themeNames.add(theme.getName());
+            themeNames.add(theme.getName());
         Collections.sort(themeNames, String.CASE_INSENSITIVE_ORDER);
         themeNames.add(0, "Default");
         themeSelectionList.setItems(
                 themeNames.toArray(new String[themeNames.size()]));
     }
 
-	private static void setLinkTarget(Link link, final String target) {
+    private static void setLinkTarget(Link link, final String target) {
         link.addListener(SWT.Selection, new Listener() {
             public void handleEvent(Event event) {
                 Program.launch(target);
             }
         });
-	}
+    }
 
     private void updateDetails(ColorTheme theme) {
         if (theme == null)
@@ -170,67 +178,69 @@ public class ColorThemePreferencePage extends PreferencePage
         }
     }
 
-	@Override
-	public boolean performOk() {
-	    IWorkbenchPage activePage = PlatformUI.getWorkbench()
+    @Override
+    public boolean performOk() {
+        IWorkbenchPage activePage = PlatformUI.getWorkbench()
                                               .getActiveWorkbenchWindow()
                                               .getActivePage();
 
-	    try {
-	    	java.util.List<IEditorReference> editorsToClose =
-	    		new ArrayList<IEditorReference>();
-	    	Map<IEditorInput, String> editorsToReopen =
-	            new HashMap<IEditorInput, String>();
-	        for (IEditorReference editor : activePage.getEditorReferences()) {
-	        	String id = editor.getId();
-	        	/*
-	        	 * C++ editors are not closed/reopened because it messes their
-	        	 * colors up.
-	        	 * TODO: Make this configurable in the mapping file.
-	        	 */
-	        	if (!id.equals("org.eclipse.cdt.ui.editor.CEditor")) {
-	        		editorsToClose.add(editor);
-	        		editorsToReopen.put(editor.getEditorInput(), id);
-	        	}
-	        }
+        try {
+            java.util.List<IEditorReference> editorsToClose =
+                new ArrayList<IEditorReference>();
+            Map<IEditorInput, String> editorsToReopen =
+                new HashMap<IEditorInput, String>();
+            for (IEditorReference editor : activePage.getEditorReferences()) {
+                String id = editor.getId();
+                /*
+                 * C++ editors are not closed/reopened because it messes their
+                 * colors up.
+                 * TODO: Make this configurable in the mapping file.
+                 */
+                if (!id.equals("org.eclipse.cdt.ui.editor.CEditor")) {
+                    editorsToClose.add(editor);
+                    editorsToReopen.put(editor.getEditorInput(), id);
+                }
+            }
 
-	        if (!editorsToClose.isEmpty()) {    
-	            if (!MessageDialog.openConfirm(getShell(), "Reopen Editors",
-	                "In order to change the color theme, some editors have to be closed and reopened.")) {
-	                return false;
-	            }
-	            
-	            activePage.closeEditors(editorsToClose.toArray(
-	                new IEditorReference[editorsToClose.size()]), true);
-	        }
-	        
-	        String selectedThemeName = themeSelectionList.getSelection()[0];
-	        getPreferenceStore().setValue("colorTheme", selectedThemeName);
+            if (!editorsToClose.isEmpty()) {    
+                if (!MessageDialog.openConfirm(getShell(), "Reopen Editors",
+                    "In order to change the color theme, some editors have to be closed and reopened.")) {
+                    return false;
+                }
+                
+                activePage.closeEditors(editorsToClose.toArray(
+                    new IEditorReference[editorsToClose.size()]), true);
+            }
+            
+            String selectedThemeName = themeSelectionList.getSelection()[0];
+            getPreferenceStore().setValue("colorTheme", selectedThemeName);
+            getPreferenceStore().setValue("forceDefaultBG", forceDefaultBG.getSelection());
             colorThemeManager.applyTheme(selectedThemeName);
 
-	        for (IEditorInput editorInput : editorsToReopen.keySet())
-	            activePage.openEditor(editorInput,
-	                                  editorsToReopen.get(editorInput));
-	    } catch (PartInitException e) {
+            for (IEditorInput editorInput : editorsToReopen.keySet())
+                activePage.openEditor(editorInput,
+                                      editorsToReopen.get(editorInput));
+        } catch (PartInitException e) {
             // TODO: Show a proper error message (StatusManager).
-	        e.printStackTrace();
-	    }
+            e.printStackTrace();
+        }
 
-	    return super.performOk();
-	}
+        return super.performOk();
+    }
 
-	@Override
-	protected void performDefaults() {
-	    getPreferenceStore().setToDefault("colorTheme");
-	    colorThemeManager.clearImportedThemes();
-	    reloadThemeSelectionList();
-	    super.performDefaults();
-	}
+    @Override
+    protected void performDefaults() {
+        getPreferenceStore().setToDefault("colorTheme");
+        colorThemeManager.clearImportedThemes();
+        reloadThemeSelectionList();
+        getPreferenceStore().setToDefault("forceDefaultBG");
+        super.performDefaults();
+    }
 
-	@Override
-	protected void contributeButtons(Composite parent) {
-	      ((GridLayout) parent.getLayout()).numColumns++;
-	      
+    @Override
+    protected void contributeButtons(Composite parent) {
+          ((GridLayout) parent.getLayout()).numColumns++;
+          
         Button button = new Button(parent, SWT.NONE);
         button.setText("&Import a theme...");
         button.addSelectionListener(new SelectionAdapter() {
@@ -255,7 +265,7 @@ public class ColorThemePreferencePage extends PreferencePage
                 }
             }
         });
-	}
+    }
 
     private void reloadThemeSelectionList() {
         themeSelectionList.removeAll();
@@ -265,14 +275,17 @@ public class ColorThemePreferencePage extends PreferencePage
         container.pack();
     }
 
-	private static String readFile(File file) throws IOException {
-	    Reader in = new BufferedReader(new FileReader(file));
-	    StringBuilder sb = new StringBuilder();
-	    char[] chars = new char[1 << 16];
-	    int length;
-	    while ((length = in.read(chars)) > 0)
-	        sb.append(chars, 0, length);
-	    in.close();
-	    return sb.toString();
-	}
+    private static String readFile(File file) throws IOException {
+        Reader in = new BufferedReader(new FileReader(file));
+        StringBuilder sb = new StringBuilder();
+        char[] chars = new char[1 << 16];
+        int length;
+        try {
+            while ((length = in.read(chars)) > 0)
+                sb.append(chars, 0, length);
+        } finally {
+            in.close();
+        }
+        return sb.toString();
+    }
 }
