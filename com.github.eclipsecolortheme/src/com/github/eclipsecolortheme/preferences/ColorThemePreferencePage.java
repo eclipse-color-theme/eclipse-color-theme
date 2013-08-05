@@ -204,7 +204,7 @@ public class ColorThemePreferencePage extends PreferencePage
 	                new IEditorReference[editorsToClose.size()]), true);
 	        }
 	        
-	        if ( themeSelectionList.getSelectionCount() > 0 ) {
+	        if (themeSelectionList.getSelectionCount() > 0) {
 	            String selectedThemeName = themeSelectionList.getSelection()[0];
 	            getPreferenceStore().setValue("colorTheme", selectedThemeName);
 	            colorThemeManager.applyTheme(selectedThemeName);
