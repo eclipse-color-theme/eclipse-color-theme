@@ -1,10 +1,8 @@
 package com.github.eclipsecolortheme.preferences;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.BufferedInputStream;
+import java.io.CharConversionException;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -240,7 +238,7 @@ public class ColorThemePreferencePage extends PreferencePage
     @Override
     protected void contributeButtons(Composite parent) {
           ((GridLayout) parent.getLayout()).numColumns++;
-          
+
         Button button = new Button(parent, SWT.NONE);
         button.setText("&Import a theme...");
         button.addSelectionListener(new SelectionAdapter() {
@@ -248,23 +246,25 @@ public class ColorThemePreferencePage extends PreferencePage
             public void widgetSelected(SelectionEvent event) {
                 FileDialog dialog = new FileDialog(getShell());
                 String file = dialog.open();
-                ColorTheme theme;
                 try {
-                    String content = readFile(new File(file));
-                    theme = colorThemeManager.saveTheme(content);
-                } catch (IOException e) {
-                    theme = null;
-                }
-                if (theme != null) {
-                    reloadThemeSelectionList();
-                } else {
-                    MessageBox box = new MessageBox(getShell(), SWT.OK);
-                    box.setText("Theme not imported");
-                    box.setMessage("This is not a valid theme file.");
-                    box.open();
-                }
+                    colorThemeManager.saveTheme(new BufferedInputStream(new FileInputStream(file)));
+                } catch (CharConversionException e) {
+                    ShowErrorMessage("Invalid file encoding.");
+                    return;
+                } catch (Exception e) {
+                    ShowErrorMessage("This is not a valid theme file.");
+                    return;
+                };
+                reloadThemeSelectionList();
             }
         });
+    }
+
+    protected void ShowErrorMessage(String message) {
+        MessageBox box = new MessageBox(getShell(), SWT.OK);
+        box.setText("Theme not imported");
+        box.setMessage(message);
+        box.open();
     }
 
     private void reloadThemeSelectionList() {
@@ -273,19 +273,5 @@ public class ColorThemePreferencePage extends PreferencePage
         themeSelectionList.setSelection(new String[]{"Default"});
         updateDetails(null);
         container.pack();
-    }
-
-    private static String readFile(File file) throws IOException {
-        Reader in = new BufferedReader(new FileReader(file));
-        StringBuilder sb = new StringBuilder();
-        char[] chars = new char[1 << 16];
-        int length;
-        try {
-            while ((length = in.read(chars)) > 0)
-                sb.append(chars, 0, length);
-        } finally {
-            in.close();
-        }
-        return sb.toString();
     }
 }

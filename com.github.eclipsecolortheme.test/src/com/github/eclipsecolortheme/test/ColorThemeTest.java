@@ -19,7 +19,7 @@ public class ColorThemeTest {
 	
 	@Before
 	public void setUp() {
-		colorTheme = new ColorTheme();
+		colorTheme = new ColorTheme("<colorTheme></colorTheme>");
 	}
 	
 	@Test
@@ -30,7 +30,7 @@ public class ColorThemeTest {
 		assertThat(colorTheme.getWebsite(), nullValue());
 		assertThat(colorTheme.getEntries(), nullValue());
 	}
-	
+
 	@Test
 	public void id() {
 		colorTheme.setId("id");
@@ -54,7 +54,12 @@ public class ColorThemeTest {
 		colorTheme.setWebsite("website");
 		assertThat(colorTheme.getWebsite(), is("website"));
 	}
-	
+
+	@Test
+	public void source() {
+		assertThat(colorTheme.getSource(), is("<colorTheme></colorTheme>"));
+	}
+
 	@Test
 	public void entries() {
 		Map<String, ColorThemeSetting> entries = new HashMap<String, ColorThemeSetting>();
