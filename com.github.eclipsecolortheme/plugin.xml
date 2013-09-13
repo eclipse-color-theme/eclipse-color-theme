@@ -293,6 +293,12 @@
          pluginId="org.eclipse.xtend.core.Xtend"
          xml="mappings/org.eclipse.xtend.ide.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Haskell"
+         pluginId="net.sf.eclipsefp.haskell.ui"
+         xml="mappings/net.sf.eclipsefp.haskell.ui.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
