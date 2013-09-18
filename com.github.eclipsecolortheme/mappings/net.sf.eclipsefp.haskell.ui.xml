@@ -1,0 +1,23 @@
+<eclipseColorThemeMapping plugin="net.sf.eclipsefp.haskell.ui"
+	created="2013-09-13 00:00:00">
+	<mappings>
+		<mapping pluginKey="commentColor" themeKey="singleLineComment" />
+		<mapping pluginKey="pragmaColor" themeKey="multiLineComment" />
+		<mapping pluginKey="literateCommentColor" themeKey="multiLineComment" />
+		<mapping pluginKey="sourceHoverBackgroundColor" themeKey="sourceHoverBackground" />
+		<mapping pluginKey="stringColor" themeKey="string" />
+		<mapping pluginKey="charColor" themeKey="string" />
+		<mapping pluginKey="symbolColor" themeKey="bracket" />
+		<mapping pluginKey="varSymColor" themeKey="operator" />
+		<mapping pluginKey="keywordColor" themeKey="keyword" />
+		<mapping pluginKey="functionColor" themeKey="foreground" />
+		<mapping pluginKey="varColor" themeKey="foreground" />
+		<mapping pluginKey="conColor" themeKey="class" />
+		<mapping pluginKey="cppColor" themeKey="annotation" />
+		<mapping pluginKey="thColor" themeKey="annotation" />
+		<mapping pluginKey="docColor" themeKey="javadoc" />
+	</mappings>
+	<semanticHighlightingMappings>
+
+	</semanticHighlightingMappings>
+</eclipseColorThemeMapping>
