@@ -12,6 +12,7 @@
 * Added support for the Spket JavaScript and XML editros.
 * Added support for the XSL editor.
 * Added support for the DTD editor.
+* Added support for the Haskell editor (EclipseFP).
 
 0.12.0 (2012-07-24)
 ===================

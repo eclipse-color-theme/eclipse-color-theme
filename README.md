@@ -75,6 +75,7 @@ Eclipse Color Theme currently supports the following editors:
 * Spket IDE (JavaScript and XML)
 * XSL
 * DTD
+* Haskell (EclipseFP)
 
 Available themes:
 
