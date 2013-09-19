@@ -212,14 +212,15 @@ public class ColorThemePreferencePage extends PreferencePage
                     new IEditorReference[editorsToClose.size()]), true);
             }
             
-            String selectedThemeName = themeSelectionList.getSelection()[0];
-            getPreferenceStore().setValue("colorTheme", selectedThemeName);
-            getPreferenceStore().setValue("forceDefaultBG", forceDefaultBG.getSelection());
-            colorThemeManager.applyTheme(selectedThemeName);
+            if (themeSelectionList.getSelectionCount() > 0) {
+                String selectedThemeName = themeSelectionList.getSelection()[0];
+                getPreferenceStore().setValue("colorTheme", selectedThemeName);
+                getPreferenceStore().setValue("forceDefaultBG", forceDefaultBG.getSelection());
+                colorThemeManager.applyTheme(selectedThemeName);
+                for (IEditorInput editorInput : editorsToReopen.keySet())
+                    activePage.openEditor(editorInput, editorsToReopen.get(editorInput));
+            }
 
-            for (IEditorInput editorInput : editorsToReopen.keySet())
-                activePage.openEditor(editorInput,
-                                      editorsToReopen.get(editorInput));
         } catch (PartInitException e) {
             // TODO: Show a proper error message (StatusManager).
             e.printStackTrace();
