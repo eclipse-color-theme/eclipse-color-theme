@@ -13,6 +13,7 @@
 * Added support for the XSL editor.
 * Added support for the DTD editor.
 * Added support for the Haskell editor (EclipseFP).
+* Fixed exception caused by empty selections.
 
 0.12.0 (2012-07-24)
 ===================
