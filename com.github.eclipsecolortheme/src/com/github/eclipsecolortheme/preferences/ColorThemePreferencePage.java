@@ -248,11 +248,9 @@ public class ColorThemePreferencePage extends PreferencePage
             public void widgetSelected(SelectionEvent event) {
                 FileDialog dialog = new FileDialog(getShell());
                 String file = dialog.open();
-                FileInputStream fileStream = null;
                 BufferedInputStream bufferedFileStream = null;
                 try {
-                    fileStream = new FileInputStream(file);
-                    bufferedFileStream = new BufferedInputStream(fileStream);
+                    bufferedFileStream = new BufferedInputStream(new FileInputStream(file));
                     colorThemeManager.saveTheme(bufferedFileStream);
                 } catch (CharConversionException e) {
                     showErrorMessage("Invalid file encoding.");
@@ -264,8 +262,6 @@ public class ColorThemePreferencePage extends PreferencePage
                     try {
                         if(bufferedFileStream != null)
                             bufferedFileStream.close();
-                        if(fileStream != null)
-                            fileStream.close();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
