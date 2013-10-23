@@ -15,6 +15,7 @@
 * Added support for the Haskell editor (EclipseFP).
 * Fixed exception caused by empty selections.
 * Fixed some issues with Scala IDE.
+* Support parsing of XML files in encodings other than UTF-8.
 
 0.12.0 (2012-07-24)
 ===================
