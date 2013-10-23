@@ -5,6 +5,7 @@ import static com.github.eclipsecolortheme.ColorThemeKeys.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -13,6 +14,12 @@ import java.util.Set;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
@@ -79,9 +86,9 @@ public class ColorThemeManager {
 				Bundle bundle = Platform.getBundle(contributorPluginId);
 				InputStream input = (InputStream) bundle.getResource(xml)
 						.getContent();
-				ColorTheme theme = parseTheme(input);
-				amendThemeEntries(theme.getEntries());
-				themes.put(theme.getName(), theme);
+				ParsedTheme theme = parseTheme(input, false);
+				amendThemeEntries(theme.getTheme().getEntries());
+				themes.put(theme.getTheme().getName(), theme.getTheme());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -96,10 +103,9 @@ public class ColorThemeManager {
 			if (xml == null || xml.length() == 0)
 				break;
 			try {
-				ColorTheme theme = parseTheme(new ByteArrayInputStream(
-						xml.getBytes()));
-				amendThemeEntries(theme.getEntries());
-				themes.put(theme.getName(), theme);
+				ParsedTheme theme = parseTheme(new ByteArrayInputStream(xml.getBytes("UTF-8")), false);
+				amendThemeEntries(theme.getTheme().getEntries());
+				themes.put(theme.getTheme().getName(), theme.getTheme());
 			} catch (Exception e) {
 				System.err.println("Error while parsing imported theme");
 				e.printStackTrace();
@@ -119,8 +125,14 @@ public class ColorThemeManager {
 		return Activator.getDefault().getPreferenceStore();
 	}
 
-	public static ColorTheme parseTheme(InputStream input)
-			throws ParserConfigurationException, SAXException, IOException {
+	/**
+	 * Parses theme file.
+	 * @param input The input for theme file.
+	 * @param loadSource Specify if should load original XML source.
+	 * @return Parsed theme
+	 */
+	public static ParsedTheme parseTheme(InputStream input, boolean loadSource)
+			throws ParserConfigurationException, SAXException, IOException, TransformerException {
 		ColorTheme theme = new ColorTheme();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
@@ -163,7 +175,9 @@ public class ColorThemeManager {
 		}
 		theme.setEntries(entries);
 
-		return theme;
+		ParsedTheme parsedTheme = new ParsedTheme(theme);
+		if (loadSource) parsedTheme.setSource(documentToString(document));
+		return parsedTheme;
 	}
 
 	private static void amendThemeEntries(Map<String, ColorThemeSetting> theme) {
@@ -226,26 +240,29 @@ public class ColorThemeManager {
 	/**
 	 * Adds the color theme to the list and saves it to the preferences.
 	 * Existing themes will be overwritten with the new content.
-	 * @param content The content of the color theme file.
-	 * @return The saved color theme, or <code>null</code> if the theme was not
-	 *         valid.
+	 * @param input The input for theme file.
+	 * @throws TransformerException
+	 * @throws IOException
+	 * @throws SAXException
+	 * @throws ParserConfigurationException
 	 */
-	public ColorTheme saveTheme(String content) {
-		ColorTheme theme;
-		try {
-			theme = ColorThemeManager.parseTheme(new ByteArrayInputStream(
-					content.getBytes()));
-			String name = theme.getName();
-			themes.put(name, theme);
-			IPreferenceStore store = getPreferenceStore();
-			for (int i = 1;; i++)
-				if (!store.contains("importedColorTheme" + i)) {
-					store.putValue("importedColorTheme" + i, content);
-					break;
-				}
-			return theme;
-		} catch (Exception e) {
-			return null;
-		}
+	public void saveTheme(InputStream input) throws ParserConfigurationException, SAXException, IOException, TransformerException {
+		ParsedTheme theme = ColorThemeManager.parseTheme(input, true);
+		themes.put(theme.getTheme().getName(), theme.getTheme());
+		IPreferenceStore store = getPreferenceStore();
+		for (int i = 1;; i++)
+			if (!store.contains("importedColorTheme" + i)) {
+				store.putValue("importedColorTheme" + i, theme.getSource());
+				break;
+			}
 	}
+
+	protected static String documentToString(Document document) throws TransformerException {
+	    StringWriter writer = new StringWriter();
+	    Transformer transformer = TransformerFactory.newInstance().newTransformer();
+	    transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+	    transformer.transform(new DOMSource(document), new StreamResult(writer));
+	    return writer.toString();
+	}
+
 }
