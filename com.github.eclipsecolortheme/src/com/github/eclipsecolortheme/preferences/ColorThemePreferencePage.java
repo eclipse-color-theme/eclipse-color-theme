@@ -98,9 +98,10 @@ public class ColorThemePreferencePage extends PreferencePage
         themeDetails.setLayout(themeDetailsLayout);
         gridData = new GridData(GridData.FILL_BOTH);
         gridData.heightHint = 306;
-        if (getBrowser() != null) {
-            getBrowser().setLayoutData(gridData);
-            getBrowser().setText("<html><body></body></html>");
+        Browser browser = getBrowser();
+        if (browser != null) {
+            browser.setLayoutData(gridData);
+            browser.setText("<html><body></body></html>");
         }
         authorLabel = new Label(themeDetails, SWT.NONE);
         GridDataFactory.swtDefaults().grab(true, false).applyTo(authorLabel);
@@ -141,7 +142,7 @@ public class ColorThemePreferencePage extends PreferencePage
             browser = new Browser(themeDetails, SWT.BORDER | SWT.NO_SCROLL);
         } catch (SWTError e) {
             try {
-                browser = new Browser(themeDetails, SWT.BORDER|SWT.WEBKIT);
+                browser = new Browser(themeDetails, SWT.BORDER | SWT.WEBKIT);
             } catch (SWTError e1) {
                 e.printStackTrace();
                 e1.printStackTrace();
@@ -187,8 +188,9 @@ public class ColorThemePreferencePage extends PreferencePage
                 websiteLink.setVisible(true);
             }
             String id = theme.getId();
-            if (getBrowser() != null)
-                getBrowser().setUrl(
+            Browser browser = getBrowser();
+            if (browser != null)
+                browser.setUrl(
                     "http://www.eclipsecolorthemes.org/static/themes/java/"
                     + id + ".html");
             themeDetails.setVisible(true);
