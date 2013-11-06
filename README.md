@@ -133,6 +133,25 @@ directory which maps the colour theme's keys to those of the editor.
 
 4. Open *plugin.xml* and add the new mapping file to the extension point *com.github.eclipsecolortheme.theme*.
 
+Building
+--------
+
+### Generating an update site
+
+If you just want to generate an update site from the sources, you can
+do so using [Maven](http://maven.apache.org/):
+
+    mvn clean verify
+
+This will create an update site in
+_com.github.eclipsecolortheme.updatesite/target/repository_.
+
+### Development
+
+All you need is [Eclipse PDE](http://www.eclipse.org/pde/). Once you
+have that, you can import the projects in this repository into an
+Eclipse workspace.
+
 License
 -------
 
