@@ -5,7 +5,9 @@ Bundle-SymbolicName: com.github.eclipsecolortheme;singleton:=true
 Bundle-Version: 0.13.0.qualifier
 Bundle-Activator: com.github.eclipsecolortheme.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.e4.ui.workbench.addons.swt,
+ org.eclipse.ui.forms
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: com.github.eclipsecolortheme,
