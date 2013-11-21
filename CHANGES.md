@@ -1,5 +1,5 @@
-0.13.0
-======
+0.13.0 (2013-11-21)
+===================
 * Fixed occurrence and inactive code highlighting in C/C++.
 * Added support for the Puppet DSL editor (Gepetto).
 * Added support for the Twig editor.
