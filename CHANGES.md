@@ -1,3 +1,6 @@
+0.14.0
+======
+
 0.13.0 (2013-11-21)
 ===================
 * Fixed occurrence and inactive code highlighting in C/C++.
