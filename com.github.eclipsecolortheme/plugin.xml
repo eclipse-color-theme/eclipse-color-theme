@@ -177,7 +177,7 @@
             pluginId="com.spket.xml"
             xml="mappings/com.spket.xml.xml">
       </mapper>
-      
+
       <mapper
             class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
             name="XSL"
@@ -298,6 +298,12 @@
          name="Haskell"
          pluginId="net.sf.eclipsefp.haskell.ui"
          xml="mappings/net.sf.eclipsefp.haskell.ui.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="TypeScript"
+         pluginId="com.palantir.typescript"
+         xml="mappings/com.palantir.typescript.xml">
    </mapper>
    </extension>
    <extension
