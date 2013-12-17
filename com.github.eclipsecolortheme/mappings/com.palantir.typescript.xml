@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.palantir.typescript" created="2013-12-06 12:00:00">
+  <mappings>
+    <mapping pluginKey="syntaxColoring.comment.color"         themeKey="singleLineComment" />
+    <mapping pluginKey="syntaxColoring.identifier.color"      themeKey="foreground" />
+    <mapping pluginKey="syntaxColoring.keyword.color"         themeKey="keyword" />
+    <mapping pluginKey="syntaxColoring.numberLiteral.color"   themeKey="number" />
+    <mapping pluginKey="syntaxColoring.operator.color"        themeKey="operator" />
+    <mapping pluginKey="syntaxColoring.punctuation.color"     themeKey="foreground" />
+    <mapping pluginKey="syntaxColoring.regExpLiteral.color"   themeKey="string" />
+    <mapping pluginKey="syntaxColoring.stringLiteral.color"   themeKey="string" />
+  </mappings>
+</eclipseColorThemeMapping>
