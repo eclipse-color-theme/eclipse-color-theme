@@ -39,71 +39,73 @@ Editors and themes
 Eclipse Color Theme currently supports the following editors:
 
 * Text
+* ActionScript/MXML (Adobe Flash Builder)
+* Ant
+* BibTex/LaTeX (TeXlipse)
+* C++
+* Clojure (Counterclockwise)
+* ColdFusion (CFEclipse)
+* CSS
+* DTD
+* Erlang (ErlIDE)
+* FDT
+* FreeMarker (JBoss Tools)
+* Go (GoClipse)
+* Groovy
+* Haskell (EclipseFP)
+* haXe (eclihx)
+* HTML
 * Java
 * Java properties
-* XML
-* HTML
-* CSS
 * JavaScript
-* C++
-* PHP
-* Ant
-* SQL
-* Python
+* Json (Json Eclipse Plugin)
 * JSP
+* Markdown
+* PDE
 * Perl
-* Groovy
-* FDT
-* ActionScript/MXML (Adobe Flash Builder)
+* PHP
+* Puppet (Gepetto)
+* Python
+* R (StatET)
 * Ruby
 * Scala
-* FreeMarker (JBoss Tools)
-* PDE
-* ColdFusion (CFEclipse)
-* TCL
-* BibTex/LaTeX (TeXlipse)
-* R (StatET)
-* Erlang (ErlIDE)
-* haXe (eclihx)
-* Clojure (Counterclockwise)
-* Go (GoClipse)
-* Puppet (Gepetto)
-* Twig 
-* Json (Json Eclipse Plugin)
-* Yaml (Yedit)
-* Xtend
-* Markdown
 * Spket IDE (JavaScript and XML)
-* XSL
-* DTD
-* Haskell (EclipseFP)
+* SQL
+* TCL
+* Twig 
 * TypeScript
+* XML
+* XSL
+* Xtend
+* Yaml (Yedit)
+
 
 Available themes:
 
+* [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
+* [frontenddev](http://www.eclipsecolorthemes.org/?view=theme&id=90)
+* [Gedit Original Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=115)
+* [Havenjark](http://www.eclipsecolorthemes.org/?view=theme&id=25)
+* [Inkpot](http://www.eclipsecolorthemes.org/?view=theme&id=4)
+* [minimal](http://www.eclipsecolorthemes.org/?view=theme&id=43)
+* [Monokai](http://www.eclipsecolorthemes.org/?view=theme&id=52)
+* [Mr](http://www.eclipsecolorthemes.org/?view=theme&id=32)
+* [NightLion Aptana Theme](http://www.eclipsecolorthemes.org/?view=theme&id=47)
+* [Notepadd++ Like](http://www.eclipsecolorthemes.org/?view=theme&id=91)
 * [Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=1)
 * [Obsidian](http://www.eclipsecolorthemes.org/?view=theme&id=21)
-* [Zenburn](http://www.eclipsecolorthemes.org/?view=theme&id=2)
-* [RecognEyes](http://www.eclipsecolorthemes.org/?view=theme&id=30)
-* [Inkpot](http://www.eclipsecolorthemes.org/?view=theme&id=4)
-* [Vibrant Ink](http://www.eclipsecolorthemes.org/?view=theme&id=3)
-* [Tango](http://www.eclipsecolorthemes.org/?view=theme&id=27)
-* [Havenjark](http://www.eclipsecolorthemes.org/?view=theme&id=25)
-* [frontenddev](http://www.eclipsecolorthemes.org/?view=theme&id=90)
-* [NightLion Aptana Theme](http://www.eclipsecolorthemes.org/?view=theme&id=47)
-* [Schuss](http://www.eclipsecolorthemes.org/?view=theme&id=29)
-* [Notepadd++ Like](http://www.eclipsecolorthemes.org/?view=theme&id=91)
-* [Sublime Text 2](http://www.eclipsecolorthemes.org/?view=theme&id=66)
-* [Wombat](http://www.eclipsecolorthemes.org/?view=theme&id=118)
 * [Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=68)
-* [minimal](http://www.eclipsecolorthemes.org/?view=theme&id=43)
-* [Gedit Original Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=115)
-* [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
-* [Mr](http://www.eclipsecolorthemes.org/?view=theme&id=32)
-* [Monokai](http://www.eclipsecolorthemes.org/?view=theme&id=52)
-* [Roboticket](http://www.eclipsecolorthemes.org/?view=theme&id=93)
-* [Sunburst](http://www.eclipsecolorthemes.org/?view=theme&id=383)
+* [RecognEyes](http://www.eclipsecolorthemes.org/?view=theme&id=30)
 * [Retta](http://www.eclipsecolorthemes.org/?view=theme&id=1004)
+* [Roboticket](http://www.eclipsecolorthemes.org/?view=theme&id=93)
+* [Schuss](http://www.eclipsecolorthemes.org/?view=theme&id=29)
+* [Sublime Text 2](http://www.eclipsecolorthemes.org/?view=theme&id=66)
+* [Sunburst](http://www.eclipsecolorthemes.org/?view=theme&id=383)
+* [Tango](http://www.eclipsecolorthemes.org/?view=theme&id=27)
+* [Vibrant Ink](http://www.eclipsecolorthemes.org/?view=theme&id=3)
+* [Wombat](http://www.eclipsecolorthemes.org/?view=theme&id=118)
+* [Zenburn](http://www.eclipsecolorthemes.org/?view=theme&id=2)
+
 
 You can download additional themes or create your own on
 [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
