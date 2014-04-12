@@ -14,7 +14,7 @@
 * Fixed background in XML, HTML and CSS editor.
 * Added support for the Markdown editor.
 * Theme the debug and CVS console.
-* Added support for the Spket JavaScript and XML editros.
+* Added support for the Spket JavaScript and XML editors.
 * Added support for the XSL editor.
 * Added support for the DTD editor.
 * Added support for the Haskell editor (EclipseFP).
