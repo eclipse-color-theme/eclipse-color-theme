@@ -156,6 +156,8 @@ All you need is [Eclipse PDE](http://www.eclipse.org/pde/). Once you
 have that, you can import the projects in this repository into an
 Eclipse workspace.
 
+![](eclipse-color-theme-code-overview.png)
+
 License
 -------
 
