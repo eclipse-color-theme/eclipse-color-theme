@@ -161,3 +161,7 @@ Copyright (C) 2011 Felix H. Dahlke and Roger Dudler
 
 This is open source software, licensed under the Eclipse Public
 License. See the file COPYING for details.
+
+<a href="http://with-eclipse.github.io/" target="_blank">
+<img alt="with-Eclipse logo" src="http://with-eclipse.github.io/with-eclipse-1.jpg" /></a>
+
