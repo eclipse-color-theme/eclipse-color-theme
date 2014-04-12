@@ -22,7 +22,7 @@ public abstract class ThemePreferenceMapper {
     public ThemePreferenceMapper() {
         // NOOP
     }
-    
+
     /**
      * Creates a new mapper.
      * @param plugin The ID of the Eclipse plugin whose preferences should be
@@ -31,7 +31,7 @@ public abstract class ThemePreferenceMapper {
     public ThemePreferenceMapper(String plugin) {
         setPluginId(plugin);
     }
-    
+
     /**
      * Sets the plugin ID and loads preferences.
      * @param plugin The ID of the Eclipse plugin whose preferences should be
@@ -39,7 +39,7 @@ public abstract class ThemePreferenceMapper {
      */
     @SuppressWarnings("deprecation")
     public void setPluginId(String plugin) {
-    	preferences = new InstanceScope().getNode(plugin);
+        preferences = new InstanceScope().getNode(plugin);
     }
 
     /**

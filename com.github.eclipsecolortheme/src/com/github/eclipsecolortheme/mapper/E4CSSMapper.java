@@ -5,7 +5,6 @@ import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
 
 public class E4CSSMapper extends GenericMapper {
-    
     private class Mapping extends ColorThemeMapping {
         private static final String KEY_PREFIX = "org.eclipse.e4.CSS.syntaxColorer.tokenStyles";
         public Mapping(String pluginKey, String themeKey) {
@@ -18,10 +17,9 @@ public class E4CSSMapper extends GenericMapper {
             preferences.put(KEY_PREFIX + '.' + pluginKey + ".bgColor", defaultBackground.getHexColorOrEmpty());
         }
     }
-    
+
     @Override
     protected ColorThemeMapping createMapping(String pluginKey, String themeKey) {
         return new Mapping(pluginKey, themeKey);
     }
-
 }

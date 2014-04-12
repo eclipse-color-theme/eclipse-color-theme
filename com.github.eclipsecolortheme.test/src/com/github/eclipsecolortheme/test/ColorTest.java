@@ -9,27 +9,27 @@ import org.junit.Test;
 import com.github.eclipsecolortheme.Color;
 
 public class ColorTest {
-	private Color color;
-	
-	@Before
-	public void setUp() {
-		color = new Color("#FFAA00");
-	}
+    private Color color;
 
-	@Test
-	public void rgbGetters() {
-		assertThat(color.getR(), is(255));
-		assertThat(color.getG(), is(170));
-		assertThat(color.getB(), is(0));
-	}
+    @Before
+    public void setUp() {
+        color = new Color("#FFAA00");
+    }
 
-	@Test
-	public void asHex() {
-		assertThat(color.asHex().toUpperCase(), is("#FFAA00"));
-	}
-	
-	@Test
-	public void asRGB() {
-		assertThat(color.asRGB(), is("255,170,0"));
-	}
+    @Test
+    public void rgbGetters() {
+        assertThat(color.getR(), is(255));
+        assertThat(color.getG(), is(170));
+        assertThat(color.getB(), is(0));
+    }
+
+    @Test
+    public void asHex() {
+        assertThat(color.asHex().toUpperCase(), is("#FFAA00"));
+    }
+
+    @Test
+    public void asRGB() {
+        assertThat(color.asRGB(), is("255,170,0"));
+    }
 }

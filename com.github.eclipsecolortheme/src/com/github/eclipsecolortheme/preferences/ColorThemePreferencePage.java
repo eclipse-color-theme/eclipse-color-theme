@@ -80,7 +80,7 @@ public class ColorThemePreferencePage extends PreferencePage
         themeSelectionLayout.marginHeight = 0;
         themeSelection.setLayout(themeSelectionLayout);
         themeSelection.setLayoutData(gridData);
-        
+
         gridData = new GridData(GridData.FILL_VERTICAL);
         gridData.minimumWidth = 120;
         themeSelectionList = new List(themeSelection, SWT.BORDER | SWT.V_SCROLL);
@@ -107,14 +107,14 @@ public class ColorThemePreferencePage extends PreferencePage
         GridDataFactory.swtDefaults().grab(true, false).applyTo(authorLabel);
         websiteLink = new Link(themeDetails, SWT.NONE);
         GridDataFactory.swtDefaults().grab(true, false).applyTo(websiteLink);
-        
+
         themeSelectionList.addListener(SWT.Selection, new Listener() {
             public void handleEvent(Event event) {
                 updateDetails(colorThemeManager.getTheme(
                         themeSelectionList.getSelection()[0]));
             }
         });
-        
+
         String activeThemeName = getPreferenceStore().getString("colorTheme");
         if (colorThemeManager.getTheme(activeThemeName) == null)
             activeThemeName = "Default";
@@ -130,14 +130,14 @@ public class ColorThemePreferencePage extends PreferencePage
         forceDefaultBG.setText("Set all background colors to the default");
         forceDefaultBG.setSelection(getPreferenceStore().getBoolean("forceDefaultBG"));
         forceDefaultBG.setToolTipText("Forces the background color of all color styles to be 'background' color of the theme");
-        
+
         return container;
     }
 
     private Browser getBrowser() {
         if (browser != null)
             return browser;
-    
+
         try {
             browser = new Browser(themeDetails, SWT.BORDER | SWT.NO_SCROLL);
         } catch (SWTError e) {
@@ -223,16 +223,16 @@ public class ColorThemePreferencePage extends PreferencePage
                 }
             }
 
-            if (!editorsToClose.isEmpty()) {    
+            if (!editorsToClose.isEmpty()) {
                 if (!MessageDialog.openConfirm(getShell(), "Reopen Editors",
                     "In order to change the color theme, some editors have to be closed and reopened.")) {
                     return false;
                 }
-                
+
                 activePage.closeEditors(editorsToClose.toArray(
                     new IEditorReference[editorsToClose.size()]), true);
             }
-            
+
             if (themeSelectionList.getSelectionCount() > 0) {
                 String selectedThemeName = themeSelectionList.getSelection()[0];
                 getPreferenceStore().setValue("colorTheme", selectedThemeName);
@@ -262,7 +262,6 @@ public class ColorThemePreferencePage extends PreferencePage
     @Override
     protected void contributeButtons(Composite parent) {
           ((GridLayout) parent.getLayout()).numColumns++;
-          
         Button button = new Button(parent, SWT.NONE);
         button.setText("&Import a theme...");
         button.addSelectionListener(new SelectionAdapter() {

@@ -1,7 +1,6 @@
 package com.github.eclipsecolortheme;
 
 public class ParsedTheme {
-
     private ColorTheme theme;
     private String source;
 
@@ -35,5 +34,4 @@ public class ParsedTheme {
         this.source = source;
         return this;
     }
-
 }

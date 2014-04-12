@@ -22,10 +22,9 @@ import com.github.eclipsecolortheme.ColorThemeSetting;
 import com.github.eclipsecolortheme.ColorThemeSemanticHighlightingMapping;
 
 public class GenericMapper extends ThemePreferenceMapper {
-    
     private Map<String, ColorThemeMapping> mappings = new HashMap<String, ColorThemeMapping>();
     protected ColorThemeSetting defaultBackground;
-    
+
     /**
      * Parse mapping from input file.
      * @param input InputStream for an XML file
@@ -42,7 +41,7 @@ public class GenericMapper extends ThemePreferenceMapper {
         parseMappings(root);
         parseSemanticHighlightingMappings(root);
     }
-    
+
     private void parseMappings(Element root) {
         Node mappingsNode = root.getElementsByTagName("mappings").item(0);
         NodeList mappingNodes = mappingsNode.getChildNodes();
@@ -55,7 +54,7 @@ public class GenericMapper extends ThemePreferenceMapper {
             }
         }
     }
-    
+
     private void parseSemanticHighlightingMappings(Element root) {
         Node mappingsNode = root.getElementsByTagName("semanticHighlightingMappings").item(0);
         if (mappingsNode != null) {
@@ -70,7 +69,7 @@ public class GenericMapper extends ThemePreferenceMapper {
             }
         }
     }
-    
+
     protected ColorThemeMapping createMapping(String pluginKey, String themeKey) {
         return new ColorThemeMapping(pluginKey, themeKey);
     }
@@ -78,7 +77,7 @@ public class GenericMapper extends ThemePreferenceMapper {
     protected ColorThemeSemanticHighlightingMapping createSemanticHighlightingMapping(String pluginKey, String themeKey) {
         return new ColorThemeSemanticHighlightingMapping(pluginKey, themeKey);
     }
-    
+
     private static String extractAttribute(Node node, String name) {
         return node.getAttributes().getNamedItem(name).getNodeValue();
     }
