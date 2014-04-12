@@ -1,6 +1,11 @@
 Eclipse Color Theme
 ===================
 
+[![Build Status](https://secure.travis-ci.org/eclipse-color-theme/eclipse-color-theme.png)](http://travis-ci.org/eclipse-color-theme/eclipse-color-theme)
+<a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=27025" title="Drag and drop into a running Eclipse menu area to install Eclipse Color Theme">
+  <img src="http://marketplace.eclipse.org/sites/all/modules/custom/marketplace/images/installbutton.png"/>
+</a>
+
 Color themes for Eclipse.
 
 Eclipse Color Theme makes it possible to import and switch color
