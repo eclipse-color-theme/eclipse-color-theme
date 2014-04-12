@@ -37,6 +37,6 @@
     <currentLine color="#222220" />
     <foreground color="#FFFFFF" />
     <lineNumber color="#999999" />
-    <selectionBackground color="#333333" />
-    <selectionForeground color="#333333" />
+    <selectionBackground color="#CCFFCC" />
+    <selectionForeground color="#555555" />
 </colorTheme>
