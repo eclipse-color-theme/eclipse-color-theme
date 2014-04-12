@@ -1,5 +1,7 @@
 0.14.0
 ======
+* Used a different colour for brackets in ErlIDE.
+* Fixed selection colours in the frontenddev theme.
 
 0.13.0 (2013-11-21)
 ===================
