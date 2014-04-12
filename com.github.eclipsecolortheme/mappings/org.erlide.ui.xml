@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eclipseColorThemeMapping plugin="org.erlide.ui" created="2011-08-05 13:20:00">
     <mappings>
-        <mapping pluginKey="editor/colors/default" themeKey="foreground"/>
+        <mapping pluginKey="editor/colors/default" themeKey="bracket"/>
         <mapping pluginKey="editor/colors/keyword" themeKey="keyword"/>
         <mapping pluginKey="editor/colors/integer" themeKey="number"/>
         <mapping pluginKey="editor/colors/float" themeKey="number"/>
