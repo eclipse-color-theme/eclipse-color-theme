@@ -7,7 +7,8 @@ Eclipse Color Theme makes it possible to import and switch color
 themes conveniently and without side effects.
 
 You can install the plugin from the
-[update site](http://eclipse-color-theme.github.com/update).  After
+[update site](http://eclipse-color-theme.github.com/update) (there's
+also an archive of the site for offline installation). After
 installing, go to *Window->Preferences->General->Appearance->Color
 Theme* to change the color theme.
 
