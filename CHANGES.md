@@ -1,5 +1,5 @@
-0.14.0
-======
+0.13.1 (2014-05-04)
+===================
 * Fixed installation errors in Eclipse <4.
 * Used a different colour for brackets in ErlIDE.
 * Fixed selection colours in the frontenddev theme.
