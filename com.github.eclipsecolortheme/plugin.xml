@@ -210,6 +210,18 @@
          xml="mappings/org.jboss.ide.eclipse.freemarker.xml">
    </mapper>
    <mapper
+        class="com.github.eclipsecolortheme.mapper.GenericMapper"
+        name="Gradle"
+        pluginId="org.nodeclipse.enide.editors.gradle"
+        xml="mappings/org.nodeclipse.enide.editors.gradle.xml">
+   </mapper>
+   <mapper
+        class="com.github.eclipsecolortheme.mapper.GenericMapper"
+        name="Jade"
+        pluginId="org.nodeclipse.enide.editors.jade"
+        xml="mappings/org.nodeclipse.enide.editors.jade.xml">
+   </mapper>
+   <mapper
          class="com.github.eclipsecolortheme.mapper.DltkEditorMapper"
          name="Ruby"
          pluginId="org.eclipse.dltk.ruby.ui"
@@ -226,6 +238,12 @@
          name="CFML"
          pluginId="org.cfeclipse.cfml"
          xml="mappings/org.cfeclipse.cfml.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="CFML"
+         pluginId="org.chromium.debug.ui"
+         xml="mappings/org.chromium.debug.ui.xml">
    </mapper>
    <mapper
          class="com.github.eclipsecolortheme.mapper.DltkEditorMapper"
@@ -343,6 +361,9 @@
       </theme>
       <theme
             file="themes/pastel.xml">
+      </theme>
+      <theme
+            file="themes/RainbowDrops.xml">
       </theme>
       <theme
             file="themes/recogneyes.xml">

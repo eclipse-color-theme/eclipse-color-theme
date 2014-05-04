@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<eclipseColorThemeMapping plugin="org.nodeclipse.enide.editors.jade" created="2014-05-04 13:45:38">
+   <mappings>
+      <mapping pluginKey="color_comment" themeKey="multiLineComment" />
+      <mapping pluginKey="color_doc" themeKey="javadoc" />
+      <mapping pluginKey="color_keyword" themeKey="keyword" />
+      <mapping pluginKey="color_normal" themeKey="foreground" />
+      <mapping pluginKey="color_number" themeKey="number" />
+      <mapping pluginKey="color_string" themeKey="string" />
+   </mappings>
+</eclipseColorThemeMapping>

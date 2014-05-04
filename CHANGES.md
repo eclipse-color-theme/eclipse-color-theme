@@ -1,4 +1,4 @@
-0.14.0
+0.14.0 (2014-05-04)
 ======
 
 0.13.1 (2014-05-04)
@@ -6,6 +6,11 @@
 * Fixed installation errors in Eclipse <4.
 * Used a different colour for brackets in ErlIDE.
 * Fixed selection colours in the frontenddev theme.
+* #160 added support for Nodeclipse Chromium Debugger JS Editor
+* #178 added support for Nodeclipse/Enide Gradle Editor
+* #178 added support for Nodeclipse Minimalist Jade Editor
+* #166 bundle RainbowDrops theme by Andrea Guarinoni
+* #172 Travis CI ready; add code overview image; Adding a mapping explanation
 
 0.13.0 (2013-11-21)
 ===================

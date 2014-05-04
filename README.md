@@ -1,6 +1,11 @@
 Eclipse Color Theme
 ===================
 
+[![Build Status](https://secure.travis-ci.org/eclipse-color-theme/eclipse-color-theme.png)](http://travis-ci.org/eclipse-color-theme/eclipse-color-theme)
+<a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=27025" title="Drag and drop into a running Eclipse menu area to install Eclipse Color Theme">
+  <img src="http://marketplace.eclipse.org/sites/all/modules/custom/marketplace/images/installbutton.png"/>
+</a>
+
 Color themes for Eclipse.
 
 Eclipse Color Theme makes it possible to import and switch color
@@ -45,16 +50,19 @@ Eclipse Color Theme currently supports the following editors:
 * C++
 * Clojure (Counterclockwise)
 * ColdFusion (CFEclipse)
+* [Chromium Debugger JavaScript Editor](https://github.com/Nodeclipse/nodeclipse-1/tree/master/chromedevtools/plugins/org.chromium.debug.ui) 
 * CSS
 * DTD
 * Erlang (ErlIDE)
 * FDT
 * FreeMarker (JBoss Tools)
 * Go (GoClipse)
+* Gradle ([Nodeclipse/Enide Minimalist Gradle Editor](http://www.nodeclipse.org/projects/gradle))
 * Groovy
 * Haskell (EclipseFP)
 * haXe (eclihx)
 * HTML
+* Jade (Node.js template engine; [Nodeclipse/Enide Minimalist Jade Editor](http://www.nodeclipse.org/projects/gradle))
 * Java
 * Java properties
 * JavaScript
@@ -81,7 +89,7 @@ Eclipse Color Theme currently supports the following editors:
 * Yaml (Yedit)
 
 
-Available themes:
+Bundled themes:
 
 * [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
 * [frontenddev](http://www.eclipsecolorthemes.org/?view=theme&id=90)
@@ -96,6 +104,7 @@ Available themes:
 * [Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=1)
 * [Obsidian](http://www.eclipsecolorthemes.org/?view=theme&id=21)
 * [Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=68)
+* [RainbowDrops](https://github.com/guari/eclipse-ui-theme/) by Andrea Guarinoni
 * [RecognEyes](http://www.eclipsecolorthemes.org/?view=theme&id=30)
 * [Retta](http://www.eclipsecolorthemes.org/?view=theme&id=1004)
 * [Roboticket](http://www.eclipsecolorthemes.org/?view=theme&id=93)
@@ -138,6 +147,21 @@ directory which maps the colour theme's keys to those of the editor.
 
 4. Open *plugin.xml* and add the new mapping file to the extension point *com.github.eclipsecolortheme.theme*.
 
+## Adding a mapping explanation by Andrea Guarinoni
+
+<p>Add <a href="https://github.com/eclipse-color-theme/eclipse-color-theme/tree/master/com.github.eclipsecolortheme/mappings">here</a> a new XML with the same name of your .pref file (eg. <code>org.nodeclipse.enide.editors.gradle.xml</code>) and place into that file your mappings for the color's preferences keys: </p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;eclipseColorThemeMapping</span> <span class="na">plugin=</span><span class="s">"org.nodeclipse.enide.editors.gradle"</span> <span class="na">created=</span><span class="s">"2014-05-02 13:10:08"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;mappings&gt;</span>
+        <span class="nt">&lt;mapping</span> <span class="na">pluginKey=</span><span class="s">"color_comment"</span> <span class="na">themeKey=</span><span class="s">"singleLineComment"</span><span class="nt">/&gt;</span>
+        ....
+    <span class="nt">&lt;/mappings&gt;</span>
+<span class="nt">&lt;/eclipseColorThemeMapping&gt;</span>
+</pre></div>
+
+<p>Finally add to <a href="https://github.com/eclipse-color-theme/eclipse-color-theme/blob/master/com.github.eclipsecolortheme/plugin.xml">plugin.xml</a> your <code>&lt;mapper&gt;</code> properties to the extension point <code>com.github.eclipsecolortheme.mapper</code>.</p>
+
+
 Building
 --------
 
@@ -156,6 +180,8 @@ _com.github.eclipsecolortheme.updatesite/target/repository_.
 All you need is [Eclipse PDE](http://www.eclipse.org/pde/). Once you
 have that, you can import the projects in this repository into an
 Eclipse workspace.
+
+![](eclipse-color-theme-code-overview.png)
 
 License
 -------
