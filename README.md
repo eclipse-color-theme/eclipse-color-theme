@@ -45,6 +45,7 @@ Eclipse Color Theme currently supports the following editors:
 * C++
 * Clojure (Counterclockwise)
 * ColdFusion (CFEclipse)
+* [Chromium Debugger JavaScript Editor](https://github.com/Nodeclipse/nodeclipse-1/tree/master/chromedevtools/plugins/org.chromium.debug.ui) 
 * CSS
 * DTD
 * Erlang (ErlIDE)
