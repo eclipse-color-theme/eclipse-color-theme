@@ -53,6 +53,7 @@ Eclipse Color Theme currently supports the following editors:
 * FDT
 * FreeMarker (JBoss Tools)
 * Go (GoClipse)
+* Gradle ([Nodeclipse/Enide Minimalist Gradle Editor](http://www.nodeclipse.org/projects/gradle))
 * Groovy
 * Haskell (EclipseFP)
 * haXe (eclihx)
