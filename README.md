@@ -84,7 +84,7 @@ Eclipse Color Theme currently supports the following editors:
 * Yaml (Yedit)
 
 
-Available themes:
+Bundled themes:
 
 * [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
 * [frontenddev](http://www.eclipsecolorthemes.org/?view=theme&id=90)
@@ -99,6 +99,7 @@ Available themes:
 * [Oblivion](http://www.eclipsecolorthemes.org/?view=theme&id=1)
 * [Obsidian](http://www.eclipsecolorthemes.org/?view=theme&id=21)
 * [Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=68)
+* [RainbowDrops](https://github.com/guari/eclipse-ui-theme/) by Andrea Guarinoni
 * [RecognEyes](http://www.eclipsecolorthemes.org/?view=theme&id=30)
 * [Retta](http://www.eclipsecolorthemes.org/?view=theme&id=1004)
 * [Roboticket](http://www.eclipsecolorthemes.org/?view=theme&id=93)

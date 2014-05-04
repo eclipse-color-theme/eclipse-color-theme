@@ -363,6 +363,9 @@
             file="themes/pastel.xml">
       </theme>
       <theme
+            file="themes/RainbowDrops.xml">
+      </theme>
+      <theme
             file="themes/recogneyes.xml">
       </theme>
       <theme
