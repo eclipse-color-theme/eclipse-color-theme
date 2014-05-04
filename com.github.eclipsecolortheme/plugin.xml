@@ -240,6 +240,12 @@
          xml="mappings/org.cfeclipse.cfml.xml">
    </mapper>
    <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="CFML"
+         pluginId="org.chromium.debug.ui"
+         xml="mappings/org.chromium.debug.ui.xml">
+   </mapper>
+   <mapper
          class="com.github.eclipsecolortheme.mapper.DltkEditorMapper"
          name="TCL"
          pluginId="org.eclipse.dltk.tcl.ui"
