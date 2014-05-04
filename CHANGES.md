@@ -7,6 +7,7 @@
 * #178 added support for Nodeclipse/Enide Gradle Editor
 * #178 added support for Nodeclipse Minimalist Jade Editor
 * #166 bundle RainbowDrops theme by Andrea Guarinoni
+* #172 Travis CI ready; add code overview image; Adding a mapping explanation
 
 0.13.0 (2013-11-21)
 ===================
