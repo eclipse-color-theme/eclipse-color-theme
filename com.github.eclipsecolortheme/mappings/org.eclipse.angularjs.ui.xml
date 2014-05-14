@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.eclipse.angularjs.ui" created="2014-05-14 14:33:05">
+    <mappings>
+        <mapping pluginKey="angularExpression" themeKey="string" />
+        <mapping pluginKey="angularExpressionBorder" themeKey="bracket" />
+        <mapping pluginKey="directiveParameterName" themeKey="localVariableDeclaration" />
+        <mapping pluginKey="directiveName" themeKey="keyword" />
+    </mappings>
+</eclipseColorThemeMapping>
