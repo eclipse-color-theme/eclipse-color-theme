@@ -277,9 +277,15 @@
    </mapper>
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
-         name="Json"
+         name="Json (Json-Eclipse-Plugin)"
          pluginId="org.sourceforge.jsonedit.core"
          xml="mappings/org.sourceforge.jsonedit.core.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Json (Eclipse Json Editor Plugin)"
+         pluginId="jsonedit-core"
+         xml="mappings/jsonedit-core.xml">
    </mapper>
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
