@@ -1,3 +1,7 @@
+0.15.0
+======
+* Added support for the [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/).
+
 0.14.0
 ======
 
