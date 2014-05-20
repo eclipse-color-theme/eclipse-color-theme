@@ -1,6 +1,7 @@
 0.15.0
 ======
 * Added support for the [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/).
+* Added support for the [Properties Editor](http://propedit.sourceforge.jp/index_en.html).
 
 0.14.0
 ======
