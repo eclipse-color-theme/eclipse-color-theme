@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.sweetlemonade.eclipse.json" created="2014-05-20 23:41">
+    <mappings>
+        <mapping pluginKey="colorMatchBracket" themeKey="localVariable" />
+        <mapping pluginKey="colorBracket" themeKey="localVariable" />
+        <mapping pluginKey="colorObjectBracket" themeKey="localVariable" />
+        <mapping pluginKey="colorArrayBracket" themeKey="localVariable" />
+        <mapping pluginKey="colorKey" themeKey="field" />
+        <mapping pluginKey="colorString" themeKey="string" />
+        <mapping pluginKey="colorNumber" themeKey="number" />
+        <mapping pluginKey="colorBoolean" themeKey="keyword" />
+        <mapping pluginKey="colorNull" themeKey="keyword" />
+        <mapping pluginKey="colorDefault" themeKey="foreground" />
+    </mappings>
+</eclipseColorThemeMapping> 

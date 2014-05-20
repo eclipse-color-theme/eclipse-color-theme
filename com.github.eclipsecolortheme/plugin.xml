@@ -288,6 +288,12 @@
          xml="mappings/jsonedit-core.xml">
    </mapper>
    <mapper
+         class="com.github.eclipsecolortheme.mapper.JsonToolsEditorMapper"
+         name="Json (JsonTools)"
+         pluginId="org.sweetlemonade.eclipse.json"
+         xml="mappings/org.sweetlemonade.eclipse.json.xml">
+   </mapper>
+   <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
          name="Yaml"
          pluginId="org.dadacoalition.yedit"
