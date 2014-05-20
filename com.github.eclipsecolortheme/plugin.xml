@@ -307,7 +307,7 @@
    </mapper>
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
-         name="Properties (Properties Ediotr)"
+         name="Properties (Properties Editor)"
          pluginId="jp.gr.java_conf.ussiy.app.propedit"
          xml="mappings/jp.gr.java_conf.ussiy.app.propedit.xml">
    </mapper>
