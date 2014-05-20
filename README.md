@@ -56,8 +56,7 @@ Eclipse Color Theme currently supports the following editors:
 * haXe (eclihx)
 * HTML
 * Java
-* Java properties (Eclipse JDT)
-* Java properties ([PropertiesEditor](http://propedit.sourceforge.jp/index_en.html))
+* Java properties (Eclipse JDT, [Properties Editor](http://propedit.sourceforge.jp/index_en.html))
 * JavaScript
 * Json (Json Eclipse Plugin)
 * JSP
