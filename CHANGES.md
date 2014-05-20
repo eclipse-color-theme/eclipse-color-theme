@@ -1,3 +1,7 @@
+0.15.0
+======
+* #187 added support for the [PropertiesEditor](http://propedit.sourceforge.jp/index_en.html).
+
 0.14.0
 ======
 
