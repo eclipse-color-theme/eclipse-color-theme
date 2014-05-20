@@ -62,7 +62,7 @@ Eclipse Color Theme currently supports the following editors:
 * Haskell (EclipseFP)
 * haXe (eclihx)
 * HTML
-* Jade (Node.js template engine; [Nodeclipse/Enide Minimalist Jade Editor](http://www.nodeclipse.org/projects/gradle))
+* Jade (Node.js template engine; [Nodeclipse/Enide Minimalist Jade Editor](https://github.com/Nodeclipse/nodeclipse-1/tree/master/org.nodeclipse.enide.editors.jade))
 * Java
 * Java properties
 * JavaScript
