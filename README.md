@@ -42,7 +42,7 @@ supported editor.
 Editors and themes
 ------------------
 
-Eclipse Color Theme currently supports the following editors:
+Eclipse Color Theme currently supports the following editors (add links to projects):
 
 * ActionScript/MXML (Adobe Flash Builder)
 * Ant
