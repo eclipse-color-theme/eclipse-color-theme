@@ -21,6 +21,8 @@ Theme* to change the color theme.
   plugin and the update site, add the site listed above and install it
   again from there. Otherwise you won't see any updates.
 
+[![Build Status](https://secure.travis-ci.org/eclipse-color-theme/eclipse-color-theme.png)](http://travis-ci.org/eclipse-color-theme/eclipse-color-theme)
+
 Rationale
 ---------
 
