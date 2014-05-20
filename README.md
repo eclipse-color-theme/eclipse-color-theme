@@ -60,7 +60,7 @@ Eclipse Color Theme currently supports the following editors:
 * Java
 * Java properties (Eclipse JDT, [Properties Editor](http://propedit.sourceforge.jp/index_en.html))
 * JavaScript
-* Json ([Json Eclipse Plugin](https://github.com/pulse00/Json-Eclipse-Plugin), [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/))
+* Json ([Json Eclipse Plugin](https://github.com/pulse00/Json-Eclipse-Plugin), [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/), [JsonTools](https://bitbucket.org/denmiroch/jsontools/wiki/Home))
 * JSP
 * Markdown
 * PDE
