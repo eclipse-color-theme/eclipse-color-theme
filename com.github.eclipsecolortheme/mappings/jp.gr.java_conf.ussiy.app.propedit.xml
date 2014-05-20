@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="jp.gr.java_conf.ussiy.app.propedit" created="2014-05-14 15:36:24">
+    <mappings>
+        <mapping pluginKey="commentColor" themeKey="singleLineComment" />
+        <mapping pluginKey="backgroundColor" themeKey="background" />
+        <mapping pluginKey="keyColor" themeKey="foreground" />
+        <mapping pluginKey="separatorColor" themeKey="foreground" />
+        <mapping pluginKey="valueColor" themeKey="string" />
+    </mappings>
+</eclipseColorThemeMapping>

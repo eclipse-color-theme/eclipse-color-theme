@@ -305,6 +305,12 @@
          pluginId="com.palantir.typescript"
          xml="mappings/com.palantir.typescript.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Properties (Properties Editor)"
+         pluginId="jp.gr.java_conf.ussiy.app.propedit"
+         xml="mappings/jp.gr.java_conf.ussiy.app.propedit.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
