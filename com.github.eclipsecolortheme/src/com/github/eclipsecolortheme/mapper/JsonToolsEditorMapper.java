@@ -9,9 +9,7 @@ import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
 
 public class JsonToolsEditorMapper extends GenericMapper {
-
     private static class Mapping extends ColorThemeMapping {
-
         private static final int STYLE_VALUE_UNDERLINE = 0x40000000;
         private static final int STYLE_VALUE_STRIKETHROUGH = 0x20000000;
 
