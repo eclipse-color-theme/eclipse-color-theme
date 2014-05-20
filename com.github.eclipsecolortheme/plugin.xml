@@ -323,6 +323,12 @@
          pluginId="jp.gr.java_conf.ussiy.app.propedit"
          xml="mappings/jp.gr.java_conf.ussiy.app.propedit.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
+         name="AngularJS"
+         pluginId="org.eclipse.angularjs.ui"
+         xml="mappings/org.eclipse.angularjs.ui.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">

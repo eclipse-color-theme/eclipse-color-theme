@@ -1,5 +1,6 @@
 0.14.0
 ======
+* Added support for the [AngularJS Eclipse Plugin](https://github.com/angelozerr/angularjs-eclipse).
 * Added support for the [JsonTools](https://bitbucket.org/denmiroch/jsontools/wiki/Home).
 * Added support for the [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/).
 * Added support for the [Properties Editor](http://propedit.sourceforge.jp/index_en.html).

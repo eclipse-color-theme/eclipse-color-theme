@@ -56,7 +56,7 @@ Eclipse Color Theme currently supports the following editors:
 * Groovy
 * Haskell (EclipseFP)
 * haXe (eclihx)
-* HTML
+* HTML (Eclipse WTP, [AngularJS Eclipse Plugin](https://github.com/angelozerr/angularjs-eclipse))
 * Java
 * Java properties (Eclipse JDT, [Properties Editor](http://propedit.sourceforge.jp/index_en.html))
 * JavaScript
