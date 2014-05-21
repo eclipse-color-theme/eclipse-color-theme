@@ -42,7 +42,7 @@ supported editor.
 Editors and themes
 ------------------
 
-Eclipse Color Theme currently supports the following editors:
+Eclipse Color Theme currently supports the following editors (add links to projects):
 
 * ActionScript/MXML (Adobe Flash Builder)
 * Ant
@@ -62,7 +62,7 @@ Eclipse Color Theme currently supports the following editors:
 * Haskell (EclipseFP)
 * haXe (eclihx)
 * HTML (Eclipse WTP, [AngularJS Eclipse Plugin](https://github.com/angelozerr/angularjs-eclipse))
-* Jade (Node.js template engine; [Nodeclipse/Enide Minimalist Jade Editor](http://www.nodeclipse.org/projects/gradle))
+* Jade (Node.js template engine; [Nodeclipse/Enide Minimalist Jade Editor](https://github.com/Nodeclipse/nodeclipse-1/tree/master/org.nodeclipse.enide.editors.jade))
 * Java
 * Java properties (Eclipse JDT, [Properties Editor](http://propedit.sourceforge.jp/index_en.html))
 * JavaScript
