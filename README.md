@@ -61,12 +61,12 @@ Eclipse Color Theme currently supports the following editors:
 * Groovy
 * Haskell (EclipseFP)
 * haXe (eclihx)
-* HTML
+* HTML (Eclipse WTP, [AngularJS Eclipse Plugin](https://github.com/angelozerr/angularjs-eclipse))
 * Jade (Node.js template engine; [Nodeclipse/Enide Minimalist Jade Editor](http://www.nodeclipse.org/projects/gradle))
 * Java
-* Java properties
+* Java properties (Eclipse JDT, [Properties Editor](http://propedit.sourceforge.jp/index_en.html))
 * JavaScript
-* Json (Json Eclipse Plugin)
+* Json ([Json Eclipse Plugin](https://github.com/pulse00/Json-Eclipse-Plugin), [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/), [JsonTools](https://bitbucket.org/denmiroch/jsontools/wiki/Home))
 * JSP
 * Markdown
 * PDE
@@ -186,7 +186,7 @@ Eclipse workspace.
 License
 -------
 
-Copyright (C) 2011 Felix H. Dahlke and Roger Dudler
+Copyright (C) 2011-2014 Felix H. Dahlke and Roger Dudler
 
 This is open source software, licensed under the Eclipse Public
 License. See the file COPYING for details.
