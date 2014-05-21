@@ -401,6 +401,12 @@
       <theme
             file="themes/retta.xml">
       </theme>
+      <theme
+            file="themes/solarized-dark.xml">
+      </theme>
+      <theme
+            file="themes/solarized-light.xml">
+      </theme>
    </extension>
 
 </plugin>
