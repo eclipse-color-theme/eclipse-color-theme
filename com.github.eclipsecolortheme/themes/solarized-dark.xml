@@ -39,7 +39,7 @@
     <typeParameter color="#B58900" />
     <constant color="#2AA198" />
     <background color="#002B36" />
-    <currentLine color="#002B36" />
+    <currentLine color="#073642" />
     <foreground color="#839496" />
     <lineNumber color="#657B83" />
     <selectionBackground color="#073642" />
