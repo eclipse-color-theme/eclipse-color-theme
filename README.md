@@ -109,6 +109,8 @@ Bundled themes:
 * [Retta](http://www.eclipsecolorthemes.org/?view=theme&id=1004)
 * [Roboticket](http://www.eclipsecolorthemes.org/?view=theme&id=93)
 * [Schuss](http://www.eclipsecolorthemes.org/?view=theme&id=29)
+* [Solarized Dark](http://www.eclipsecolorthemes.org/?view=theme&id=1115)
+* [Solarized Light](http://www.eclipsecolorthemes.org/?view=theme&id=1013)
 * [Sublime Text 2](http://www.eclipsecolorthemes.org/?view=theme&id=66)
 * [Sunburst](http://www.eclipsecolorthemes.org/?view=theme&id=383)
 * [Tango](http://www.eclipsecolorthemes.org/?view=theme&id=27)
