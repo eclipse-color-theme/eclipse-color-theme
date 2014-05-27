@@ -1,13 +1,12 @@
-0.14.0 (2014-05-04)
+0.15.0 (2014-05-27) by Pei-Tang Huang
 ======
-* Added the Solarized Dark theme.
-* Added the Solarized Light theme.
-* Added support for the [AngularJS Eclipse Plugin](https://github.com/angelozerr/angularjs-eclipse).
-* Added support for the [JsonTools](https://bitbucket.org/denmiroch/jsontools/wiki/Home).
-* Added support for the [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/).
-* Added support for the [Properties Editor](http://propedit.sourceforge.jp/index_en.html).
+* #193 Added the Solarized Dark/Light themes.
+* #192 Added support for the [AngularJS Eclipse Plugin](https://github.com/angelozerr/angularjs-eclipse).
+* #191 Added support for the [JsonTools](https://bitbucket.org/denmiroch/jsontools/wiki/Home).
+* #188 Added support for the [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/).
+* #187 Added support for the [Properties Editor](http://propedit.sourceforge.jp/index_en.html).
 
-0.13.1 (2014-05-04)
+0.14.0 (2014-05-04)
 ===================
 * Fixed installation errors in Eclipse <4.
 * Used a different colour for brackets in ErlIDE.
