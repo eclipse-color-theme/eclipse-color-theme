@@ -6,6 +6,7 @@
 * Added support for the [JsonTools](https://bitbucket.org/denmiroch/jsontools/wiki/Home).
 * Added support for the [Eclipse Json Editor Plugin](http://sourceforge.net/projects/eclipsejsonedit/).
 * Added support for the [Properties Editor](http://propedit.sourceforge.jp/index_en.html).
+* Added support for Geppetto 4+.
 
 0.13.1 (2014-05-04)
 ===================
