@@ -70,6 +70,12 @@
             xml="mappings/org.cloudsmith.geppetto.pp.dsl.PP.xml">
       </mapper>
       <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Puppet Geppetto 4+"
+            pluginId="com.puppetlabs.geppetto.pp.dsl.PP"
+            xml="mappings/com.puppetlabs.geppetto.pp.dsl.PP.xml">
+      </mapper>
+      <mapper
             class="com.github.eclipsecolortheme.mapper.TextEditorMapper"
             name="Text"
             pluginId="org.eclipse.ui.editors"
