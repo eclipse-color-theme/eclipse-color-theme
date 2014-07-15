@@ -1,5 +1,5 @@
-0.14.0
-======
+0.14.0 (2014-07-15)
+===================
 * Added the Solarized Dark theme.
 * Added the Solarized Light theme.
 * Added support for the [AngularJS Eclipse Plugin](https://github.com/angelozerr/angularjs-eclipse).
