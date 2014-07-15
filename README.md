@@ -85,7 +85,6 @@ Eclipse Color Theme currently supports the following editors:
 * Xtend
 * Yaml (Yedit)
 
-
 Available themes:
 
 * [Black Pastel](http://www.eclipsecolorthemes.org/?view=theme&id=128)
@@ -113,7 +112,6 @@ Available themes:
 * [Vibrant Ink](http://www.eclipsecolorthemes.org/?view=theme&id=3)
 * [Wombat](http://www.eclipsecolorthemes.org/?view=theme&id=118)
 * [Zenburn](http://www.eclipsecolorthemes.org/?view=theme&id=2)
-
 
 You can download additional themes or create your own on
 [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
