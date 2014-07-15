@@ -78,7 +78,7 @@ Eclipse Color Theme currently supports the following editors:
 * SQL
 * TCL
 * Text
-* Twig 
+* Twig
 * TypeScript
 * XML
 * XSL
