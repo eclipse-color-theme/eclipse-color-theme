@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Eclipse Color Theme Test
 Bundle-SymbolicName: com.github.eclipsecolortheme.test
-Bundle-Version: 0.14.0.qualifier
+Bundle-Version: 0.15.0.qualifier
 Bundle-Vendor: GitHub
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: com.github.eclipsecolortheme;bundle-version="0.9.0",
