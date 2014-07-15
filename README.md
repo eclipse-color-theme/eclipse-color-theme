@@ -116,51 +116,28 @@ Available themes:
 You can download additional themes or create your own on
 [eclipsecolorthemes.org](http://eclipsecolorthemes.org).
 
-Adding a theme
---------------
+Contributing
+------------
 
-To create a new theme, go to
-[eclipsecolorthemes.org](http://eclipsecolorthemes.org), create it,
-download it in *.xml format and import it from the Color Theme
-preference page.
+Since pretty much all Eclipse Color Theme users are developers, and
+since it supports many more editors than a single person could
+possibly want to use, the project has always been driven by
+[our fantastic contributors](https://github.com/eclipse-color-theme/eclipse-color-theme/graphs/contributors).
 
-Adding a mapping
-----------------
-
-If you would like to add an editor mapping, proceed as follows:
-
-1. Go to the *syntax coloring* preferences page of the editor,
-e.g. *C/C++->Editor->Syntax Coloring*.
-
-2. Look at the colour theme keys of one theme (See `ColorThemeKeys`
-for all available keys) and set up the syntax colouring using the
-colours defined there.
-
-3. Open the editor's preferences file,
-e.g. *workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.cdt.ui.prefs*
-and create a new XML file named after the plugin ID in the *mapper*
-directory which maps the colour theme's keys to those of the editor.
-
-4. Open *plugin.xml* and add the new mapping file to the extension point *com.github.eclipsecolortheme.theme*.
+Please consider contributing if you're missing support for an editor,
+get annoyed by a bug or just want to help - it's greatly appreciated!
+See the [contributor guide](https://github.com/eclipse-color-theme/eclipse-color-theme/wiki/Contributing)
+for a start.
 
 Building
 --------
 
-### Generating an update site
-
-If you just want to generate an update site from the sources, you can
-do so using [Maven](http://maven.apache.org/):
+You can generate an update site using [Maven](http://maven.apache.org/):
 
     mvn clean verify
 
 This will create an update site in
 _com.github.eclipsecolortheme.updatesite/target/repository_.
-
-### Development
-
-All you need is [Eclipse PDE](http://www.eclipse.org/pde/). Once you
-have that, you can import the projects in this repository into an
-Eclipse workspace.
 
 License
 -------
