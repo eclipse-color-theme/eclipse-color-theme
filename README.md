@@ -165,7 +165,7 @@ Eclipse workspace.
 License
 -------
 
-Copyright (C) 2011 Felix H. Dahlke and Roger Dudler
+Copyright (C) 2010-2014 Felix H. Dahlke and Roger Dudler
 
 This is open source software, licensed under the Eclipse Public
 License. See the file COPYING for details.
