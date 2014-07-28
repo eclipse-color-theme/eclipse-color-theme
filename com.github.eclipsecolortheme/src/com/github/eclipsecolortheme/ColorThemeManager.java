@@ -42,10 +42,6 @@ public class ColorThemeManager {
 
     /** Creates a new color theme manager. */
     public ColorThemeManager() {
-        themes = new HashMap<String, ColorTheme>();
-        readStockThemes(themes);
-        readImportedThemes(themes);
-
         editors = new HashMap<String, ThemePreferenceMapper>();
         IConfigurationElement[] config = Platform.getExtensionRegistry()
                 .getConfigurationElementsFor(
@@ -72,9 +68,13 @@ public class ColorThemeManager {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+        themes = new HashMap<String, ColorTheme>();
+        readStockThemes(themes);
+        readImportedThemes(themes);
     }
 
-    private static void readStockThemes(Map<String, ColorTheme> themes) {
+    private void readStockThemes(Map<String, ColorTheme> themes) {
         IConfigurationElement[] config = Platform.getExtensionRegistry()
                 .getConfigurationElementsFor(
                         Activator.EXTENSION_POINT_ID_THEME);
@@ -94,7 +94,7 @@ public class ColorThemeManager {
         }
     }
 
-    private static void readImportedThemes(Map<String, ColorTheme> themes) {
+    private void readImportedThemes(Map<String, ColorTheme> themes) {
         IPreferenceStore store = getPreferenceStore();
 
         for (int i = 1;; i++) {
@@ -130,7 +130,7 @@ public class ColorThemeManager {
      * @param loadSource Specify if should load original XML source.
      * @return Parsed theme
      */
-    public static ParsedTheme parseTheme(InputStream input, boolean loadSource)
+    public ParsedTheme parseTheme(InputStream input, boolean loadSource)
             throws ParserConfigurationException, SAXException, IOException, TransformerException {
         ColorTheme theme = new ColorTheme();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -173,6 +173,25 @@ public class ColorThemeManager {
             }
         }
         theme.setEntries(entries);
+
+        NodeList nodeListMappingOverrides = root.getElementsByTagName("mappingOverrides");
+        if (nodeListMappingOverrides.getLength() > 0) {
+            Element mappingOverridesRoot = (Element) nodeListMappingOverrides.item(0);
+
+            Map<String, Map<String, ColorThemeMapping>> mappings = new HashMap<String, Map<String, ColorThemeMapping>>();
+            NodeList nodeListEclipseColorThemeMapping = mappingOverridesRoot.getChildNodes();
+            for (int i = 0; i < nodeListEclipseColorThemeMapping.getLength(); ++i) {
+                Node eclipseColorThemeMapping = nodeListEclipseColorThemeMapping.item(i);
+                if (eclipseColorThemeMapping.hasAttributes()) {
+                    String pluginId = eclipseColorThemeMapping.getAttributes().getNamedItem("plugin").getNodeValue();
+                    Map<String, ColorThemeMapping> mapMappings = new HashMap<String, ColorThemeMapping>();
+
+                    ((GenericMapper) editors.get(pluginId)).parseMappings((Element) eclipseColorThemeMapping, mapMappings);
+                    mappings.put(pluginId, mapMappings);
+                }
+            }
+            theme.setMappings(mappings);
+        }
 
         ParsedTheme parsedTheme = new ParsedTheme(theme);
         if (loadSource) parsedTheme.setSource(documentToString(document));
@@ -246,7 +265,7 @@ public class ColorThemeManager {
      * @throws ParserConfigurationException
      */
     public void saveTheme(InputStream input) throws ParserConfigurationException, SAXException, IOException, TransformerException {
-        ParsedTheme theme = ColorThemeManager.parseTheme(input, true);
+        ParsedTheme theme = parseTheme(input, true);
         themes.put(theme.getTheme().getName(), theme.getTheme());
         IPreferenceStore store = getPreferenceStore();
         for (int i = 1;; i++)
