@@ -37,12 +37,35 @@ public class GenericMapper extends ThemePreferenceMapper {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse(input);
-        Element root = document.getDocumentElement();
-        parseMappings(root);
-        parseSemanticHighlightingMappings(root);
+        parseMapping(document.getDocumentElement());
     }
 
-    private void parseMappings(Element root) {
+    /**
+     * Parse mapping from input file.
+     * @param root Root element for parsing
+     * @throws SAXException
+     * @throws IOException
+     * @throws ParserConfigurationException
+     */
+    public void parseMapping(Element root)
+            throws SAXException, IOException, ParserConfigurationException {
+        parseMapping(root, mappings);
+    }
+
+    /**
+     * Parse mapping from input file.
+     * @param root Root element for parsing
+     * @throws SAXException
+     * @throws IOException
+     * @throws ParserConfigurationException
+     */
+    public void parseMapping(Element root, Map<String, ColorThemeMapping> map)
+            throws SAXException, IOException, ParserConfigurationException {
+        parseMappings(root, map);
+        parseSemanticHighlightingMappings(root, map);
+    }
+
+    private void parseMappings(Element root, Map<String, ColorThemeMapping> map) {
         Node mappingsNode = root.getElementsByTagName("mappings").item(0);
         NodeList mappingNodes = mappingsNode.getChildNodes();
         for (int i = 0; i < mappingNodes.getLength(); i++) {
@@ -50,12 +73,12 @@ public class GenericMapper extends ThemePreferenceMapper {
             if (mappingNode.hasAttributes()) {
                 String pluginKey = extractAttribute(mappingNode, "pluginKey");
                 String themeKey = extractAttribute(mappingNode, "themeKey");
-                mappings.put(pluginKey, createMapping(pluginKey, themeKey));
+                map.put(pluginKey, createMapping(pluginKey, themeKey));
             }
         }
     }
 
-    private void parseSemanticHighlightingMappings(Element root) {
+    private void parseSemanticHighlightingMappings(Element root, Map<String, ColorThemeMapping> map) {
         Node mappingsNode = root.getElementsByTagName("semanticHighlightingMappings").item(0);
         if (mappingsNode != null) {
             NodeList mappingNodes = mappingsNode.getChildNodes();
@@ -64,7 +87,7 @@ public class GenericMapper extends ThemePreferenceMapper {
                 if (mappingNode.hasAttributes()) {
                     String pluginKey = extractAttribute(mappingNode, "pluginKey");
                     String themeKey = extractAttribute(mappingNode, "themeKey");
-                    mappings.put(pluginKey, createSemanticHighlightingMapping(pluginKey, themeKey));
+                    map.put(pluginKey, createSemanticHighlightingMapping(pluginKey, themeKey));
                 }
             }
         }
