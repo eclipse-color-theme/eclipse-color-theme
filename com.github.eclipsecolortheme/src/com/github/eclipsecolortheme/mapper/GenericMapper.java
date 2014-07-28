@@ -106,7 +106,7 @@ public class GenericMapper extends ThemePreferenceMapper {
     }
 
     @Override
-    public void map(Map<String, ColorThemeSetting> theme) {
+    public void map(Map<String, ColorThemeSetting> theme, Map<String, ColorThemeMapping> overrideMappings) {
         // put preferences according to mappings
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         if (store.getBoolean("forceDefaultBG")) {
@@ -115,7 +115,8 @@ public class GenericMapper extends ThemePreferenceMapper {
             defaultBackground = new ColorThemeSetting();
         }
         for (String pluginKey : mappings.keySet()) {
-            ColorThemeMapping mapping = mappings.get(pluginKey);
+            ColorThemeMapping mapping = (overrideMappings != null && overrideMappings.containsKey(pluginKey)) ? 
+                    overrideMappings.get(pluginKey) : mappings.get(pluginKey);
             ColorThemeSetting setting = theme.get(mapping.getThemeKey());
             if (setting != null) {
                 mapping.putPreferences(preferences, setting);

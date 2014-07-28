@@ -244,7 +244,9 @@ public class ColorThemeManager {
         for (ThemePreferenceMapper editor : editors.values()) {
             editor.clear();
             if (themes.get(theme) != null)
-                editor.map(themes.get(theme).getEntries());
+                editor.map(themes.get(theme).getEntries(),
+                           themes.get(theme).getMappings() == null ?
+                               null : themes.get(theme).getMappings().get(editor.getPluginId()));
 
             try {
                 editor.flush();

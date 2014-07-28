@@ -35,8 +35,8 @@ public class DltkEditorMapper extends GenericMapper {
     }
 
     @Override
-    public void map(Map<String, ColorThemeSetting> theme) {
+    public void map(Map<String, ColorThemeSetting> theme, Map<String, ColorThemeMapping> overrideMappings) {
         preferences.putBoolean("sourceHoverBackgroundColor.SystemDefault", false);
-        super.map(theme);
+        super.map(theme, overrideMappings);
     }
 }

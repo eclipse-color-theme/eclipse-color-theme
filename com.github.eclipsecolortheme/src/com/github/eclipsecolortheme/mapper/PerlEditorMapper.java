@@ -28,9 +28,9 @@ public class PerlEditorMapper extends GenericMapper {
     }
 
     @Override
-    public void map(Map<String, ColorThemeSetting> theme) {
+    public void map(Map<String, ColorThemeSetting> theme, Map<String, ColorThemeMapping> overrideMappings) {
         preferences.putBoolean("AbstractTextEditor.Color.Background.SystemDefault", false);
         preferences.putBoolean("AbstractTextEditor.Color.Foreground.SystemDefault", false);
-        super.map(theme);
+        super.map(theme, overrideMappings);
     }
 }
