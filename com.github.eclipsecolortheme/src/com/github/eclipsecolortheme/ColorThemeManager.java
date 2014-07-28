@@ -38,7 +38,7 @@ import com.github.eclipsecolortheme.mapper.ThemePreferenceMapper;
 /** Loads and applies color themes. */
 public class ColorThemeManager {
     private Map<String, ColorTheme> themes;
-    private Set<ThemePreferenceMapper> editors;
+    private Map<String, ThemePreferenceMapper> editors;
 
     /** Creates a new color theme manager. */
     public ColorThemeManager() {
@@ -46,7 +46,7 @@ public class ColorThemeManager {
         readStockThemes(themes);
         readImportedThemes(themes);
 
-        editors = new HashSet<ThemePreferenceMapper>();
+        editors = new HashMap<String, ThemePreferenceMapper>();
         IConfigurationElement[] config = Platform.getExtensionRegistry()
                 .getConfigurationElementsFor(
                         Activator.EXTENSION_POINT_ID_MAPPER);
@@ -66,7 +66,7 @@ public class ColorThemeManager {
                                 xml).getContent();
                         ((GenericMapper) mapper).parseMapping(input);
                     }
-                    editors.add(mapper);
+                    editors.put(pluginId, mapper);
                 }
             }
         } catch (Exception ex) {
@@ -222,7 +222,7 @@ public class ColorThemeManager {
      * @param theme The name of the color theme to apply.
      */
     public void applyTheme(String theme) {
-        for (ThemePreferenceMapper editor : editors) {
+        for (ThemePreferenceMapper editor : editors.values()) {
             editor.clear();
             if (themes.get(theme) != null)
                 editor.map(themes.get(theme).getEntries());
