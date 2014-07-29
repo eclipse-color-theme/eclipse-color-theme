@@ -402,6 +402,9 @@
             file="themes/sublime-text-2.xml">
       </theme>
       <theme
+            file="themes/sublime-text-monokai-extended.xml">
+      </theme>
+      <theme
             file="themes/tango.xml">
       </theme>
       <theme

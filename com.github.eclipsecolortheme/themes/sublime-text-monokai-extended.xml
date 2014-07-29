@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="66" name="Sublime Text Monokai Extended" modified="2014-07-29 12:00:00" author="Andreas Guther">
+    <searchResultIndication color="#D8D8D8" />
+    <filteredSearchResultIndication color="#D8D8D8" />
+    <occurrenceIndication color="#000000" />
+    <writeOccurrenceIndication color="#000000" />
+    <findScope color="#000000" />
+    <deletionIndication color="#FF0000" />
+    <sourceHoverBackground color="#FFFFFF" />
+    <singleLineComment color="#FFFFFF" />
+    <multiLineComment color="#FFFFFF" />
+    <commentTaskTag color="#FFFFFF" />
+    <javadoc color="#FFFFFF" />
+    <javadocLink color="#CFBFAD" />
+    <javadocTag color="#CFBFAD" />
+    <javadocKeyword color="#D9E577" />
+    <class color="#52E3F6" />
+    <interface color="#52E3F6" />
+    <method color="#A7EC21" />
+    <methodDeclaration color="#A7EC21" />
+    <bracket color="#F9FAF4" />
+    <number color="#C48CFF" />
+    <string color="#ECE47E" />
+    <operator color="#FF007F" />
+    <keyword color="#FF007F" />
+    <annotation color="#FFFFFF" />
+    <staticMethod color="#A7EC21" />
+    <localVariable color="#CFBFAD" />
+    <localVariableDeclaration color="#CFBFAD" />
+    <field color="#CFBFAD" />
+    <staticField color="#CFBFAD" />
+    <staticFinalField color="#CFBFAD" />
+    <deprecatedMember color="#FF0000" />
+    <inheritedMethod color="#BED6FF" />
+    <abstractMethod color="#BED6FF" />
+    <parameterVariable color="#79ABFF" />
+    <typeArgument color="#BFA4A4" />
+    <typeParameter color="#BFA4A4" />
+    <background color="#222222" />
+    <currentLine color="#2F2F2F" />
+    <foreground color="#CFBFAD" />
+    <lineNumber color="#8D8D8A" />
+    <selectionBackground color="#CC9900" />
+    <selectionForeground color="#333333" />
+
+    <!-- these are the color definitions used by the
+         XML editor overrides -->
+    <sl_magenta color="#F92772" />
+    <sl_green color="#A6E22D" />
+    <sl_yellow color="#E6DB74" />
+    <sl_purple color="#BE84FF" />
+    <sl_blue color="#66D9EF" />
+    <sl_orange color="#FD9720" />
+    <sl_grey color="#C8CECC" />
+    <sl_comment color="#75715E" />
+    <sl_lineNumber color="#8D8D8A" />
+    <sl_background color="#222222" />
+    <sl_white color="#FFFFFF" />
+    <sl_currentLineBackground color="#2F2F2F" />
+    <sl_currentSelectionBackground color="#333333" />
+
+    <!-- this tag is needed to define overrides -->
+    <mappingOverrides>
+        <!-- overrides are specified per plugin -->
+        <eclipseColorThemeMapping plugin="org.eclipse.wst.xml.ui">
+            <mappings>
+                <!-- this example overrides every mapping of the eclipse XML editor,
+                     but needed are only the ones that should be overridden -->
+                <mapping pluginKey="cdataBorder" themeKey="sl_yellow" />
+                <mapping pluginKey="cdataText" themeKey="sl_yellow" />
+                <mapping pluginKey="commentBorder" themeKey="sl_comment" />
+                <mapping pluginKey="commentText" themeKey="sl_comment" />
+                <mapping pluginKey="declBorder" themeKey="sl_white" />
+                <mapping pluginKey="doctypeExternalId" themeKey="sl_grey" />
+                <mapping pluginKey="doctypeExternalPubref" themeKey="sl_grey" />
+                <mapping pluginKey="doctypeExtrenalSysref" themeKey="sl_grey" />
+                <mapping pluginKey="doctypeName" themeKey="sl_grey" />
+                <mapping pluginKey="entityReference" themeKey="sl_purple" />
+                <mapping pluginKey="piBorder" themeKey="sl_white" />
+                <mapping pluginKey="piContent" themeKey="sl_green" />
+                <mapping pluginKey="tagAttributeEquals" themeKey="sl_white" />
+                <mapping pluginKey="tagAttributeName" themeKey="sl_green" />
+                <mapping pluginKey="tagAttributeValue" themeKey="sl_yellow" />
+                <mapping pluginKey="tagBorder" themeKey="sl_white" />
+                <mapping pluginKey="tagName" themeKey="sl_magenta" />
+                <mapping pluginKey="xmlContent" themeKey="sl_white" />
+            </mappings>
+        </eclipseColorThemeMapping>
+    </mappingOverrides>
+</colorTheme>
