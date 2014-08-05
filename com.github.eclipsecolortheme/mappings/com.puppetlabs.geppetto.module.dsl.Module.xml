@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.puppetlabs.geppetto.module.dsl.Module" created="2014-08-05 22:00:00">
+    <mappings>
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.default.color" themeKey="foreground" />
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.deprecatedKey.color" themeKey="deprecatedMember" />
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.keyword.color" themeKey="keyword" />
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.number.color" themeKey="number" />
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.punctuation.color" themeKey="foreground" />
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.string.color" themeKey="string" />
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.task.color" themeKey="commentTaskTag" />
+        <mapping pluginKey="com.puppetlabs.geppetto.module.dsl.Module.syntaxColorer.tokenStyles.unrecognizedKey.color" themeKey="unrecognizedKey" />
+    </mappings>
+</eclipseColorThemeMapping>
