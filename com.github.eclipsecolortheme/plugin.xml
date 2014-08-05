@@ -71,7 +71,13 @@
       </mapper>
       <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
-            name="Puppet Geppetto 4+"
+            name="Puppet Geppetto 4+ module editor"
+            pluginId="com.puppetlabs.geppetto.module.dsl.Module"
+            xml="mappings/com.puppetlabs.geppetto.pp.dsl.PP.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="Puppet Geppetto 4+ manifest editor"
             pluginId="com.puppetlabs.geppetto.pp.dsl.PP"
             xml="mappings/com.puppetlabs.geppetto.pp.dsl.PP.xml">
       </mapper>
