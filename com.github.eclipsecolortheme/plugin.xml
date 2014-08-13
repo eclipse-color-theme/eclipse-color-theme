@@ -359,6 +359,12 @@
          pluginId="org.eclipse.angularjs.ui"
          xml="mappings/org.eclipse.angularjs.ui.xml">
    </mapper>
+   <mapper
+        class="com.github.eclipsecolortheme.mapper.GenericMapper"
+        name="LESS"
+        pluginId="net.vtst.ow.eclipse.less.Less"
+        xml="mappings/net.vtst.ow.eclipse.less.Less.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
