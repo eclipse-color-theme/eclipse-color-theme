@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="net.vtst.ow.eclipse.less.Less" created="2014-08-13 12:00:00">
+  <mappings>
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.AT_KEYWORD.color" themeKey="keyword" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.COMMENT.color" themeKey="multiLineComment" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.DEFAULT.color" themeKey="foreground" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.MEDIA_FEATURE.color" themeKey="keyword" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.MEDIA_QUERY_KEYWORD.color" themeKey="keyword" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.MIXIN_CALL.color" themeKey="method" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.NUMERIC_LITERAL.color" themeKey="number" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.STRING.color" themeKey="string" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.PROPERTY.color" themeKey="field" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.SELECTOR.color" themeKey="method" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.SELECTOR_CLASS.color" themeKey="method" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.SELECTOR_HASH.color" themeKey="method" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.SELECTOR_ROOT.color" themeKey="method" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.VARIABLE_DEFINITION.color" themeKey="localVariableDeclaration" />
+    <mapping pluginKey="net.vtst.ow.eclipse.less.Less.syntaxColorer.tokenStyles.VARIABLE_USE.color" themeKey="localVariable" />
+  </mappings>
+</eclipseColorThemeMapping>
+

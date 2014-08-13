@@ -1,6 +1,7 @@
 0.15.0
 ======
 * Added support for Gepetto's new module editor.
+* Added support for the [LESS Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.fr.html).
 
 0.14.0 (2014-07-15)
 ===================
