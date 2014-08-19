@@ -64,7 +64,7 @@ public class ColorThemeManager {
                         Bundle bundle = Platform.getBundle(contributorPluginId);
                         InputStream input = (InputStream) bundle.getResource(
                                 xml).getContent();
-                        ((GenericMapper) mapper).parseMapping(input);
+                        ((GenericMapper) mapper).parseMappings(input);
                     }
                     editors.put(pluginId, mapper);
                 }

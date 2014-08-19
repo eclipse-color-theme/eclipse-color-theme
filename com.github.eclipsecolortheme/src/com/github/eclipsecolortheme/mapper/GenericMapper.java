@@ -32,12 +32,12 @@ public class GenericMapper extends ThemePreferenceMapper {
      * @throws IOException
      * @throws ParserConfigurationException
      */
-    public void parseMapping(InputStream input)
+    public void parseMappings(InputStream input)
             throws SAXException, IOException, ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse(input);
-        parseMapping(document.getDocumentElement());
+        parseMappings(document.getDocumentElement());
     }
 
     /**
@@ -47,9 +47,9 @@ public class GenericMapper extends ThemePreferenceMapper {
      * @throws IOException
      * @throws ParserConfigurationException
      */
-    public void parseMapping(Element root)
+    public void parseMappings(Element root)
             throws SAXException, IOException, ParserConfigurationException {
-        parseMapping(root, mappings);
+        parseMappings(root, mappings);
     }
 
     /**
@@ -59,13 +59,13 @@ public class GenericMapper extends ThemePreferenceMapper {
      * @throws IOException
      * @throws ParserConfigurationException
      */
-    public void parseMapping(Element root, Map<String, ColorThemeMapping> map)
+    public void parseMappings(Element root, Map<String, ColorThemeMapping> map)
             throws SAXException, IOException, ParserConfigurationException {
-        parseMappings(root, map);
+        parseStandardMappings(root, map);
         parseSemanticHighlightingMappings(root, map);
     }
 
-    private void parseMappings(Element root, Map<String, ColorThemeMapping> map) {
+    private void parseStandardMappings(Element root, Map<String, ColorThemeMapping> map) {
         Node mappingsNode = root.getElementsByTagName("mappings").item(0);
         NodeList mappingNodes = mappingsNode.getChildNodes();
         for (int i = 0; i < mappingNodes.getLength(); i++) {
