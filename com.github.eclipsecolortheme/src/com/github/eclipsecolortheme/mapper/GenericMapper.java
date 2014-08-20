@@ -59,13 +59,13 @@ public class GenericMapper extends ThemePreferenceMapper {
      * @throws IOException
      * @throws ParserConfigurationException
      */
-    public void parseMappings(Element root, Map<String, ColorThemeMapping> map)
+    public void parseMappings(Element root, Map<String, ColorThemeMapping> mappings)
             throws SAXException, IOException, ParserConfigurationException {
-        parseStandardMappings(root, map);
-        parseSemanticHighlightingMappings(root, map);
+        parseStandardMappings(root, mappings);
+        parseSemanticHighlightingMappings(root, mappings);
     }
 
-    private void parseStandardMappings(Element root, Map<String, ColorThemeMapping> map) {
+    private void parseStandardMappings(Element root, Map<String, ColorThemeMapping> mappings) {
         Node mappingsNode = root.getElementsByTagName("mappings").item(0);
         NodeList mappingNodes = mappingsNode.getChildNodes();
         for (int i = 0; i < mappingNodes.getLength(); i++) {
@@ -73,12 +73,12 @@ public class GenericMapper extends ThemePreferenceMapper {
             if (mappingNode.hasAttributes()) {
                 String pluginKey = extractAttribute(mappingNode, "pluginKey");
                 String themeKey = extractAttribute(mappingNode, "themeKey");
-                map.put(pluginKey, createMapping(pluginKey, themeKey));
+                mappings.put(pluginKey, createMapping(pluginKey, themeKey));
             }
         }
     }
 
-    private void parseSemanticHighlightingMappings(Element root, Map<String, ColorThemeMapping> map) {
+    private void parseSemanticHighlightingMappings(Element root, Map<String, ColorThemeMapping> mappings) {
         Node mappingsNode = root.getElementsByTagName("semanticHighlightingMappings").item(0);
         if (mappingsNode != null) {
             NodeList mappingNodes = mappingsNode.getChildNodes();
@@ -87,7 +87,7 @@ public class GenericMapper extends ThemePreferenceMapper {
                 if (mappingNode.hasAttributes()) {
                     String pluginKey = extractAttribute(mappingNode, "pluginKey");
                     String themeKey = extractAttribute(mappingNode, "themeKey");
-                    map.put(pluginKey, createSemanticHighlightingMapping(pluginKey, themeKey));
+                    mappings.put(pluginKey, createSemanticHighlightingMapping(pluginKey, themeKey));
                 }
             }
         }
