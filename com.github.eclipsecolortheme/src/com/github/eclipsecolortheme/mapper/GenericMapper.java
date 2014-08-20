@@ -32,17 +32,40 @@ public class GenericMapper extends ThemePreferenceMapper {
      * @throws IOException
      * @throws ParserConfigurationException
      */
-    public void parseMapping(InputStream input)
+    public void parseMappings(InputStream input)
             throws SAXException, IOException, ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse(input);
-        Element root = document.getDocumentElement();
-        parseMappings(root);
-        parseSemanticHighlightingMappings(root);
+        parseMappings(document.getDocumentElement());
     }
 
-    private void parseMappings(Element root) {
+    /**
+     * Parse mapping from input file.
+     * @param root Root element for parsing
+     * @throws SAXException
+     * @throws IOException
+     * @throws ParserConfigurationException
+     */
+    public void parseMappings(Element root)
+            throws SAXException, IOException, ParserConfigurationException {
+        parseMappings(root, mappings);
+    }
+
+    /**
+     * Parse mapping from input file.
+     * @param root Root element for parsing
+     * @throws SAXException
+     * @throws IOException
+     * @throws ParserConfigurationException
+     */
+    public void parseMappings(Element root, Map<String, ColorThemeMapping> map)
+            throws SAXException, IOException, ParserConfigurationException {
+        parseStandardMappings(root, map);
+        parseSemanticHighlightingMappings(root, map);
+    }
+
+    private void parseStandardMappings(Element root, Map<String, ColorThemeMapping> map) {
         Node mappingsNode = root.getElementsByTagName("mappings").item(0);
         NodeList mappingNodes = mappingsNode.getChildNodes();
         for (int i = 0; i < mappingNodes.getLength(); i++) {
@@ -50,12 +73,12 @@ public class GenericMapper extends ThemePreferenceMapper {
             if (mappingNode.hasAttributes()) {
                 String pluginKey = extractAttribute(mappingNode, "pluginKey");
                 String themeKey = extractAttribute(mappingNode, "themeKey");
-                mappings.put(pluginKey, createMapping(pluginKey, themeKey));
+                map.put(pluginKey, createMapping(pluginKey, themeKey));
             }
         }
     }
 
-    private void parseSemanticHighlightingMappings(Element root) {
+    private void parseSemanticHighlightingMappings(Element root, Map<String, ColorThemeMapping> map) {
         Node mappingsNode = root.getElementsByTagName("semanticHighlightingMappings").item(0);
         if (mappingsNode != null) {
             NodeList mappingNodes = mappingsNode.getChildNodes();
@@ -64,7 +87,7 @@ public class GenericMapper extends ThemePreferenceMapper {
                 if (mappingNode.hasAttributes()) {
                     String pluginKey = extractAttribute(mappingNode, "pluginKey");
                     String themeKey = extractAttribute(mappingNode, "themeKey");
-                    mappings.put(pluginKey, createSemanticHighlightingMapping(pluginKey, themeKey));
+                    map.put(pluginKey, createSemanticHighlightingMapping(pluginKey, themeKey));
                 }
             }
         }
@@ -83,7 +106,7 @@ public class GenericMapper extends ThemePreferenceMapper {
     }
 
     @Override
-    public void map(Map<String, ColorThemeSetting> theme) {
+    public void map(Map<String, ColorThemeSetting> theme, Map<String, ColorThemeMapping> overrideMappings) {
         // put preferences according to mappings
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         if (store.getBoolean("forceDefaultBG")) {
@@ -92,7 +115,8 @@ public class GenericMapper extends ThemePreferenceMapper {
             defaultBackground = new ColorThemeSetting();
         }
         for (String pluginKey : mappings.keySet()) {
-            ColorThemeMapping mapping = mappings.get(pluginKey);
+            ColorThemeMapping mapping = (overrideMappings != null && overrideMappings.containsKey(pluginKey)) ? 
+                    overrideMappings.get(pluginKey) : mappings.get(pluginKey);
             ColorThemeSetting setting = theme.get(mapping.getThemeKey());
             if (setting != null) {
                 mapping.putPreferences(preferences, setting);

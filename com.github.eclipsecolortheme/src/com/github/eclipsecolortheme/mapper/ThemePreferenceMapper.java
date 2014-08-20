@@ -6,6 +6,7 @@ import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.osgi.service.prefs.BackingStoreException;
 
+import com.github.eclipsecolortheme.ColorThemeMapping;
 import com.github.eclipsecolortheme.ColorThemeSetting;
 
 /**
@@ -43,6 +44,15 @@ public abstract class ThemePreferenceMapper {
     }
 
     /**
+     * Gets the plugin ID.
+     * @return The ID of the Eclipse plugin whose preferences should be
+     *               altered.
+     */
+    public String getPluginId() {
+        return preferences.name();
+    }
+
+    /**
      * Writes and applies the modified preferences.
      * @throws BackingStoreException
      */
@@ -54,7 +64,7 @@ public abstract class ThemePreferenceMapper {
      * Maps the @a theme to the associated Eclipse preferences.
      * @param theme The color theme to map.
      */
-    public abstract void map(Map<String, ColorThemeSetting> theme);
+    public abstract void map(Map<String, ColorThemeSetting> theme, Map<String, ColorThemeMapping> overrideMappings);
 
     /**
      * Clears the associated Eclipse preferences.

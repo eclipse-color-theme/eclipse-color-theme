@@ -8,6 +8,7 @@ public class ColorTheme {
     private String author;
     private String website;
     private Map<String, ColorThemeSetting> entries;
+    private Map<String, Map<String, ColorThemeMapping>> mappings;
 
     public String getId() {
         return id;
@@ -47,5 +48,13 @@ public class ColorTheme {
 
     public void setEntries(Map<String, ColorThemeSetting> entries) {
         this.entries = entries;
+    }
+
+    public Map<String, Map<String, ColorThemeMapping>> getMappings() {
+        return mappings;
+    }
+
+    public void setMappings(Map<String, Map<String, ColorThemeMapping>> mappings) {
+        this.mappings = mappings;
     }
 }
