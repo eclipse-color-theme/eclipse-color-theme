@@ -8,6 +8,7 @@
     <mapping pluginKey="syntaxColouring.operator.colour"                  themeKey="operator" />
     <mapping pluginKey="syntaxColouring.keyword.colour"                   themeKey="keyword" />
     <mapping pluginKey="syntaxColouring.return.colour"                    themeKey="keyword" />
+    <mapping pluginKey="syntaxColouring.character.colour"                 themeKey="string" />
     <mapping pluginKey="syntaxColouring.string.colour"                    themeKey="string" />
     <mapping pluginKey="syntaxColouring.multiLineString.colour"           themeKey="string" />
     <mapping pluginKey="syntaxColouring.bracket.colour"                   themeKey="bracket" />
