@@ -217,6 +217,12 @@
    </mapper>
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Scala IDE Play framework"
+         pluginId="org.scala-ide.play2"
+         xml="mappings/org.scala-ide.play2.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
          name="FreeMarker"
          pluginId="org.jboss.ide.eclipse.freemarker"
          xml="mappings/org.jboss.ide.eclipse.freemarker.xml">
