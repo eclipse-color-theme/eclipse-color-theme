@@ -1,5 +1,5 @@
-0.15.0
-======
+1.0.0 (2014-10-26)
+==================
 * Added support for Gepetto's new module editor.
 * Added support for the [LESS Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.fr.html).
 * Allow themes to override mappings.
