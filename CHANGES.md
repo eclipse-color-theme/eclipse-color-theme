@@ -1,3 +1,6 @@
+1.1.0
+=====
+
 1.0.0 (2014-10-26)
 ==================
 * Added support for Gepetto's new module editor.
