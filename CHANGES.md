@@ -1,5 +1,6 @@
 1.1.0
 =====
+* Fixed outdated mapping for the Go editor (goclipse)
 
 1.0.0 (2014-10-26)
 ==================

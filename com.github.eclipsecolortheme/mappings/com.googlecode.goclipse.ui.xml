@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<eclipseColorThemeMapping plugin="com.googlecode.goclipse.ui" created="2014-11-26 12:00:00">
+   <mappings>
+      <mapping pluginKey="syntax_highlighting_text" themeKey="foreground" />
+      <mapping pluginKey="syntax_highlighting_keyword" themeKey="keyword" />
+      <mapping pluginKey="syntax_highlighting_value" themeKey="number" />
+      <mapping pluginKey="syntax_highlighting_primitive" themeKey="number" />
+      <mapping pluginKey="syntax_highlighting_comment" themeKey="multiLineComment" />
+      <mapping pluginKey="syntax_highlighting_builtin_function" themeKey="method" />
+      <mapping pluginKey="syntax_highlighting_string" themeKey="string" />
+      <mapping pluginKey="syntax_highlighting_multiline_string" themeKey="string" />
+   </mappings>
+</eclipseColorThemeMapping>
