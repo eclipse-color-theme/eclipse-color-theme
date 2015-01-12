@@ -1,5 +1,6 @@
-1.1.0
+1.1.0 (2015-01-12)
 =====
+* Added support for Apache IvyDE editor (http://ant.apache.org/ivy/ivyde/)
 
 1.0.0 (2014-10-26)
 ==================

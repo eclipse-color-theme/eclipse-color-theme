@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="org.apache.ivyde.eclipse" created="2015-01-07 04:30:00">
+    <mappings>
+        <mapping pluginKey="editor.color.default" themeKey="foreground" />
+        <mapping pluginKey="editor.color.procInstr" themeKey="method" />
+        <mapping pluginKey="editor.color.string" themeKey="string" />
+        <mapping pluginKey="editor.color.tag" themeKey="method" />
+        <mapping pluginKey="editor.color.xmlComment" themeKey="multiLineComment" />
+    </mappings>
+</eclipseColorThemeMapping>
