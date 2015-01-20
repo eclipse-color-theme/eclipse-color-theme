@@ -1,5 +1,6 @@
 1.1.0
 =====
+* Explicitly import hamcrest core bundle for tests.
 
 1.0.0 (2014-10-26)
 ==================
