@@ -3,7 +3,7 @@
       id="com.github.eclipsecolortheme.feature"
       label="Eclipse Color Theme"
       version="1.1.0.qualifier"
-      provider-name="GitHub">
+      provider-name="Eclipse Color Theme authors">
 
    <description url="http://github.com/eclipse-color-theme/eclipse-color-theme">
       Color themes for Eclipse.
