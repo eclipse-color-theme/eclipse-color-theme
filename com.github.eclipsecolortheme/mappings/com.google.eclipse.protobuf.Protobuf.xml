@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<eclipseColorThemeMapping plugin="com.google.eclipse.protobuf.Protobuf" created="2015-03-10 13:51:17"> 
+    <mappings> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.comment.color" themeKey="singleLineComment" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.default.color" themeKey="foreground" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enum.color" themeKey="enum" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumDefinition.color" themeKey="enum" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteral.color" themeKey="enum" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteralDefinition.color" themeKey="enum" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteralIndex.color" themeKey="annotation" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.keyword.color" themeKey="keyword" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.message.color" themeKey="class" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.messageDefinition.color" themeKey="class" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.messageFieldIndex.color" themeKey="annotation" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.number.color" themeKey="number" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.punctuation.color" themeKey="class" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.rpcArgument.color" themeKey="typeArgument" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.rpcDefinition.color" themeKey="class" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.rpcReturnType.color" themeKey="typeArgument" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.serviceDefinition.color" themeKey="class" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.string.color" themeKey="string" /> 
+
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.comment.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.default.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enum.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumDefinition.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteral.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteralDefinition.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.enumLiteralIndex.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.keyword.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.message.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.messageDefinition.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.messageFieldIndex.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.number.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.punctuation.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.rpcArgument.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.rpcDefinition.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.rpcReturnType.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.serviceDefinition.bgColor" themeKey="background" /> 
+        <mapping pluginKey="com.google.eclipse.protobuf.Protobuf.syntaxColorer.tokenStyles.string.bgColor" themeKey="background" /> 
+    </mappings> 
+</eclipseColorThemeMapping> 
