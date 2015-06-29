@@ -1,5 +1,6 @@
-1.1.0
+1.1.0 
 =====
+* Added support for the [TypeScript IDE for Eclipse](http://typecsdev.com/).
 
 1.0.0 (2014-10-26)
 ==================

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipseColorThemeMapping plugin="com.axmor.eclipse.typescript.editor" created="2015-06-26 12:00:00">
+  <mappings> 
+        <mapping pluginKey="ts_default" themeKey="foreground" />
+        <mapping pluginKey="ts_reference" themeKey="annotation" />
+        <mapping pluginKey="ts_keyword" themeKey="keyword" />
+        <mapping pluginKey="ts_string" themeKey="string" />
+        <mapping pluginKey="ts_comment" themeKey="singleLineComment" />
+        <mapping pluginKey="ts_number" themeKey="number" />        
+        <mapping pluginKey="ts_java_doc" themeKey="javadoc" />
+        <mapping pluginKey="ts_brackets" themeKey="bracket" />
+    </mappings>
+    <semanticHighlightingMappings> 
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.ts_localVariable" themeKey="localVariable" /> 
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.ts_class" themeKey="class" /> 
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.ts_interface" themeKey="interface" /> 
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.ts_method" themeKey="method" />
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.ts_classProperty" themeKey="field" />
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.ts_module" themeKey="class" />
+    </semanticHighlightingMappings>    
+</eclipseColorThemeMapping>
