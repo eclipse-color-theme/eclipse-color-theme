@@ -1,5 +1,6 @@
 1.1.0
 =====
+* Added support for the [Apache IvyDE](http://ant.apache.org/ivy/ivyde/).
 
 1.0.0 (2014-10-26)
 ==================
