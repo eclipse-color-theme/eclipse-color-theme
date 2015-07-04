@@ -383,6 +383,12 @@
         pluginId="com.axmor.eclipse.typescript.editor"
         xml="mappings/com.axmor.eclipse.typescript.editor.xml">
    </mapper>
+   <mapper
+        class="com.github.eclipsecolortheme.mapper.GenericMapper"
+        name="IvyDE"
+        pluginId="org.apache.ivyde.eclipse"
+        xml="mappings/org.apache.ivyde.eclipse.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
