@@ -70,6 +70,7 @@ Eclipse Color Theme currently supports the following editors:
 * Markdown
 * PDE
 * Perl
+* [Protocol Buffers](https://code.google.com/p/protobuf-dt)
 * PHP
 * Puppet (Gepetto)
 * Python
@@ -81,7 +82,7 @@ Eclipse Color Theme currently supports the following editors:
 * TCL
 * Text
 * Twig
-* TypeScript ([TypeScript IDE for Eclipse](http://typecsdev.com/))
+* TypeScript ([Eclipse TypeScript Plug-in](https://github.com/palantir/eclipse-typescript), [TypeScript IDE for Eclipse](http://typecsdev.com/))
 * XML
 * XSL
 * Xtend
