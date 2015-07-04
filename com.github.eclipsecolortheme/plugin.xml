@@ -23,6 +23,12 @@
          point="com.github.eclipsecolortheme.mapper">
       <mapper
             class="com.github.eclipsecolortheme.mapper.GenericMapper"
+            name="protobuf"
+            pluginId="com.google.eclipse.protobuf.Protobuf"
+            xml="mappings/com.google.eclipse.protobuf.Protobuf.xml">
+      </mapper>
+      <mapper
+            class="com.github.eclipsecolortheme.mapper.GenericMapper"
             name="Make"
             pluginId="org.eclipse.cdt.make.ui"
             xml="mappings/org.eclipse.cdt.make.ui.xml">
