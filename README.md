@@ -80,7 +80,7 @@ Eclipse Color Theme currently supports the following editors:
 * TCL
 * Text
 * Twig
-* TypeScript
+* TypeScript ([TypeScript IDE for Eclipse](http://typecsdev.com/))
 * XML
 * XSL
 * Xtend
