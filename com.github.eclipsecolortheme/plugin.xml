@@ -308,8 +308,8 @@
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
          name="Go"
-         pluginId="goclipse"
-         xml="mappings/goclipse.xml">
+         pluginId="com.googlecode.goclipse.ui"
+         xml="mappings/com.googlecode.goclipse.ui.xml">
    </mapper>
    <mapper
          class="com.github.eclipsecolortheme.mapper.WebEditorMapper"
