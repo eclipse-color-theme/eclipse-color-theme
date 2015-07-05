@@ -10,5 +10,8 @@
       <mapping pluginKey="syntax_highlighting_builtin_function" themeKey="method" />
       <mapping pluginKey="syntax_highlighting_string" themeKey="string" />
       <mapping pluginKey="syntax_highlighting_multiline_string" themeKey="string" />
+      <mapping pluginKey="syntax_highlighting_operator" themeKey="operator" />
+      <mapping pluginKey="syntax_highlighting_syntax_chars" themeKey="bracket" />
+      <mapping pluginKey="syntax_highlighting_character" themeKey="string" />
    </mappings>
 </eclipseColorThemeMapping>
