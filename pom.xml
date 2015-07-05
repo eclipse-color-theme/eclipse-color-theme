@@ -15,14 +15,14 @@
 	</modules>
 
 	<properties>
-		<tycho-version>0.18.1</tycho-version>
+		<tycho-version>0.23.0</tycho-version>
 	</properties>
 
 	<repositories>
 		<repository>
-			<id>kepler</id>
+			<id>eclipse-platform</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/kepler</url>
+			<url>${eclipse.repo.url}</url>
 		</repository>
 	</repositories>
 
@@ -129,4 +129,43 @@
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>platform-mars</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>platform-version</name>
+					<value>mars</value>
+				</property>
+			</activation>
+			<properties>
+				<eclipse.repo.url>http://download.eclipse.org/releases/mars</eclipse.repo.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>platform-luna</id>
+			<activation>
+				<property>
+					<name>platform-version</name>
+					<value>luna</value>
+				</property>
+			</activation>
+			<properties>
+				<eclipse.repo.url>http://download.eclipse.org/releases/luna</eclipse.repo.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>platform-kepler</id>
+			<activation>
+				<property>
+					<name>platform-version</name>
+					<value>kepler</value>
+				</property>
+			</activation>
+			<properties>
+				<eclipse.repo.url>http://download.eclipse.org/releases/kepler</eclipse.repo.url>
+			</properties>
+		</profile>
+	</profiles>
 </project>
