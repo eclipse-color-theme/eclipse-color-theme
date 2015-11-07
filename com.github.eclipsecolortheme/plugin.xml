@@ -389,6 +389,12 @@
         pluginId="org.apache.ivyde.eclipse"
         xml="mappings/org.apache.ivyde.eclipse.xml">
    </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="Mathematica"
+         pluginId="com.wolfram.eclipse.MEET"
+         xml="mappings/com.wolfram.eclipse.MEET.xml">
+   </mapper>
    </extension>
    <extension
          point="com.github.eclipsecolortheme.theme">
