@@ -1,3 +1,7 @@
+Next
+====
+* Added offline theme previewer
+
 1.1.0
 =====
 * Added support for [Protocol Buffers Development Tools](https://code.google.com/p/protobuf-dt).
