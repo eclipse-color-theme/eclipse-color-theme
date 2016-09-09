@@ -238,6 +238,7 @@ public class ColorThemePreferencePage extends PreferencePage
 
         StringBuilder defaultClass = new StringBuilder(".defaultClass {\n");    // This contains all the basic foreground and background colors
         defaultClass.append("font-family: \"Courier New\", \"Lucida Console\", Monospace;\n");
+        defaultClass.append("font-size: small;\n");
 
         for (Map.Entry<String, ColorThemeSetting> setting : theme.getEntries().entrySet()) {
             ColorThemeSetting settingVal = setting.getValue();
