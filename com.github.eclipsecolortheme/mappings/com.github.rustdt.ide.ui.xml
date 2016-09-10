@@ -13,8 +13,8 @@
         <mapping pluginKey="editor.coloring2.lifetime" themeKey="annotation"/>
         <mapping pluginKey="editor.coloring2.attribute" themeKey="annotation"/>
         <mapping pluginKey="editor.coloring2.macro_call" themeKey="method"/>
-	
-		<!-- Copy of the above, with the extension #dark# to enable us complete theme control in eclipse dark mode as well -->
+
+        <!-- Copy of the above, with the extension #dark# to enable us complete theme control in eclipse dark mode as well -->
         <mapping pluginKey="editor.coloring2.default#dark#" themeKey="foreground"/>
         <mapping pluginKey="editor.coloring2.comment#dark#" themeKey="multiLineComment"/>
         <mapping pluginKey="editor.coloring2.doc_comment#dark#" themeKey="javadoc"/>
