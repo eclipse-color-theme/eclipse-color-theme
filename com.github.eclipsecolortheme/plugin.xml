@@ -253,6 +253,12 @@
    </mapper>
    <mapper
          class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="RustDT"
+         pluginId="com.github.rustdt.ide.ui"
+         xml="mappings/com.github.rustdt.ide.ui.xml">
+   </mapper>
+   <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
          name="PDE"
          pluginId="org.eclipse.pde.ui"
          xml="mappings/org.eclipse.pde.ui.xml">

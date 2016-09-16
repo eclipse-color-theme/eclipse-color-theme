@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eclipseColorThemeMapping plugin="com.github.rustdt.ide.ui" created="2016-09-08 20:31:00">
+    <mappings>
+        <mapping pluginKey="editor.coloring2.default" themeKey="foreground"/>
+        <mapping pluginKey="editor.coloring2.comment" themeKey="multiLineComment"/>
+        <mapping pluginKey="editor.coloring2.doc_comment" themeKey="javadoc"/>
+        <mapping pluginKey="editor.coloring2.number" themeKey="number"/>
+        <mapping pluginKey="editor.coloring2.character" themeKey="string"/>
+        <mapping pluginKey="editor.coloring2.string" themeKey="string"/>
+        <mapping pluginKey="editor.coloring2.keyword" themeKey="keyword"/>
+        <mapping pluginKey="editor.coloring2.keyword_self" themeKey="class"/>
+        <mapping pluginKey="editor.coloring2.keyword_boolean" themeKey="keyword"/>
+        <mapping pluginKey="editor.coloring2.lifetime" themeKey="annotation"/>
+        <mapping pluginKey="editor.coloring2.attribute" themeKey="annotation"/>
+        <mapping pluginKey="editor.coloring2.macro_call" themeKey="method"/>
+
+        <!-- Copy of the above, with the extension #dark# to enable us complete theme control in eclipse dark mode as well -->
+        <mapping pluginKey="editor.coloring2.default#dark#" themeKey="foreground"/>
+        <mapping pluginKey="editor.coloring2.comment#dark#" themeKey="multiLineComment"/>
+        <mapping pluginKey="editor.coloring2.doc_comment#dark#" themeKey="javadoc"/>
+        <mapping pluginKey="editor.coloring2.number#dark#" themeKey="number"/>
+        <mapping pluginKey="editor.coloring2.character#dark#" themeKey="string"/>
+        <mapping pluginKey="editor.coloring2.string#dark#" themeKey="string"/>
+        <mapping pluginKey="editor.coloring2.keyword#dark#" themeKey="keyword"/>
+        <mapping pluginKey="editor.coloring2.keyword_self#dark#" themeKey="class"/>
+        <mapping pluginKey="editor.coloring2.keyword_boolean#dark#" themeKey="keyword"/>
+        <mapping pluginKey="editor.coloring2.lifetime#dark#" themeKey="annotation"/>
+        <mapping pluginKey="editor.coloring2.attribute#dark#" themeKey="annotation"/>
+        <mapping pluginKey="editor.coloring2.macro_call#dark#" themeKey="method"/>
+    </mappings>
+</eclipseColorThemeMapping> 
