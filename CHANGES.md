@@ -5,6 +5,7 @@
 * Added support for the [Apache IvyDE](http://ant.apache.org/ivy/ivyde/).
 * Fixed outdated mapping for the Go editor (goclipse).
 * Explicitly import hamcrest core bundle for tests.
+* Added offline theme previewer.
 
 1.0.0 (2014-10-26)
 ==================
