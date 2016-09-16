@@ -142,11 +142,11 @@ You can generate an update site using [Maven](http://maven.apache.org/):
 This will create an update site in
 _com.github.eclipsecolortheme.updatesite/target/repository_.
 
-By default, Eclipse Color Theme will be built against the Eclipse Mars
-version of the platform. You can build against either Eclipse Luna or
-Kepler by setting the "platform-version" property, for example:
+By default, Eclipse Color Theme will be built against the Eclipse Neon
+version of the platform. You can build against older versions of the
+platform by setting the "platform-version" property, for example:
 
-    mvn clean verify -Dplatform-version=kepler
+    mvn clean verify -Dplatform-version=mars
 
 License
 -------
