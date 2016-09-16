@@ -7,6 +7,10 @@
 	<packaging>pom</packaging>
 	<version>1.1.0-SNAPSHOT</version>
 
+	<prerequisites>
+		<maven>3.1.1</maven>
+	</prerequisites>
+
 	<modules>
 		<module>com.github.eclipsecolortheme</module>
 		<module>com.github.eclipsecolortheme.feature</module>
@@ -15,7 +19,7 @@
 	</modules>
 
 	<properties>
-		<tycho-version>0.23.0</tycho-version>
+		<tycho-version>0.26.0</tycho-version>
 	</properties>
 
 	<repositories>
@@ -131,9 +135,21 @@
 
 	<profiles>
 		<profile>
-			<id>platform-mars</id>
+			<id>platform-neon</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>platform-version</name>
+					<value>neon</value>
+				</property>
+			</activation>
+			<properties>
+				<eclipse.repo.url>http://download.eclipse.org/releases/neon</eclipse.repo.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>platform-mars</id>
+			<activation>
 				<property>
 					<name>platform-version</name>
 					<value>mars</value>
