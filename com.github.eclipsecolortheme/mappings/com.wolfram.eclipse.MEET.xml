@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipseColorThemeMapping plugin="com.wolfram.eclipse.MEET" created="2015-11-07 12:00:00">
+  <mappings> 
+        <mapping pluginKey="syntaxcolor.private.non.system.symbol" themeKey="field" />
+        <mapping pluginKey="syntaxcolor.string.literal" themeKey="string" />
+        <mapping pluginKey="syntaxcolor.number.literal" themeKey="number" />        
+        <mapping pluginKey="syntaxcolor.symbol.system" themeKey="keyword" />
+        <mapping pluginKey="syntaxcolor.public.non.system.symbols" themeKey="class" />
+        <mapping pluginKey="syntaxcolor.comment" themeKey="multiLineComment" />
+        <mapping pluginKey="syntaxcolor.symbol.package" themeKey="methodDeclaration" /> 
+        <mapping pluginKey="syntaxcolor.symbol.local" themeKey="localVariable" />
+         <mapping pluginKey="syntaxcolor.symbol.conflict.local" themeKey="deprecatedMember" />                  
+    </mappings>
+    <semanticHighlightingMappings> 
+        <mapping pluginKey="syntaxcolor.live.bracket.matching" themeKey="string" />           	
+    </semanticHighlightingMappings> 
+</eclipseColorThemeMapping>	
