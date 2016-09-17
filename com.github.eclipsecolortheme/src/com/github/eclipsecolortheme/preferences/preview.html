@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Theme previewer</title>
+<style type="text/css">
+${theme_css}
+</style>
+</head>
+<body class="defaultClass">
+<span class="keyword">public class</span> <span class="class">Demo</span> <span class="bracket">{</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private static final</span> <span class="class">String</span> <span class="staticFinalField">CONSTANT</span> = <span class="string">"String"</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span> <span class="class">Object</span> <span class="field">o</span>;	<span class="singleLineComment">// <span class="commentTaskTag">TODO</span> needs better name</span><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="javadoc">/**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Javadoc. Creates a new demo.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <span class="javadocKeyword">@param</span> o The object to demonstrate<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br/></span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@DemoAnnotation</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span> <span class="methodDeclaration">Demo</span>(<span class="class">Object</span> <span class="localVariable"><span class="parameterVariable">o</span></span>) <span class="bracket">{</span><br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="field">o</span> = <span class="localVariable"><span class="parameterVariable">o</span></span>; <span class="multiLineComment">/* multiline comment */</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="class">String</span> <span class="localVariableDeclaration">s</span> = <span class="staticFinalField">CONSTANT</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> <span class="localVariableDeclaration">i</span> = <span class="number">12345678</span>;<br/>
+</body>
+</html>

@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.CharConversionException;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,14 +12,19 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.preferences.IPreferencesService;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.SWTError;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.program.Program;
@@ -41,8 +47,10 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
 import com.github.eclipsecolortheme.Activator;
+import com.github.eclipsecolortheme.Color;
 import com.github.eclipsecolortheme.ColorTheme;
 import com.github.eclipsecolortheme.ColorThemeManager;
+import com.github.eclipsecolortheme.ColorThemeSetting;
 
 /** The preference page for managing color themes. */
 public class ColorThemePreferencePage extends PreferencePage
@@ -187,16 +195,140 @@ public class ColorThemePreferencePage extends PreferencePage
                 setLinkTarget(websiteLink, website);
                 websiteLink.setVisible(true);
             }
-            String id = theme.getId();
             Browser browser = getBrowser();
-            if (browser != null)
-                browser.setUrl(
-                    "http://www.eclipsecolorthemes.org/static/themes/java/"
-                    + id + ".html");
+            if (browser != null) {
+                browser.setText(getThemeHtml(theme));
+            }
+
             themeDetails.setVisible(true);
             authorLabel.pack();
             websiteLink.pack();
         }
+    }
+
+    private String getThemeHtml(ColorTheme theme) {
+        char[] buf = new char[1024];
+        StringBuffer complete = new StringBuffer();
+        InputStreamReader isr = null;
+        try {
+            isr = new InputStreamReader(ColorThemePreferencePage.class.getResourceAsStream("preview.html"));
+            int numRead = 0;
+            while ((numRead = isr.read(buf)) > 0) {
+                complete.append(buf, 0, numRead);
+            }
+        } catch (IOException e) {
+            Activator.getDefault().getLog().log(new Status(Status.ERROR, Activator.PLUGIN_ID, "Failed to fetch preview", e));
+            return "<html><body>Failed to create preview</body></html>";
+        } finally {
+            if (isr != null) {
+                try {
+                    isr.close();
+                } catch (IOException e) {
+                    Activator.getDefault().getLog().log(new Status(Status.ERROR, Activator.PLUGIN_ID, "Failed to close preview html", e));
+                }
+            }
+        }
+
+        String html = complete.toString();
+        String css = createThemeCss(theme);
+
+        html = html.replace("${theme_css}", css);
+
+        return html;
+    }
+
+    private String createThemeCss(ColorTheme theme) {
+        StringBuffer css = new StringBuffer();
+
+        StringBuilder defaultClass = new StringBuilder(".defaultClass {\n");    // This contains all the basic foreground and background colors
+
+        // Create font and font size based on the preference setting at
+        // Window -> Preferences -> General -> Appearance -> Colors and Fonts -> Basic -> Text Font
+        FontData fontData = getFontData("org.eclipse.ui.workbench", "org.eclipse.jface.textfont");
+        if (fontData == null) {
+            // Fallback
+            defaultClass.append("font-family: \"Courier New\", \"Lucida Console\", Monospace;\n");
+        } else {
+            defaultClass.append("font-family: \"" + fontData.getName() + "\", \"Lucida Console\", Monospace;\n");
+            defaultClass.append("font-size: " + fontData.getHeight() + "pt;\n");
+        }
+
+        // Go through the theme and convert to CSS classes
+        for (Map.Entry<String, ColorThemeSetting> setting : theme.getEntries().entrySet()) {
+            ColorThemeSetting settingVal = setting.getValue();
+            Color c = settingVal.getColor();
+
+            if (setting.getKey().equals("foreground")) {
+                if (c != null) {
+                    defaultClass.append("color: " + c.asHex() + ";\n");
+                }
+            } else if (setting.getKey().equals("background")) {
+                if (c != null) {
+                    defaultClass.append("background: " + c.asHex() + ";\n");
+                }
+            } else {
+                StringBuilder cssClass = new StringBuilder();
+                cssClass.append(String.format(".%s {\n", setting.getKey()));        // The class name and beginning of class definition
+
+                if (c != null) {
+                    cssClass.append("color: " + c.asHex() + ";\n");
+                }
+
+                if (settingVal.isBoldEnabled() != null && settingVal.isBoldEnabled()) {
+                    cssClass.append("font-weight: bold;\n");
+                }
+
+                if (settingVal.isItalicEnabled() != null && settingVal.isItalicEnabled()) {
+                    cssClass.append("font-style: italic;\n");
+                }
+
+                String decoration = "";
+                if (settingVal.isStrikethroughEnabled() != null && settingVal.isStrikethroughEnabled()) {
+                    decoration = "line-through";
+                }
+
+                if (settingVal.isUnderlineEnabled() != null && settingVal.isUnderlineEnabled()) {
+                    if (decoration.length() > 0) {
+                        decoration += "|";
+                    }
+                    decoration += "underline";
+                }
+
+                if (decoration.length() > 0) {
+                    cssClass.append("text-decoration: " + decoration + ";\n");
+                }
+
+                cssClass.append("}\n"); // Close class
+
+                css.append(cssClass);
+            }
+        }
+
+        defaultClass.append("}\n");    // Close the default class
+        css.append(defaultClass);
+
+        return css.toString();
+    }
+
+    /**
+     * Fetches the font data for the qualifier+key
+     * @param qualifier
+     * @param key
+     * @return FontData or null if the FontData didn't exist.
+     */
+    private FontData getFontData(String qualifier, String key) {
+        IPreferencesService preferencesService = Platform.getPreferencesService();
+        if (preferencesService != null) {
+            String fontString = preferencesService.getString(qualifier, key, null, null);
+            if (fontString != null) {
+                FontData fontData[] = PreferenceConverter.basicGetFontData(fontString);
+                if (fontData != null && fontData.length > 0) {
+                    return fontData[0];
+                }
+            }
+        }
+
+        return null;
     }
 
     @Override
