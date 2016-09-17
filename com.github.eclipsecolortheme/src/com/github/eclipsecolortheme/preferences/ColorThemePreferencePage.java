@@ -12,15 +12,19 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.preferences.IPreferencesService;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.SWTError;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.program.Program;
@@ -237,9 +241,19 @@ public class ColorThemePreferencePage extends PreferencePage
         StringBuffer css = new StringBuffer();
 
         StringBuilder defaultClass = new StringBuilder(".defaultClass {\n");    // This contains all the basic foreground and background colors
-        defaultClass.append("font-family: \"Courier New\", \"Lucida Console\", Monospace;\n");
-        defaultClass.append("font-size: small;\n");
 
+        // Create font and font size based on the preference setting at
+        // Window -> Preferences -> General -> Appearance -> Colors and Fonts -> Basic -> Text Font
+        FontData fontData = getFontData("org.eclipse.ui.workbench", "org.eclipse.jface.textfont");
+        if (fontData == null) {
+            // Fallback
+            defaultClass.append("font-family: \"Courier New\", \"Lucida Console\", Monospace;\n");
+        } else {
+            defaultClass.append("font-family: \"" + fontData.getName() + "\", \"Lucida Console\", Monospace;\n");
+            defaultClass.append("font-size: " + fontData.getHeight() + "pt;\n");
+        }
+
+        // Go through the theme and convert to CSS classes
         for (Map.Entry<String, ColorThemeSetting> setting : theme.getEntries().entrySet()) {
             ColorThemeSetting settingVal = setting.getValue();
             Color c = settingVal.getColor();
@@ -294,6 +308,27 @@ public class ColorThemePreferencePage extends PreferencePage
         css.append(defaultClass);
 
         return css.toString();
+    }
+
+    /**
+     * Fetches the font data for the qualifier+key
+     * @param qualifier
+     * @param key
+     * @return FontData or null if the FontData didn't exist.
+     */
+    private FontData getFontData(String qualifier, String key) {
+        IPreferencesService preferencesService = Platform.getPreferencesService();
+        if (preferencesService != null) {
+            String fontString = preferencesService.getString(qualifier, key, null, null);
+            if (fontString != null) {
+                FontData fontData[] = PreferenceConverter.basicGetFontData(fontString);
+                if (fontData != null && fontData.length > 0) {
+                    return fontData[0];
+                }
+            }
+        }
+
+        return null;
     }
 
     @Override
