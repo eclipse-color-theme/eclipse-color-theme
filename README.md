@@ -20,6 +20,7 @@ Theme* to change the color theme.
 * When updating from an earlier version than 0.6, please uninstall the
   plugin and the update site, add the site listed above and install it
   again from there. Otherwise you won't see any updates.
+* Latest 0.13 version requires Eclipse 4.x see [#163](https://github.com/eclipse-color-theme/eclipse-color-theme/issues/163)
 
 [![Build Status](https://secure.travis-ci.org/eclipse-color-theme/eclipse-color-theme.png)](http://travis-ci.org/eclipse-color-theme/eclipse-color-theme)
 
