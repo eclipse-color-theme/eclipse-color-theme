@@ -7,12 +7,12 @@ It is possible to achieve that by importing and exporting preferences files, but
 (Development Process - Alternatives)
 Best Software Process for this project: 
 
-. Prototyping. Reasons: 
+* Prototyping. Reasons: 
     - Prototyping is not a standalone, complete development methodology, but rather an approach to try out particular features in the context of a full methodology (such as incremental, spiral, or rapid application development (RAD)).
     - Attempts to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.
     - The user is involved throughout the development process, which increases the likelihood of user acceptance of the final implementation.
     
-. Rapid application development. Reasons: 
+* Rapid application development. Reasons: 
     - Key objective is for fast development and delivery of a high quality system at a relatively low investment cost.
     - Attempts to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.
 
