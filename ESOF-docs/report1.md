@@ -1,10 +1,10 @@
 #Software Process
 ![Eclipse-Color-Theme](http://p2.pdt-extensions.org/images/colorthemes/screenshot.png)
 Team and contact:
-    - Carolina Moreira - up201303494@fe.up.pt
-    - Nuno Silva - up201404380@fe.up.pt
-    - Paulo Babo - up201404022@fe.up.pt
-    - Rita Carvalho - up201304918@fe.up.pt
+* Carolina Moreira - up201303494@fe.up.pt
+* Nuno Silva - up201404380@fe.up.pt
+* Paulo Babo - up201404022@fe.up.pt
+* Rita Carvalho - up201304918@fe.up.pt
 
 ##Brief description of the project
 
@@ -42,10 +42,11 @@ To help with the code you first need to open an issue before starting to work.
 Although the Interactive and Incremental Development Process have the advantages written above it requires higher level of technical excellence, more discipline and buyout from the whole team of contributors. It often requires that the contributors are capable of performing more than one type of tasks (for example develop and test or work on both front-end and back-end).
 In that aspect the Prototyping Process is better because it is an initial version of a system used to demonstrate concepts and try out design options. 
 The benefits that this process bring to this project are:
-    - The closer match to user's real needs;
-    - Improved the design quality;
-    - Improved maintainability;
-    - Reduce development effort.
+* The closer match to user's real needs;
+* Improved the design quality;
+* Improved maintainability;
+* Reduce development effort.
+
 This advantages allows to reduse the inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process and allows to explore options and develop a UI design, in design processes. The main disadvantage of Prototyping is that are normally undocumented, which hinders access to information to new contributors.
 
 ##Conclusion
