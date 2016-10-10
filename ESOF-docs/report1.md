@@ -22,11 +22,14 @@ After analysing this process, among all that were studied, we found it to be the
 ###Contributing
 
 There are multiple ways to contribute to the development of the plugin, namely, creating an editor mapping, creating a theme and you can contribute to code too.
- *Creating an editor mapping:
+
+* Creating an editor mapping:
 	Create a new mapping for any new editor, this does not require programming and is fairly easy to contribute, you just need to do some research.
- *Creating a theme:
+
+* Creating a theme:
 	Create a custom theme for any editor supported by the plugin.
- *Contributing to the code:
+	
+* Contributing to the code:
 	Contribute to the code in a positive way, you can correct bugs or add new features.
 
 You don't need a lot of experience to contribute, creating an editor mapping or creating a theme is accessible to anyone who wants to contribute. There is an [**contributor guide**](https://github.com/eclipse-color-theme/eclipse-color-theme/wiki/Contributing) that explains how to get started on working in this project.
