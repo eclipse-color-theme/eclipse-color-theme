@@ -51,7 +51,7 @@ This advantages allows to reduse the inherent project risk by breaking a project
 
 ##Conclusion
 
-We feel that Eclipse Color Theme is an appropriately developed project, and that it will provide us with a good study case for our envolvment in this class in the coming months. Although we weren't able to contact the developers, the development process they used shines through, and we're sure all the other methods used will as well.
+We feel that Eclipse Color Theme is an appropriately developed project, and that it will provide us with a good study case for our involvement in this class in the upcoming months. Although we weren't able to contact the developers, the development process they used shines through, and we're sure all the other methods used will as well.
 
 ##Contribuition of the team members
 
