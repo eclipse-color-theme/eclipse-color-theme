@@ -16,7 +16,9 @@ It is possible to achieve that by importing and exporting preferences files, but
 
 We couldn't contact the developers, but by analysing the commits made thorough the growth of the application, we were able to approximate the development process used by those who initially started this endeavour.
 Our group came to the conclusion that the aforementioned process adopted was Iterative and Incremental Development which can be succinctly described as small changes to the code, which are then tested, and if workable, commited to the main project. 
-After analysing this process, among all that were studied, we found it to be the one that best fit the commits in Eclipse Color Theme. 
+After analysing this process, among all that were studied, we found it to be the one that best fit the commits in Eclipse Color Theme.
+
+As this is an community driven project, this aproach has the advantage of facilitating the involvement of new developers, even with small contributions, at any state of the development.
 
 
 ###Contributing
