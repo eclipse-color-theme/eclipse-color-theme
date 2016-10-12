@@ -189,10 +189,11 @@ public class ColorThemePreferencePage extends PreferencePage
             }
             String id = theme.getId();
             Browser browser = getBrowser();
-            if (browser != null)
+            if (browser != null) {
                 browser.setUrl(
-                    "http://www.eclipsecolorthemes.org/static/themes/java/"
-                    + id + ".html");
+                    "http://www.eclipsecolorthemes.org/api/theme.php?action=preview&theme="
+                    + id + "&lang=php");
+            }
             themeDetails.setVisible(true);
             authorLabel.pack();
             websiteLink.pack();
