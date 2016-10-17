@@ -1,9 +1,40 @@
 
+#Requirements
+![Eclipse-Color-Theme](http://p2.pdt-extensions.org/images/colorthemes/screenshot.png)
+Team and contact:
+* Carolina Moreira - up201303494@fe.up.pt
+* Nuno Silva - up201404380@fe.up.pt
+* Paulo Babo - up201404022@fe.up.pt
+* Rita Carvalho - up201304918@fe.up.pt
+
+##Introduction
+
+The main purpose of this document is to give a detailed description about Eclipse-Color-Theme. We intend to illustrate the purpose, the features and the goals of the project, and what we can do with it. This document is directed to both the developers and users of Eclipse-Color-Theme.
+
+##Purpose
+
+The Eclipse-Color-Theme was developed with the purpose of make possible to import and switch color themes conveniently without side effects.
+
+##Requirements elicitation
+
+Since <<all Eclipse Color Theme users are developers>> the development procces can be called "Nothing Formal" The main requirments of the project are create new mapping to add support for an editor, create new themes and fixing bugs.
+The ideal setup to build up new mapping would be to perform the following steps:
+
+1. Go to the syntax coloring preferences page of the editor, e.g. C/C++->Editor->Syntax Coloring;
+2. Look at the colour theme keys of any theme (See the ColorThemeKeys class for all available keys) and configure the syntax colouring manually using the colours defined there;
+3. Open the editor's preferences file, e.g. workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.cdt.ui.prefs and create a new XML file named after the plugin ID in the mapper directory which maps the colour theme's keys to those of the editor;
+4. Open plugin.xml and add the new mapping file to the extension point com.github.eclipsecolortheme.theme;
+5. Create a pull request.
+
+And the idela setup to build up new themes would be to perform the following steps:
+
+1. Go to eclipsecolorthemes.org and create the new theme;
+2. Download it in *.xml format and import it from the Color Theme preference page;
+3. Check if the new theme would be popular and if it is new;
+4. Create a pull request.
 
 
-
-
-
+The release of the new feature is done every few months in a stable version where the new feature is completely ready, validated and tested.
 
 
 
