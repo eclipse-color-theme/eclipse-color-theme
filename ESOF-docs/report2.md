@@ -9,16 +9,16 @@ Team and contact:
 
 ##Introduction
 
-The main purpose of this document is to give a detailed description about Eclipse-Color-Theme. We intend to illustrate the purpose, the features and the goals of the project, and what we can do with it. This document is directed to both the developers and users of Eclipse-Color-Theme.
+The main purpose of this document is to give a detailed description about Eclipse Color Theme. We intend to illustrate the purpose, the features and the goals of the project, and what we can do with it. This document is directed to both the developers and users of Eclipse Color Theme.
 
 ##Purpose
 
-The Eclipse-Color-Theme was developed with the purpose of make possible to import and switch color themes conveniently without side effects.
+Eclipse Color Theme was developed with the purpose of making it possible to import and switch color themes conveniently and without side effects.
 
-##Requirements elicitation
+##Requirements Elicitation
 
-Since <<all Eclipse Color Theme users are developers>> the development procces can be called "Nothing Formal" The main requirments of the project are create new mapping to add support for an editor, create new themes and fixing bugs.
-The ideal setup to build up new mapping would be to perform the following steps:
+Since <<most, if not all, Eclipse Color Theme users are developers>> the development procces can be called "Nothing Formal". The main requirements of the project are to create new mapping to add support for an editor, create new themes, and fixing bugs.
+The ideal setup to build new mapping would be to perform the following steps:
 
 1. Go to the syntax coloring preferences page of the editor, e.g. C/C++->Editor->Syntax Coloring;
 2. Look at the colour theme keys of any theme (See the ColorThemeKeys class for all available keys) and configure the syntax colouring manually using the colours defined there;
@@ -26,15 +26,14 @@ The ideal setup to build up new mapping would be to perform the following steps:
 4. Open plugin.xml and add the new mapping file to the extension point com.github.eclipsecolortheme.theme;
 5. Create a pull request.
 
-And the idela setup to build up new themes would be to perform the following steps:
+And the ideal setup to build new themes would be to perform the following steps:
 
 1. Go to eclipsecolorthemes.org and create the new theme;
 2. Download it in *.xml format and import it from the Color Theme preference page;
 3. Check if the new theme would be popular and if it is new;
 4. Create a pull request.
 
-
-The release of the new feature is done every few months in a stable version where the new feature is completely ready, validated and tested.
+There is a new stable version launched every few months, in which the new features created since the previous version are implemented, completely ready, having been validated and tested.
 
 
 
