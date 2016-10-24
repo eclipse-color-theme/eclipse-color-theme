@@ -58,8 +58,8 @@ In the Eclipse Color Theme project there aren't any  evident barrier for validat
 
 ##Versioning usage
 
-As mentioned before, the project leader tries to get out a release every few months. The main reason for that happen is that the project leader want to do some testing before releasing a new version, and he don't have time to do it in shorter cycles.
-The name of which version follow the pattern "Incrementing sequences" that is a method that treat versions as a series of individual numbers, separated by periods, with a progression.
+As mentioned before, the project leader tries to get out a new release every few months. The main reason why that happens is that the project leader wants to do some testing before releasing the new version, but he doesn't have the time to do it in shorter cycles.
+The version naming follows the pattern of "Incrementing sequences", that is, a method that treat versions as a series of individual numbers, separated by periods, progressively.
 
 
 ##Domain
@@ -68,8 +68,7 @@ The name of which version follow the pattern "Incrementing sequences" that is a 
 
 ##Contribuition of the team members
 
-//We felt that in this second report, the distribution of work was pretty even, leaving everyone with about 25% of the work done.
-
+Although the work was more distributed than in the previous report, we feel that the variation between different people and their work  doesn't warrant an unalike division of the contribution, therefore, we also apply 25% to each individual member of the team. 
 
 The goal of this second assignment is to investigate how the project deals with requirement elicitation in the project that you're studying. As in the first assignment,  as this is a topic that may not be explicitly reported in the repository, it may require you to contact the team members to find out more. If that is the case, you should cite/credit the person you talked to.
 
