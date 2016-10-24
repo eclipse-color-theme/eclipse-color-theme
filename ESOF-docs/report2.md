@@ -17,7 +17,7 @@ Eclipse Color Theme was developed with the purpose of making it possible to impo
 
 ##Requirements Elicitation
 
-Since <<most, if not all, Eclipse Color Theme users are developers>> the development procces can be called "Nothing Formal". The main requirements of the project are to create new mapping to add support for an editor, create new themes, and fixing bugs.
+Since most, if not all, Eclipse Color Theme users are developers, the development process can be called "Nothing Formal". The main requirements of the project are: create new mappings to add support for an editor, create new themes, fixing bugs and if you would like to add new features, you could just open an issue and wait for a response.
 The ideal setup to build new mapping would be to perform the following steps:
 
 1. Go to the syntax coloring preferences page of the editor, e.g. C/C++->Editor->Syntax Coloring;
@@ -28,10 +28,12 @@ The ideal setup to build new mapping would be to perform the following steps:
 
 And the ideal setup to build new themes would be to perform the following steps:
 
-1. Go to eclipsecolorthemes.org and create the new theme;
-2. Download it in *.xml format and import it from the Color Theme preference page;
-3. Check if the new theme would be popular and if it is new;
-4. Create a pull request.
+1. Go to eclipsecolorthemes.org;
+2. Log-in or create a new account;
+3. create the new theme by editing the values;
+4. Download it in *.xml format and import it from the Color Theme preference page;
+5. Check if the new theme would be popular and if it is new;
+6. Create a pull request.
 
 There is a new stable version launched every few months, in which the new features created since the previous version are implemented, completely ready, having been validated and tested.
 
