@@ -48,7 +48,7 @@ Some project requirements at the funtional level are:
 
 ##Use Cases
 
-(http://p2.pdt-extensions.org/images/colorthemes/screenshot.png)
+![UseCases](http://p2.pdt-extensions.org/images/colorthemes/screenshot.png)
 
 ##Validation
 
