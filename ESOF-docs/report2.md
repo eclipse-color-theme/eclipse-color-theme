@@ -52,7 +52,9 @@ Some project requirements at the funtional level are:
 
 ##Validation
 
-//TODO
+Since there are no deadlines for the design, development can be done in a careful way, always requiring some kind of validation for the developers contributions are positive fact for the project.
+In the Eclipse Color Theme project there aren't any  evident barrier for validation of the requirements once the contributors are free to develop new features, asking for aprove only in the moment of merge the new feature and the initial project (pull request). The pull request is reviewed normally by the user Felix H. Dahlke (fhd) and either approved, in which case the code is merged into the main repository, or denied when the code has errors or isn't popular enought. The code is tested locally to make sure it works and does what is advertised. 
+
 
 ##Versioning usage
 
