@@ -64,7 +64,8 @@ The version naming follows the pattern of "Incrementing sequences", that is, a m
 
 ##Domain
 
-//TODO
+![Domain](http://i.imgur.com/b4gpxMb.png)
+
 
 ##Contribuition of the team members
 
