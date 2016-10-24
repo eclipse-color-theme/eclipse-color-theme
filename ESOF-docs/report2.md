@@ -48,7 +48,7 @@ Some project requirements at the funtional level are:
 
 ##Use Cases
 
-//TODO
+![UseCases](http://i.imgur.com/7UFnv5M.png)
 
 ##Validation
 
