@@ -37,6 +37,15 @@ And the ideal setup to build new themes would be to perform the following steps:
 
 There is a new stable version launched every few months, in which the new features created since the previous version are implemented, completely ready, having been validated and tested.
 
+##Requirements
+
+Some project requirements at the funtional level are:
+
+1. Change the color of the menus;
+2. Change the size of the font;
+3. Change the color of the font;
+4. Change the syntax coloring in great detail;
+
 ##Use Cases
 
 //TODO
@@ -55,7 +64,9 @@ The name of which version follow the pattern "Incrementing sequences" that is a 
 
 //TODO
 
+##Contribuition of the team members
 
+//We felt that in this second report, the distribution of work was pretty even, leaving everyone with about 25% of the work done.
 
 
 The goal of this second assignment is to investigate how the project deals with requirement elicitation in the project that you're studying. As in the first assignment,  as this is a topic that may not be explicitly reported in the repository, it may require you to contact the team members to find out more. If that is the case, you should cite/credit the person you talked to.
