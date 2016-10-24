@@ -37,7 +37,23 @@ And the ideal setup to build new themes would be to perform the following steps:
 
 There is a new stable version launched every few months, in which the new features created since the previous version are implemented, completely ready, having been validated and tested.
 
+##Use Cases
 
+//TODO
+
+##Validation
+
+//TODO
+
+##Versioning usage
+
+As mentioned before, the project leader tries to get out a release every few months. The main reason for that happen is that the project leader want to do some testing before releasing a new version, and he don't have time to do it in shorter cycles.
+The name of which version follow the pattern "Incrementing sequences" that is a method that treat versions as a series of individual numbers, separated by periods, with a progression.
+
+
+##Domain
+
+//TODO
 
 
 
