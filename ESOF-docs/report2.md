@@ -48,7 +48,11 @@ Some project requirements at the funtional level are:
 
 ##Use Cases
 
+Sometimes it is important to understand the type of use that a particular application will have to determine which requirements may apply. In this context, the diagram below shows the main use cases of Eclipse Color Theme.
+
+
 ![UseCases](https://github.com/Miridinia/eclipse-color-theme/blob/master/ESOF-docs/Resources/Use%20Cases.jpg)
+
 
 ##Validation
 
