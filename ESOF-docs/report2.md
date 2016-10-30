@@ -48,7 +48,7 @@ Some project requirements at the funtional level are:
 
 ##Use Cases
 
-![UseCases](http://i.imgur.com/7UFnv5M.png)
+![UseCases](https://github.com/Miridinia/eclipse-color-theme/blob/master/ESOF-docs/Resources/Use%20Cases.jpg)
 
 ##Validation
 
@@ -64,7 +64,7 @@ The version naming follows the pattern of "Incrementing sequences", that is, a m
 
 ##Domain
 
-![Domain](http://i.imgur.com/b4gpxMb.png)
+![Domain](https://github.com/Miridinia/eclipse-color-theme/blob/master/ESOF-docs/Resources/Domain.jpg)
 
 
 ##Contribuition of the team members
