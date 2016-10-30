@@ -39,12 +39,27 @@ There is a new stable version launched every few months, in which the new featur
 
 ##Requirements
 
+###Functional level requirements
+
+Funtional level requirements specifie the things the programm should do or accomplish, that is, they should represent a funtion  or a particular result of the system.
 Some project requirements at the funtional level are:
 
 1. Change the color of the menus;
 2. Change the size of the font;
 3. Change the color of the font;
 4. Change the syntax coloring in great detail;
+
+###Non-functional level requirements
+
+Non-functional level requirements contrasts with the funtional level ones because they must specifie overall property of the system as a whole or of a particular aspect, they can even show some criteria that can help judge that same system in the operation level rather than in a specific behavior one.
+Some project requirements at the non-functional level are:
+
+1. Open Source Project
+2. Free software and support
+3. Continuous extensibility
+4. A high compatibility with the editors
+5. Really user friendly
+6. Reusable
 
 ##Use Cases
 
