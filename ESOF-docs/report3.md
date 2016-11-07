@@ -19,6 +19,15 @@ We begin to make an approach to Eclipse Color Theme architecture as well as to t
 ##Logical View
 TODO, diagrama e falar sobre os packages
 
+mappings
+
+themes
+
+eclipsecolortheme que engloba:
+  preferences
+  mapper
+
+
 ##Development View
 
 ##Deployment View
