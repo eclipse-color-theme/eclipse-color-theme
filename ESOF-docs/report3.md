@@ -17,6 +17,7 @@ We begin to make an approach to Eclipse Color Theme architecture as well as to t
 ##4+1 Architectural View Model
 
 ##Logical View
+TODO, diagrama e falar sobre os packages
 
 ##Development View
 
