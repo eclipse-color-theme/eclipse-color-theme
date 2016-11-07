@@ -8,6 +8,10 @@ Team and contact:
 
 ##Introduction
 
+
+This report aims to explain the Eclipse Color Theme architecture according to 4 + 1 view model of software architecture.
+We begin to make an approach to Eclipse Color Theme architecture as well as to the model noted above. In the next points we approach a little more specific in respect to Logical view, Development view, Deployment view and Process view, with the help of illustrative diagrams.
+
 ##Eclipse Color Theme Architecture
 
 ##4+1 Architectural View Model
@@ -15,6 +19,8 @@ Team and contact:
 ##Logical View
 
 ##Development View
+
+##Deployment View
 
 ##Process View
 
