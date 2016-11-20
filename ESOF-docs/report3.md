@@ -19,13 +19,17 @@ We begin to make an approach to Eclipse Color Theme architecture as well as to t
 ##Logical View
 
 Below we can see the package diagram representing the logic view of the plugin.
+
 ![LogicView](eclipse-color-theme/ESOF-docs/Resources/LogicalView.jpg)
 
 Eclipse Color Theme plugin is divided in three main packages.
 
 Themes package: It has all the themes that comes bundled with the plugin.
+
 Mappings package: It contains all the mappings for the multiple editors supported by this plugin.
+
 Eclipsecolortheme package: This package is the core of the plugin, it applies the selected theme to eclipse. It has two more packages, mapper package and preferences package.
+
 	- Preferences package handles the preference page of the plugin.
 	- Mapper package handles the multiple mappings.
 
