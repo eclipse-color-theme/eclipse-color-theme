@@ -5,5 +5,14 @@
       <mapping pluginKey="defaultColor" themeKey="foreground" />
       <mapping pluginKey="valueColor" themeKey="field" />
       <mapping pluginKey="nullColor" themeKey="foreground" />
+
+      <!-- Newer versions of jsonedit uses these preferences instead -->
+      <mapping pluginKey="styleText.color" themeKey="string" />
+      <mapping pluginKey="styleDefault.color" themeKey="foreground" />
+      <mapping pluginKey="styleKey.color" themeKey="field" />
+      <mapping pluginKey="styleNull.color" themeKey="foreground" />
+      <mapping pluginKey="styleNumber.color" themeKey="number" />
+      <mapping pluginKey="styleBoolean.color" themeKey="keyword" />
+      <mapping pluginKey="styleError.color" themeKey="foreground" />
     </mappings>
 </eclipseColorThemeMapping>
