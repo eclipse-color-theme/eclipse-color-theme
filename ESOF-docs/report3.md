@@ -30,9 +30,10 @@ Eclipse Color Theme plugin is divided in three main packages.
 
 **Eclipsecolortheme** package: This package is the core of the plugin, it applies the selected theme to eclipse. It has two more packages, mapper package and preferences package.
     
-   * Preferences package handles the preference page of the plugin.
+   * **Preferences** package handles the preference page of the plugin.
 
-   * Mapper package handles the multiple mappings.
+   * **Mapper** package handles the multiple mappings.
+
 
 
 
