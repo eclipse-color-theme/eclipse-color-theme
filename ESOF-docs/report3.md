@@ -17,7 +17,7 @@ We begin to make an approach to Eclipse Color Theme architecture as well as to t
 ##4+1 Architectural View Model
 
 ##Logical View
-![LogicView](https://github.com/Miridinia/eclipse-color-theme/blob/master/ESOF-docs/Resources/LogicalView.jpg)
+![LogicView](eclipse-color-theme/ESOF-docs/Resources/LogicalView.jpg)
 
 
 ##Development View
