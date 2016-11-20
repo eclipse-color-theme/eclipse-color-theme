@@ -32,7 +32,7 @@ Eclipse Color Theme plugin is divided in three main packages.
     
    * **Preferences** package handles the preference page of the plugin.
 
-   * **Mapper** package handles the multiple mappings.
+   * **Mapper** package handles the multiple mappings of the mappings package.
 
 
 
