@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -85,7 +87,7 @@ public class ColorThemeManager {
                 Bundle bundle = Platform.getBundle(contributorPluginId);
                 InputStream input = (InputStream) bundle.getResource(xml)
                         .getContent();
-                ParsedTheme theme = parseTheme(input, false);
+                ParsedTheme theme = parseTheme(input, false, false);
                 amendThemeEntries(theme.getTheme().getEntries());
                 themes.put(theme.getTheme().getName(), theme.getTheme());
             }
@@ -102,7 +104,7 @@ public class ColorThemeManager {
             if (xml == null || xml.length() == 0)
                 break;
             try {
-                ParsedTheme theme = parseTheme(new ByteArrayInputStream(xml.getBytes("UTF-8")), false);
+                ParsedTheme theme = parseTheme(new ByteArrayInputStream(xml.getBytes("UTF-8")), false, true);
                 amendThemeEntries(theme.getTheme().getEntries());
                 themes.put(theme.getTheme().getName(), theme.getTheme());
             } catch (Exception e) {
@@ -120,6 +122,36 @@ public class ColorThemeManager {
         readStockThemes(themes);
     }
 
+    /**
+     * Deletes imported theme
+     * @param themeName The name of the selected theme to delete
+     */
+    public void deleteImportedTheme(String themeName) {
+       IPreferenceStore store = getPreferenceStore();
+        for (int i = 1; i < 1000; i++)
+          if (store.contains("importedColorTheme" + i)) 
+          {
+        	 String importedStr = store.getString("importedColorTheme" + i);
+
+             Pattern pattern = Pattern.compile("name=\"(.*?)\"");
+             Matcher matcher = pattern.matcher(importedStr);
+             matcher.find();
+             String importesName = matcher.group(1);
+                            
+             if(themeName.contains(" "))
+           	  	themeName = themeName.substring(0, themeName.indexOf(" "));
+             
+             if(themeName.equals(importesName))
+             {
+                store.setToDefault("importedColorTheme" + i);
+                themes.remove(themeName);
+            	break;
+             }
+          }
+       
+    }
+
+    
     private static IPreferenceStore getPreferenceStore() {
         return Activator.getDefault().getPreferenceStore();
     }
@@ -130,7 +162,7 @@ public class ColorThemeManager {
      * @param loadSource Specify if should load original XML source.
      * @return Parsed theme
      */
-    public ParsedTheme parseTheme(InputStream input, boolean loadSource)
+    public ParsedTheme parseTheme(InputStream input, boolean loadSource, boolean imported)
             throws ParserConfigurationException, SAXException, IOException, TransformerException {
         ColorTheme theme = new ColorTheme();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -138,7 +170,10 @@ public class ColorThemeManager {
         Document document = builder.parse(input);
         Element root = document.getDocumentElement();
         theme.setId(root.getAttribute("id"));
-        theme.setName(root.getAttribute("name"));
+        if(!imported)
+        	theme.setName(root.getAttribute("name"));
+        else
+        	theme.setName(root.getAttribute("name") + " (imported)");
         theme.setAuthor(root.getAttribute("author"));
         theme.setWebsite(root.getAttribute("website"));
 
@@ -267,7 +302,7 @@ public class ColorThemeManager {
      * @throws ParserConfigurationException
      */
     public void saveTheme(InputStream input) throws ParserConfigurationException, SAXException, IOException, TransformerException {
-        ParsedTheme theme = parseTheme(input, true);
+        ParsedTheme theme = parseTheme(input, true, true);
         themes.put(theme.getTheme().getName(), theme.getTheme());
         IPreferenceStore store = getPreferenceStore();
         for (int i = 1;; i++)
