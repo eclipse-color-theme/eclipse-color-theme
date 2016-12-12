@@ -290,6 +290,21 @@ public class ColorThemePreferencePage extends PreferencePage
                 reloadThemeSelectionList();
             }
         });
+        
+        
+        
+        Button delbutton = new Button(parent, SWT.NONE);
+        delbutton.setText("&Delete Imported Theme");
+        delbutton.addSelectionListener(new SelectionAdapter() {
+            public void widgetSelected(SelectionEvent event) {
+            	if (themeSelectionList.getSelectionCount() > 0)               
+                	colorThemeManager.deleteImportedTheme(themeSelectionList.getSelection()[0]);
+
+               reloadThemeSelectionList();
+            }
+        });
+        
+        
     }
 
     protected void showErrorMessage(String message) {
