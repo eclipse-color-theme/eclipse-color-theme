@@ -32,5 +32,9 @@
         <mapping pluginKey="cssTextColor" themeKey="foreground"/>
         <mapping pluginKey="unknowTagColors" themeKey="deprecatedMember"/>
         <mapping pluginKey="defaultTextColor" themeKey="foreground"/>
+        <mapping pluginKey="javaDocStyeComments" themeKey="multiLineComment"/>
+        <mapping pluginKey="javaDocStyeCommentsBackground" themeKey="background"/>
+        <mapping pluginKey="AbstractTextEditor.Color.SelectionBackground" themeKey="selectionBackground"/>
+        <mapping pluginKey="AbstractTextEditor.Color.SelectionForeground" themeKey="selectionForeground"/>
     </mappings>
 </eclipseColorThemeMapping>
