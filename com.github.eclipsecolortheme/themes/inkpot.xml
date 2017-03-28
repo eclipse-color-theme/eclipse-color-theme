@@ -14,6 +14,9 @@
     <string color="#FFCD8B" />
     <operator color="#CFBFAD" />
     <keyword color="#808BED" />
+    <staticMethod color="#CFBFAD" />
+    <staticField color="#CFBFAD" />
+    <staticFinalField color="#CFBFAD" />
     <background color="#1F1F27" />
     <currentLine color="#2D2D44" />
     <foreground color="#CFBFAD" />
