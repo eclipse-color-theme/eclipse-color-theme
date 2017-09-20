@@ -23,7 +23,8 @@
     </mappings> 
     <semanticHighlightingMappings> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.number" themeKey="number" /> 
-        <semanticHighlightingMapping pluginKey="semanticHighlighting.class" themeKey="class" /> 
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.class" themeKey="class" />
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.abstractClass" themeKey="abstractClass" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.interface" themeKey="interface" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.enum" themeKey="enum" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.method" themeKey="method" /> 
