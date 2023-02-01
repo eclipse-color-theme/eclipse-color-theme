@@ -41,5 +41,6 @@
         <semanticHighlightingMapping pluginKey="semanticHighlighting.staticField" themeKey="staticField" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.staticFinalField" themeKey="staticFinalField" /> 
         <semanticHighlightingMapping pluginKey="semanticHighlighting.deprecatedMember" themeKey="deprecatedMember" /> 
+        <semanticHighlightingMapping pluginKey="semanticHighlighting.abstractClass" themeKey="abstractClass" /> 
     </semanticHighlightingMappings> 
 </eclipseColorThemeMapping> 

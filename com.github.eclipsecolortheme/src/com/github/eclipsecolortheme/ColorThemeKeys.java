@@ -28,6 +28,7 @@ public class ColorThemeKeys {
     public static final String OPERATOR = "operator";
     public static final String KEYWORD = "keyword";
     public static final String CLASS = "class";
+    public static final String ABSTRACT_CLASS = "abstractClass";
     public static final String INTERFACE = "interface";
     public static final String ENUM = "enum";
     public static final String METHOD = "method";
